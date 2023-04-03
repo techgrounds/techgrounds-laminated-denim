@@ -9,11 +9,13 @@
 #### Furthermore
 *Italics use asterixes.*
 * Bullet points use them too.
-	* Indent.
-***Bold and italic.***
-~~Strikethrough~~
-Some inline code. `print("Goodbye World")
-- [ ] Checkbox off
-- [x] Checkbox on
-1. Item 1
+	* A nested item.
+
+***Bold and Italic***
+~~Strikethrough~~  
+Some inline code. `print("Goodbye World")`
+
+- [ ] Checkbox off  
+- [x] Checkbox on  
+1. Item 1  
 2. Item 2

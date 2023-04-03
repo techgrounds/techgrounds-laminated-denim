@@ -37,14 +37,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01_Linux_1/01_completed_assignments/GIT-02 report.md",
+                "file": "beschrijvingen/01_notes/LNX-01 Notes.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8520597225648044",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "01_Linux_1/01_completed_assignments/LNX-01 report.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -110,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01_Linux_1/01_completed_assignments/GIT-02 report.md",
+                "file": "01_Linux_1/01_completed_assignments/LNX-01 report.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01_Linux_1/01_completed_assignments/GIT-02 report.md",
+                "file": "01_Linux_1/01_completed_assignments/LNX-01 report.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_Linux_1/01_completed_assignments/GIT-02 report.md"
+                "file": "01_Linux_1/01_completed_assignments/LNX-01 report.md"
               }
             }
           }
@@ -171,18 +183,21 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c4d602f97111f6d3",
+  "active": "8520597225648044",
   "lastOpenFiles": [
     "01_Linux_1/01_completed_assignments/GIT-01 report.md",
     "01_Linux_1/01_completed_assignments/GIT-02 report.md",
-    "01_Linux_1/GIT-02/GIT-02-learning-markdown.md",
-    "00_templates/opdracht.md",
+    "01_Linux_1/01_completed_assignments/LNX-01 report.md",
+    "beschrijvingen/01_notes/LNX-01 Notes.md",
+    "00_includes/LNX-01_screenshot.png",
     "beschrijvingen/ideas/01-WK.md",
+    "00_templates/opdracht.md",
+    "beschrijvingen/01_notes/GIT-01 Notes.md",
+    "00_includes/powershell_ar8ZGONlUK.png",
+    "01_Linux_1/GIT-02/GIT-02-learning-markdown.md",
     "beschrijvingen/Misc.md",
     "beschrijvingen/ideas",
-    "beschrijvingen/01_notes/Untitled.md",
     "02_Cloud_1/S3.md",
-    "beschrijvingen/01_notes/Github Basic Terms.md",
     "01_Linux_1/GIT-02",
     "01_Linux_1/GIT-01",
     "00_includes/GIT-01_screenshot.png"
