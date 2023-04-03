@@ -13,13 +13,38 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01_completed_assignments/WEEK-01/GIT-01.md",
+                "file": "01_Linux_1/01_completed_assignments/GIT-01 report.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "0849bff882bf8626",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "01_Linux_1/01_completed_assignments/GIT-02 report.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c4d602f97111f6d3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "01_Linux_1/01_completed_assignments/GIT-02 report.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -85,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01_completed_assignments/WEEK-01/GIT-01.md",
+                "file": "01_Linux_1/01_completed_assignments/GIT-02 report.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01_completed_assignments/WEEK-01/GIT-01.md",
+                "file": "01_Linux_1/01_completed_assignments/GIT-02 report.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_completed_assignments/WEEK-01/GIT-01.md"
+                "file": "01_Linux_1/01_completed_assignments/GIT-02 report.md"
               }
             }
           }
@@ -146,8 +171,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ef5328cb6fab2028",
+  "active": "c4d602f97111f6d3",
   "lastOpenFiles": [
+    "01_Linux_1/01_completed_assignments/GIT-01 report.md",
+    "01_Linux_1/01_completed_assignments/GIT-02 report.md",
+    "01_Linux_1/GIT-02/GIT-02-learning-markdown.md",
+    "00_templates/opdracht.md",
+    "beschrijvingen/ideas/01-WK.md",
+    "beschrijvingen/Misc.md",
+    "beschrijvingen/ideas",
+    "beschrijvingen/01_notes/Untitled.md",
+    "02_Cloud_1/S3.md",
+    "beschrijvingen/01_notes/Github Basic Terms.md",
+    "01_Linux_1/GIT-02",
+    "01_Linux_1/GIT-01",
     "00_includes/GIT-01_screenshot.png"
   ]
 }

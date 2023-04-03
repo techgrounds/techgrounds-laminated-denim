@@ -45,4 +45,4 @@ https://devhints.io/markdown
 * Onbegrip uitleg opdracht. Opgelost door LC te vragen over repositories.
 
 ### Resultaat
-I created one repository to share with my team and cloned that of a teammate onto my local PC. Furthermore, I learned about the key terms used on GitHub. Screenshot for further clarification: ![screenshot of Git Desktop with cloned repository showing](../../00_includes/GIT-01_screenshot.png)
+I created one repository to share with my team and cloned that of a teammate onto my local PC. Furthermore, I learned about the key terms used on GitHub. Screenshot for further clarification: ![screenshot of Git Desktop with cloned repository showing](GIT-01_screenshot.png)
