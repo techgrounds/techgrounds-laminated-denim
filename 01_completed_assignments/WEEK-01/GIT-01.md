@@ -38,7 +38,8 @@ Version control and source code management platform. Allows teams to collaborate
 ## Opdracht
 ### Gebruikte bronnen
 https://github.com/techgrounds/git-github-fundamentals-laminated-denim  
-https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository
+https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository  
+https://devhints.io/markdown
 
 ### Ervaren problemen
 * Onbegrip uitleg opdracht. Opgelost door LC te vragen over repositories.
