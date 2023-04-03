@@ -37,11 +37,11 @@ Version control and source code management platform. Allows teams to collaborate
 
 ## Opdracht
 ### Gebruikte bronnen
-https://github.com/techgrounds/git-github-fundamentals-laminated-denim
+https://github.com/techgrounds/git-github-fundamentals-laminated-denim  
 https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository
 
 ### Ervaren problemen
 * Onbegrip uitleg opdracht. Opgelost door LC te vragen over repositories.
 
 ### Resultaat
-I created one repository to share with my team, and cloned that of a teammate onto my local PC. Furthermore, I learned about the key terms used on GitHub. Screenshot for further clarification: [img]: ![[GIT-01 screenshot.png]]
+I created one repository to share with my team and cloned that of a teammate onto my local PC. Furthermore, I learned about the key terms used on GitHub. Screenshot for further clarification: ![screenshot of Git Desktop with cloned repository showing](../00_includes/GIT-01_screenshot.png)
