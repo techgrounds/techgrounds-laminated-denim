@@ -38,6 +38,6 @@ https://phoenixnap.com/kb/how-to-list-users-linux#:~:text=Linux%2Dbased%20system
 ### Resultaat
 I successfully used the `sudo adduser` command to create a new user. I switched to this user and found the files *group* and *passwd* in the */etc/* folder.
 
-![screenshot of me creating a new user](../../00_includes/LNX-04_screenshot1.png)
-![screenshot of me logging into sudo as user2](../../00_includes/LNX-04_screenshot2.png)
+![screenshot of me creating a new user](../../00_includes/LNX-04_screenshot1.png)  
+![screenshot of me logging into sudo as user2](../../00_includes/LNX-04_screenshot2.png)  
 ![screenshot showing the required files](../../00_includes/LNX-04_screenshot3.png)

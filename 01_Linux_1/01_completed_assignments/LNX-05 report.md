@@ -42,4 +42,4 @@ https://www.redhat.com/sysadmin/linux-file-permissions-explained
 ### Resultaat
 I created a text file using the **echo** command and the **\>** operator. Using `ls -l` I displayed a long-form listing that showed file permissions. With **chmod**, **chown** and **chgrp** I then changed permissions to complete the assignment.
 
-![screenshot showing me changing users](../../LNX-05_screenshot2.png)
+![screenshot showing me changing users](../../00_includes/LNX-05_screenshot2.png)
