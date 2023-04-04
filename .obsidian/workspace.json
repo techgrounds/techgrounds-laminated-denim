@@ -49,14 +49,50 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01_Linux_1/01_completed_assignments/LNX-05 report.md",
+                "file": "00_templates/opdracht.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "44ef1c3ab383de39",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "01_Linux_1/01_completed_assignments/LNX-06 report.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a8f9075b46a68a43",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "beschrijvingen/ideas/01-WK.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e4e6b835a4926d77",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "beschrijvingen/ideas/01-WK.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -122,7 +158,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01_Linux_1/01_completed_assignments/LNX-05 report.md",
+                "file": "beschrijvingen/ideas/01-WK.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +175,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01_Linux_1/01_completed_assignments/LNX-05 report.md",
+                "file": "beschrijvingen/ideas/01-WK.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +198,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_Linux_1/01_completed_assignments/LNX-05 report.md"
+                "file": "beschrijvingen/ideas/01-WK.md"
               }
             }
           }
@@ -183,26 +219,31 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "38034205b54c327c",
+  "active": "e4e6b835a4926d77",
   "lastOpenFiles": [
-    "01_Linux_1/01_completed_assignments/LNX-02 report.md",
+    "beschrijvingen/01_notes/LNX-06 notes.md",
+    "beschrijvingen/01_notes/LNX-05 notes.md",
+    "01_Linux_1/01_completed_assignments/LNX-06 report.md",
+    "beschrijvingen/ideas/01-WK.md",
+    "beschrijvingen/02_notes/J.P. Morgan Softskill Notes.md",
+    "beschrijvingen/02_notes",
+    "beschrijvingen/Scrum Notes.md",
+    "01_Linux_1/GIT-02/GIT-02-learning-markdown.md",
+    "beschrijvingen/Soft skills workshop.md",
+    "00_templates/opdracht.md",
     "01_Linux_1/01_completed_assignments/LNX-05 report.md",
+    "01_Linux_1/01_completed_assignments/LNX-02 report.md",
     "01_Linux_1/01_completed_assignments/LNX-04 report.md",
     "00_includes/LNX-05_screenshot2.png",
-    "beschrijvingen/01_notes/LNX-05 notes.md",
     "00_includes/LNX-05_screenshot1.png",
     "00_includes/LNX-05-screenshot2.png",
-    "00_templates/opdracht.md",
     "beschrijvingen/01_notes/LNX-04 notes.md",
     "01_Linux_1/01_completed_assignments/LNX-03 report.md",
     "01_Linux_1/01_completed_assignments/LNX-01 report.md",
-    "01_Linux_1/GIT-02/GIT-02-learning-markdown.md",
     "02_Cloud_1/S3.md",
     "01_Linux_1/01_completed_assignments/GIT-01 report.md",
     "01_Linux_1/01_completed_assignments/GIT-02 report.md",
     "beschrijvingen/01_notes/LNX-03 Notes.md",
-    "beschrijvingen/Soft skills workshop.md",
-    "beschrijvingen/ideas/01-WK.md",
     "00_includes/LNX-04_screenshot2.png",
     "00_includes/LNX-04_screenshot1.png",
     "00_includes/LNX-04_screenshot3.png",
@@ -214,11 +255,9 @@
     "beschrijvingen/01_notes/LNX-01 Notes.md",
     "00_includes/LNX-03_screenshot1.png",
     "00_templates/retro.md",
-    "beschrijvingen/Scrum Notes.md",
     "beschrijvingen/01_notes/GIT-01 Notes.md",
     "README.md",
     "beschrijvingen/storage-types.md",
-    "beschrijvingen/Misc.md",
     "beschrijvingen/ideas",
     "01_Linux_1/GIT-02",
     "01_Linux_1/GIT-01"
