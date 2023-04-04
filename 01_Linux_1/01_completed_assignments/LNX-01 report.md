@@ -3,7 +3,7 @@ The assignment was to connect to a virtual machine in the cloud with Secure Shel
 
 ## Key-terms
 #### SSH
-* Secure Shell Protocol. A networking protocol used for accessing another computer remotely.*
+* Secure Shell Protocol. A networking protocol used for accessing another computer remotely.
 #### CLI
 * Command Line Interface. A text-based user interface that allows a user to operate a computer with keyboard commands.
 #### VM
