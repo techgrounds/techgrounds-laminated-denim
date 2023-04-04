@@ -27,8 +27,8 @@ Opens a text editor, **nano**, which allows the user to create and edit text.
 Shell operators modify commands. 
 * &: Allows the user to run commands in the background.
 * &&: Allows for the combination of multiple commands on one line in the terminal (CLI.)
-* >: Redirects the output from one command somewhere else. For example, `echo hello > welcome` creates or overwrites the file *welcome* with the content *hello*.
-* >>: Does the same as above, but appends the output to the end of the redirected file instead of overwriting it.
+* \>: Redirects the output from one command somewhere else. For example, `echo hello > welcome` creates or overwrites the file *welcome* with the content *hello*.
+* \>\>: Does the same as above, but appends the output to the end of the redirected file instead of overwriting it.
 
 ##### Modifiers
 Modifiers allow you to modify commands. One useful modifier is --help. For example `ls --help` lists all possible modifiers for the **ls** command.
