@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01_Linux_1/LNX-07 report.md",
+                "file": "01_Linux_1/LNX-07/LNX-07-EX1.md",
                 "mode": "source",
                 "source": false
               }
@@ -122,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01_Linux_1/LNX-07 report.md",
+                "file": "01_Linux_1/LNX-07/LNX-07-EX1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01_Linux_1/LNX-07 report.md",
+                "file": "01_Linux_1/LNX-07/LNX-07-EX1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_Linux_1/LNX-07 report.md"
+                "file": "01_Linux_1/LNX-07/LNX-07-EX1.md"
               }
             }
           }
@@ -183,13 +183,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "985bf311e6f92f56",
+  "active": "581e030abe8bd9e5",
   "lastOpenFiles": [
     "01_Linux_1/LNX-07/LNX-07-EX3.md",
-    "beschrijvingen/01_notes/LNX-07 Notes.md",
-    "01_Linux_1/LNX-07 report.md",
     "01_Linux_1/LNX-07/LNX-07-EX1.md",
     "01_Linux_1/LNX-07/LNX-07-EX2.md",
+    "01_Linux_1/LNX-07 report.md",
+    "01_Linux_1/LNX-06 report.md",
+    "beschrijvingen/01_notes/LNX-07 Notes.md",
     "00_includes/LNX-07_screenshot4.png",
     "Pasted image 20230405150054.png",
     "Pasted image 20230405150043.png",
@@ -208,7 +209,6 @@
     "beschrijvingen/01_notes/LNX-04 notes.md",
     "01_Linux_1/GIT-02/GIT-02-learning-markdown.md",
     "01_Linux_1/01_completed_assignments/GIT-02 report.md",
-    "01_Linux_1/LNX-06 report.md",
     "00_templates/opdracht.md",
     "00_templates/retro.md",
     "beschrijvingen/01_notes/LNX-01 Notes.md",
