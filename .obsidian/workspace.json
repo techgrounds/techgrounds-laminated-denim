@@ -31,7 +31,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01_Linux_1/LNX-06 report.md",
+                "file": "01_Linux_1/01_completed_assignments/LNX-06 report.md",
                 "mode": "source",
                 "source": false
               }
@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01_Linux_1/LNX-06 report.md",
+                "file": "01_Linux_1/01_completed_assignments/LNX-06 report.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01_Linux_1/LNX-06 report.md",
+                "file": "01_Linux_1/01_completed_assignments/LNX-06 report.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -143,7 +143,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_Linux_1/LNX-06 report.md"
+                "file": "01_Linux_1/01_completed_assignments/LNX-06 report.md"
               }
             }
           }
@@ -164,12 +164,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0584e8ddf61da450",
+  "active": "581e030abe8bd9e5",
   "lastOpenFiles": [
     "00_includes/LNX-06_screenshot1.png",
     "00_includes/LNX-06_screenshot2.png",
     "beschrijvingen/01_notes/LNX-06 notes.md",
-    "01_Linux_1/LNX-06 report.md",
+    "01_Linux_1/01_completed_assignments/LNX-06 report.md",
     "beschrijvingen/01_notes/LNX-08 Notes.md",
     "01_Linux_1/01_completed_assignments/LNX-07 report.md",
     "01_Linux_1/LNX-07/LNX-07-EX2.md",
