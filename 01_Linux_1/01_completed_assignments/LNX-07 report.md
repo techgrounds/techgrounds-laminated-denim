@@ -31,12 +31,12 @@ https://ryanstutorials.net/bash-scripting-tutorial/bash-if-statements.php
 
 ### Ervaren problemen
 * What is PATH?
-	* How do I use it?
+	* How do I use it?  
 	I solved this by googling PATH and reading about its function and syntax.
 
 * Create a script that appends a line of text to a text file whenever it is executed.
 	* How do I create a script?
-		* How do I create a script with the required functionality?
+		* How do I create a script with the required functionality?  
 	I followed the instructions on [this site](https://www.freecodecamp.org/news/shell-scripting-crash-course-how-to-write-bash-scripts-in-linux/) to learn the **shebang** command and adjusted the tutorial using my knowledge of **echo** and **\>\>**. 
 
 * Create a script that installs the httpd package, activates httpd, and enables httpd. Finally, your script should print the status of httpd in the terminal.
@@ -48,12 +48,12 @@ https://ryanstutorials.net/bash-scripting-tutorial/bash-if-statements.php
 		* How do I enable it?
 			* sudo systemctl enable apache2
 		* How do I print it?
-			* ps -aux | grep apache2
+			* ps -aux | grep apache2  
 	I solved this issue by learning about *virtual packages* and my existing knowledge about installing apache2 from a previous course.
 
 * Create a script that generates a random number between 1 and 10, stores it in a variable, and then appends the number to a text file.
 	* How do I generate a random number?
-		* How do I store this number in a variable?
+		* How do I store this number in a variable?  
 	I solved this by googling variables & the creation of random numbers in Linux. I ran into an issue where my variable `RANDOM=$((RANDOM10+1))` was recognised as a request for a random number by the **echo** command. I fixed it by appending another letter to the end of the variable.
 
 ### Resultaat
