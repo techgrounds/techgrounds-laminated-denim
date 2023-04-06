@@ -2,22 +2,22 @@
 Cron jobs allow the user to run tasks and processes on a schedule. In combination with scripting, this allows for significant automation of otherwise monotonous tasks. 
 
 ## Key-terms
-##### #cron
+##### cron
 Cron is a *daemon* used to schedule tasks to be executed at a specific time and date.
 
-##### #crontab
+##### crontab
 Crontab is a command used to create a table of commands, that the *cron* daemon uses to execute these commands at a specific time.
 
-##### #devnull
-A folder `/dev/null` where files are automatically discarded. By routing the #stdoutput and #stderr here from #crontab, the OS does not create any logs or display anything to the terminal when the scripts run.
+##### devnull
+A folder `/dev/null` where files are automatically discarded. By routing the stdoutput and stderr here from crontab, the OS does not create any logs or display anything to the terminal when the scripts run.
 
-##### #stderr
+##### stderr
 Standard error. Used by processes to write an error message.
 
-##### #fg
+##### fg
 A command to print the currently available diskspace.
 
-##### #\$date
+##### date
 A command to print the current date and time.
 
 ## Opdracht
@@ -35,7 +35,7 @@ https://unix.stackexchange.com/questions/89386/what-is-symbol-and-in-unix-linux
 * How do I register a script in crontab?
 	* How do I make it run every minute?
 * What is the function to display currently available disk space?
-	* How do I make it run weekly?
+	* How do I make it run weekly?  
 I solved my issues by first googling the commands or syntax I didn't recognise. I then wrote the required scripts and edited my crontab.
 
 ### Resultaat
