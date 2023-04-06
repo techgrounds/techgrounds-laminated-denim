@@ -21,4 +21,4 @@ https://www.ssh.com/academy/ssh/protocol
 * Ran into an issue with connecting to the right port number via OpenSSH. Solved via google & with help from a teammate.
 
 ### Resultaat
-I succeeded in using the whoami command to log into the Virtual Machine via Windows Powershell. ![Screenshot of Windows Powershell showing I've logged in.](../../00_includes/LNX-01_screenshot.png)
+I succeeded in using the whoami command upon logging into the Virtual Machine via Windows Powershell. ![Screenshot of Windows Powershell showing I've logged in.](../../00_includes/LNX-01_screenshot.png)

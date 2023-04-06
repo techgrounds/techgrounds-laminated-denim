@@ -11,8 +11,30 @@
             "id": "02ba01096d572cde",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "01_Linux_1/01_completed_assignments/LNX-08 report.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "2223774f37b6dc11",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7249be13c2a4b6b6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "01_Linux_1/01_completed_assignments/LNX-08 report.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -44,7 +66,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#crontab",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -61,7 +83,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -81,6 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "01_Linux_1/01_completed_assignments/LNX-08 report.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "01_Linux_1/01_completed_assignments/LNX-08 report.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +143,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "01_Linux_1/01_completed_assignments/LNX-08 report.md"
+              }
             }
           }
         ],
@@ -138,44 +165,45 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "02ba01096d572cde",
+  "active": "a8673bffff049c90",
   "lastOpenFiles": [
+    "00_includes/LNX-08_screenshot2.png",
+    "00_includes/LNX-08_screenshot1.png",
+    "00_includes/LNX-08_screenshot3.png",
+    "beschrijvingen/01_notes/LNX-08 Notes.md",
+    "01_Linux_1/01_completed_assignments/LNX-08 report.md",
+    "01_Linux_1/01_completed_assignments/LNX-05 report.md",
+    "01_Linux_1/01_completed_assignments/LNX-04 report.md",
+    "01_Linux_1/01_completed_assignments/LNX-03 report.md",
+    "01_Linux_1/01_completed_assignments/LNX-02 report.md",
+    "01_Linux_1/01_completed_assignments/LNX-01 report.md",
+    "01_Linux_1/01_completed_assignments/GIT-01 report.md",
+    "01_Linux_1/LNX-07/LNX-07-EX3.md",
+    "beschrijvingen/01_notes/LNX-07 Notes.md",
+    "01_Linux_1/LNX-07/LNX-07-EX1.md",
+    "01_Linux_1/LNX-07/LNX-07-EX2.md",
+    "beschrijvingen/01_notes/LNX-01 Notes.md",
+    "01_Linux_1/01_completed_assignments/LNX-07 report.md",
     "01_Linux_1/01_completed_assignments/LNX-06 report.md",
+    "00_templates/standup.md",
+    "beschrijvingen/01_notes/LNX-05 notes.md",
+    "beschrijvingen/ideas/01-WK.md",
+    "beschrijvingen/01_notes/GIT-01 Notes.md",
+    "beschrijvingen/01_notes/LNX-04 notes.md",
+    "beschrijvingen/01_notes/LNX-03 Notes.md",
+    "beschrijvingen/01_notes/LNX-06 notes.md",
+    "beschrijvingen/01_notes/LNX-02 Notes.md",
+    "beschrijvingen/02_notes/J.P. Morgan Softskill Notes.md",
     "Pasted image 20230405150054.png",
     "Pasted image 20230405150043.png",
     "Pasted image 20230405150033.png",
     "Pasted image 20230405150030.png",
-    "beschrijvingen/01_notes/GIT-01 Notes.md",
-    "beschrijvingen/01_notes/LNX-01 Notes.md",
-    "beschrijvingen/01_notes/LNX-02 Notes.md",
-    "beschrijvingen/01_notes/LNX-03 Notes.md",
-    "beschrijvingen/01_notes/LNX-04 notes.md",
-    "beschrijvingen/01_notes/LNX-05 notes.md",
-    "beschrijvingen/01_notes/LNX-06 notes.md",
-    "beschrijvingen/01_notes/LNX-07 Notes.md",
-    "beschrijvingen/01_notes/LNX-08 Notes.md",
     "00_includes/LNX-06_screenshot1.png",
     "00_includes/LNX-06_screenshot2.png",
-    "01_Linux_1/01_completed_assignments/LNX-07 report.md",
-    "01_Linux_1/LNX-07/LNX-07-EX2.md",
-    "01_Linux_1/LNX-07/LNX-07-EX1.md",
-    "01_Linux_1/LNX-08 report.md",
     "00_templates/opdracht.md",
-    "01_Linux_1/01_completed_assignments/LNX-05 report.md",
-    "01_Linux_1/LNX-07/LNX-07-EX3.md",
     "00_includes/LNX-07_screenshot4.png",
     "00_includes/LNX-07_screenshot3.png",
-    "01_Linux_1/01_completed_assignments/LNX-04 report.md",
     "01_Linux_1/LNX-07",
-    "00_includes/LNX-07_screenshot1.png",
-    "00_includes/LNX-07_screenshot2.png",
-    "().md",
-    "01_Linux_1/01_completed_assignments/LNX-03 report.md",
-    "01_Linux_1/01_completed_assignments/LNX-02 report.md",
-    "01_Linux_1/GIT-02/GIT-02-learning-markdown.md",
-    "01_Linux_1/01_completed_assignments/GIT-02 report.md",
-    "00_templates/retro.md",
-    "beschrijvingen/ideas/01-WK.md",
     "beschrijvingen/02_notes",
     "beschrijvingen/ideas",
     "01_Linux_1/GIT-02",
