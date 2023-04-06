@@ -5,7 +5,7 @@ Permissions are split into three categories: user, user group and other. The OS 
 
 ## Key-terms
 ##### rwx
-Read, write, execute. A user with **rwr** permissions for a file can read, write and execute (run) it.
+Read, write, execute. A user with **rwx** permissions for a file can read, write and execute it.
 
 ##### -l
 An option for the **ls** command. It displays information in a long list format, showing much more detail.
@@ -17,8 +17,8 @@ Change mode. This command changes the file permissions for a file using octal va
 A numeral system, used in this context to set file permissions. Supplanted in most modern computing by the hexadecimal system.
 
 Read is defined by the number 4. Write by 2. Execute 1. Added together (as 4, 6 or 7) in a 3 digit number signifies which user has permissions. The first digit represents the owner, the second the owner group, and the third other users. An example below:
-	chmod 700 LNX-05.txt
-changes the permissions for the file LNX-05.txt so that the owner can read, write and execute. Other users and the owner group have no permissions.
+	chmod 764 LNX-05.txt
+changes the permissions for the file LNX-05.txt so that the owner can read, write and execute. The group owner can read and write. Other users can only read.
 
 ##### chown
 Changes the owner of a file.

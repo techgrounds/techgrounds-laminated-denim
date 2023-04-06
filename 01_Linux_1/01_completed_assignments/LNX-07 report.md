@@ -49,7 +49,7 @@ https://ryanstutorials.net/bash-scripting-tutorial/bash-if-statements.php
 			* sudo systemctl enable apache2
 		* How do I print it?
 			* ps -aux | grep apache2  
-	I solved this issue by learning about *virtual packages* and my existing knowledge about installing apache2 from a previous course.
+	I solved this issue by learning about *virtual packages* and my existing knowledge about installing apache2 from a previous course. The command `systemctl status apache2` would have been a better choice to print the status of the service.
 
 * Create a script that generates a random number between 1 and 10, stores it in a variable, and then appends the number to a text file.
 	* How do I generate a random number?

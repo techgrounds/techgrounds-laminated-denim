@@ -15,7 +15,7 @@ A folder `/dev/null` where files are automatically discarded. By routing the std
 Standard error. Used by processes to write an error message.
 
 ##### fg
-A command to print the currently available diskspace.
+A command to print the currently available diskspace. There are a number of flags and arguments available for this command to make the output more readable, such as **-h**.
 
 ##### date
 A command to print the current date and time.
