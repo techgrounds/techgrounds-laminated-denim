@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "beschrijvingen/01_notes/LNX-07 Notes.md",
+                "file": "beschrijvingen/00_teamnotes/WK-01.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "beschrijvingen/01_notes/LNX-07 Notes.md",
+                "file": "beschrijvingen/00_teamnotes/WK-01.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "beschrijvingen/01_notes/LNX-07 Notes.md",
+                "file": "beschrijvingen/00_teamnotes/WK-01.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "beschrijvingen/01_notes/LNX-07 Notes.md"
+                "file": "beschrijvingen/00_teamnotes/WK-01.md"
               }
             }
           }
@@ -161,12 +161,16 @@
   },
   "active": "c47dafa803042241",
   "lastOpenFiles": [
-    "beschrijvingen/scrumNotes.md",
-    "beschrijvingen/02_notes/workshop_JPMorgan.md",
-    "beschrijvingen/02_notes/NTW-01 notes.md",
-    "beschrijvingen/01_notes/workshop_softSkills.md",
+    "01_Linux_1/01_completed_assignments/LNX-06 report.md",
+    "beschrijvingen/01_notes/LNX-06 notes.md",
     "beschrijvingen/01_notes/SS-01_learningToLearn.md",
     "beschrijvingen/00_teamnotes/WK-01.md",
+    "beschrijvingen/scrumNotes.md",
+    "beschrijvingen/01_notes/workshop_softSkills.md",
+    "beschrijvingen/01_notes/LNX-08 Notes.md",
+    "beschrijvingen/01_notes/LNX-07 Notes.md",
+    "beschrijvingen/02_notes/workshop_JPMorgan.md",
+    "beschrijvingen/02_notes/NTW-01 notes.md",
     "beschrijvingen/00_teamnotes",
     "02_Networking_1/02_completed_assignments/NTW-01 report.md",
     "02_Networking_1/02_completed_assignments",
@@ -180,9 +184,6 @@
     "Untitled 1.canvas",
     "02_Cloud_1/S3.md",
     "02_Cloud_1",
-    "beschrijvingen/01_notes/LNX-08 Notes.md",
-    "beschrijvingen/01_notes/LNX-07 Notes.md",
-    "beschrijvingen/01_notes/LNX-06 notes.md",
     "00_templates/retro.md",
     "00_templates/standup.md",
     "beschrijvingen/01_notes/GIT-01 Notes.md",
@@ -192,7 +193,6 @@
     "beschrijvingen/01_notes/LNX-04 notes.md",
     "beschrijvingen/01_notes/LNX-05 notes.md",
     "01_Linux_1/01_completed_assignments/LNX-03 report.md",
-    "01_Linux_1/01_completed_assignments/LNX-06 report.md",
     "01_Linux_1/01_completed_assignments/LNX-07 report.md",
     "00_includes/LNX-08_screenshot2.png",
     "00_includes/LNX-08_screenshot1.png",
