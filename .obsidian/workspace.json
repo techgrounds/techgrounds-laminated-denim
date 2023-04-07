@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "7411c80631b61cc7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "beschrijvingen/00_teamnotes/WK-01.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -48,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#encapsulation",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,8 +78,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -86,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "beschrijvingen/02_notes/NTW-01 notes.md",
+                "file": "beschrijvingen/00_teamnotes/WK-01.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "beschrijvingen/02_notes/NTW-01 notes.md",
+                "file": "beschrijvingen/00_teamnotes/WK-01.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "beschrijvingen/02_notes/NTW-01 notes.md"
+                "file": "beschrijvingen/00_teamnotes/WK-01.md"
               }
             }
           }
@@ -148,14 +160,19 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "7249be13c2a4b6b6",
+  "active": "7411c80631b61cc7",
   "lastOpenFiles": [
-    "beschrijvingen/02_notes/NTW-01 notes.md",
-    "02_Networking_1/02_completed_assignments/NTW-01 report.md",
-    "beschrijvingen/01_notes/SS-01_learningToLearn.md",
     "01_Linux_1/01_completed_assignments/LNX-08 report.md",
     "01_Linux_1/01_completed_assignments/LNX-07 report.md",
     "01_Linux_1/01_completed_assignments/LNX-06 report.md",
+    "beschrijvingen/01_notes/LNX-08 Notes.md",
+    "beschrijvingen/01_notes/LNX-01 Notes.md",
+    "01_Linux_1/01_completed_assignments/LNX-01 report.md",
+    "beschrijvingen/02_notes/NTW-01 notes.md",
+    "beschrijvingen/00_teamnotes/WK-01.md",
+    "beschrijvingen/Exam notes.md",
+    "02_Networking_1/02_completed_assignments/NTW-01 report.md",
+    "beschrijvingen/01_notes/SS-01_learningToLearn.md",
     "01_Linux_1/01_completed_assignments/LNX-05 report.md",
     "01_Linux_1/01_completed_assignments/LNX-04 report.md",
     "01_Linux_1/01_completed_assignments/LNX-03 report.md",
@@ -163,7 +180,6 @@
     "01_Linux_1/LNX-07/LNX-07-EX1.md",
     "01_Linux_1/LNX-07/LNX-07-EX2.md",
     "01_Linux_1/01_completed_assignments/LNX-02 report.md",
-    "01_Linux_1/01_completed_assignments/LNX-01 report.md",
     "01_Linux_1/01_completed_assignments/GIT-02 report.md",
     "01_Linux_1/01_completed_assignments/GIT-01 report.md",
     "01_Linux_1/GIT-02/GIT-02-learning-markdown.md",
@@ -172,12 +188,8 @@
     "Untitled 1.canvas",
     "2023-04-07.md",
     "00_templates/standup.md",
-    "beschrijvingen/00_teamnotes/WK-01.md",
     "beschrijvingen/01_notes/LNX-06 notes.md",
     "beschrijvingen/scrumNotes.md",
-    "beschrijvingen/01_notes/workshop_softSkills.md",
-    "beschrijvingen/01_notes/LNX-08 Notes.md",
-    "beschrijvingen/01_notes/LNX-07 Notes.md",
     "beschrijvingen/00_teamnotes",
     "02_Networking_1/02_completed_assignments",
     "02_Networking_1",
