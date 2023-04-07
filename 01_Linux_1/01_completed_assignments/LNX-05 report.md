@@ -3,22 +3,22 @@ File permissions in Linux determine who can access (read), change (write) and us
 
 Permissions are split into three categories: user, user group and other. The OS identifies which of these categories a user trying to access the file belongs to and lends the correct permissions.
 
+#IT/Linux
+
 ## Key-terms
 ##### rwx
 Read, write, execute. A user with **rwx** permissions for a file can read, write and execute it.
 
-##### -l
+##### -l flag
 An option for the **ls** command. It displays information in a long list format, showing much more detail.
 
 ##### chmod
-Change mode. This command changes the file permissions for a file using octal values.
+Change mode. This command changes the file permissions for a file using octal values. This can also be done by definining the user and permission. For example `chmod u+x FILE` gives the user owner execute permission.
 
 ##### Octal number system
 A numeral system, used in this context to set file permissions. Supplanted in most modern computing by the hexadecimal system.
 
-Read is defined by the number 4. Write by 2. Execute 1. Added together (as 4, 6 or 7) in a 3 digit number signifies which user has permissions. The first digit represents the owner, the second the owner group, and the third other users. An example below:
-	chmod 764 LNX-05.txt
-changes the permissions for the file LNX-05.txt so that the owner can read, write and execute. The group owner can read and write. Other users can only read.
+Read is defined by the number 4. Write by 2. Execute 1. Added together (as 4, 6 or 7) in a 3 digit number signifies which user has permissions. The first digit represents the owner, the second the owner group, and the third other users. As an example, `chmod 764 LNX-05.txt` changes the permissions for the file LNX-05.txt so that the owner can read, write and execute. The group owner can read and write. Other users can only read.
 
 ##### chown
 Changes the owner of a file.

@@ -13,13 +13,14 @@ Version control and source code management platform. Allows teams to collaborate
 * Displayed when anyone visits the repository.
 
 ##### Commits
-* The way you adapt changes made locally to the GitHub repository.
+* The way you save changes made locally. 
 * You make a commit when you've made changes you want to save.
 * Add a commit message to let teammates know what changes you've made.
 
 ##### Pull requests
 * Pulls are used to request feedback from collaborators on changes in a branch.
 * Add specific people to show them you want their feedback.
+* They can also be used to merge branches into main.
 
 ##### Pushes
 * Once you've got a commit or multiple commits, use *push* to add the changes to the repository.

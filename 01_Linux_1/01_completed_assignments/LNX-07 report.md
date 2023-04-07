@@ -1,12 +1,14 @@
 # Bash scripting
 Bash is a command language and shell. Via a command line interface, it processes commands and executes them. Via scripting, it's possible to run multiple commands at once in sequence.
 
+#IT/Linux #IT/Linux/Bash
+
 ## Key-terms
 ##### PATH
 Allows the user to run command-line programs from directories other than the current working directory. Adding a new directory works as follows: `export PATH=/this/way/to/file:$PATH` to prioritise it. `export PATH=$PATH:/thisway/to/file` adds it to the end of the list of checked directories instead. This lasts until the end of the current shell session. To permanently add the directory, it requires a change in the shell configuration file, typically found at `~/.bashrc`.
 
 ##### bash
-A command language and shell. It can read the bash scripting language and execute the commands it reads. 
+A command language and shell. It can read the bash scripting language and execute the commands it reads. Used as a command, it tells the shell to execute the contents of the *stdinput.*
 
 ##### script
 A file with a list of commands. With a command language interpreter such as **bash**, it's possible to read and execute these commands.

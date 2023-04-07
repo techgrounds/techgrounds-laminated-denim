@@ -3,6 +3,8 @@ Users are accounts or processes on a Linux machine. There are two types: system 
 
 Groups are a cluster of users. They simplify managing permissions for multiple users.
 
+#IT/Linux
+
 ## Key-terms
 ##### sudo
 Super User Do. Allows the user to execute commands they would not normally be able to. Example: `sudo adduser user2`
@@ -16,10 +18,10 @@ The command to add a user to a group.
 ##### su
 Switch user. Switches to another user. Will prompt for a password if there is one.
 
-##### -a
+##### -a flag
 Append. In the context of this assignment, it adds the user to the groups listed by **-G** without removing them from other groups.
 
-##### -G
+##### -G flag
 Supplementary groups the user is also part of.
 
 ## Opdracht

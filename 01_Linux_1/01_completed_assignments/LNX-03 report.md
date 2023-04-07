@@ -1,6 +1,8 @@
 # Working with text (CLI)
 The basics of working with text files in Linux via the CLI. Using the **grep**, **echo**, **cat** commands and the **\>** operator it's possible to create, search and read text files. 
 
+#IT/Linux 
+
 ## Key-terms
 ##### cat
 Concatenate. Displays the contents of a file.

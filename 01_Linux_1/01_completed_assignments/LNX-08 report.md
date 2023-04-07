@@ -1,6 +1,8 @@
 # Cron jobs
 Cron jobs allow the user to run tasks and processes on a schedule. In combination with scripting, this allows for significant automation of otherwise monotonous tasks. 
 
+#IT/Linux #IT/Linux/Bash
+
 ## Key-terms
 ##### cron
 Cron is a *daemon* used to schedule tasks to be executed at a specific time and date.

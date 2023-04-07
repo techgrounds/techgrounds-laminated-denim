@@ -1,6 +1,8 @@
 # Processes
 Processes are programs that are actively executing. They are identified in the terminal by a name, such as *sshd* and a PID, such as *258*. There are multiple kinds of processes in Linux, including user processes, daemon processes and kernel processes. User processes are initiated by the user. Daemon processes  run in the background as services. Kernel processes run in the kernel, and cannot be modified on the fly.
 
+#IT/Linux
+
 ## Key-terms
 ##### apt
 A utility that manages packages in Linux distributions. Used for installing, updating and uninstalling packages such as *telnetd* and *apache2*.
