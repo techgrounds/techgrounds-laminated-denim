@@ -11,8 +11,12 @@
             "id": "7249be13c2a4b6b6",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "01_Linux_1/01_completed_assignments/LNX-08 report.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "01_Linux_1/01_completed_assignments/LNX-08 report.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "01_Linux_1/01_completed_assignments/LNX-08 report.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "01_Linux_1/01_completed_assignments/LNX-08 report.md"
+              }
             }
           }
         ],
@@ -140,9 +148,11 @@
   },
   "active": "7249be13c2a4b6b6",
   "lastOpenFiles": [
+    "01_Linux_1/01_completed_assignments/LNX-07 report.md",
+    "01_Linux_1/01_completed_assignments/GIT-02 report.md",
+    "01_Linux_1/LNX-07/LNX-07-EX1.md",
     "01_Linux_1/01_completed_assignments/LNX-02 report.md",
     "01_Linux_1/01_completed_assignments/LNX-01 report.md",
-    "01_Linux_1/01_completed_assignments/GIT-02 report.md",
     "01_Linux_1/01_completed_assignments/GIT-01 report.md",
     "01_Linux_1/GIT-02/GIT-02-learning-markdown.md",
     "00_templates/opdracht.md",
@@ -171,8 +181,6 @@
     "beschrijvingen/02_notes/J.P. Morgan Softskill Notes.md",
     "02_Cloud_1/S3.md",
     "02_Cloud_1",
-    "00_templates/retro.md",
-    "beschrijvingen/01_notes/GIT-01 Notes.md",
     "00_includes/LNX-08_screenshot2.png",
     "00_includes/LNX-08_screenshot1.png",
     "00_includes/LNX-08_screenshot3.png",

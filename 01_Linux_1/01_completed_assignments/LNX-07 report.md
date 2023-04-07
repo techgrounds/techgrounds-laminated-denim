@@ -37,7 +37,7 @@ https://ryanstutorials.net/bash-scripting-tutorial/bash-if-statements.php
 * Create a script that appends a line of text to a text file whenever it is executed.
 	* How do I create a script?
 		* How do I create a script with the required functionality?  
-	I followed the instructions on [this site](https://www.freecodecamp.org/news/shell-scripting-crash-course-how-to-write-bash-scripts-in-linux/) to learn the **shebang** command and adjusted the tutorial using my knowledge of **echo** and **\>\>**. 
+I followed the instructions on [this site](https://www.freecodecamp.org/news/shell-scripting-crash-course-how-to-write-bash-scripts-in-linux/) to learn the **shebang** command and adjusted the tutorial using my knowledge of **echo** and **\>\>**. 
 
 * Create a script that installs the httpd package, activates httpd, and enables httpd. Finally, your script should print the status of httpd in the terminal.
 	* What is httpd?
@@ -49,15 +49,15 @@ https://ryanstutorials.net/bash-scripting-tutorial/bash-if-statements.php
 			* sudo systemctl enable apache2
 		* How do I print it?
 			* ps -aux | grep apache2  
-	I solved this issue by learning about *virtual packages* and my existing knowledge about installing apache2 from a previous course. The command `systemctl status apache2` would have been a better choice to print the status of the service.
+I solved this issue by learning about *virtual packages* and my existing knowledge about installing apache2 from a previous course. The command `systemctl status apache2` would have been a better choice to print the status of the service.
 
 * Create a script that generates a random number between 1 and 10, stores it in a variable, and then appends the number to a text file.
 	* How do I generate a random number?
 		* How do I store this number in a variable?  
-	I solved this by googling variables & the creation of random numbers in Linux. I ran into an issue where my variable `RANDOM=$((RANDOM10+1))` was recognised as a request for a random number by the **echo** command. I fixed it by appending another letter to the end of the variable.
+I solved this by googling variables & the creation of random numbers in Linux. I ran into an issue where my variable `RANDOM=$((RANDOM10+1))` was recognised as a request for a random number by the **echo** command. I fixed it by appending another letter to the end of the variable.
 
 ### Resultaat
-I created four different scripts, three of which I uploaded: [exercise 01-02](../LNX-07/LNX-07-EX1), [exercise 02](../LNX-07/LNX-07-EX2) and [exercise 03](../LNX-07/LNX-07-EX3). The first, not uploaded, appends a line of text to a new file upon execution. The second installs, starts, enables and displays the status of the appache2 webserver; a package that falls under the *virtual package* umbrella of *httpd*. The third and fourth show my progression with variables, random numbers and basic conditional scripting.
+I created four different scripts, three of which I uploaded: [exercise 01-02](../LNX-07/LNX-07-EX1.md), [exercise 02](../LNX-07/LNX-07-EX2.md) and [exercise 03](../LNX-07/LNX-07-EX3.md). The first, not uploaded, appends a line of text to a new file upon execution. The second installs, starts, enables and displays the status of the appache2 webserver; a package that falls under the *virtual package* umbrella of *httpd*. The third and fourth show my progression with variables, random numbers and basic conditional scripting.
 
 ![screenshot1](../../00_includes/LNX-07_screenshot1.png)  
 ![screenshot2](../../00_includes/LNX-07_screenshot2.png)  
