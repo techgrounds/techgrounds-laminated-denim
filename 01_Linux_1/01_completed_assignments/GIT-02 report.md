@@ -1,5 +1,7 @@
 # Markdown
-Markdown is a markup language used to add formatting to plaintext documents. It's meant to be easy to use and readable even without formatting: the syntax doesn't get in the way of readability. 
+Markdown is a markup language used to add formatting to plaintext documents. It's meant to be easy to use and readable even without formatting: the syntax doesn't get in the way of readability.
+
+#IT/Github #IT/Markdown
 
 ## Key-terms
 ##### WYSIWYG

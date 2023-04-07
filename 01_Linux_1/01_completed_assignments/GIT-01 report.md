@@ -1,7 +1,7 @@
 # Git and Github
 Version control and source code management platform. Allows teams to collaborate on and share code while maintaining version history to secure a safe environment in case of error.
 
-#Github/Repositories #Github/Main #Github/Commits #Github/Pull #Github/Push #Github/Cloning #Github/Branches #Github/
+#IT/Github
 ## Key-terms
 ##### Repositories
 * Project folder that contains all files and version (revision) histories. Can use it alone or invite people to work with you.
