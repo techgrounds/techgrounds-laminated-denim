@@ -1,6 +1,8 @@
 # SSH Remote connection
 The assignment was to connect to a virtual machine in the cloud with Secure Shell Protocol via a command line interface. Secure Shell is a networking protocol that allows for encrypted communication between two computers. It's typically used to operate another machine remotely. Linux and OS X offer native support for SSH, and Windows 10 offers access via an advanced settings menu or a client program.
 
+#IT/Linux 
+
 ## Key-terms
 #### SSH
 * Secure Shell Protocol. A networking protocol used for accessing another computer remotely.

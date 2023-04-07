@@ -1,6 +1,8 @@
 # Files and Directories
 An introduction to the basics of the Linux filesystem. The assignment involves learning how to navigate Linux via CLI and creating files and folder. This requires knowledge of a few key commands, seen below.
 
+#IT/Linux
+
 ## Key-terms
 ##### ls
 Lists files in the current directory. Can be modified or directed to list files in another directory. For example `ls -a` to list hidden files or `ls /home/../bin/` to list files in another directory.

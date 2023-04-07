@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01_Linux_1/01_completed_assignments/GIT-01 report.md",
+                "file": "01_Linux_1/01_completed_assignments/LNX-08 report.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#SSH",
+                "query": "tag:#Github",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01_Linux_1/01_completed_assignments/GIT-01 report.md",
+                "file": "01_Linux_1/01_completed_assignments/LNX-08 report.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01_Linux_1/01_completed_assignments/GIT-01 report.md",
+                "file": "01_Linux_1/01_completed_assignments/LNX-08 report.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,16 +125,16 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_Linux_1/01_completed_assignments/GIT-01 report.md"
+                "file": "01_Linux_1/01_completed_assignments/LNX-08 report.md"
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 300.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -148,47 +148,51 @@
   },
   "active": "7249be13c2a4b6b6",
   "lastOpenFiles": [
-    "01_Linux_1/01_completed_assignments/GIT-02 report.md",
-    "01_Linux_1/01_completed_assignments/GIT-01 report.md",
-    "01_Linux_1/01_completed_assignments/LNX-08 report.md",
     "01_Linux_1/01_completed_assignments/LNX-07 report.md",
-    "01_Linux_1/01_completed_assignments/LNX-06 report.md",
-    "01_Linux_1/01_completed_assignments/LNX-05 report.md",
-    "01_Linux_1/01_completed_assignments/LNX-04 report.md",
-    "01_Linux_1/01_completed_assignments/LNX-03 report.md",
+    "01_Linux_1/01_completed_assignments/GIT-02 report.md",
+    "01_Linux_1/LNX-07/LNX-07-EX1.md",
     "01_Linux_1/01_completed_assignments/LNX-02 report.md",
     "01_Linux_1/01_completed_assignments/LNX-01 report.md",
-    "Untitled 1.canvas",
+    "01_Linux_1/01_completed_assignments/GIT-01 report.md",
+    "01_Linux_1/GIT-02/GIT-02-learning-markdown.md",
+    "00_templates/opdracht.md",
     "Untitled.canvas",
+    "Untitled 1.canvas",
+    "2023-04-07.md",
+    "00_templates/standup.md",
+    "beschrijvingen/00_teamnotes/WK-01.md",
+    "01_Linux_1/01_completed_assignments/LNX-06 report.md",
+    "beschrijvingen/01_notes/LNX-06 notes.md",
+    "beschrijvingen/01_notes/SS-01_learningToLearn.md",
+    "beschrijvingen/scrumNotes.md",
+    "beschrijvingen/01_notes/workshop_softSkills.md",
+    "beschrijvingen/01_notes/LNX-08 Notes.md",
+    "beschrijvingen/01_notes/LNX-07 Notes.md",
+    "beschrijvingen/02_notes/workshop_JPMorgan.md",
+    "beschrijvingen/02_notes/NTW-01 notes.md",
+    "beschrijvingen/00_teamnotes",
+    "02_Networking_1/02_completed_assignments/NTW-01 report.md",
+    "02_Networking_1/02_completed_assignments",
+    "02_Networking_1",
+    "beschrijvingen/ideas/01-WK.md",
+    "beschrijvingen/ideas",
+    "beschrijvingen/Soft skills workshop.md",
+    "beschrijvingen/Scrum Notes.md",
+    "beschrijvingen/02_notes/J.P. Morgan Softskill Notes.md",
+    "02_Cloud_1/S3.md",
+    "02_Cloud_1",
     "00_includes/LNX-08_screenshot2.png",
     "00_includes/LNX-08_screenshot1.png",
     "00_includes/LNX-08_screenshot3.png",
-    "beschrijvingen/01_notes/LNX-08 Notes.md",
-    "01_Linux_1/LNX-07/LNX-07-EX3.md",
-    "beschrijvingen/01_notes/LNX-07 Notes.md",
-    "01_Linux_1/LNX-07/LNX-07-EX1.md",
-    "01_Linux_1/LNX-07/LNX-07-EX2.md",
-    "beschrijvingen/01_notes/LNX-01 Notes.md",
-    "00_templates/standup.md",
-    "beschrijvingen/01_notes/LNX-05 notes.md",
-    "beschrijvingen/ideas/01-WK.md",
-    "beschrijvingen/01_notes/GIT-01 Notes.md",
-    "beschrijvingen/01_notes/LNX-04 notes.md",
-    "beschrijvingen/01_notes/LNX-03 Notes.md",
-    "beschrijvingen/01_notes/LNX-06 notes.md",
-    "beschrijvingen/01_notes/LNX-02 Notes.md",
-    "beschrijvingen/02_notes/J.P. Morgan Softskill Notes.md",
     "Pasted image 20230405150054.png",
     "Pasted image 20230405150043.png",
     "Pasted image 20230405150033.png",
     "Pasted image 20230405150030.png",
     "00_includes/LNX-06_screenshot1.png",
     "00_includes/LNX-06_screenshot2.png",
-    "00_templates/opdracht.md",
     "00_includes/LNX-07_screenshot4.png",
     "01_Linux_1/LNX-07",
     "beschrijvingen/02_notes",
-    "beschrijvingen/ideas",
     "01_Linux_1/GIT-02",
     "01_Linux_1/GIT-01"
   ]
