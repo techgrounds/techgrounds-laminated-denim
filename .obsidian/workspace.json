@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "2223774f37b6dc11",
+        "id": "6dbd407b419c328e",
         "type": "tabs",
         "children": [
           {
-            "id": "7249be13c2a4b6b6",
+            "id": "aafb53f5e9c7e31a",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -20,61 +20,19 @@
             }
           },
           {
-            "id": "7411c80631b61cc7",
+            "id": "51061d14e0b8f694",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "beschrijvingen/02_notes/workshop_JPMorgan.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8ba80d2230b16b26",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "beschrijvingen/02_notes/Untitled.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8760560481476eab",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "beschrijvingen/02_notes/NTW-01 notes.md",
+                "file": "beschrijvingen/02_notes/NTW-02 Notes.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 3
-      },
-      {
-        "id": "6dbd407b419c328e",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "8d2fa65d526a11cc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "02_Networking_1/02_completed_assignments/NTW-01 report.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          }
-        ]
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -140,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "02_Networking_1/02_completed_assignments/NTW-01 report.md",
+                "file": "beschrijvingen/02_notes/NTW-02 Notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -157,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "02_Networking_1/02_completed_assignments/NTW-01 report.md",
+                "file": "beschrijvingen/02_notes/NTW-02 Notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -180,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "02_Networking_1/02_completed_assignments/NTW-01 report.md"
+                "file": "beschrijvingen/02_notes/NTW-02 Notes.md"
               }
             }
           }
@@ -202,12 +160,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "8d2fa65d526a11cc",
+  "active": "51061d14e0b8f694",
   "lastOpenFiles": [
+    "beschrijvingen/02_notes/NTW-03 notes.md",
+    "beschrijvingen/00_teamnotes/WK-02.md",
+    "beschrijvingen/00_teamnotes/WK-01.md",
+    "beschrijvingen/02_notes/NTW-02 Notes.md",
+    "02_Networking_1/02_completed_assignments/NTW-01_report_OSI.md",
+    "02_Networking_1/02_completed_assignments/NTW-02_report_devices.md",
     "beschrijvingen/02_notes/NTW-01 notes.md",
-    "02_Networking_1/02_completed_assignments/NTW-01 report.md",
     "beschrijvingen/02_notes/workshop_JPMorgan.md",
-    "beschrijvingen/02_notes/Untitled.md",
     "00_templates/standup.md",
     "01_Linux_1/LNX-07/LNX-07-EX3.md",
     "01_Linux_1/01_completed_assignments/LNX-07 report.md",
@@ -223,13 +185,9 @@
     "01_Linux_1/LNX-07/LNX-07-EX1.md",
     "01_Linux_1/LNX-07/LNX-07-EX2.md",
     "beschrijvingen/01_notes/LNX-07 Notes.md",
-    "beschrijvingen/00_teamnotes/WK-02.md",
-    "beschrijvingen/00_teamnotes/WK-01.md",
     "beschrijvingen/01_notes/LNX-08 Notes.md",
     "beschrijvingen/01_notes/LNX-01 Notes.md",
     "01_Linux_1/01_completed_assignments/LNX-01 report.md",
-    "beschrijvingen/Exam notes.md",
-    "beschrijvingen/01_notes/SS-01_learningToLearn.md",
     "Untitled.canvas",
     "Untitled 1.canvas",
     "beschrijvingen/00_teamnotes",

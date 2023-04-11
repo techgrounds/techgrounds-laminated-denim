@@ -62,7 +62,7 @@ Routing Information Protocol is used to determine the best route for end-to-end 
 #### Layer 2: Data Link
 The data link layer is responsible for the physical addressing of a connection. It takes the #PDU it receives from an adjoining layer and adds a MAC address. Furthermore, this layer is responsible for turning packets into frames that are ready for transfer over the network.
 
-##### MAC
+##### #MAC
 Media Access Control. A MAC address is designated by the manufacturer of a piece of hardware. They are immutable, unique and are the physical addresses that determine where data is sent.
 
 ##### ARP
