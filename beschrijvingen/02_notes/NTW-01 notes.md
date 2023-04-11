@@ -1,8 +1,9 @@
 [Description of the OSI model with practical examples.](https://tryhackme.com/room/osimodelzi)  
 [An alternative source for the OSI model.](https://www.javatpoint.com/osi-model)  
-[Description of the TCP/IP model with practical examples.](https://tryhackme.com/room/packetsframes) 
+[Description of the TCP/IP model.](https://www.techopedia.com/definition/2460/transmission-control-protocolinternet-protocol-tcpip) 
 [An alternative source for the TCP/IP model](https://www.javatpoint.com/computer-network-tcp-ip-model)
 [OSI layer protocols.](https://www.techopedia.com/definition/24961/osi-protocols)  
+[Differences between OSI and TCP/IP](https://www.tutorialspoint.com/OSI-vs-TCP-IP-Reference-Mode)
 [SAP](https://www.techopedia.com/definition/25846/session-announcement-protocol-sap)
 [L2TP](https://www.techtarget.com/searchnetworking/definition/Layer-Two-Tunneling-Protocol-L2TP)
 [PDU](https://www.techopedia.com/definition/25292/protocol-data-unit-pdu)
@@ -11,6 +12,7 @@
 [ARP](https://www.techopedia.com/definition/5493/address-resolution-protocol-arp)
 [PON](https://www.techopedia.com/definition/16009/passive-optical-network-pon)
 [Bluetooth](https://www.techopedia.com/definition/26198/bluetooth)
+[API](https://www.techopedia.com/definition/24407/application-programming-interface-api))
 
 
 Study the OSI model and its uses.
@@ -104,7 +106,23 @@ Bluetooth is a wireless communication protocol used over short distances. Used o
 ##### PON
 A passive optical network is a wired connection consisting of optical fibers and splitters that connects multiple points. Examples include fiber-to-the-curb (FTTC)  and fiber-to-the-home (FTTH.) This infrastructure is known as passive because it uses no power once installed. 
 
-### Other terms
+
+## TCP/IP
+The TCP/IP model predates the OSI model. It is made up of four layers: the application layer, transport layer, network layer, and the link layer. The transport and network layers are functionally equivalent to their OSI model counterparts. The application layer folds in many of the functions otherwise seen in OSI's presentation and session layer. The link layer combines the physical and data link tasks seen in OSI.
+
+### Link Layer
+The link layer in the TCP/IP model is responsible for transmitting data between devices. It is responsible for actions such as addressing and error detection. Commonly used protocols include ethernet, Wi-Fi and Bluetooth.
+
+### Network Layer
+The network layer is also called the internet layer. It handles routing, ensuring that data is sent to the correction location via the shortest path. The IP protocol is one of the most widely used protocols in the network layer.
+
+### Transport Layer
+The transport layer establishes a connection between two devices and ensures for a reliable, error-free data transmission. Common protocols include #TCP and #UDP.
+
+### Application Layer
+The application layer is the topmost layer in the TCP/IP model and the interface between the user and the network. It services applications by handling protocols such as HTTP, FTP and Telnet. In contrast to the OSI model, the TCP/IP model does not include the session and presentation layers. Instead, it considers these to be the responsibility of #API's.
+
+## Other terms
 ##### #PDU
 Protocol Data Unit. A phrase in the OSI model that is used to reference the information being sent across a network.
 * In layer 1, a PDU is a bit.
@@ -116,16 +134,5 @@ Protocol Data Unit. A phrase in the OSI model that is used to reference the info
 ##### #Encapsulation
 The process of adding information to data as it traverses the OSI layers. This is turns a segment into a packet, and so on.
 
-
-## TCP/IP
-The TCP/IP model precedes the OSI model. It is made up of five layers: the application layer, transport layer, network layer, data link layer and physical layer.
-
-### Network Access Layer
-The network access layer is the lowest 
-### Internet Layer
-
-### Application Layer
-
-
-##### IP
-
+#### #API
+Application programming interfaces are a group of routines, protocols, functions and commands that can be referenced by programmers across different programs. This allows for cross-functionality without requiring massive amounts of new code. For example, a videogame using an API to access functionality that comes with a GPU driver.

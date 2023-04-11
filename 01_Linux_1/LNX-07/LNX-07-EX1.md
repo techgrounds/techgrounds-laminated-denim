@@ -4,3 +4,4 @@
 	sudo systemctl start apache2
 	sudo systemctl enable apache2
 	ps -aux | grep apache2
+
