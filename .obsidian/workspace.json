@@ -4,77 +4,55 @@
     "type": "split",
     "children": [
       {
-        "id": "bc7e6c6bc1a1871c",
+        "id": "199f340e22401d1a",
         "type": "tabs",
+        "dimension": 31.15264797507788,
         "children": [
           {
-            "id": "630c77c9e64a2809",
+            "id": "f7d340b0b8e9d162",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02_Networking_1/02_completed_assignments/NTW-03_report_protocols.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          }
-        ]
-      },
-      {
-        "id": "7476832d3720ce32",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "397761f70d97b782",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "02_Networking_1/02_completed_assignments/NTW-03_report_protocols.md",
+                "file": "02_Networking_1/02_completed_assignments/NTW-06_report_subnetting.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "3efcf0fcf242bdb7",
+            "id": "e8c785adf94c8a0b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01_Linux_1/01_completed_assignments/GIT-01 report.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b4043faaba905c56",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "beschrijvingen/Presentation Notes.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "49c42e904b7484ce",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "beschrijvingen/02_notes/NTW-04 notes.md",
+                "file": "beschrijvingen/02_notes/NTW-05 notes.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
+      },
+      {
+        "id": "51578d47801684bd",
+        "type": "tabs",
+        "dimension": 68.84735202492212,
+        "children": [
+          {
+            "id": "a81ac4f97a5e6268",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "beschrijvingen/00_teamnotes/WK-02.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -140,7 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "02_Networking_1/02_completed_assignments/NTW-03_report_protocols.md",
+                "file": "beschrijvingen/00_teamnotes/WK-02.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -157,7 +135,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "02_Networking_1/02_completed_assignments/NTW-03_report_protocols.md",
+                "file": "beschrijvingen/00_teamnotes/WK-02.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -180,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "02_Networking_1/02_completed_assignments/NTW-03_report_protocols.md"
+                "file": "beschrijvingen/00_teamnotes/WK-02.md"
               }
             }
           }
@@ -202,17 +180,23 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "630c77c9e64a2809",
+  "active": "a81ac4f97a5e6268",
   "lastOpenFiles": [
-    "02_Networking_1/02_completed_assignments/NTW-04_report_binaryhex.md",
-    "beschrijvingen/02_notes/NTW-04 notes.md",
     "02_Networking_1/02_completed_assignments/NTW-03_report_protocols.md",
+    "02_Networking_1/02_completed_assignments/NTW-05_report_ipadresses.md",
+    "beschrijvingen/02_notes/NTW-05 notes.md",
+    "beschrijvingen/02_notes/NTW-06 notes.md",
+    "02_Networking_1/02_completed_assignments/NTW-06_report_subnetting.md",
+    "02_Networking_1/02_completed_assignments/NTW-04_report_binaryhex.md",
     "02_Networking_1/02_completed_assignments/NTW-01_report_OSI.md",
+    "02_Networking_1/02_completed_assignments/NTW-02_report_devices.md",
+    "beschrijvingen/02_notes/workshop_JPMorgan.md",
+    "01_Linux_1/01_completed_assignments/GIT-01 report.md",
+    "beschrijvingen/Presentation Notes.md",
+    "beschrijvingen/02_notes/NTW-04 notes.md",
+    "02_Networking_1/02_completed_assignments/opdracht 1 2.md",
     "00_includes/NTW-04_screenshot1.png",
     "00_includes/NTW-04_screenshot2.png",
-    "beschrijvingen/02_notes/NTW-05 notes.md",
-    "beschrijvingen/Presentation Notes.md",
-    "01_Linux_1/01_completed_assignments/GIT-01 report.md",
     "01_Linux_1/01_completed_assignments/GIT-02 report.md",
     "01_Linux_1/01_completed_assignments/LNX-01 report.md",
     "01_Linux_1/01_completed_assignments/LNX-02 report.md",
@@ -222,16 +206,11 @@
     "01_Linux_1/01_completed_assignments/LNX-06 report.md",
     "01_Linux_1/01_completed_assignments/LNX-07 report.md",
     "01_Linux_1/01_completed_assignments/LNX-08 report.md",
-    "02_Networking_1/02_completed_assignments/NTW-02_report_devices.md",
     "beschrijvingen/01_notes/SS-01_learningToLearn.md",
     "beschrijvingen/01_notes/workshop_softSkills.md",
     "00_includes/NTW-03_screenshot1.png",
     "beschrijvingen/02_notes/NTW-03 notes.md",
     "NTW-01_report_OSI.md",
-    "beschrijvingen/scrumNotes.md",
-    "beschrijvingen/Exam notes.md",
-    "beschrijvingen/02_notes/workshop_JPMorgan.md",
-    "beschrijvingen/storage-types.md",
     "00_includes/NTW-02_screenshot1.png",
     "00_includes/NTW-02_screenshot2.png",
     "Untitled.canvas",
