@@ -4,9 +4,14 @@ Opdracht:
 lijst. Welke andere informatie heeft de router over aangesloten apparatuur?
 - Waar staat je DHCP server op jouw netwerk? Wat zijn de configuraties hiervan?
 
-[List of commonly used networking devices.](https://www.geeksforgeeks.org/network-devices-hub-repeater-bridge-switch-router-gateways/)
-[Alt. source for networking devices.](https://blog.netwrix.com/2019/01/08/network-devices-explained/)
-[Info about networking topologies](https://tryhackme.com/room/introtolan)
+[List of commonly used networking devices.](https://www.geeksforgeeks.org/network-devices-hub-repeater-bridge-switch-router-gateways/)  
+[Alt. source for networking devices.](https://blog.netwrix.com/2019/01/08/network-devices-explained/)  
+[Info about networking topologies and subnetting](https://tryhackme.com/room/introtolan)  
+[DHCP]([)https://www.techopedia.com/definition/11337/dynamic-host-configuration-protocol-dhcp)  
+[Subnet Mask](https://www.techopedia.com/definition/5563/subnet-mask)
+[CPEs](https://www.promptlink.com/media-library/blog/what-is-cpe-and-why-does-it-matter.html)  
+[Lease Time](https://lazyadmin.nl/home-network/dhcp-lease-time/)
+
 
 * Create a list of common network devices and describe their functions.
 	* Search for common network devices.
@@ -34,14 +39,30 @@ A switch is more complicated and efficient than the devices named above. Unlike 
 * Unmanaged switches, which are ideal for small networks.
 
 ### Router
-A router is primarily a network layer device, and used to connect a LAN (Local Area Network) to a WAN (Wide Area Network), such as the internet. As their name indicates, routers are responsible for routing data via the ideal path.
+A router is primarily a network layer device, and used to connect a LAN (Local Area Network) to a WAN (Wide Area Network), such as the internet. As their name indicates, routers are responsible for routing data. They have a variety of different configuration options and advanced features, such as firewalls and traffic control.
 
 ### Modem
+A modem is a digital-to-analog signal converter that converts digital signals for transfer over analog phone lines. They are a physical and data link layer device, and are typically provided by DSL and cable internet providers.
 
 ### Gateway
+Gateways are a more advanced type of router, designed to connect multiple networks that each use distinct protocols and domain name services. A protocol converter serves as the translater between these different networks, and a router that has this function can also be called a gateway.
+
+### Access Point
+Access points are data link devices, and are usually used in conjunction with a wireless connection. It can serve as a connector between a wired network and wireless devices, or a router that transmits data from one AP to another. 
 
 ### NIC
+A network interface card is an adapter that connects a machine to the network. With a unique #MAC address, it serves as a data link layer device.
 
 ## Other terms
 
 #### DHCP
+Dynamic Host Configuration Protocol gives IP addresses to new devices on the network. It allows for automatic configuration of basic networking settings.
+
+#### Subnet Mask
+A subnet mask is used to designate subnetworks for a LAN. It divides an IP address into a a host address and a network address and can determine how many devices are allowed on the subnet.
+
+#### CPEs
+Customer Premise Equipment is any device connected to the network or internet.
+
+#### Lease time
+The amount of time an IP address can be leased to a device. The IP address is reserved for the duration and can be renewed via contact with the DHCP server.

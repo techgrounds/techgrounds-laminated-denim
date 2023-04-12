@@ -4,23 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "6dbd407b419c328e",
+        "id": "5d86f1db4ff21461",
         "type": "tabs",
         "children": [
           {
             "id": "aafb53f5e9c7e31a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "beschrijvingen/02_notes/NTW-01 notes.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "51061d14e0b8f694",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -31,8 +19,25 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
+      },
+      {
+        "id": "bc7e6c6bc1a1871c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9e3a8116accab699",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "02_Networking_1/02_completed_assignments/NTW-02_report_devices.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "beschrijvingen/02_notes/NTW-02 Notes.md",
+                "file": "02_Networking_1/02_completed_assignments/NTW-02_report_devices.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "beschrijvingen/02_notes/NTW-02 Notes.md",
+                "file": "02_Networking_1/02_completed_assignments/NTW-02_report_devices.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +143,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "beschrijvingen/02_notes/NTW-02 Notes.md"
+                "file": "02_Networking_1/02_completed_assignments/NTW-02_report_devices.md"
               }
             }
           }
@@ -160,17 +165,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "51061d14e0b8f694",
+  "active": "9e3a8116accab699",
   "lastOpenFiles": [
-    "beschrijvingen/02_notes/NTW-03 notes.md",
-    "beschrijvingen/00_teamnotes/WK-02.md",
-    "beschrijvingen/00_teamnotes/WK-01.md",
-    "beschrijvingen/02_notes/NTW-02 Notes.md",
     "02_Networking_1/02_completed_assignments/NTW-01_report_OSI.md",
     "02_Networking_1/02_completed_assignments/NTW-02_report_devices.md",
+    "00_includes/NTW-02_screenshot1.png",
+    "00_includes/NTW-02_screenshot2.png",
+    "beschrijvingen/02_notes/NTW-02 Notes.md",
     "beschrijvingen/02_notes/NTW-01 notes.md",
-    "beschrijvingen/02_notes/workshop_JPMorgan.md",
+    "beschrijvingen/02_notes/NTW-03 notes.md",
     "00_templates/standup.md",
+    "00_templates/opdracht.md",
+    "beschrijvingen/00_teamnotes/WK-02.md",
+    "beschrijvingen/00_teamnotes/WK-01.md",
+    "beschrijvingen/02_notes/workshop_JPMorgan.md",
     "01_Linux_1/LNX-07/LNX-07-EX3.md",
     "01_Linux_1/01_completed_assignments/LNX-07 report.md",
     "01_Linux_1/01_completed_assignments/LNX-06 report.md",
@@ -186,8 +194,6 @@
     "01_Linux_1/LNX-07/LNX-07-EX2.md",
     "beschrijvingen/01_notes/LNX-07 Notes.md",
     "beschrijvingen/01_notes/LNX-08 Notes.md",
-    "beschrijvingen/01_notes/LNX-01 Notes.md",
-    "01_Linux_1/01_completed_assignments/LNX-01 report.md",
     "Untitled.canvas",
     "Untitled 1.canvas",
     "beschrijvingen/00_teamnotes",
@@ -203,8 +209,6 @@
     "Pasted image 20230405150033.png",
     "Pasted image 20230405150030.png",
     "00_includes/LNX-06_screenshot1.png",
-    "00_includes/LNX-06_screenshot2.png",
-    "00_includes/LNX-07_screenshot4.png",
     "01_Linux_1/LNX-07",
     "beschrijvingen/02_notes",
     "01_Linux_1/GIT-02",

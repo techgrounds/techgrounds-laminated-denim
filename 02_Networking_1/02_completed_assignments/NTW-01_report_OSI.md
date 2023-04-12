@@ -1,3 +1,5 @@
+#Networking #OSI #TCP/IP
+
 # OSI Stack
 OSI and TCP/IP are theoretical models that go into depth to explain how computer networking works. Their primary function in practice is to assist in troubleshooting.
 
