@@ -1,7 +1,7 @@
-#Networking #OSI #TCP/IP
-
 # OSI Stack
 OSI and TCP/IP are theoretical models that go into depth to explain how computer networking works. Their primary function in practice is to assist in troubleshooting.
+
+#Networking #OSI #TCP/IP #Protocols
 
 ## Key-terms
 ## OSI model
@@ -44,7 +44,10 @@ Layer Two Tunneling Protocol. This protocol is used by VPNs to provide encryptio
 The Transport layer is the layer that ensures the complete transmission of data. It takes data from upper layers and converts it into segments. Using the *TCP* and *UDP* protocols, the Transport layer creates a reliable connection that safeguards against data duplication.
 
 ##### #TCP
-The Transmission Control Protocol allows for communication over the internet. It's designed to create a connection that lasts until all data has been transmitted. Furthermore, the protocol safeguards against data corruption by checking for errors. It is commonly used for browsing the internet and file sharing, due to its accurate nature.
+The Transmission Control Protocol allows for communication over the internet. It's designed to create a connection that lasts until all data has been transmitted. Furthermore, the protocol safeguards against data corruption by checking for errors. It is commonly used for browsing the internet and file sharing, due to its accurate nature. An example of the TCP three-way handshake that is used to establish a stable connection below:
+* The client sends a request to **SYN**chronise with the server.
+* The server responds with a **SYN**chronise and **ACK**nowledge message.
+* The client **ACK**knowledges this.
 
 ##### #UDP
 The User Datagram Protocol is designed for a faster transfer of data. By not synchronising the connection between two devices or checking the received data for errors, it trades accuracy for efficiency. This is useful for activities that require large amounts of data to be sent where some corruption is unimportant, such as video streaming.

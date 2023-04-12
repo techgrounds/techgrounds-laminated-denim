@@ -1,7 +1,7 @@
-#Networking #OSI
-
 # Network Devices
 Networking devices serve to connect networks or devices together. There are many different types of devices, each with unique functions. Some can connect together different LANs, others simply refresh a signal so that it is still readable once it reaches its end destination. Networking devices are the backbone of any home, office or global network.
+
+#Networking #OSI
 
 ## Key-terms
 ### Common network devices
