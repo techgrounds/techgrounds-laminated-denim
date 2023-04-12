@@ -4,6 +4,9 @@
 ##### Metacognition
 Metacognition is the process of understanding one's thoughts and patterns.
 
+# Computational Thinking
+* *
+
 # Peer learning
 * Explaining concepts to others helps you learn and can show you gaps in your own knowledge.
 * Builds cohesion and social relationships.

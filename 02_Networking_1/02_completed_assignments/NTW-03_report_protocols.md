@@ -78,6 +78,7 @@ Wireshark is a program that analyses network protocols. It can sniff packets on 
 [Internet Engineering Task Force](https://www.ietf.org/)  
 [IETF process for developing a new standard](https://www.ietf.org/standards/process/)  
 [Information about packets and TCP](https://tryhackme.com/room/packetsframes)
+[Observation of TCP in wireshark](https://www.youtube.com/watch?v=3Zb_EebU22o)
 [SAP](https://www.techopedia.com/definition/25846/session-announcement-protocol-sap)  
 [L2TP](https://www.techtarget.com/searchnetworking/definition/Layer-Two-Tunneling-Protocol-L2TP)  
 [PDU](https://www.techopedia.com/definition/25292/protocol-data-unit-pdu)  
