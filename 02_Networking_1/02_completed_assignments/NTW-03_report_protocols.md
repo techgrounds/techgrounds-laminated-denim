@@ -74,9 +74,19 @@ Wireshark is a program that analyses network protocols. It can sniff packets on 
 
 ## Opdracht
 ### Gebruikte bronnen
-[Wireshark documentation](https://www.wireshark.org/docs/wsug_html/)
-[Internet Engineering Task Force](https://www.ietf.org/)
-[IETF process for developing a new standard](https://www.ietf.org/standards/process/)
+[Wireshark documentation](https://www.wireshark.org/docs/wsug_html/)  
+[Internet Engineering Task Force](https://www.ietf.org/)  
+[IETF process for developing a new standard](https://www.ietf.org/standards/process/)  
+[Information about packets and TCP](https://tryhackme.com/room/packetsframes)
+[SAP](https://www.techopedia.com/definition/25846/session-announcement-protocol-sap)  
+[L2TP](https://www.techtarget.com/searchnetworking/definition/Layer-Two-Tunneling-Protocol-L2TP)  
+[PDU](https://www.techopedia.com/definition/25292/protocol-data-unit-pdu)  
+[IPv4](https://www.techopedia.com/definition/5367/internet-protocol-version-4-ipv4)  
+[RIP](https://www.techopedia.com/definition/24846/routing-information-protocol-rip)  
+[ARP](https://www.techopedia.com/definition/5493/address-resolution-protocol-arp)  
+[PON](https://www.techopedia.com/definition/16009/passive-optical-network-pon)  
+[Bluetooth](https://www.techopedia.com/definition/26198/bluetooth)  
+[API](https://www.techopedia.com/definition/24407/application-programming-interface-api))  
 
 ### Ervaren problemen
 * Identify several other protocols and their associated OSI layer. Name at least one for each layer.

@@ -18,20 +18,33 @@
                 "source": false
               }
             }
-          }
-        ]
-      },
-      {
-        "id": "7d9b8db034194ade",
-        "type": "tabs",
-        "children": [
+          },
           {
-            "id": "ffd85c27e55d54c0",
+            "id": "4f91c013296329bc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "beschrijvingen/02_notes/NTW-03 notes.md",
+                "file": "02_Networking_1/02_completed_assignments/NTW-01_report_OSI.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      },
+      {
+        "id": "7476832d3720ce32",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "397761f70d97b782",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "02_Networking_1/02_completed_assignments/NTW-03_report_protocols.md",
                 "mode": "source",
                 "source": false
               }
@@ -165,11 +178,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "630c77c9e64a2809",
+  "active": "397761f70d97b782",
   "lastOpenFiles": [
     "02_Networking_1/02_completed_assignments/NTW-01_report_OSI.md",
     "02_Networking_1/02_completed_assignments/NTW-03_report_protocols.md",
     "02_Networking_1/02_completed_assignments/NTW-02_report_devices.md",
+    "00_templates/NTW-04_report_binaryhex.md",
     "00_includes/NTW-03_screenshot1.png",
     "beschrijvingen/02_notes/NTW-03 notes.md",
     "NTW-01_report_OSI.md",
