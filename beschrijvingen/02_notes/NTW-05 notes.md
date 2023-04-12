@@ -15,13 +15,18 @@ Internet Protocol addresses are a number that identify a device on a network. In
 Internet Protocol version 4 has been superseded by IPv6, but is still incredibly popular and remains the most widely used protocol. It governs how devices communicate over a network.
 
 #### IPv6
+IPv6 is a 128-bit protocol that provides many more addresses. Because of its length, it is possible to leave out repeated 0's in the same octet when writing out an address. Further, an IPv6 address is split into two sections: a network component and a node component. This is done by splitting the address in half. The first 64 bits refer to the network, and the final 64 bits to the node.
+
+The bits used for the network portion of the address are used primarily for routing. It's split further into two blocks: one of 48, used for routing over the internet. The other 16 bits are used for subnetting on LANs. The remaining 64 bits draw information from the #MAC address. 
 
 #### Public and private IPs
+Public IPs are used to address an entire local network of devices via the router. It is effectively the IP address with which one is visible on the internet. Private IPs are used to identify devices on the local network.
 
 #### NAT
-
+Network address translation is essentially a means of combining a local network of multiple private IPs into a single public IP. This function is typically found on a router or gateway.
 
 #### Static and dynamic IPs
+Dynamic IPs change automatically. On a private network these are assigned by the DHCP server. Publically, it is a user's ISP that designates IP addresses. Static IPs are configured manually. They're particularly useful for servers that need to consistently available on the same address.
 
 
 #### Exercise:

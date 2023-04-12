@@ -128,7 +128,7 @@ Application programming interfaces are a group of routines, protocols, functions
 [ARP](https://www.techopedia.com/definition/5493/address-resolution-protocol-arp)  
 [PON](https://www.techopedia.com/definition/16009/passive-optical-network-pon)  
 [Bluetooth](https://www.techopedia.com/definition/26198/bluetooth)  
-[API](https://www.techopedia.com/definition/24407/application-programming-interface-api))  
+[API](https://www.techopedia.com/definition/24407/application-programming-interface-api)  
 
 ### Ervaren problemen
 Study the OSI model and its uses.

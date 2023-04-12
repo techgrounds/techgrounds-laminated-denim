@@ -8,3 +8,6 @@ moet minimaal 30 hosts kunnen plaatsen (de 30 hosts is exclusief de NAT
 gateway).
 ○ 1 public subnet met een internet gateway. Dit subnet moet minimaal 5 hosts
 kunnen plaatsen (de 5 hosts is exclusief de internet gateway).
+
+
+https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Scenario2.html <- from younes
