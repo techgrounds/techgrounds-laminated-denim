@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02_Networking_1/02_completed_assignments/NTW-02_report_devices.md",
+                "file": "beschrijvingen/02_notes/NTW-06 notes.md",
                 "mode": "source",
                 "source": false
               }
@@ -31,7 +31,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "beschrijvingen/02_notes/NTW-06 notes.md",
+                "file": "02_Networking_1/02_completed_assignments/NTW-06_report_subnets.md",
                 "mode": "source",
                 "source": false
               }
@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "02_Networking_1/02_completed_assignments/NTW-02_report_devices.md",
+                "file": "02_Networking_1/02_completed_assignments/NTW-06_report_subnets.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "02_Networking_1/02_completed_assignments/NTW-02_report_devices.md",
+                "file": "02_Networking_1/02_completed_assignments/NTW-06_report_subnets.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -143,7 +143,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "02_Networking_1/02_completed_assignments/NTW-02_report_devices.md"
+                "file": "02_Networking_1/02_completed_assignments/NTW-06_report_subnets.md"
               }
             }
           }
@@ -165,11 +165,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a81ac4f97a5e6268",
+  "active": "86a49ccd5779d4cb",
   "lastOpenFiles": [
+    "00_includes/NTW-06_screenshot1.png",
     "beschrijvingen/02_notes/NTW-06 notes.md",
-    "02_Networking_1/02_completed_assignments/NTW-02_report_devices.md",
     "02_Networking_1/02_completed_assignments/NTW-06_report_subnets.md",
+    "02_Networking_1/02_completed_assignments/NTW-02_report_devices.md",
+    "02_Networking_1/NTW-06/NTW-06_subnets.drawio.crswap",
+    "02_Networking_1/NTW-06/NTW-06_subnets.drawio",
+    "02_Networking_1/NTW-06",
+    "02_Networking_1/New folder",
     "NTW-06_report_subnets.md",
     "02_Networking_1/02_completed_assignments/NTW-04_report_binaryhex.md",
     "02_Networking_1/02_completed_assignments/NTW-05_report_ipaddresses.md",
@@ -194,7 +199,6 @@
     "01_Linux_1/01_completed_assignments/LNX-02 report.md",
     "01_Linux_1/01_completed_assignments/LNX-03 report.md",
     "01_Linux_1/01_completed_assignments/LNX-04 report.md",
-    "01_Linux_1/01_completed_assignments/LNX-05 report.md",
     "00_includes/NTW-03_screenshot1.png",
     "00_includes/NTW-02_screenshot1.png",
     "00_includes/NTW-02_screenshot2.png",
@@ -210,9 +214,6 @@
     "00_includes/LNX-08_screenshot3.png",
     "Pasted image 20230405150054.png",
     "Pasted image 20230405150043.png",
-    "01_Linux_1/LNX-07",
-    "beschrijvingen/02_notes",
-    "01_Linux_1/GIT-02",
-    "01_Linux_1/GIT-01"
+    "01_Linux_1/LNX-07"
   ]
 }

@@ -10,9 +10,20 @@ gateway).
 kunnen plaatsen (de 5 hosts is exclusief de internet gateway).
 
 
-https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Scenario2.html <- from younes
+* Public IP: 31.186.200.192/29: 31.186.200.192 - 31.186.200.199
+* Private IP with NAT: 192.168.1.0/27 192.168.1.0 - 192.168.1.31
+* Private IP without NAT: 192.168.1.32/27 192.168.1.32 - 192.168.1.64
+* Private subnet for the web server: 192.168.1.64/29
+* 
+
+
+[AWS explanation on public & private subnets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Scenario2.html)
 [Subnetting and address space tutorial](https://hub.packtpub.com/understanding-address-spaces-and-subnetting-in-ipv4-tutorial/)  
-[Subnet calculator](https://www.subnet-calculator.com/)
+[Subnet calculator](https://www.subnet-calculator.com/)  
+[CIDR](https://www.techtarget.com/searchnetworking/definition/CIDR)  
+[Network address](https://www.techopedia.com/definition/20969/network-address)  
+[Broadcast address](http://ladu.htk.tlu.ee/erika/taavi/doc2/network_and_broadcast_address.html)
+
 
 
 #### #Subnets
@@ -29,6 +40,14 @@ Variable Length Subnet Masking allows for subnets to be divided into smaller sub
 
 #### CIDR
 Classless Inter Domain Routing is a manner of condensing routing tables into a smaller size. Instead of dividing a route into an IP address and a subnet mask, it notes the network address and the number of mask bits. For example, `192.168.1.0 255.255.255.192` becomes `192.168.1.0/26` because there are 6 available bits for use by each subnet.
+
+#### Network address
+Network addresses are used to identify the network device on a particular subnet. For example, the switch or router.
+
+#### Broadcast address
+Broadcast addresses are used to address all devices on a network at once.
+
+
 
 #### NAT Gateway
 See [NTW-02](NTW-02_report_devices.md) for gateways and [NTW-05](NTW-05_report_ipaddresses.md) for NAT.
