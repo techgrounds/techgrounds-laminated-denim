@@ -12,7 +12,7 @@ A repeater is tasked with copying a weakening signal and retransmitting it at fu
 A hub is in essence a repeater with more than two ports. It connects multiple  devices on the same network and retransmits signals it receives to all connected devices. It does not discriminate between devices; meaning data it sends to one device it sends to all. It operates on the physical layer.
 
 #### Bridge
-A bridge is similar in function a repeater, but is capable of reading the #MAC addresses of the devices on both ends of a signal. They can also be used to connect two LANs that function on the same networking protocols. It is a two port device, and because of its ability to read MAC addresses is a data link layer device.
+A bridge is similar in function to a repeater, but is capable of reading the #MAC addresses of the devices on both ends of a signal. They can also be used to connect two LANs that function on the same networking protocols. It is a two port device, and because of its ability to read MAC addresses is a data link layer device.
 
 #### Switch
 A switch is more complicated and efficient than the devices named above. Unlike a bridge, it has multiple ports and boasts features that improve performance. It is capable of checking packets for errors before forwarding them to the correct destination. Switches exist with many different kinds of functions, including:
@@ -39,8 +39,8 @@ A network interface card is an adapter that connects a machine to the network. W
 #### DHCP
 Dynamic Host Configuration Protocol gives IP addresses to new devices on the network. It allows for automatic configuration of basic networking settings.
 
-#### Subnet Mask
-A subnet mask is used to designate subnetworks for a LAN. It divides an IP address into a a host address and a network address and can determine how many devices are allowed on the subnet.
+#### Subnets
+See #Subnets in [NTW-06.](NTW-06_report_subnets.md)
 
 #### CPEs
 Customer Premise Equipment is any device connected to the network or internet.
