@@ -1,7 +1,7 @@
 # Subnetting
 Subnets are used to divide IP addresses into subnetworks. This allows administrators to set permissions on a subnet basis, creating additional security. Furthermore, subnetting allows for more efficient use of IPv4's available addresses and prevents it from exhausting this pool as quickly as it would otherwise.
 
-#Networking #Subnets
+#Networking #Subnets #IP
 
 ## Key-terms
 
