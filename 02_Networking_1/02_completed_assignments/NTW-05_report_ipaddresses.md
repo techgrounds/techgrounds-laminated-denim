@@ -1,5 +1,5 @@
 # IP addresses
-[Geef een korte beschrijving van het onderwerp]
+IP addresses are logical addresses that identify devices on a network. They could be compared in function to a street address. They differ from #MAC addresses, which are more akin to a fingerprint and serve as the physical identifier for a device.
 
 ## Key-terms
 #### IP addresses
@@ -32,9 +32,19 @@ Dynamic IPs change automatically. On a private network these are assigned by the
 ### Ervaren problemen
 I broke the assignment down into two parts, theory and practical exercise.
 * First, I broadened my layman's knowledge of the internet protocol and the associated key terms.
-* Second, I executed the assignment step by step. I ran into no issues doing this given
-
-
+* Second, I executed the assignment step by step.
+	* I ran into no unexpected issues.
 
 ### Resultaat
-[Omschrijf hoe je weet dat je opdracht gelukt is (gebruik screenshots waar nodig).]
+
+To start, I used the website https://whatismyip.com to determine the public IP of my phone and desktop. These were the same. An ISP assigns home users a single public IP, which is found on the internet gateway in the home router.  
+![ss1](../../00_includes/NTW-05_screenshot1.png)  
+![ss2](../../00_includes/NTW-05_screenshot2.png)  
+The router then sends the internet traffic towards the device that requested it via a private IP address. These addresses, visible below, are different so that the router can differentiate between the devices.  
+![ss3](../../00_includes/NTW-05_screenshot3.png)  
+![ss4](../../00_includes/NTW-05_screenshot4.png)  
+![ss previous assignment](../../00_includes/NTW-02_screenshot1.png)  
+Upon changing the private IP address of my phone to that of my desktop, my phone disappears from the list of connected devices. While my phone is still connected to the network due to the Wi-Fi protocol operating on a lower layer of the OSI model, and still able to transmit data due to possessing a recognisable IP address, network connectivity issues begin to occur. Websites fail to load or take enormous amounts of time to do so. One posits that this is because the packets requested by the phone are instead sent to the desktop, creating a cascade of errors. My desktop experiences no issues, due to the IP address being associated with its #MAC address.  
+![ss5](../../00_includes/NTW-05_screenshot6.png)  
+Finally, changing a phone's IP address on Wi-Fi to a public IP removes its ability to connect to the internet. While still connected to the network due to Wi-Fi being on a lower layer, the faulty IP address means that the router is unable to form a connection on the networking layer.  
+![ss6](../../00_includes/NTW-05_screenshot5.png)

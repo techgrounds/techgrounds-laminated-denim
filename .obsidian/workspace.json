@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "beschrijvingen/02_notes/NTW-05 notes.md",
+                "file": "02_Networking_1/02_completed_assignments/NTW-05_report_ipaddresses.md",
                 "mode": "source",
                 "source": false
               }
@@ -33,24 +33,6 @@
           }
         ],
         "currentTab": 1
-      },
-      {
-        "id": "42623bb6d8494c47",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "86a49ccd5779d4cb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "02_Networking_1/02_completed_assignments/NTW-05_report_ipaddresses.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          }
-        ]
       }
     ],
     "direction": "vertical"
@@ -79,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#encapsulation",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -96,7 +78,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -178,31 +161,30 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "86a49ccd5779d4cb",
+  "active": "38a599b31f78871c",
   "lastOpenFiles": [
+    "beschrijvingen/00_teamnotes/WK-02.md",
+    "02_Networking_1/02_completed_assignments/NTW-05_report_ipaddresses.md",
+    "00_includes/NTW-05_screenshot6.png",
+    "00_includes/router_phonenotshown.png",
+    "00_includes/NTW-05_screenshot5.png",
+    "00_includes/NTW-05_screenshot3.png",
+    "00_includes/NTW-05_screenshot4.png",
+    "00_includes/NTW-05_screenshot1.png",
+    "00_includes/NTW-05_screenshot2.png",
+    "02_Networking_1/02_completed_assignments/NTW-06_report_subnets.md",
+    "beschrijvingen/02_notes/NTW-05 notes.md",
     "02_Networking_1/NTW-05_presentation/phone_IP.png",
     "00_includes/phone_IP.png",
     "02_Networking_1/NTW-05_presentation/desktop_IP.png",
-    "02_Networking_1/NTW-05_presentation/router_phoneshown.png",
-    "02_Networking_1/NTW-05_presentation/router_phonenotshown.png",
-    "02_Networking_1/NTW-05_presentation/phone_nointernet.png",
-    "02_Networking_1/NTW-05_presentation/phone_localip.png",
     "02_Networking_1/NTW-05_presentation",
     "02_Networking_1/New folder",
     "New folder",
-    "00_includes/router_phoneshown.png",
-    "00_includes/NTW-02_screenshot1 - Copy.png",
-    "00_includes/desktop_IP.png",
-    "00_includes/router_phonenotshown.png",
-    "beschrijvingen/02_notes/NTW-05 notes.md",
-    "02_Networking_1/02_completed_assignments/NTW-05_report_ipaddresses.md",
     "02_Networking_1/02_completed_assignments/NTW-03_report_protocols.md",
-    "beschrijvingen/00_teamnotes/WK-02.md",
     "beschrijvingen/00_teamnotes/WK-02_presentation.md",
     "02_Networking_1/02_completed_assignments/NTW-02_report_devices.md",
     "02_Networking_1/02_completed_assignments/NTW-01_report_OSI.md",
     "02_Networking_1/02_completed_assignments/NTW-04_report_binaryhex.md",
-    "02_Networking_1/02_completed_assignments/NTW-06_report_subnets.md",
     "beschrijvingen/02_notes/NTW-06 notes.md",
     "02_Networking_1/NTW-06/NTW-06_subnets.drawio.crswap",
     "02_Networking_1/NTW-06/NTW-06_subnets.drawio",
