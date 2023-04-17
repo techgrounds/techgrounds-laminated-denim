@@ -1,6 +1,8 @@
 # IP addresses
 IP addresses are logical addresses that identify devices on a network. They could be compared in function to a street address. They differ from #MAC addresses, which are more akin to a fingerprint and serve as the physical identifier for a device.
 
+#Networking #IP 
+
 ## Key-terms
 #### IP addresses
 Internet Protocol addresses are a number that identify a device on a network. In the [32-bit](NTW-04_report_binaryhex.md) IPv4 protocol, hey are typically written in the following format: `255.255.255.255`. In the 128-bit IPv6 protocol, addresses are written using hexadecimal, like so: `2001:0db8:84a3:0000:0000:8a2d:0350:6333`

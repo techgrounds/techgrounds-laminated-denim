@@ -1,0 +1,2 @@
+* Read softskills before Wednesday
+* *
