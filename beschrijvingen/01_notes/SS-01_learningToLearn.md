@@ -1,5 +1,7 @@
 #learning #studying #goals
 
+Ingaan op inhoud in presentatie, play to your strengths
+
 # Key terms
 ##### Metacognition
 Metacognition is the process of understanding one's thoughts and patterns.
