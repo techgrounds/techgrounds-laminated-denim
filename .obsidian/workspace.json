@@ -54,9 +54,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "107e761e128b2fc8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "beschrijvingen/03_notes/Sec-04 notes.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -122,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "beschrijvingen/03_notes/Sec-03 notes.md",
+                "file": "beschrijvingen/03_notes/Sec-04 notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "beschrijvingen/03_notes/Sec-03 notes.md",
+                "file": "beschrijvingen/03_notes/Sec-04 notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "beschrijvingen/03_notes/Sec-03 notes.md"
+                "file": "beschrijvingen/03_notes/Sec-04 notes.md"
               }
             }
           }
@@ -184,10 +196,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "abc01a0479e0a579",
+  "active": "107e761e128b2fc8",
   "lastOpenFiles": [
-    "beschrijvingen/03_notes/Sec-02 notes.md",
     "beschrijvingen/03_notes/Sec-03 notes.md",
+    "beschrijvingen/03_notes/Sec-04 notes.md",
+    "beschrijvingen/03_notes/Sec-02 notes.md",
     "beschrijvingen/01_notes/LNX-01 Notes.md",
     "beschrijvingen/01_notes/GIT-01 Notes.md",
     "beschrijvingen/03_notes/Sec-01 notes.md",
@@ -217,7 +230,6 @@
     "00_templates/opdracht.md",
     "00_includes/NTW-07_screenshot1.png",
     "02_Networking_1/NTW-07/NTW-07_casestudy.drawio.crswap",
-    "02_Networking_1/02_completed_assignments/NTW-06_report_subnets.md",
     "beschrijvingen/03_notes",
     "02_Networking_1/NTW-07/NTW-07_casestudy.drawio",
     "02_Networking_1/NTW-07",
