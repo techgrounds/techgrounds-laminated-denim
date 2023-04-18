@@ -24,5 +24,15 @@ A protocol used to authenticate and verify a user's identity via method of JSON 
 #### Multi-factor authentication
 MFA is a method of authentication that requires a user to provide more than one form of verification. As an example, a website might require a password and a code they receive via SMS on their phone. This greatly increases the security of the authentication process, since there is no longer a single point of failure; a bad actor would require not just the password, but also the device or service used for MFA.
 
+The three factors for MFA are:
+##### Knowledge factor
+This involves a user authenticating by revealing secret information, such as a password or PIN code. This is a secure method so long as the information remains private. Brute-forcing a password, social engineering or OSINT are possible weaknesses.
+
+##### Possession factor
+This involves a user authenticating by ownership of a unique item. This could be a mobile phone, a display card, or an e-mail account. If this item is stolen or lost, the account could be compromised.
+
+##### Inherence factor
+This involves authenticating a user by factors inherent to them. Fingerprint or retina scans and voice or facial recognition are examples of this authentication method. This information needs to be stored and secured by the organisation authenticating the user.
+
 #### Principle of least privilege
 The principle of least privilege indicates that each entity or user should be assigned the minimum authorisation they require to function. For example, allowing employees at a company access to their workstations and peripherals but preventing them from accessing database servers.
