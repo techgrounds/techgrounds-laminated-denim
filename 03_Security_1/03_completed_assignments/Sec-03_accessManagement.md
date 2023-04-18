@@ -1,4 +1,4 @@
-# Network detection
+# [Onderwerp]
 [Geef een korte beschrijving van het onderwerp]
 
 ## Key-terms
