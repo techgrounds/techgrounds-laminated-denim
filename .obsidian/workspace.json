@@ -13,25 +13,38 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03_Security_1/03_completed_assignments/Sec-02_firewalls.md",
+                "file": "00_templates/standup.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a612bd8d06658259",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "beschrijvingen/03_notes/Sec-04 notes.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
-        "id": "52a062d9e11433e6",
+        "id": "1349b46a4a3f7ce5",
         "type": "tabs",
         "children": [
           {
-            "id": "24043e26ce65b2bf",
+            "id": "eb02a933b39f1ec8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03_Security_1/03_completed_assignments/Sec-03_accessManagement.md",
+                "file": "03_Security_1/03_completed_assignments/Sec-04_symmetricEncryption.md",
                 "mode": "source",
                 "source": false
               }
@@ -103,7 +116,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "03_Security_1/03_completed_assignments/Sec-02_firewalls.md",
+                "file": "03_Security_1/03_completed_assignments/Sec-04_symmetricEncryption.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +133,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "03_Security_1/03_completed_assignments/Sec-02_firewalls.md",
+                "file": "03_Security_1/03_completed_assignments/Sec-04_symmetricEncryption.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -143,7 +156,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "03_Security_1/03_completed_assignments/Sec-02_firewalls.md"
+                "file": "03_Security_1/03_completed_assignments/Sec-04_symmetricEncryption.md"
               }
             }
           }
@@ -165,10 +178,21 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "33431943fa709274",
+  "active": "eb02a933b39f1ec8",
   "lastOpenFiles": [
-    "beschrijvingen/03_notes/Sec-03 notes.md",
+    "00_includes/Sec-04_screenshot3.png",
+    "00_includes/Sec-04_screenshot2.png",
+    "00_includes/Sec-04_screenshot1.png",
+    "beschrijvingen/03_notes/Sec-04 notes.md",
+    "03_Security_1/03_completed_assignments/Sec-04_symmetricEncryption.md",
+    "beschrijvingen/03_notes/Sec-05 notes.md",
     "03_Security_1/03_completed_assignments/Sec-03_accessManagement.md",
+    "03_Security_1/03_completed_assignments/Sec-05_asymmetricEncryption.md",
+    "beschrijvingen/03_notes/softSkillsWk3.md",
+    "beschrijvingen/03_notes/Sec-03 notes.md",
+    "00_templates/standup.md",
+    "00_templates/retro.md",
+    "00_templates/opdracht.md",
     "03_Security_1/03_completed_assignments/Sec-02_firewalls.md",
     "03_Security_1/03_completed_assignments/Sec-01_networkDetection.md",
     "beschrijvingen/03_notes/Sec-02 notes.md",
@@ -176,10 +200,6 @@
     "01_Linux_1/01_completed_assignments/LNX-05 report.md",
     "00_includes/Sec-02_screenshot1.png",
     "00_includes/Sec-02_screenshot2.png",
-    "beschrijvingen/03_notes/Sec-04 notes.md",
-    "beschrijvingen/03_notes/Sec-05 notes.md",
-    "03_Security_1/03_completed_assignments/Sec-05_asymmetricEncryption.md",
-    "03_Security_1/03_completed_assignments/Sec-04_symmetricEncryption.md",
     "beschrijvingen/01_notes/LNX-01 Notes.md",
     "beschrijvingen/01_notes/GIT-01 Notes.md",
     "beschrijvingen/03_notes/Sec-01 notes.md",
@@ -190,13 +210,9 @@
     "01_Linux_1/01_completed_assignments/LNX-06 report.md",
     "01_Linux_1/01_completed_assignments/LNX-03 report.md",
     "01_Linux_1/01_completed_assignments/LNX-04 report.md",
-    "01_Linux_1/01_completed_assignments/LNX-02 report.md",
-    "01_Linux_1/01_completed_assignments/LNX-08 report.md",
-    "02_Networking_1/02_completed_assignments/NTW-04_report_binaryhex.md",
     "00_includes/Sec-01_screenshot2.png",
     "00_includes/Sec-01_screenshot1.png",
     "00_includes/Sec-01_screenshot3.png",
-    "02_Networking_1/02_completed_assignments/NTW-03_report_protocols.md",
     "03_Security_1/03_completed_assignments",
     "00_includes/NTW-07_screenshot1.png",
     "02_Networking_1/NTW-07/NTW-07_casestudy.drawio.crswap",
@@ -208,8 +224,6 @@
     "02_Networking_1/03_completed_assignments",
     "00_includes/NTW-05_screenshot6.png",
     "00_includes/router_phonenotshown.png",
-    "00_includes/NTW-05_screenshot5.png",
-    "00_includes/NTW-05_screenshot3.png",
     "02_Networking_1/NTW-05_presentation",
     "New folder",
     "Untitled.canvas",
