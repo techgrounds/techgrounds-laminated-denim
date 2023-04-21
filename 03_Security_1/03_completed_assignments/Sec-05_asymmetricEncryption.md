@@ -13,19 +13,19 @@ HPKE is a form of hybrid encryption, utilising both symmetric and asymmetric enc
 
 ## Opdracht
 ### Gebruikte bronnen
-[Public key cryptography](https://www.ibm.com/docs/en/ztpf/2020?topic=concepts-public-key-cryptography)
-[Hybrid Key Encryption](https://developers.google.com/tink/hybrid)
-[RSA](https://www.javatpoint.com/rsa-encryption-algorithm)
+[Public key cryptography](https://www.ibm.com/docs/en/ztpf/2020?topic=concepts-public-key-cryptography)  
+[Hybrid Key Encryption](https://developers.google.com/tink/hybrid)  
+[RSA](https://www.javatpoint.com/rsa-encryption-algorithm)  
 
 ### Ervaren problemen
 I read about public key cryptography and hybrid public key encryption. Following this, I followed the assigment's practical objectives without experiencing issues.
 
 ### Resultaat
-By using a teammate's public key, I was able to encrypt a message and transmit it only to them via a public Slack channel. Via Zoom, they then relayed the contents of the message back to me to confirm they had received it.
+By using a teammate's public key, I was able to encrypt a message and transmit it only to them via a public Slack channel. Via Zoom they then relayed the contents of the message back to me to confirm they had received it.  
 
 ![ss of slack](../../00_includes/Sec-05_screenshot1.png)
 
-Following this, I transmitted my public key and received an encrypted message from the same teammate. I was able to decrypt this with my private key.
+Following this, I transmitted my public key and received an encrypted message from the same teammate. I was able to decrypt this with my private key.  
 ![ss of RSA codes and decrypted message](../../00_includes/Sec-05_screenshot2.png)
 
 
