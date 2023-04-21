@@ -47,5 +47,5 @@ I found a resource to navigate *ufw* and configured the firewall. This blocked t
 I successfully launched the apache2 web server using knowledge from [week 1.](../../01_Linux_1/01_completed_assignments/LNX-07_report_bash.md) I followed this by seeing if I could access the webserver from a browser on my home PC.
 ![screenshot of loading page](../../00_includes/Sec-02_screenshot1.png)  
 
-After checking that I could indeed load the page, I turned on the firewall via my terminal and blocked http traffic.
+After checking that I could indeed load the page, I turned on the firewall via my terminal and blocked http traffic. This stopped me from accessing the webpage again.
 ![ss of powershell](../../00_includes/Sec-02_screenshot2.png)
