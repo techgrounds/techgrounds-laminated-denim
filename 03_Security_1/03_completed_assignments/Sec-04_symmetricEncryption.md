@@ -1,6 +1,8 @@
 # Symmetric Encryption
 Symmetric encryption is a method of encryption that uses a single key to both encrypt and decrypt data. 
 
+#Cybersecurity #Encryption
+
 ## Key-terms
 #### Symmetric encryption
 Symmetric encryption uses the same key to encode and decode a message. A simple example is a substitution cipher, where each letter in the alphabet is substituted for another. In this way one could write but also read a message by possessing the key.

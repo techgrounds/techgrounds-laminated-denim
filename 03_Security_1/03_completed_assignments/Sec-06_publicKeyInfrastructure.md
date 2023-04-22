@@ -1,6 +1,8 @@
 # Public Key Infrastructure
 Public key infrastructure describes the process that users and devices are verified as being who they claim. Via a daisy chain of trusted authorities known as Certificate Authorities and the use of public key cryptography identities can be established and verified.
 
+#Cybersecurity #Encryption
+
 ## Key-terms
 #### Public Key Infrastructure
 PKI is a way to authenticate users and devices. PKI serves to link a cryptographic key to a user or device through the signature of a *certificate authority*, or CA. The CA uses a key to sign certificates that verify the authenticity of a link between key and user. Public key infrastructure is reliant on public key cryptography, as described [here.](Sec-05_asymmetricEncryption.md)
