@@ -22,10 +22,10 @@ A hash table is a list of hashes and their corresponding cleartext passwords. It
 
 ## Opdracht
 ### Gebruikte bronnen
-[Password hashing](https://auth0.com/blog/hashing-passwords-one-way-road-to-security/)
-[Rainbow tables](https://nordvpn.com/nl/blog/what-is-rainbow-table-attack/)
-[Password salting](https://auth0.com/blog/adding-salt-to-hashing-a-better-way-to-store-passwords/)
-[Explanation about /etc/shadow formatting](https://www.cyberciti.biz/faq/understanding-etcshadow-file/)
+[Password hashing](https://auth0.com/blog/hashing-passwords-one-way-road-to-security/)  
+[Rainbow tables](https://nordvpn.com/nl/blog/what-is-rainbow-table-attack/)  
+[Password salting](https://auth0.com/blog/adding-salt-to-hashing-a-better-way-to-store-passwords/)  
+[Explanation about /etc/shadow formatting](https://www.cyberciti.biz/faq/understanding-etcshadow-file/)  
 
 ### Ervaren problemen
 * What is hashing and why is it preferred over symmetric encryption for storing passwords?
@@ -34,8 +34,11 @@ A hash table is a list of hashes and their corresponding cleartext passwords. It
 * What is a Rainbow Table and how is it used to crack hashed passwords?
 	* Google and transcribe.
 * Try to crack the two passwords in the assignment using a Rainbow Table.
+	* This was self-explanatory.
 * Create a new user in Linux with the password 12345. Look up the corresponding hash in a Rainbow Table.
+	* I referred back to a [previous assignment](../../01_Linux_1/01_completed_assignments/LNX-04_report_usersGroups.md).
 * Compare the password hash located in `/etc/shadow` with a peer and read about salting.
+	* I had to look up the formatting that was used to identify the salt in order to separate it from the hash.
 
 ### Resultaat
 Password hashing is preferred over symmetric encryption for the purpose of storing passwords because it cannot be reversed. If passwords were symmetrically encrypted, they would be vulnerable if the keys were compromised. Hashing is a one way process that always has the same result: the same password results in the same hash. With the addition of salting and the sheer number of possible permutations possible in a hexadecimal string, this results in password security that is unfeasible to crack with current computing power.

@@ -57,7 +57,7 @@
               "type": "markdown",
               "state": {
                 "file": "03_Security_1/03_completed_assignments/Sec-07_passwords.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               }
             }
@@ -108,8 +108,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -173,13 +172,11 @@
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300.5,
-    "collapsed": true
+    "width": 300.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -193,6 +190,7 @@
   },
   "active": "af48aa33968f4ab4",
   "lastOpenFiles": [
+    "01_Linux_1/01_completed_assignments/LNX-04_report_usersGroups.md",
     "beschrijvingen/03_notes/Sec-07 Notes.md",
     "03_Security_1/03_completed_assignments/Sec-07_passwords.md",
     "00_includes/Sec-07_screenshot3.png",
@@ -205,7 +203,6 @@
     "03_Security_1/03_completed_assignments/opdracht 1 1.md",
     "Pasted image 20230422121130.png",
     "Pasted image 20230422121113.png",
-    "01_Linux_1/01_completed_assignments/LNX-04 report.md",
     "01_Linux_1/01_completed_assignments/LNX-03 report.md",
     "01_Linux_1/01_completed_assignments/LNX-02 report.md",
     "01_Linux_1/01_completed_assignments/LNX-01 report.md",
