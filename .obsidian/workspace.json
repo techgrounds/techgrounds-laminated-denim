@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "beschrijvingen/03_notes/Sec-02_presentation.md",
+                "file": "03_Security_1/03_completed_assignments/Sec-02_firewalls.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "beschrijvingen/03_notes/Sec-02_presentation.md",
+                "file": "03_Security_1/03_completed_assignments/Sec-02_firewalls.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "beschrijvingen/03_notes/Sec-02_presentation.md",
+                "file": "03_Security_1/03_completed_assignments/Sec-02_firewalls.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "beschrijvingen/03_notes/Sec-02_presentation.md"
+                "file": "03_Security_1/03_completed_assignments/Sec-02_firewalls.md"
               }
             }
           }
@@ -173,38 +173,38 @@
   },
   "active": "5977d4091a729489",
   "lastOpenFiles": [
+    "03_Security_1/03_completed_assignments/Sec-01_networkDetection.md",
     "03_Security_1/03_completed_assignments/Sec-02_firewalls.md",
-    "beschrijvingen/03_notes/Sec-02_presentation.md",
-    "beschrijvingen/01_notes/LNX-01 Notes.md",
+    "03_Security_1/03_completed_assignments/Sec-05_asymmetricEncryption.md",
+    "03_Security_1/03_completed_assignments/Sec-04_symmetricEncryption.md",
+    "03_Security_1/03_completed_assignments/Sec-03_accessManagement.md",
+    "beschrijvingen/03_notes/softSkillsWk3.md",
+    "beschrijvingen/03_notes/Sec-08 Notes.md",
     "03_Security_1/03_completed_assignments/Sec-07_passwords.md",
     "03_Security_1/03_completed_assignments/Sec-06_publicKeyInfrastructure.md",
+    "beschrijvingen/01_notes/LNX-08 Notes.md",
+    "01_Linux_1/01_completed_assignments/LNX-08 report.md",
+    "01_Linux_1/01_completed_assignments/LNX-07_report_bash.md",
+    "01_Linux_1/01_completed_assignments/LNX-06 report.md",
+    "01_Linux_1/01_completed_assignments/LNX-05 report.md",
+    "01_Linux_1/01_completed_assignments/LNX-04_report_usersGroups.md",
+    "01_Linux_1/01_completed_assignments/LNX-03 report.md",
+    "01_Linux_1/01_completed_assignments/LNX-02 report.md",
+    "beschrijvingen/03_notes/Sec-02_presentation.md",
+    "beschrijvingen/01_notes/LNX-01 Notes.md",
     "02_Networking_1/02_completed_assignments/NTW-06_report_subnets.md",
     "02_Networking_1/02_completed_assignments/NTW-05_report_ipaddresses.md",
     "02_Networking_1/02_completed_assignments/NTW-04_report_binaryhex.md",
-    "beschrijvingen/03_notes/Sec-08 Notes.md",
-    "03_Security_1/03_completed_assignments/Sec-05_asymmetricEncryption.md",
     "01_Linux_1/GIT-02/GIT-02-learning-markdown.md",
     "01_Linux_1/01_completed_assignments/GIT-02 report.md",
     "01_Linux_1/01_completed_assignments/LNX-01 report.md",
     "01_Linux_1/01_completed_assignments/GIT-01 report.md",
-    "00_templates/opdracht.md",
-    "00_templates/retro.md",
-    "00_templates/standup.md",
-    "beschrijvingen/02_notes/NTW-01 notes.md",
-    "02_Networking_1/02_completed_assignments/NTW-01_report_OSI.md",
-    "02_Networking_1/02_completed_assignments/NTW-03_report_protocols.md",
-    "01_Linux_1/01_completed_assignments/LNX-04_report_usersGroups.md",
     "00_includes/Sec-07_screenshot1.png",
-    "beschrijvingen/03_notes/Sec-07 Notes.md",
     "Pasted image 20230422121130.png",
     "Pasted image 20230422121113.png",
     "Pasted image 20230421112826.png",
-    "beschrijvingen/03_notes/Sec-05 notes.md",
     "00_includes/Sec-07_screenshot3.png",
     "00_includes/Sec-07_screenshot2.png",
-    "2023-04-07.md",
-    "beschrijvingen/03_notes/Sec-03 notes.md",
-    "03_Security_1/03_completed_assignments/Sec-03_accessManagement.md",
     "00_includes/Sec-06_screenshot5.png",
     "00_includes/Sec-06_screenshot4.png",
     "00_includes/Sec-06_screenshot3.png",

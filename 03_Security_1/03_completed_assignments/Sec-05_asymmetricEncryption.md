@@ -1,11 +1,11 @@
 # Asymmetric Encryption
-Asymmetric encryption is a form of encryption that allows for the public sharing of keys (for example, over the internet) without compromising security. This can be used, among other things, to secure the transmission of symmetric keys or verify the identity of a source.
+Asymmetric encryption is a form of encryption that allows for the public sharing of keys (for example, over the internet) without compromising security. This can be used, among other things, to secure the transmission of symmetric keys or to verify the identity of a source.
 
 #Cybersecurity #Encryption
 
 ## Key-terms
 #### RSA
-Named for its creators, Rivest, Shamir and Adelman. It is a form of public key encryption, also known as asymmetric encryption. It is widely used to secure data transmissions, digital signatures and key exchanges.
+Named for its creators Rivest, Shamir and Adelman. It is a form of public key encryption, also known as asymmetric encryption. It is widely used to secure data transmissions, digital signatures and key exchanges.
 
 #### Public key cryptography
 Also known as public key encryption and asymmetric encryption, public key cryptography is a form of encryption that involves a public and private key. The public key is broadcast over the internet; anyone can use it to encrypt a message that can then only be read by the owner of the private key. Conversely, the owner of the private key can also encrypt data with it that can then be read by anyone with the public key. While this does not secure the data, it does certify that the source of the data is the owner of the private key.
