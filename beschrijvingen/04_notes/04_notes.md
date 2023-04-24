@@ -5,3 +5,10 @@ Koningsdag vrij / vrijdag om 9u online
 *
 roan@caspertechgrounds.onmicrosoft.com
 portal.azure.com 
+
+
+day1:
+* Ik gebruik MS Learn. Merk dat bij een module die de onderwerpen in opdracht 1 benoemd er ook veel andere dingen komen kijken. Heb je enige tips om hier structuur in te brengen en overzicht te houden zodat je niet ontspoort of info noteert die pas bij latere certificaten nuttig is?
+	* Check timeline
+	* Check others' experiences with the exams
+	* Look closely at the assignments and the terms / phrases they reference.

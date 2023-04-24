@@ -4,59 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "707621806fd31cb1",
+        "id": "0e1683e32bdbfe3a",
         "type": "tabs",
         "children": [
           {
-            "id": "bb38aa8f1fed497e",
+            "id": "b4ad68bac7c79deb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03_Security_1/03_completed_assignments/Sec-02_firewalls.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "5977d4091a729489",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "beschrijvingen/01_notes/LNX-01 Notes.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "cd0f5ccc4aada457",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "beschrijvingen/04_notes/04_notes.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "15f26371fd6b451e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "beschrijvingen/03_notes/Sec-07 Notes.md",
+                "file": "beschrijvingen/04_notes/AZ-01 Notes.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -85,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#Cybersecurity",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -122,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "beschrijvingen/04_notes/04_notes.md",
+                "file": "beschrijvingen/04_notes/AZ-01 Notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "beschrijvingen/04_notes/04_notes.md",
+                "file": "beschrijvingen/04_notes/AZ-01 Notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "beschrijvingen/04_notes/04_notes.md"
+                "file": "beschrijvingen/04_notes/AZ-01 Notes.md"
               }
             }
           }
@@ -183,12 +146,18 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "cd0f5ccc4aada457",
+  "active": "b4ad68bac7c79deb",
   "lastOpenFiles": [
+    "04_Azure_1/04_completed_assignments/opdracht 1.md",
+    "beschrijvingen/04_notes/AZ-02 notes.md",
+    "04_Azure_1/04_completed_assignments/AZ-01_globalInfrastructure.md",
+    "beschrijvingen/04_notes/AZ-01 Notes.md",
+    "beschrijvingen/04_notes/04_notes.md",
+    "04_Azure_1/04_completed_assignments",
+    "04_Azure_1",
     "03_Security_1/03_completed_assignments/Sec-04_symmetricEncryption.md",
     "03_Security_1/03_completed_assignments/Sec-05_asymmetricEncryption.md",
     "beschrijvingen/03_notes/Sec-02_presentation.md",
-    "beschrijvingen/04_notes/04_notes.md",
     "beschrijvingen/04_notes",
     "beschrijvingen/01_notes/LNX-01 Notes.md",
     "03_Security_1/03_completed_assignments/Sec-02_firewalls.md",
@@ -208,9 +177,6 @@
     "01_Linux_1/01_completed_assignments/LNX-02 report.md",
     "02_Networking_1/02_completed_assignments/NTW-06_report_subnets.md",
     "02_Networking_1/02_completed_assignments/NTW-05_report_ipaddresses.md",
-    "02_Networking_1/02_completed_assignments/NTW-04_report_binaryhex.md",
-    "01_Linux_1/GIT-02/GIT-02-learning-markdown.md",
-    "01_Linux_1/01_completed_assignments/GIT-02 report.md",
     "00_includes/Sec-07_screenshot1.png",
     "Pasted image 20230422121130.png",
     "Pasted image 20230422121113.png",
@@ -228,8 +194,6 @@
     "02_Networking_1/NTW-07",
     "02_Networking_1/New folder",
     "03_Security_1",
-    "02_Networking_1/03_completed_assignments",
-    "02_Networking_1/NTW-05_presentation",
     "Untitled.canvas",
     "Untitled 1.canvas"
   ]
