@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "beschrijvingen/04_notes/AZ-01 Notes.md",
+                "file": "beschrijvingen/04_notes/AZ-02 notes.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#Cybersecurity",
+                "query": "tag:#Azure",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "beschrijvingen/04_notes/AZ-01 Notes.md",
+                "file": "beschrijvingen/04_notes/AZ-02 notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "beschrijvingen/04_notes/AZ-01 Notes.md",
+                "file": "beschrijvingen/04_notes/AZ-02 notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,16 +125,17 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "beschrijvingen/04_notes/AZ-01 Notes.md"
+                "file": "beschrijvingen/04_notes/AZ-02 notes.md"
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300.5
+    "width": 300.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -148,10 +149,10 @@
   },
   "active": "b4ad68bac7c79deb",
   "lastOpenFiles": [
-    "04_Azure_1/04_completed_assignments/opdracht 1.md",
+    "beschrijvingen/04_notes/AZ-01 Notes.md",
     "beschrijvingen/04_notes/AZ-02 notes.md",
     "04_Azure_1/04_completed_assignments/AZ-01_globalInfrastructure.md",
-    "beschrijvingen/04_notes/AZ-01 Notes.md",
+    "04_Azure_1/04_completed_assignments/opdracht 1.md",
     "beschrijvingen/04_notes/04_notes.md",
     "04_Azure_1/04_completed_assignments",
     "04_Azure_1",

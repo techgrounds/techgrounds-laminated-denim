@@ -1,6 +1,8 @@
 # Azure Global Infrastructure
 Azure global infrastructure refers to the physical architecture of the Azure Cloud. This is the datacentres and the way they are connected. 
 
+#Azure/Infrastructure #Azure/Services
+
 ## Key-terms
 #### Azure Regions
 Azure regions are an umbrella term for the datacentres located in a region. For example, South Africa has two regions: South Africa North and South Africa West. These consist of multiple datacentres.
