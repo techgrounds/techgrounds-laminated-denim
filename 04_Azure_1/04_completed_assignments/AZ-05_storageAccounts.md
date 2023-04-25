@@ -1,6 +1,7 @@
 # Azure Storage Accounts
 Azure Storage accounts are a resource that group together multiple storage services. The Azure Storage Explorer is software that allows one to 
 
+#Azure/Services #Azure/Architecture #Azure/AZ-900
 ## Key-terms
 #### Azure Storage
 Azure offers different manners to store data, such as Azure SQL Database, Azure Cosmos DB and Azure Table Storage. Messaging is handled by Azure Queues and Event Hubs. Loose files can be stored by services such as Azure Files and Azure Blobs. Azure groups Azure Blobs, Azure Files, Azure Queues, and Azure Tables together under the header *Azure Storage.*

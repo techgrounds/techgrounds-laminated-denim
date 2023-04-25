@@ -1,6 +1,7 @@
 # Advantages of the cloud
 [Geef een korte beschrijving van het onderwerp]
 
+#Azure/Concepts #Azure/AZ-900
 ## Key-terms
 [Schrijf hier een lijst met belangrijke termen met eventueel een korte uitleg.]
 

@@ -1,7 +1,7 @@
 # Azure Global Infrastructure
 Azure global infrastructure refers to the physical architecture of the Azure Cloud. This is the datacentres and the way they are connected. 
 
-#Azure/Infrastructure #Azure/Services
+#Azure/Architecture #Azure/Services #Azure/AZ-900
 
 ## Key-terms
 #### Azure Regions

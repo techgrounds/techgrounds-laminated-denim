@@ -1,6 +1,8 @@
 # Cost Management
 [Geef een korte beschrijving van het onderwerp]
 
+#Azure/Concepts #Azure/Management #Azure/AZ-900
+
 ## Key-terms
 #### CapEx
 Capital expenditure is the cost of acquiring long-term assets. For example, the purchase of physical hardware or equipment. They typically feature a significant upfront cost.
