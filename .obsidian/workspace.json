@@ -30,27 +30,21 @@
                 "source": false
               }
             }
-          }
-        ],
-        "currentTab": 1
-      },
-      {
-        "id": "866028ae6f73ed25",
-        "type": "tabs",
-        "children": [
+          },
           {
-            "id": "8d4de8ee50d30041",
+            "id": "3b3626ad1ae6267b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "04_Azure_1/04_completed_assignments/AZ-02_costManagement.md",
+                "file": "beschrijvingen/04_notes/AZ-03 notes.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -116,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "04_Azure_1/04_completed_assignments/AZ-02_costManagement.md",
+                "file": "beschrijvingen/04_notes/AZ-03 notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "04_Azure_1/04_completed_assignments/AZ-02_costManagement.md",
+                "file": "beschrijvingen/04_notes/AZ-03 notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -156,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "04_Azure_1/04_completed_assignments/AZ-02_costManagement.md"
+                "file": "beschrijvingen/04_notes/AZ-03 notes.md"
               }
             }
           }
@@ -178,8 +172,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "8d4de8ee50d30041",
+  "active": "3b3626ad1ae6267b",
   "lastOpenFiles": [
+    "beschrijvingen/04_notes/AZ-09 notes.md",
+    "beschrijvingen/04_notes/AZ-03 notes.md",
+    "00_includes/AZ-09_screenshot1.png.png",
     "beschrijvingen/04_notes/AZ-02 notes.md",
     "04_Azure_1/04_completed_assignments/AZ-02_costManagement.md",
     "00_includes/AZ-01_screenshot1.png",
@@ -207,8 +204,6 @@
     "01_Linux_1/01_completed_assignments/LNX-07_report_bash.md",
     "01_Linux_1/01_completed_assignments/LNX-06 report.md",
     "01_Linux_1/01_completed_assignments/LNX-05 report.md",
-    "01_Linux_1/01_completed_assignments/LNX-04_report_usersGroups.md",
-    "01_Linux_1/01_completed_assignments/LNX-03 report.md",
     "00_includes/Sec-07_screenshot1.png",
     "Pasted image 20230422121130.png",
     "Pasted image 20230422121113.png",
@@ -217,7 +212,6 @@
     "00_includes/Sec-07_screenshot2.png",
     "00_includes/Sec-06_screenshot5.png",
     "00_includes/Sec-06_screenshot4.png",
-    "00_includes/Sec-06_screenshot3.png",
     "03_Security_1/03_completed_assignments",
     "02_Networking_1/NTW-07/NTW-07_casestudy.drawio.crswap",
     "beschrijvingen/03_notes",
