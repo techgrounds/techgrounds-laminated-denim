@@ -1,15 +1,7 @@
-##### Study:
-* Azure cost management principles
-* Free subscription agreement
-* Difference between CapEx and OpEx
-	* I found a summary explaining the differences.
-* The TCO calculator
-	* I followed a tutorial on MS Learn
+# Cost Management
+[Geef een korte beschrijving van het onderwerp]
 
-##### Assignment
-* Create an alert with which you can monitor your own costs.
-* Understand the options Azure offers that give insight into your expenses.
-
+## Key-terms
 #### CapEx
 Capital expenditure is the cost of acquiring long-term assets. For example, the purchase of physical hardware or equipment. They typically feature a significant upfront cost.
 
@@ -49,12 +41,33 @@ A free subscription features a set of services that are permanently free, and a 
 #### Pay-as-you-go
 Pas-as-you-go is a payment model where you pay for the resources used during a billing cycle. This saves costs on unused resources but also allows one to cope with unexpected increases in demand by renting additional resources.
 
-https://azure.com/e/c94629eddac44a6d8706dfc38f6f9dc1 <-- link to TCO calculator example.
+## Opdracht
 
-#### 
-
+### Gebruikte bronnen
 [Describe cost management](https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/)  
 [Cost management suite](https://learn.microsoft.com/nl-nl/azure/cost-management-billing/cost-management-billing-overview)  
 [CapEx vs OpEx](https://www.cloudzero.com/blog/capex-vs-opex)  
 [Cost management principles](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/cost-mgt-best-practices)
 [Azure free account](https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/create-free-services)
+
+### Ervaren problemen
+##### Study:
+* Azure cost management principles
+	* I read the documentation.
+* Free subscription agreement
+	* I read the documentation.
+* Difference between CapEx and OpEx
+	* I found a summary explaining the differences.
+* The TCO calculator
+	* I followed a tutorial on MS Learn.
+
+##### Assignment
+* Create an alert with which you can monitor your own costs.
+	* I experimented until I succeeded.
+* Understand the options Azure offers that give insight into your expenses.
+	* I followed a tutorial on MS Learn.
+
+### Resultaat
+[Omschrijf hoe je weet dat je opdracht gelukt is (gebruik screenshots waar nodig).]
+
+![Cost Management ss](../../00_includes/AZ-01_screenshot1.png)
