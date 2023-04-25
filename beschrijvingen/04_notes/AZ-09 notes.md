@@ -31,3 +31,4 @@ obsidian://open?vault=techgrounds-laminated-denim&file=00_includes%2FAZ-09_scree
 
 [Intro to Cloud: describe the shared responsibility model](https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/4-describe-shared-responsibility-model)
 [Describe cloud service types](https://learn.microsoft.com/en-us/training/modules/describe-cloud-service-types/)
+[Further info on cloud service types](https://www.microsoftpressstore.com/articles/article.aspx?p=2979073&seqNum=2)
