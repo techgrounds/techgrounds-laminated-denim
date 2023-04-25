@@ -1,5 +1,18 @@
+# Azure Core Services
+This assignment serves to offer insight into what to expect on the exam, and what to look for while doing research for other assignments.
+
+## Key-terms
+N/A.
+
+## Opdracht
+### Gebruikte bronnen
 [AZ-900 study guide](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE3VwUY)
 
+### Ervaren problemen
+N/A
+
+### Resultaat
+These are concepts and strategies I plan to implement to achieve a passing grade.
 
 #### Describe cloud concepts
 * Read further about cloud pricing models (add to AZ-02)
@@ -8,11 +21,10 @@
 
 #### Describe Azure architecture and services
 * Read further about hierarchy of resource groups, subscriptions and management groups. Grab a screenshot. Add to AZ-01.
-* *
+* 
 #### Describe Azure management and governance
 
 
 #### Strategies:
 * Complete [these learning paths](https://learn.microsoft.com/en-us/certifications/exams/az-900/?tab=tab-learning-paths#two-ways-to-prepare)
 * Cram with [John Saville.](https://www.youtube.com/playlist?list=PLlVtbbG169nED0_vMEniWBQjSoxTsBYS3)
-* 

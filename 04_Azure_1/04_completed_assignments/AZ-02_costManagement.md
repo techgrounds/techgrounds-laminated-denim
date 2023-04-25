@@ -70,4 +70,4 @@ Pas-as-you-go is a payment model where you pay for the resources used during a b
 ### Resultaat
 [Omschrijf hoe je weet dat je opdracht gelukt is (gebruik screenshots waar nodig).]
 
-![Cost Management ss](../../00_includes/AZ-01_screenshot1.png)
+![Cost Management ss](../../00_includes/AZ-02_screenshot1.png)
