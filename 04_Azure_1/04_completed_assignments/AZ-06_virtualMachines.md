@@ -1,6 +1,8 @@
 # Virtual Machines
 Azure VMs can be configured and launched in a variety of different ways. Via the Azure Portal, or a number of Cloud Shell tools such as the Azure CLI. Setup can be configured ahead of time using templates or done on the fly.
 
+#Azure/Architecture #Azure/AZ-900
+
 ## Key-terms
 #### Azure Virtual Machines
 Azure VMs make use of several *Azure resources* to do their job. 

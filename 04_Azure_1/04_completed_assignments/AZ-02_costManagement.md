@@ -1,5 +1,5 @@
 # Cost Management
-[Geef een korte beschrijving van het onderwerp]
+Cost management refers to optimisation and insight into one's expenses. The cost management suite in the Azure Portal allows one to create budgets and track expenses. Further, Azure has a set of principles that relate to the subject.
 
 #Azure/Concepts #Azure/Management #Azure/AZ-900
 
@@ -70,6 +70,6 @@ Pas-as-you-go is a payment model where you pay for the resources used during a b
 	* I followed a tutorial on MS Learn.
 
 ### Resultaat
-[Omschrijf hoe je weet dat je opdracht gelukt is (gebruik screenshots waar nodig).]
+By studying the documentation and following modules on MS Learn I was able to build an understanding of the subject. For the assignment, I created a budget alert in the cost management suite that sends an e-mail if I spend over 20 euros in a month. This should help ensure that I don't spend recklesssly.
 
 ![Cost Management ss](../../00_includes/AZ-02_screenshot1.png)

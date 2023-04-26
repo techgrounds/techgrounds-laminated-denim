@@ -4,71 +4,34 @@
     "type": "split",
     "children": [
       {
-        "id": "c285335dcf585e53",
+        "id": "584062756d4623d4",
         "type": "tabs",
         "children": [
           {
-            "id": "047e1bf323c43956",
+            "id": "46a28cc0b2fc49f9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "04_Azure_1/04_completed_assignments/AZ-03_advantagesCloud.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "a194b7f59bcd8bdb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "04_Azure_1/04_completed_assignments/AZ-06_virtualMachines.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "5e9c5fbba61cad87",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "beschrijvingen/04_notes/AZ-06 notes.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "02955bea9d83a19c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "beschrijvingen/04_notes/AZ-06 notes.md",
+                "file": "beschrijvingen/04_notes/AZ-09 notes.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       },
       {
-        "id": "52dcc2fb4bf35f7a",
+        "id": "7b4dcbb1b550898f",
         "type": "tabs",
         "children": [
           {
-            "id": "6c5d63004a4db6f1",
+            "id": "6378a9ebe9d98763",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "04_Azure_1/04_completed_assignments/AZ-06_virtualMachines.md",
+                "file": "04_Azure_1/04_completed_assignments/AZ-09_sharedResponsibility.md",
                 "mode": "source",
                 "source": false
               }
@@ -140,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "04_Azure_1/04_completed_assignments/AZ-06_virtualMachines.md",
+                "file": "04_Azure_1/04_completed_assignments/AZ-09_sharedResponsibility.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -157,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "04_Azure_1/04_completed_assignments/AZ-06_virtualMachines.md",
+                "file": "04_Azure_1/04_completed_assignments/AZ-09_sharedResponsibility.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -180,7 +143,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "04_Azure_1/04_completed_assignments/AZ-06_virtualMachines.md"
+                "file": "04_Azure_1/04_completed_assignments/AZ-09_sharedResponsibility.md"
               }
             }
           }
@@ -202,50 +165,50 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "6c5d63004a4db6f1",
+  "active": "6378a9ebe9d98763",
   "lastOpenFiles": [
     "04_Azure_1/04_completed_assignments/opdracht 1.md",
+    "00_includes/AZ-09_screenshot1.png.png",
+    "00_includes/AZ-09_screenshot1.png",
+    "04_Azure_1/04_completed_assignments/AZ-09_sharedResponsibility.md",
+    "beschrijvingen/04_notes/AZ-09 notes.md",
+    "beschrijvingen/04_notes/AZ-05 notes.md",
+    "04_Azure_1/04_completed_assignments/AZ-07_diskStorage.md",
+    "04_Azure_1/04_completed_assignments/AZ-06_virtualMachines.md",
+    "04_Azure_1/04_completed_assignments/AZ-05_storageAccounts.md",
+    "04_Azure_1/04_completed_assignments/AZ-02_costManagement.md",
+    "04_Azure_1/04_completed_assignments/Az-04_coreServices.md",
+    "04_Azure_1/04_completed_assignments/AZ-03_advantagesCloud.md",
+    "beschrijvingen/04_notes/AZ-03 notes.md",
+    "beschrijvingen/04_notes/AZ-02 notes.md",
+    "beschrijvingen/04_notes/AZ-07 notes.md",
+    "beschrijvingen/03_notes/softSkillsWk3.md",
+    "01_Linux_1/01_completed_assignments/LNX-05 report.md",
+    "01_Linux_1/01_completed_assignments/LNX-04_report_usersGroups.md",
+    "beschrijvingen/01_notes/LNX-05 notes.md",
+    "beschrijvingen/01_notes/LNX-06 notes.md",
+    "beschrijvingen/01_notes/LNX-04 notes.md",
+    "beschrijvingen/04_notes/AZ-06 notes.md",
+    "beschrijvingen/04_notes/04_notes.md",
+    "beschrijvingen/01_notes/LNX-01 Notes.md",
+    "01_Linux_1/01_completed_assignments/LNX-01 report.md",
     "04_Azure_1/AZ-06/template.json",
     "04_Azure_1/AZ-06/parameters.json",
-    "04_Azure_1/04_completed_assignments/AZ-06_virtualMachines.md",
     "04_Azure_1/AZ-06/Untitled",
     "04_Azure_1/AZ-06",
     "00_includes/AZ-06_screenshot3.png",
     "00_includes/AZ-06_screenshot4.png",
-    "beschrijvingen/04_notes/AZ-06 notes.md",
-    "04_Azure_1/04_completed_assignments/Az-04_coreServices.md",
     "beschrijvingen/04_notes/AZ-04 Notes.md",
-    "beschrijvingen/04_notes/AZ-05 notes.md",
-    "beschrijvingen/04_notes/AZ-09 notes.md",
     "beschrijvingen/04_notes/AZ-10 notes.md",
-    "01_Linux_1/01_completed_assignments/LNX-01 report.md",
-    "beschrijvingen/01_notes/LNX-01 Notes.md",
     "00_includes/AZ-06_screenshot2.png",
-    "04_Azure_1/04_completed_assignments/AZ-02_costManagement.md",
-    "beschrijvingen/04_notes/AZ-03 notes.md",
-    "04_Azure_1/04_completed_assignments/AZ-05_storageAccounts.md",
     "00_includes/AZ-06_screenshot1.png",
-    "beschrijvingen/04_notes/AZ-01 Notes.md",
-    "00_templates/retro.md",
-    "04_Azure_1/04_completed_assignments/AZ-03_advantagesCloud.md",
-    "04_Azure_1/04_completed_assignments/AZ-01_globalInfrastructure.md",
-    "beschrijvingen/03_notes/softSkillsWk3.md",
-    "beschrijvingen/04_notes/AZ-02 notes.md",
     "00_includes/AZ-02_screenshot1.png",
     "00_includes/Az-05_screenshot4.png",
     "00_includes/AZ-05_screenshot3.png",
     "00_includes/AZ-05_screenshot2.png",
-    "00_includes/Az-05_screenshot5.png",
-    "00_includes/AZ-05_screenshot1.png",
-    "beschrijvingen/04_notes/04_notes.md",
-    "beschrijvingen/Exam notes.md",
     "04_Azure_1/04_completed_assignments",
     "04_Azure_1",
-    "03_Security_1/03_completed_assignments/Sec-04_symmetricEncryption.md",
-    "03_Security_1/03_completed_assignments/Sec-05_asymmetricEncryption.md",
-    "beschrijvingen/03_notes/Sec-02_presentation.md",
     "beschrijvingen/04_notes",
-    "03_Security_1/03_completed_assignments/Sec-02_firewalls.md",
     "03_Security_1/03_completed_assignments",
     "02_Networking_1/NTW-07/NTW-07_casestudy.drawio.crswap",
     "beschrijvingen/03_notes",

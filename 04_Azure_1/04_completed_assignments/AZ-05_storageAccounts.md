@@ -1,5 +1,5 @@
 # Azure Storage Accounts
-Azure Storage accounts are a resource that group together multiple storage services. The Azure Storage Explorer is software that allows one to 
+Azure Storage accounts are a resource that group together multiple storage services. The Azure Storage Explorer is software that allows one to view and edit data on these storage services via a GUI.
 
 #Azure/Services #Azure/Architecture #Azure/AZ-900
 ## Key-terms
@@ -9,14 +9,6 @@ Azure offers different manners to store data, such as Azure SQL Database, Azure 
 #### Storage account
 A storage account is a container that groups multiple Storage services together. Only *Azure Storage* services can be added to an account. A storage account allows one to configure these services as a group. A storage account is an Azure resource and can be part of a resource group.  
 ![ss of typical setup](../../00_includes/AZ-05_screenshot1.png)  
-
-#### Blobs
-
-#### Files
-
-#### Queues
-
-#### Tables
 
 ## Opdracht
 ### Gebruikte bronnen
@@ -44,8 +36,14 @@ A storage account is a container that groups multiple Storage services together.
 * Share the URL with a teammate and check if they can see the website.
 
 ### Resultaat
-![ss1](../../00_includes/AZ-05_screenshot1.png)  
+The first assignment was to create an Azure Storage account where only I had access to the data. During creation of the container I set default access to private so that only I would be able to access the files within.  
 ![ss2](../../00_includes/AZ-05_screenshot2.png)  
+
+Below is a screenshot showcasing RBAC access to the storage account. This is something I cannot edit as a contributor, with the learning coach in control of role assignments.  
 ![ss3](../../00_includes/AZ-05_screenshot3.png)  
+
+Once I had set the correct access permissions, I uploaded a .png file to the container and checked to see if it was visible from the Storage Explorer software.  
 ![ss4](../../00_includes/AZ-05_screenshot4.png)  
+
+For the second assignment, I needed to upload a set of files from the cloud10 google drive to a new container. With this completed, I turned on static website hosting and had a teammate check to see if the website contained within the files could be accessed via the internet. It was.
 ![ss5](../../00_includes/AZ-05_screenshot5.png)  

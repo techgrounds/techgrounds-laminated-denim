@@ -36,6 +36,7 @@ VM names are not easy to change after the fact. Good convention for naming inclu
 
 
 #### VM storage 
+See [AZ-07.](AZ-07_diskStorage.md)
 ![SS of storage](../../00_includes/AZ-06_screenshot2.png)  
 
 #### Resource Manager Templates
