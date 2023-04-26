@@ -23,9 +23,10 @@ These are concepts and strategies I plan to implement to achieve a passing grade
 
 #### Describe Azure architecture and services
 * Read further about hierarchy of resource groups, subscriptions and management groups. Grab a screenshot. Add to AZ-01.
-* 
-#### Describe Azure management and governance
 
+#### Describe Azure management and governance
+* Read further about Azure Cloud Shell, including Azure Powershell & Azure CLI. Maybe add to AZ-06?
+* 
 
 #### Strategies:
 * Complete [these learning paths](https://learn.microsoft.com/en-us/certifications/exams/az-900/?tab=tab-learning-paths#two-ways-to-prepare)

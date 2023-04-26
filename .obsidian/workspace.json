@@ -4,109 +4,6 @@
     "type": "split",
     "children": [
       {
-        "id": "0e1683e32bdbfe3a",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "b4ad68bac7c79deb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "beschrijvingen/04_notes/AZ-02 notes.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "636b6f401408876b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "beschrijvingen/04_notes/AZ-02 notes.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "3b3626ad1ae6267b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "beschrijvingen/04_notes/AZ-03 notes.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "59d0342c3634d12c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "beschrijvingen/04_notes/AZ-04 Notes.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "0cea7de084ce2fd1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "beschrijvingen/04_notes/AZ-04 Notes.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6d143f0ca3de0f1f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "04_Azure_1/04_completed_assignments/AZ-02_costManagement.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "1bb1b533b74d6798",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "04_Azure_1/04_completed_assignments/opdracht 1.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "1b9521bc3e9b1a62",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "beschrijvingen/04_notes/AZ-03 notes.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          }
-        ],
-        "currentTab": 7
-      },
-      {
         "id": "c285335dcf585e53",
         "type": "tabs",
         "children": [
@@ -133,9 +30,51 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "5e9c5fbba61cad87",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "beschrijvingen/04_notes/AZ-06 notes.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "02955bea9d83a19c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "beschrijvingen/04_notes/AZ-06 notes.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
+      },
+      {
+        "id": "52dcc2fb4bf35f7a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6c5d63004a4db6f1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "04_Azure_1/04_completed_assignments/AZ-06_virtualMachines.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -263,54 +202,53 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a194b7f59bcd8bdb",
+  "active": "6c5d63004a4db6f1",
   "lastOpenFiles": [
-    "04_Azure_1/04_completed_assignments/AZ-05_storageAccounts.md",
-    "04_Azure_1/04_completed_assignments/Az-04_coreServices.md",
-    "04_Azure_1/04_completed_assignments/AZ-03_advantagesCloud.md",
-    "04_Azure_1/04_completed_assignments/AZ-02_costManagement.md",
-    "04_Azure_1/04_completed_assignments/AZ-01_globalInfrastructure.md",
+    "04_Azure_1/04_completed_assignments/opdracht 1.md",
+    "04_Azure_1/AZ-06/template.json",
+    "04_Azure_1/AZ-06/parameters.json",
     "04_Azure_1/04_completed_assignments/AZ-06_virtualMachines.md",
+    "04_Azure_1/AZ-06/Untitled",
+    "04_Azure_1/AZ-06",
+    "00_includes/AZ-06_screenshot3.png",
+    "00_includes/AZ-06_screenshot4.png",
+    "beschrijvingen/04_notes/AZ-06 notes.md",
+    "04_Azure_1/04_completed_assignments/Az-04_coreServices.md",
+    "beschrijvingen/04_notes/AZ-04 Notes.md",
+    "beschrijvingen/04_notes/AZ-05 notes.md",
+    "beschrijvingen/04_notes/AZ-09 notes.md",
+    "beschrijvingen/04_notes/AZ-10 notes.md",
+    "01_Linux_1/01_completed_assignments/LNX-01 report.md",
+    "beschrijvingen/01_notes/LNX-01 Notes.md",
+    "00_includes/AZ-06_screenshot2.png",
+    "04_Azure_1/04_completed_assignments/AZ-02_costManagement.md",
     "beschrijvingen/04_notes/AZ-03 notes.md",
+    "04_Azure_1/04_completed_assignments/AZ-05_storageAccounts.md",
+    "00_includes/AZ-06_screenshot1.png",
+    "beschrijvingen/04_notes/AZ-01 Notes.md",
+    "00_templates/retro.md",
+    "04_Azure_1/04_completed_assignments/AZ-03_advantagesCloud.md",
+    "04_Azure_1/04_completed_assignments/AZ-01_globalInfrastructure.md",
     "beschrijvingen/03_notes/softSkillsWk3.md",
     "beschrijvingen/04_notes/AZ-02 notes.md",
-    "beschrijvingen/04_notes/AZ-04 Notes.md",
-    "04_Azure_1/04_completed_assignments/opdracht 1.md",
-    "beschrijvingen/04_notes/AZ-05 notes.md",
     "00_includes/AZ-02_screenshot1.png",
     "00_includes/Az-05_screenshot4.png",
     "00_includes/AZ-05_screenshot3.png",
     "00_includes/AZ-05_screenshot2.png",
     "00_includes/Az-05_screenshot5.png",
-    "beschrijvingen/04_notes/AZ-09 notes.md",
-    "beschrijvingen/04_notes/AZ-01 Notes.md",
     "00_includes/AZ-05_screenshot1.png",
     "beschrijvingen/04_notes/04_notes.md",
     "beschrijvingen/Exam notes.md",
-    "00_includes/AZ-09_screenshot1.png.png",
-    "00_includes/AZ-01_screenshot1.png",
-    "00_templates/retro.md",
     "04_Azure_1/04_completed_assignments",
     "04_Azure_1",
     "03_Security_1/03_completed_assignments/Sec-04_symmetricEncryption.md",
     "03_Security_1/03_completed_assignments/Sec-05_asymmetricEncryption.md",
     "beschrijvingen/03_notes/Sec-02_presentation.md",
     "beschrijvingen/04_notes",
-    "beschrijvingen/01_notes/LNX-01 Notes.md",
     "03_Security_1/03_completed_assignments/Sec-02_firewalls.md",
-    "03_Security_1/03_completed_assignments/Sec-01_networkDetection.md",
-    "03_Security_1/03_completed_assignments/Sec-03_accessManagement.md",
-    "beschrijvingen/03_notes/Sec-08 Notes.md",
-    "03_Security_1/03_completed_assignments/Sec-07_passwords.md",
-    "00_includes/Sec-07_screenshot1.png",
-    "Pasted image 20230422121130.png",
     "03_Security_1/03_completed_assignments",
     "02_Networking_1/NTW-07/NTW-07_casestudy.drawio.crswap",
     "beschrijvingen/03_notes",
-    "02_Networking_1/NTW-07/NTW-07_casestudy.drawio",
-    "02_Networking_1/NTW-07",
-    "02_Networking_1/New folder",
-    "03_Security_1",
     "Untitled.canvas",
     "Untitled 1.canvas"
   ]

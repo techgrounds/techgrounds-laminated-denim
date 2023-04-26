@@ -1,0 +1,91 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "virtualMachines_test_uks_cloud10_test_name": {
+            "defaultValue": "test-uks-cloud10-test",
+            "type": "String"
+        },
+        "disks_test_uks_cloud10_test_OsDisk_1_4f642b2616e74e75bc9d11a79c5290d5_externalid": {
+            "defaultValue": "/subscriptions/7352279b-35f1-466a-a28c-6ac332d1aa69/resourceGroups/resources_techgrounds10/providers/Microsoft.Compute/disks/test-uks-cloud10-test_OsDisk_1_4f642b2616e74e75bc9d11a79c5290d5",
+            "type": "String"
+        },
+        "networkInterfaces_test_uks_cloud10_test512_z1_externalid": {
+            "defaultValue": "/subscriptions/7352279b-35f1-466a-a28c-6ac332d1aa69/resourceGroups/resources_techgrounds10/providers/Microsoft.Network/networkInterfaces/test-uks-cloud10-test512_z1",
+            "type": "String"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.Compute/virtualMachines",
+            "apiVersion": "2022-11-01",
+            "name": "[parameters('virtualMachines_test_uks_cloud10_test_name')]",
+            "location": "uksouth",
+            "tags": {
+                "Cohort": "Cloud10"
+            },
+            "zones": [
+                "1"
+            ],
+            "properties": {
+                "hardwareProfile": {
+                    "vmSize": "Standard_B1ls"
+                },
+                "storageProfile": {
+                    "imageReference": {
+                        "publisher": "canonical",
+                        "offer": "0001-com-ubuntu-server-jammy",
+                        "sku": "22_04-lts",
+                        "version": "latest"
+                    },
+                    "osDisk": {
+                        "osType": "Linux",
+                        "name": "[concat(parameters('virtualMachines_test_uks_cloud10_test_name'), '_OsDisk_1_4f642b2616e74e75bc9d11a79c5290d5')]",
+                        "createOption": "FromImage",
+                        "caching": "ReadWrite",
+                        "managedDisk": {
+                            "id": "[parameters('disks_test_uks_cloud10_test_OsDisk_1_4f642b2616e74e75bc9d11a79c5290d5_externalid')]"
+                        },
+                        "deleteOption": "Delete"
+                    },
+                    "dataDisks": []
+                },
+                "osProfile": {
+                    "computerName": "[parameters('virtualMachines_test_uks_cloud10_test_name')]",
+                    "adminUsername": "roan",
+                    "linuxConfiguration": {
+                        "disablePasswordAuthentication": true,
+                        "ssh": {
+                            "publicKeys": [
+                                {
+                                    "path": "/home/roan/.ssh/authorized_keys",
+                                    "keyData": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC5O3c/2ELe59Xb10D1b12jQZgtKWab2ciV1P6cRy6Mi9Qk/TzUm6qS3kPn3rAh2rI+7v4UmBT95ucl03GU8ZQqO000CqZJyBeuJesIuP6spf5BdlLnVR4dthRE8doUMxvbQITSVX3Q4rvxaH7ziOBB63ViLuPcG6hFEJQgZUEPBMdEdXFQDE+7QrEi46HckfMRxUIYBQZhzfBKE1Hhvro8xHeX8z3nKD0dP5408Fpu7byCcTEi7Vsh+g58zYaMd3TNuV8gFsjI6rOmCF0SrsTjH2ApGCDskgtb04BfKvcmuoVfDBGWAgW7fblY/te+LieHUroy3Dh5HBEiGibOuGAosKiMXkKYXl4Qxg7JEEfcY977TCOlHgg4HbH/9uIQfPm2/qgyTtjNzajiBbfNJ5g/VcP6IUV0scSg0ozkpoDPW9zVJ5wIDR2lX5gZxQDmiTmOjZDSYLpYMrJcU0Png04DGlg/bG9dYBz5joSbVh5rU5FFXPZUrlPo+Al6U1X3BfU= generated-by-azure"
+                                }
+                            ]
+                        },
+                        "provisionVMAgent": true,
+                        "patchSettings": {
+                            "patchMode": "ImageDefault",
+                            "assessmentMode": "ImageDefault"
+                        },
+                        "enableVMAgentPlatformUpdates": false
+                    },
+                    "secrets": [],
+                    "allowExtensionOperations": true,
+                    "requireGuestProvisionSignal": true
+                },
+                "networkProfile": {
+                    "networkInterfaces": [
+                        {
+                            "id": "[parameters('networkInterfaces_test_uks_cloud10_test512_z1_externalid')]",
+                            "properties": {
+                                "deleteOption": "Detach"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

@@ -1,7 +1,12 @@
-# Virtual Machines
-Azure VMs can be configured and launched in a variety of different ways. Via the Azure Portal, or a number of Cloud Shell tools such as the Azure CLI. Setup can be configured ahead of time using templates or done on the fly.
+##### Assignment:
+* Create a VM with specs listed in the assignment.
 
-## Key-terms
+##### Study:
+* Azure VMs
+* Network Security Groups (NSGs)
+* Custom Data on Azure VMs
+* User Data on Azure VMs
+
 #### Azure Virtual Machines
 Azure VMs make use of several *Azure resources* to do their job. 
 * The VM itself
@@ -45,23 +50,6 @@ Azure Powershell and Azure CLI are useful for simple scripts and the use of CLI 
 #### Azure Site Recovery
 Azure Site Recovery is a manner of duplicating infrastructure across multiple locations to deal with regional failover. This could be on-prem infrastructure backed up in the cloud, or cloud infrastructure that can failover to a secondary datacentre. It works with Azure resources, Hyper-V, VMware and on-prem servers.
 
-## Opdracht
-### Gebruikte bronnen
 [Intro to VMs](https://learn.microsoft.com/en-us/training/modules/intro-to-azure-virtual-machines/)  
-
-### Ervaren problemen
-##### Assignment:
-* Create a VM with specs listed in the assignment.
-	* I ran into no issues by following the instructions.
-
-##### Study:
-* Azure VMs
-	* I followed a tutorial to learn more about VMs.
-* Network Security Groups (NSGs)
-	* I read a little about NSGs, and added them to [AZ-10_VNets.](AZ-10_VNets.md)
-
-### Resultaat
-By creating a VM by following the instructions I was able to quickly host a website and access it via my browser. Furthermore, I read about VMs and their configuration settings and created notes and references for further learning. Finally, I [exported the template](../AZ-06/) used to create the VM.
-
-![ss of settings during creation](../../00_includes/AZ-06_screenshot3.png)  
-![ss of browser](../../00_includes/AZ-06_screenshot4.png)
+[Azure Load Balancer](https://learn.microsoft.com/en-us/azure/load-balancer/load-balancer-overview)  
+[Virtual Machine Scale Sets](https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/overview)  
