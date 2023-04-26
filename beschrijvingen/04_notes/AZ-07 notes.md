@@ -39,7 +39,9 @@ Billing when using managed disks takes the following factors into consideration:
 * Transactions
 	* Billing is performed for the number of I/O operations. On standard SSDs, each I/O operation less than 256 KiB is considered a single I/O operation. For HDDs, each IO operation is considered a single transaction, regardless of I/O size.
 
-[Azure disk types](https://learn.microsoft.com/en-us/azure/virtual-machines/disks-types)
-[Add and size disks in Azure VMs](https://learn.microsoft.com/en-us/training/modules/add-and-size-disks-in-azure-virtual-machines/)
-[Creating a VM via template](https://learn.microsoft.com/en-us/azure/virtual-machines/windows/ps-template)
-[Formatting and mounting disks in Linux](https://phoenixnap.com/kb/linux-format-disk)
+[Azure disk types](https://learn.microsoft.com/en-us/azure/virtual-machines/disks-types)  
+[Add and size disks in Azure VMs](https://learn.microsoft.com/en-us/training/modules/add-and-size-disks-in-azure-virtual-machines/)  
+[Creating a VM via template](https://learn.microsoft.com/en-us/azure/virtual-machines/windows/ps-template)  
+[Shared disks](https://learn.microsoft.com/en-us/azure/virtual-machines/disks-shared)  
+[Enabling shared disks](https://learn.microsoft.com/en-us/azure/virtual-machines/disks-shared-enable?tabs=azure-portal)
+[Formatting and mounting disks in Linux](https://phoenixnap.com/kb/linux-format-disk)  
