@@ -12,3 +12,10 @@ day1:
 	* Check timeline
 	* Check others' experiences with the exams
 	* Look closely at the assignments and the terms / phrases they reference.
+
+Presentaties:
+* team 3 opdracht 5
+* team 2 opdracht 7
+* team 1 opdracht 10
+
+Inschrijven Azure virtual training day
