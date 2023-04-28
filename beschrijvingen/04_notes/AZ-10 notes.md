@@ -1,6 +1,6 @@
 
 #### Virtual Networks
-VNets are the Azure equivalent of a LAN; they provide a private connection between VMs and other services. Subnets, addressing and security are all handled when one sets up a VNet.
+VNets are a set of Azure resources that allow other resources to communicate over a network, with the internet or with on-prem devices. 
 
 #### Network Security Groups
 NSGs are software firewalls that can control traffic between subnets or VMs. They allow for full control over every network request entering or exiting a VM.
@@ -9,4 +9,9 @@ NSGs are software firewalls that can control traffic between subnets or VMs. The
 The Azure Load Balancer can distribute traffic between multiple VMs. 
 
 #### Virtual Machines Scale Sets
-Azure vritual machine scale sets allow for the creation of a group of load balanced VMs. These allow scaling on demand or on schedule and provide high availability to applications. Scale sets cost nothing; instead, one pays for the VMs created.
+Azure virtual machine scale sets allow for the creation of a group of load balanced VMs. These allow scaling on demand or on schedule and provide high availability to applications. Scale sets cost nothing; instead, one pays for the VMs created.
+
+[Intro to Azure VNets](https://learn.microsoft.com/en-us/training/modules/introduction-to-azure-virtual-networks/)  
+[Configuring Azure VNets](https://learn.microsoft.com/en-us/training/modules/configure-virtual-networks/)  
+[Configure the network for your VMs](https://learn.microsoft.com/en-us/training/paths/azure-administrator-manage-virtual-networks/)  
+[Blocking internet access on subnets](https://learn.microsoft.com/en-us/answers/questions/427589/how-to-block-internet-access-in-azure-virtual-netw)  

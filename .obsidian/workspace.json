@@ -4,37 +4,6 @@
     "type": "split",
     "children": [
       {
-        "id": "7b4dcbb1b550898f",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "6378a9ebe9d98763",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "beschrijvingen/04_notes/AZ-07 notes.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "62483777fa9609bd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "beschrijvingen/04_notes/AZ-08 notes.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          }
-        ],
-        "currentTab": 1
-      },
-      {
         "id": "abd9a4256397f34e",
         "type": "tabs",
         "children": [
@@ -44,7 +13,25 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "04_Azure_1/04_completed_assignments/AZ-08_firewalls.md",
+                "file": "beschrijvingen/04_notes/AZ-10 notes.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "4859f86edfa6b85e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3f5c7dbdd3d6758d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "04_Azure_1/04_completed_assignments/AZ-10_virtualNetworks.md",
                 "mode": "source",
                 "source": false
               }
@@ -116,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "04_Azure_1/04_completed_assignments/AZ-08_firewalls.md",
+                "file": "04_Azure_1/04_completed_assignments/AZ-10_virtualNetworks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "04_Azure_1/04_completed_assignments/AZ-08_firewalls.md",
+                "file": "04_Azure_1/04_completed_assignments/AZ-10_virtualNetworks.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -156,7 +143,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "04_Azure_1/04_completed_assignments/AZ-08_firewalls.md"
+                "file": "04_Azure_1/04_completed_assignments/AZ-10_virtualNetworks.md"
               }
             }
           }
@@ -178,23 +165,27 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4e309efcdb3895b3",
+  "active": "3f5c7dbdd3d6758d",
   "lastOpenFiles": [
+    "00_includes/AZ-10_screenshot3.png",
+    "00_includes/AZ-10_screenshot2.png",
+    "00_includes/AZ-10_screenshot1.png",
+    "00_includes/AZ-10_screenshot4.png",
+    "beschrijvingen/04_notes/AZ-10 notes.md",
+    "04_Azure_1/04_completed_assignments/AZ-10_virtualNetworks.md",
+    "beschrijvingen/04_notes/04_notes.md",
+    "04_Azure_1/04_completed_assignments/AZ-08_firewalls.md",
+    "beschrijvingen/04_notes/AZ-09 notes.md",
     "00_includes/AZ-08_screenshot1.png",
     "00_includes/AZ-08_screenshot2.png",
     "beschrijvingen/04_notes/AZ-08 notes.md",
-    "04_Azure_1/04_completed_assignments/AZ-08_firewalls.md",
     "beschrijvingen/04_notes/AZ-07 notes.md",
     "04_Azure_1/04_completed_assignments/AZ-07_diskStorage.md",
-    "beschrijvingen/04_notes/AZ-10 notes.md",
     "04_Azure_1/04_completed_assignments/AZ-05_storageAccounts.md",
     "00_templates/retro.md",
     "00_templates/standup.md",
-    "beschrijvingen/04_notes/04_notes.md",
-    "beschrijvingen/04_notes/AZ-09 notes.md",
     "beschrijvingen/04_notes/AZ-02 notes.md",
     "04_Azure_1/04_completed_assignments/AZ-09_sharedResponsibility.md",
-    "04_Azure_1/04_completed_assignments/opdracht 1.md",
     "04_Azure_1/04_completed_assignments/AZ-06_virtualMachines.md",
     "04_Azure_1/04_completed_assignments/Az-04_coreServices.md",
     "04_Azure_1/04_completed_assignments/AZ-03_advantagesCloud.md",
@@ -216,10 +207,6 @@
     "00_includes/AZ-06_screenshot3.png",
     "00_includes/AZ-06_screenshot4.png",
     "00_includes/AZ-06_screenshot2.png",
-    "00_includes/AZ-06_screenshot1.png",
-    "00_includes/AZ-02_screenshot1.png",
-    "00_includes/Az-05_screenshot4.png",
-    "00_includes/AZ-05_screenshot3.png",
     "04_Azure_1/04_completed_assignments",
     "04_Azure_1",
     "beschrijvingen/04_notes",
