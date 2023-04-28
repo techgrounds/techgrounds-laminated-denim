@@ -25,20 +25,16 @@ Azure virtual machine scale sets allow for the creation of a group of load balan
 ### Ervaren problemen
 ##### Assignment 1:
 * Create a VNET with two subnets.
-	* I used the Azure Portal to create a VNet resource.
-* Ensure subnet 1 has no internet access.
-	* I created a second NSG with rules to block all internet traffic and attached it to subnet 1.
+	* I used the Azure Portal to create a VNet resource alongside my VM.
+* Ensure subnet 1 has no route to the internet.
+	* This proved more complicated than expected. First, I blocked it with NSG rules. This did not suffice for the assignment. To fix this issue, I followed the steps listed under results.
 
 ##### Assignment 2:
 * Create a VM with HTTP access and place it on subnet 2.
 	* I created a VM and was able to place it on subnet 2 during creation.
 
 ### Resultaat
-To start, I created a new Virtual Network resource and associated resource group. Within this resource I designated two subnets and the correct IP address range. This gave me an error message because I had not yet shut down a resource group from a previous assignment.  
-![ss VNET creation](../../00_includes/AZ-10_screenshot1.png)  
-Once I had done this, I created two NSGs and tweaked the security rules to block all internet traffic on the first subnet. I used the destination: service tag and the internet tag to do this.  
-![ss2](../../00_includes/AZ-10_screenshot2.png)  
-Upon completion of these steps, I created a new virtual machine and attached it to subnet 2.  
-![ss3](../../00_includes/AZ-10_screenshot3.png)  
-As shown below, this allowed me to access the webserver. Upon further testing I was able to change the subnet attached to the VM by changing the settings on its network interface. While not part of the assignment, this did successfully block me from accessing the webserver.  
-![ss of website](../../00_includes/AZ-10_screenshot4.png)
+I created a Virtual Network with two subnets and launched a VM with a webserver.  
+![ss1](../../00_includes/AZ-10_screenshot1.png)  
+In order to ensure Subnet-1 could not route to the internet, I created a routing table, created a rule to block internet access, and attached it to the subnet. I then tested the network interface with it connected to both Subnet-1 and Subnet-2. With Subnet-2 attached, I could access the webserver via browser. With Subnet-1 attached, this was not possible.
+![ss2](../../00_includes/AZ-10_screenshot2.png)
