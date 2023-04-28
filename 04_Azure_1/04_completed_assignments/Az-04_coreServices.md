@@ -23,6 +23,7 @@ These are concepts and strategies I plan to implement to achieve a passing grade
 
 #### Describe Azure architecture and services
 * Read further about hierarchy of resource groups, subscriptions and management groups. Grab a screenshot. Add to AZ-01.
+* Read about networking. VNets, virtual subnets, peering, Azure DNS, Azure VPN Gateway and Azure ExpressRoute. Add to AZ-10.
 
 #### Describe Azure management and governance
 * Read further about Azure Cloud Shell, including Azure Powershell & Azure CLI. Maybe add to AZ-06?

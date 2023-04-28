@@ -1,6 +1,7 @@
 # Azure Virtual Network
 Azure Virtual Networks allow resources to communicate with each other, over the internet or with on-premises devices. Just like other networks, they can be configured with subnets and a private IP address range.
 
+#Azure/AZ-900 #Azure/Architecture #Azure/Services 
 ## Key-terms
 #### Virtual Networks
 VNets are a set of Azure resources that allow other resources to communicate over a network, with the internet or with on-prem devices. 
@@ -39,5 +40,5 @@ Once I had done this, I created two NSGs and tweaked the security rules to block
 ![ss2](../../00_includes/AZ-10_screenshot2.png)  
 Upon completion of these steps, I created a new virtual machine and attached it to subnet 2.  
 ![ss3](../../00_includes/AZ-10_screenshot3.png)  
-As shown below, this allowed me to access the webserver. Upon further testing I was able to change the subnet attached to the VM by changing the settings on its network interface. While not part of the assignment, this did successfully block me from accessing the webserver.
+As shown below, this allowed me to access the webserver. Upon further testing I was able to change the subnet attached to the VM by changing the settings on its network interface. While not part of the assignment, this did successfully block me from accessing the webserver.  
 ![ss of website](../../00_includes/AZ-10_screenshot4.png)

@@ -24,6 +24,7 @@ Elasticity refers to the ability of the cloud to automatically scale processing,
 Agility refers to the speed with which scaling is possible. For example, if one requires more VMs these VMs can be launched within seconds of making the request. 
 
 #### Geo-distribution
+Geo-distribution refers to the geographic distribution of datacentres. Advantages include availability, latency, redundancy, and compliance.
 
 #### Fault tolerance and disaster recovery
 [Fault tolerance in Azure](https://learn.microsoft.com/en-us/archive/msdn-magazine/2015/september/microsoft-azure-fault-tolerance-pitfalls-and-resolutions-in-the-cloud) refers to the cloud provider's management of VMs and physical hardware to mitigate small-scale failures. For example, moving a customer from an unhealthy VM to a healthy one.
@@ -34,6 +35,6 @@ Disaster recovery refers to things such as data backups and the infrastructure t
 The consumption-based model is as its name indicates: a pricing model that does not require upfront investment but is rather based on dynamic scaling based on an organisation's requirements. Benefits include paying for extra resources as needed, or the ability to halt those resources when they're no longer necessary.
 
 
-[Describe benefits of cloud services](https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/)
-[Elastic Computing](https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-elastic-computing)
-[Benefits of cloud services, Exam Ref AZ-900](https://www.microsoftpressstore.com/articles/article.aspx?p=2979073)
+[Describe benefits of cloud services](https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/)  
+[Elastic Computing](https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-elastic-computing)  
+[Benefits of cloud services, Exam Ref AZ-900](https://www.microsoftpressstore.com/articles/article.aspx?p=2979073)  

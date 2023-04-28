@@ -1,6 +1,8 @@
 # Firewalls
 Azure Firewall is the cloud equivalent of a stateful hardware firewall and gateway in one. Given its NAT and DNS features it is capable of much more than what would be typically expected of a firewall. Furthermore, while it can be compared to a hardware firewall, NSGs can be compared to software firewalls that operate from individual VMs and network interfaces.
 
+#Azure/Services #Azure/Management
+
 ## Key-terms
 #### Azure Firewall
 Azure Firewall is a cloud-based firewall. Typically, it sits within the [hub VNet](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/hybrid-networking/hub-spoke?tabs=cli) and filters traffic to and from spoke VNets, the internet and any on-premises devices.
