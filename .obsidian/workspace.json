@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "beschrijvingen/04_notes/AZ-03 notes.md",
+                "file": "beschrijvingen/04_notes/AZ-07 notes.md",
                 "mode": "source",
                 "source": false
               }
@@ -31,7 +31,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "04_Azure_1/04_completed_assignments/AZ-09_sharedResponsibility.md",
+                "file": "04_Azure_1/04_completed_assignments/AZ-08_firewalls.md",
                 "mode": "source",
                 "source": false
               }
@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "04_Azure_1/04_completed_assignments/AZ-09_sharedResponsibility.md",
+                "file": "04_Azure_1/04_completed_assignments/AZ-08_firewalls.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "04_Azure_1/04_completed_assignments/AZ-09_sharedResponsibility.md",
+                "file": "04_Azure_1/04_completed_assignments/AZ-08_firewalls.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -143,7 +143,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "04_Azure_1/04_completed_assignments/AZ-09_sharedResponsibility.md"
+                "file": "04_Azure_1/04_completed_assignments/AZ-08_firewalls.md"
               }
             }
           }
@@ -167,14 +167,24 @@
   },
   "active": "3f5c7dbdd3d6758d",
   "lastOpenFiles": [
+    "04_Azure_1/04_completed_assignments/AZ-07_diskStorage.md",
+    "00_includes/AZ-07_screenshot2.png",
+    "00_includes/AZ-07_screenshot1.png",
+    "00_includes/AZ-07_screenshot3.png",
+    "beschrijvingen/04_notes/AZ-07 notes.md",
+    "01_Linux_1/01_completed_assignments/LNX-05 report.md",
     "04_Azure_1/04_completed_assignments/AZ-10_virtualNetworks.md",
-    "04_Azure_1/04_completed_assignments/Az-04_coreServices.md",
+    "00_templates/retro.md",
+    "01_Linux_1/01_completed_assignments/LNX-04_report_usersGroups.md",
+    "01_Linux_1/01_completed_assignments/LNX-03 report.md",
+    "00_includes/04AZ07-vm2_key.pem",
+    "00_includes/04AZ07-vm1_key.pem",
+    "beschrijvingen/04_notes/AZ-03 notes.md",
     "04_Azure_1/04_completed_assignments/AZ-09_sharedResponsibility.md",
+    "04_Azure_1/04_completed_assignments/Az-04_coreServices.md",
     "04_Azure_1/04_completed_assignments/AZ-08_firewalls.md",
     "04_Azure_1/04_completed_assignments/AZ-06_virtualMachines.md",
-    "04_Azure_1/04_completed_assignments/AZ-07_diskStorage.md",
     "04_Azure_1/04_completed_assignments/AZ-03_advantagesCloud.md",
-    "beschrijvingen/04_notes/AZ-03 notes.md",
     "beschrijvingen/04_notes/AZ-10 notes.md",
     "04_Azure_1/04_completed_assignments/AZ-02_costManagement.md",
     "00_includes/AZ-10_screenshot3.png",
@@ -186,32 +196,22 @@
     "00_includes/AZ-08_screenshot1.png",
     "00_includes/AZ-08_screenshot2.png",
     "beschrijvingen/04_notes/AZ-08 notes.md",
-    "beschrijvingen/04_notes/AZ-07 notes.md",
     "04_Azure_1/04_completed_assignments/AZ-05_storageAccounts.md",
-    "00_templates/retro.md",
     "00_templates/standup.md",
     "beschrijvingen/04_notes/AZ-02 notes.md",
     "04_Azure_1/04_completed_assignments/AZ-01_globalInfrastructure.md",
     "00_includes/AZ-09_screenshot1.png.png",
-    "00_includes/AZ-09_screenshot1.png",
     "beschrijvingen/04_notes/AZ-05 notes.md",
     "beschrijvingen/03_notes/softSkillsWk3.md",
-    "01_Linux_1/01_completed_assignments/LNX-05 report.md",
-    "01_Linux_1/01_completed_assignments/LNX-04_report_usersGroups.md",
     "beschrijvingen/01_notes/LNX-05 notes.md",
-    "beschrijvingen/01_notes/LNX-06 notes.md",
     "04_Azure_1/AZ-06/template.json",
     "04_Azure_1/AZ-06/parameters.json",
     "04_Azure_1/AZ-06/Untitled",
     "04_Azure_1/AZ-06",
-    "00_includes/AZ-06_screenshot3.png",
-    "00_includes/AZ-06_screenshot4.png",
     "04_Azure_1/04_completed_assignments",
     "04_Azure_1",
     "beschrijvingen/04_notes",
     "03_Security_1/03_completed_assignments",
-    "02_Networking_1/NTW-07/NTW-07_casestudy.drawio.crswap",
-    "beschrijvingen/03_notes",
     "Untitled.canvas",
     "Untitled 1.canvas"
   ]

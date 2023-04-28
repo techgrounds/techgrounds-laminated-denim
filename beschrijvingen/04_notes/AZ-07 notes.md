@@ -1,13 +1,17 @@
 ##### Assignment:
 * Start 2 Linux VMs. Ensure an open SSH connection.
-	* This should be doable simultaneously.
+	* This proved no issue.
 * Create an Azure Managed Disk and pair this with both VMs.
 	* Read about Managed Disks.
+		* I created a managed disk and paired it with both VMs without issue. I ran into problems with mounting and formatting the drive. Formatting once is sufficient and self-explanatory if one is operating with sufficient presence of mind.
 * Create a file on the first machine and place this on the shared disk.
-	* Refresh memory on Linux file directories.
+	* With the correct permissions set, this proved no issue.
 * Check to see if the file is readable on the second machine.
+	* This proved no issue once the drive was formatted and mounted correctly. The file was readable, so long as I (re)mounted the disk after its creation.
 * Make a snapshot of the disk and try to create a new disk with this.
+	* I learned that the Azure Portal requires manual refreshing in order to view updates initiated on another tab.
 * Mount the disk and examine the file.
+	* This proved no issue.
 
 
 
@@ -38,6 +42,9 @@ Billing when using managed disks takes the following factors into consideration:
 * Outbound data transfers
 * Transactions
 	* Billing is performed for the number of I/O operations. On standard SSDs, each I/O operation less than 256 KiB is considered a single I/O operation. For HDDs, each IO operation is considered a single transaction, regardless of I/O size.
+
+#### Snapshots
+A snapshot is an exact clone of an existing drive, including drive data and metadata.
 
 [Azure disk types](https://learn.microsoft.com/en-us/azure/virtual-machines/disks-types)  
 [Add and size disks in Azure VMs](https://learn.microsoft.com/en-us/training/modules/add-and-size-disks-in-azure-virtual-machines/)  
