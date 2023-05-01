@@ -1,7 +1,7 @@
 3m
 
 
-Goedemorgen iedereen. Vandaag ga ik het gedeelte Azure presenteren van opdracht 5, Storage Accounts. Mijn collega Younes neemt daarna over voor het gedeelte AWS.
+Goedemorgen iedereen. Vandaag ga ik het gedeelte Azure presenteren van opdracht 5, Storage Accounts. Mijn collega Younes neemt daarna over voor het gedeelte AWS en een live demo.
 
 Wat is een storage service?
 
