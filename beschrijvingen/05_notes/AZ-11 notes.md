@@ -18,11 +18,15 @@ Create a VM scale set with the following requirements:
 
 ##### Assignment 2:
 * Check if you can access the webserver via the endpoint of the load balancer.
+	* It took me a minute to configure the load balancer and VMSS correctly, but accessing the webserver via the public IP of the load balancer proved no issue afterwards.
 * Execute a load test on the servers to activate auto scaling.
+	* I utilised the `stress` tool in Linux to load both initial VMs to 100% CPU utilisation. This resulted in extra VMs being created.
 
 
 #### Virtual Machine Scale Sets
 Azure Virtual Machine Scale Sets are a manner of scaling applications on a set of VMs. They allow one to automatically increase or decrease the number of VMs based on demand or a pre-configured schedule. Scale sets can automatically configure the new VMs added. They are suited for compute workloads, big-data workloads and container workloads. To determine the availability of a VM instance, it uses a health probe or the Application Health Extension. The maximum number of VMs in a scale set is 1000.
+
+![ss of VMSS benefits](../../00_includes/AZ-11_screenshot1.png)
 
 #### [Autoscaling](https://learn.microsoft.com/en-us/training/modules/intro-to-azure-virtual-machine-scale-sets/3-how-azure-virtual-machine-scale-sets-work)
 Autoscaling is a manner of scaling a scale set up and down. It's ideal for variable workloads and can be configured based on metrics or a schedule. Metric-based scaling can be configured on a set of conditions, rules and limits. Common metrics include:
@@ -66,16 +70,44 @@ Also known as session affinity, source IP affinity or client IP affinity. Load B
 * **Client IP**, that specifies that any further requests from the same client IP will be handled by the same VM.
 * **Client IP and protocol**, that specifies that any further requests from the same client IP and using the same protocol will be handled by the same back-end instance.
 
+#### Azure Application Gateway
+Azure Application Gateway offers a variety of OSI Layer 7 load-balancing options. It features TLS/SSL termination, a WAF to increase security and supports session persistence. It works regionally.
 
+##### Listeners
+A listener is the first thing traffic meets after entering the gateway through a port. Set up to listen to a specific host name and a specific port on a specific IP address, it can then use a rule to direct traffic to the correct back-end pool. Listeners are also capable of TSL/SSL decryption with the correct certificate.
 
+![ss7](../../00_includes/AZ-11_screenshot7.png)
+
+##### Web Application Firewall
+The WAF is an option in the Application Gateway that checks requests before they reach a listener. It does so by comparing requests with the Open Web Application Security Project [(OWASP)](https://owasp.org/) for common threats like SQL-injection and HTTP request smuggling. OWASP provides multiple core rule sets and WAF supports four: CRS 3.2, 3.2, 3.0 and 2.2.9.
+
+##### Back-end pools
+A back-end pool is a collection of servers with an associated load balancer.
+
+##### TLS/SSL termination
+This allows one to terminate TLS and SSL connections at the application gateway instead of in the back-end, saving on CPU utilisation.
+
+#### Azure Front Door
+Front Door is an application delivery network that can provide global load balancing. It is capable of OSI Layer 7 functionality much like an application gateway, but can also distribute loads over a variety of Azure regions.
+
+#### Azure Traffic Manager
+Traffic Manager is a DNS-based load balancer that works globally. As a DNS-based load balancer, it distributes loads only at the domain level. This makes it slower at failing over than Front Door.
+
+* Created a VMSS with load balancer and required options
+* Ensured I could access webserver via load balancer's public IP
+* Used ssh to connect to the VMs using the load balancer's public IP and port forwarding rules.
+* Executed a stress test (`sudo stress --cpu 8 --timeout 600 &`) via the stress cmd on both VMs
+* Viewed CPU usage metrics in the Azure Portal as well as top command to ensure this was working
+* After a few minutes, new VM
 
 
 
 [Intro to VM Scale Sets](https://learn.microsoft.com/en-us/training/modules/intro-to-azure-virtual-machine-scale-sets/)  
 [Build a scalable app with VM Scale Sets](https://learn.microsoft.com/en-us/training/modules/build-app-with-scale-sets/)  
 [Describe monitoring tools in Azure](https://learn.microsoft.com/en-us/training/modules/describe-monitoring-tools-azure/)  
-[Intro to Azure Load Balancer](https://learn.microsoft.com/en-us/training/modules/intro-to-azure-load-balancer/)
-[Tutorial: Create a VM Scale Set](https://learn.microsoft.com/en-us/azure/virtual-machines/linux/tutorial-create-vmss)
+[Intro to Azure Load Balancer](https://learn.microsoft.com/en-us/training/modules/intro-to-azure-load-balancer/)  
+[Intro to Azure Application Gateway](https://learn.microsoft.com/en-us/training/modules/intro-to-azure-application-gateway/)  
+[Tutorial: Create a VM Scale Set](https://learn.microsoft.com/en-us/azure/virtual-machines/linux/tutorial-create-vmss)  
 
 
 [How to run the stress command on Linux](https://www.tecmint.com/linux-cpu-load-stress-test-with-stress-ng-tool/)
