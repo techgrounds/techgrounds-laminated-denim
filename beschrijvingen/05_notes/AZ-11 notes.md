@@ -57,6 +57,9 @@ Azure Log Analytics lets one run log queries on data collected by Azure Monitor.
 ##### Application Insights
 Another feature of Azure Monitor, Application Insights can monitor applications running in Azure, on-prem and other cloud environments. This can be done by installing an SDK in the application, or by using the Application Insights agent, that is supported in a variety of programming languages. It can monitor things such as request rates, response times and failure rates as well as a host of other things.
 
+#### Public and private endpoints
+Endpoints are essentially the points where a device connects to a wider network. For example, the public IP and DNS on a gateway or router would be a public endpoint. A private endpoint could be a specially configured private IP and private DNS that connects to a service. For example, allowing users connected to a certain VNet to access a storage account.
+
 #### Azure Load Balancer
 Azure Load Balancer allows one to distribute network traffic across a group or VMs or the instances in a Virtual Machine Scale Set. It operates on layer 4 of the OSI model and is thus incapable of managing traffic based on its content; see Application Gateways for this. Load balancers support NAT rules. They are ideal for applications that need low latency and high performance. There are two types of load balancer, public and private.
 * **Public Load Balancers** balance internet traffic to VMs. They also function as routers, mapping the public IP and port number of the incoming traffic to their private equivalents. They can also do the same for outbound traffic.

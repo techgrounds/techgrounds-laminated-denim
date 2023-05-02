@@ -97,14 +97,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "05_Azure_2/05_completed_assignments/opdracht 1.md",
+                "file": "beschrijvingen/05_notes/AZ-12 notes.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "9b6e5eb4dd01b1e0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "beschrijvingen/05_notes/AZ-13 notes.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 7
+        "currentTab": 8
       }
     ],
     "direction": "vertical"
@@ -170,7 +182,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "05_Azure_2/05_completed_assignments/opdracht 1.md",
+                "file": "beschrijvingen/05_notes/AZ-13 notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -187,7 +199,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "05_Azure_2/05_completed_assignments/opdracht 1.md",
+                "file": "beschrijvingen/05_notes/AZ-13 notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -210,7 +222,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "05_Azure_2/05_completed_assignments/opdracht 1.md"
+                "file": "beschrijvingen/05_notes/AZ-13 notes.md"
               }
             }
           }
@@ -232,47 +244,47 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2c74b2849d1cb7fe",
+  "active": "9b6e5eb4dd01b1e0",
   "lastOpenFiles": [
-    "05_Azure_2/05_completed_assignments/opdracht 1 1.md",
-    "05_Azure_2/05_completed_assignments/opdracht 1.md",
-    "05_Azure_2/05_completed_assignments/AZ-11_loadBalancer.md",
-    "04_Azure_1/04_completed_assignments/AZ-10_virtualNetworks.md",
-    "04_Azure_1/04_completed_assignments/AZ-08_firewalls.md",
-    "04_Azure_1/04_completed_assignments/AZ-07_diskStorage.md",
-    "04_Azure_1/04_completed_assignments/AZ-05_storageAccounts.md",
+    "beschrijvingen/05_notes/AZ-12 notes.md",
+    "beschrijvingen/05_notes/AZ-13 notes.md",
+    "beschrijvingen/05_notes/AZ-11 notes.md",
     "04_Azure_1/04_completed_assignments/Az-04_coreServices.md",
     "04_Azure_1/04_completed_assignments/AZ-03_advantagesCloud.md",
-    "beschrijvingen/05_notes/AZ-12 notes.md",
-    "beschrijvingen/05_notes/AZ-11 notes.md",
+    "beschrijvingen/04_notes/AZ-03 notes.md",
+    "beschrijvingen/05_notes/05_notes.md",
+    "beschrijvingen/03_notes/Sec-02_presentation.md",
+    "beschrijvingen/03_notes/Sec-02 notes.md",
+    "beschrijvingen/03_notes/Sec-03 notes.md",
+    "beschrijvingen/03_notes/Sec-04 notes.md",
+    "beschrijvingen/03_notes/Sec-05 notes.md",
+    "beschrijvingen/03_notes/Sec-06 Notes.md",
+    "beschrijvingen/03_notes/Sec-08 Notes.md",
+    "beschrijvingen/03_notes/Sec-07 Notes.md",
+    "beschrijvingen/04_notes/AZ-05 Presentation.md",
+    "00_includes/AZ-12_screenshot1.png",
+    "05_Azure_2/05_completed_assignments/AZ-11_loadBalancer.md",
+    "04_Azure_1/04_completed_assignments/AZ-10_virtualNetworks.md",
+    "04_Azure_1/04_completed_assignments/AZ-09_sharedResponsibility.md",
+    "04_Azure_1/04_completed_assignments/AZ-08_firewalls.md",
+    "04_Azure_1/04_completed_assignments/AZ-07_diskStorage.md",
+    "04_Azure_1/04_completed_assignments/AZ-06_virtualMachines.md",
+    "04_Azure_1/04_completed_assignments/AZ-05_storageAccounts.md",
+    "beschrijvingen/Wer.md",
+    "04_Azure_1/04_completed_assignments/AZ-01_globalInfrastructure.md",
+    "05_Azure_2/05_completed_assignments/opdracht 1.md",
     "00_includes/AZ-11_screenshot7.png",
-    "beschrijvingen/05_notes/AZ-13 notes.md",
     "00_includes/AZ-11_screenshot5.png",
     "00_includes/AZ-11_screenshot4.png",
     "00_includes/AZ-11_screenshot3.png",
     "00_includes/AZ-11_screenshot2.png",
     "00_includes/AZ-11_screenshot1.png",
     "00_includes/AZ-11_screenshot6.png",
-    "beschrijvingen/01_notes/LNX-01 Notes.md",
-    "beschrijvingen/05_notes/05_notes.md",
-    "beschrijvingen/Exam notes.md",
-    "beschrijvingen/Presentation Notes.md",
-    "beschrijvingen/scrumNotes.md",
-    "beschrijvingen/storage-types.md",
-    "beschrijvingen/04_notes/04_notes.md",
-    "04_Azure_1/04_completed_assignments/AZ-06_virtualMachines.md",
     "beschrijvingen/05_notes",
-    "00_templates/opdracht.md",
     "05_Azure_2/05_completed_assignments",
     "05_Azure_2",
-    "beschrijvingen/04_notes/AZ-05 Presentation.md",
-    "04_Azure_1/04_completed_assignments/AZ-01_globalInfrastructure.md",
-    "beschrijvingen/00_teamnotes/WK-01.md",
-    "beschrijvingen/00_teamnotes/WK-02.md",
-    "beschrijvingen/01_notes/SS-01_learningToLearn.md",
     "00_includes/AZ-10_screenshot2.png",
     "00_includes/AZ-07_screenshot2.png",
-    "00_includes/AZ-07_screenshot1.png",
     "00_includes/04AZ07-vm2_key.pem",
     "00_includes/04AZ07-vm1_key.pem",
     "04_Azure_1/AZ-06/template.json",
