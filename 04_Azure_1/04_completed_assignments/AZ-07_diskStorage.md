@@ -3,7 +3,7 @@ Azure Disk Storage allows one to create a virtual storage drive in the cloud. Wh
 
 ## Key-terms
 #### Ultra Disks
-Azure ultra disks are the highest performance tier. They are intended for data-intensive workloads such as [SAP HANA](https://www.ibm.com/topics/sap-hana), top-tier databases and transaction-heavy workloads. They can only be used as data disks.
+Azure ultra disks are the highest performance tier. They are intended for data-intensive workloads such as [SAP HANA](https://www.ibm.com/topics/sap-hana), top-tier databases and transaction-heavy workloads. They can only be used as data disks. Ultra disks IOPS throughput can be dynamically configured while it is in use.
 
 #### Premium SSD v2
 Premium SSD v2 sit between ultra disks and Premium SSDs in terms of performance. Capacity, throughput and IOPS can be tweaked without downtime for cost efficiency. It is suited for a variety of different tasks and can be set to any supported size. They cannot be used for OS disks.

@@ -7,8 +7,27 @@ Azure Storage accounts are a resource that group together multiple storage servi
 Azure offers different manners to store data, such as Azure SQL Database, Azure Cosmos DB and Azure Table Storage. Messaging is handled by Azure Queues and Event Hubs. Loose files can be stored by services such as Azure Files and Azure Blobs. Azure groups Azure Blobs, Azure Files, Azure Queues, and Azure Tables together under the header *Azure Storage.*
 
 #### Storage account
-A storage account is a container that groups multiple Storage services together. Only *Azure Storage* services can be added to an account. A storage account allows one to configure these services as a group. A storage account is an Azure resource and can be part of a resource group.  
+A storage account is a container that groups multiple Storage services together. Only *Azure Storage* services can be added to an account. A storage account allows one to configure these services as a group. A storage account is an Azure resource and can be part of a resource group. Storage Accounts offer Premium and Standard performance tiers. Premium offers higher performance but less redundancy.  
 ![ss of typical setup](../../00_includes/AZ-05_screenshot1.png)  
+##### Blob storage
+Data stored in loose containers without true directory capabilities.
+* Blocks: suited for unstructured data.
+* Page: great for random read/write access.
+* Append: ideal for appending data, for example for logs.
+
+##### Files
+Files offers file sharing and true directory capabilities. This can be combined with Azure File Sync in order to synchronise with on-premises file servers. Tiering allows one to replicate local files if a certain data capacity is reached.
+
+##### Queues
+Small pieces of data that supports FIFO (first in, first out.) Essentially a list of messages in a queue.
+
+##### Tables:
+Tables support key-value pairs. Essentially a property, type and name stored together. Useful for user data, metadata and similar things.
+
+##### Access tiers:
+Hot, cool and archive are the three different options. Hot is for frequently accessed data, cool for infrequently accessed data and archive for backup and storage. Lifecycle management allows one to automatically move data into different access tiers based on metrics such as last accessed.
+
+
 
 ## Opdracht
 ### Gebruikte bronnen
