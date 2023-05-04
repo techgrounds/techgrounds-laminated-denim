@@ -12,7 +12,7 @@ Azure Database options feature the typical cloud advantages, such as availabilit
 * **Primary key:** a unique identifier for a row in a relational database table.
 * **Foreign key:** a primary key from one table used in another to form a link and relationship with other tables.
 * **Collation:** Sorting rules, case and accent sensitivity properties for data.
-* **Non-relational databases:** 
+* **Non-relational databases:** These do not use tables. Instead, non-relational databases use storage that is optimised for the type of data stored.
 
 ##### Azure Cosmos DB
 Cosmos DB is a globally distributed, multi-model database service. It works across Azure regions and supports many APIs and SLAs. It stores data in ARS (atom-record-sequence) format. This data is then abstracted and projected with an API, with your choices including SQL, MongoDB, Cassandra, Tables, and Gremlin. This ensures flexibility. It supports schemaless, non-relational data.
