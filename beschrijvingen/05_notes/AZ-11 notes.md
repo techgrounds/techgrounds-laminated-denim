@@ -111,6 +111,4 @@ Traffic Manager is a DNS-based load balancer that works globally. As a DNS-based
 [Intro to Azure Load Balancer](https://learn.microsoft.com/en-us/training/modules/intro-to-azure-load-balancer/)  
 [Intro to Azure Application Gateway](https://learn.microsoft.com/en-us/training/modules/intro-to-azure-application-gateway/)  
 [Tutorial: Create a VM Scale Set](https://learn.microsoft.com/en-us/azure/virtual-machines/linux/tutorial-create-vmss)  
-
-
 [How to run the stress command on Linux](https://www.tecmint.com/linux-cpu-load-stress-test-with-stress-ng-tool/)

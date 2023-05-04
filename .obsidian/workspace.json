@@ -4,24 +4,6 @@
     "type": "split",
     "children": [
       {
-        "id": "4859f86edfa6b85e",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "8a72eb8b61898469",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "04_Azure_1/04_completed_assignments/AZ-05_storageAccounts.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          }
-        ]
-      },
-      {
         "id": "bddada104e320a62",
         "type": "tabs",
         "children": [
@@ -31,7 +13,25 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "beschrijvingen/Exam notes.md",
+                "file": "05_Azure_2/05_completed_assignments/AZ-11_loadBalancer.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "333d05ad28a9b607",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1152e1753abfcde8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "05_Azure_2/05_completed_assignments/AZ-13_appService.md",
                 "mode": "source",
                 "source": false
               }
@@ -66,7 +66,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#Azure/Infrastructure",
+                "query": "tag:#Azure/Architecture",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -111,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "beschrijvingen/Exam notes.md",
+                "file": "05_Azure_2/05_completed_assignments/AZ-11_loadBalancer.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -128,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "beschrijvingen/Exam notes.md",
+                "file": "05_Azure_2/05_completed_assignments/AZ-11_loadBalancer.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -151,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "beschrijvingen/Exam notes.md"
+                "file": "05_Azure_2/05_completed_assignments/AZ-11_loadBalancer.md"
               }
             }
           }
@@ -175,45 +175,45 @@
   },
   "active": "997f649903f55c2c",
   "lastOpenFiles": [
+    "05_Azure_2/05_completed_assignments/AZ-12_wellArchitectedFramework.md",
+    "05_Azure_2/05_completed_assignments/AZ-13_appService.md",
+    "05_Azure_2/05_completed_assignments/AZ-13_databases.md",
+    "05_Azure_2/05_completed_assignments/AZ-13_files.md",
     "beschrijvingen/05_notes/AZ-13 notes.md",
-    "04_Azure_1/04_completed_assignments/AZ-05_storageAccounts.md",
-    "beschrijvingen/04_notes/AZ-05 Presentation.md",
-    "beschrijvingen/04_notes/AZ-05 notes.md",
-    "04_Azure_1/04_completed_assignments/Az-04_coreServices.md",
-    "04_Azure_1/04_completed_assignments/AZ-07_diskStorage.md",
-    "00_includes/AZ-13_screenshot1.png",
-    "beschrijvingen/Exam notes.md",
-    "beschrijvingen/Presentation Notes.md",
-    "beschrijvingen/05_notes/AZ-12 notes.md",
-    "beschrijvingen/Wer.md",
-    "beschrijvingen/01_notes/SS-01_learningToLearn.md",
-    "beschrijvingen/05_notes/AZ-11 notes.md",
-    "00_templates/standup.md",
-    "04_Azure_1/04_completed_assignments/AZ-03_advantagesCloud.md",
-    "beschrijvingen/04_notes/AZ-03 notes.md",
-    "beschrijvingen/05_notes/05_notes.md",
-    "beschrijvingen/03_notes/Sec-02_presentation.md",
-    "beschrijvingen/03_notes/Sec-02 notes.md",
-    "beschrijvingen/03_notes/Sec-03 notes.md",
-    "beschrijvingen/03_notes/Sec-04 notes.md",
-    "beschrijvingen/03_notes/Sec-05 notes.md",
-    "beschrijvingen/03_notes/Sec-06 Notes.md",
-    "beschrijvingen/03_notes/Sec-08 Notes.md",
-    "beschrijvingen/03_notes/Sec-07 Notes.md",
-    "00_includes/AZ-12_screenshot1.png",
     "05_Azure_2/05_completed_assignments/AZ-11_loadBalancer.md",
     "04_Azure_1/04_completed_assignments/AZ-10_virtualNetworks.md",
+    "04_Azure_1/04_completed_assignments/AZ-08_firewalls.md",
+    "04_Azure_1/04_completed_assignments/AZ-09_sharedResponsibility.md",
+    "00_includes/AZ-13_screenshot6.png",
+    "00_includes/AZ-13_screenshot4.png",
+    "00_includes/AZ-13_screenshot5.png",
+    "00_includes/AZ-13_screenshot2.png",
+    "00_includes/AZ-13_screenshot3.png",
+    "04_Azure_1/04_completed_assignments/AZ-05_storageAccounts.md",
+    "beschrijvingen/05_notes/AZ-12 notes.md",
+    "beschrijvingen/05_notes/AZ-11 notes.md",
+    "beschrijvingen/05_notes/05_notes.md",
+    "00_templates/retro.md",
+    "beschrijvingen/04_notes/AZ-10 notes.md",
+    "04_Azure_1/04_completed_assignments/Az-04_coreServices.md",
+    "04_Azure_1/04_completed_assignments/AZ-03_advantagesCloud.md",
+    "04_Azure_1/04_completed_assignments/AZ-02_costManagement.md",
+    "04_Azure_1/04_completed_assignments/AZ-01_globalInfrastructure.md",
+    "00_templates/standup.md",
+    "beschrijvingen/Exam notes.md",
+    "beschrijvingen/04_notes/AZ-05 Presentation.md",
+    "beschrijvingen/04_notes/AZ-05 notes.md",
+    "04_Azure_1/04_completed_assignments/AZ-07_diskStorage.md",
+    "00_includes/AZ-13_screenshot1.png",
+    "beschrijvingen/Presentation Notes.md",
+    "beschrijvingen/Wer.md",
+    "00_includes/AZ-12_screenshot1.png",
     "00_includes/AZ-11_screenshot7.png",
     "00_includes/AZ-11_screenshot5.png",
     "00_includes/AZ-11_screenshot4.png",
-    "00_includes/AZ-11_screenshot3.png",
-    "00_includes/AZ-11_screenshot2.png",
-    "00_includes/AZ-11_screenshot1.png",
-    "00_includes/AZ-11_screenshot6.png",
     "beschrijvingen/05_notes",
     "05_Azure_2/05_completed_assignments",
     "05_Azure_2",
-    "00_includes/AZ-10_screenshot2.png",
     "00_includes/04AZ07-vm2_key.pem",
     "00_includes/04AZ07-vm1_key.pem",
     "04_Azure_1/AZ-06/template.json",

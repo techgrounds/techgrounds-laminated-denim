@@ -38,10 +38,10 @@ Two different types of boundaries can be set:
 * Billing boundary: billing reports and invoices can be generated per separate subscription.
 * Access control boundary: access-management at the subscription level.
 
-Indivual subscriptions include hard limitations. For example, [Azure ExpressRoute](https://learn.microsoft.com/nl-nl/azure/expressroute/expressroute-introduction) is limited to 10 circuits per subscription.
+Individual subscriptions include hard limitations. For example, [Azure ExpressRoute](https://learn.microsoft.com/nl-nl/azure/expressroute/expressroute-introduction) is limited to 10 circuits per subscription.
 
 ##### Management groups
-Management groups manage access, compliance and policies for multiple subscriptions. Subscriptions in a management group inherit the settings applied to the group. It is possible to create a hierarchy of management groups. The policies of a management group cannot be altered by those it governs. [RBACs](https://auth0.com/docs/manage-users/access-control/rbac) can be applied to management groups.
+Management groups manage access, compliance and policies for multiple subscriptions. Subscriptions in a management group inherit the settings applied to the group. It is possible to create a hierarchy of management groups. The policies of a management group cannot be altered by those it governs. [RBACs](https://auth0.com/docs/manage-users/access-control/rbac) can be applied to management groups. Management groups support 6 levels of depth in their hierarchy, not including the root group or the subscription.
 
 ## Opdracht
 ### Gebruikte bronnen

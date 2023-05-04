@@ -6,12 +6,18 @@
 ##### Assignment:
 * Azure Files
 	* What is this used for?
+		* I solved this by building theoretical knowledge.
 	* How do I use it?
+		* I followed a tutorial on MS Learn to learn how to use this resource effectively.
 	* How do I combine this with other resources?
+		* I learned how to mount the file share to a VM.
 * Azure Database (+ managed instance)
 	* What is this used for?
+		* I solved this by building theoretical knowledge.
 	* How do I use it?
+		* I followed a tutorial on MS Learn to learn how to set up an Azure SQL Database.
 	* How do I combine this with other resources?
+		* This requires a depth of knowledge that would require time in excess of the assignment, such as building an application.
 
 #### Azure App Service
 Azure App Service is at its core a HTTP-based service for hosting web applications, REST APIs and mobile back ends. It supports multiple programming languages and both Windows and Linux environments. Key features include:
@@ -64,16 +70,56 @@ To start, I created a Storage Account resource using the Azure Portal. Within th
 Best practice would include learning Azure User Directory and using this to grant permissions instead of using a sudo key to access the file share.
 
 #### Azure Database
+Azure Database options feature the typical cloud advantages, such as availability and scalability. Many of the databases listed below feature point-in-time-restorations up to 35 days and SLAs with 99.99% uptime agreements. Existing databases can be migrated using the Azure Database Migration Service. These are all managed services.
+
+##### Database terminology
+* **Table:** Made up of rows and columns.
+* **Primary key:** a unique identifier for a row in a relational database table.
+* **Foreign key:** a primary key from one table used in another to form a link and relationship with other tables.
+* **Collation:** Sorting rules, case and accent sensitivity properties for data.
+* **Non-relational databases:** 
+
+##### Azure Cosmos DB
+Cosmos DB is a globally distributed, multi-model database service. It works across Azure regions and supports many APIs and SLAs. It stores data in ARS (atom-record-sequence) format. This data is then abstracted and projected with an API, with your choices including SQL, MongoDB, Cassandra, Tables, and Gremlin. This ensures flexibility. It supports schemaless, non-relational data.
+
+##### Azure SQL Database
+Azure SQL Database functions as a PaaS database service. It is capable of processing both relational and non-relational data, such as graphs, JSON, spatial, and XML. 
+
+##### Azure Database for MySQL
+Azure Database for MySQL is a relational dabase service based on the MySQL Community Edition engine. Several service tiers exist, each offering different performance and capabilities. It is ideal for LAMP (Linux, Apache, MySQL, PHP) solutions.
+
+##### Azure Database for PostgreSQL
+Azure Database for PostgreSQL is a relational database service based on the community version of the open-source PostgreSQL engine. It is available in two deployment options:
+* **Single Server:**
+	* Vertical scaling
+	* Pay-as-you-go pricing.
+	* Other cloud benefits.
+* **Hyperscale (Citus):**
+	* Hyperscale (Citus) allows for queries to be scaled horizontally via the use of sharding. 
+	* By allowing for parallel processing of incoming SQL queries across multiple servers it is ideal for large datasets of 100GB or more.
+	* It supports multi-tenant applications, real-time analytics and high-throughput workloads.
+
+##### Azure SQL Managed Instance
+Azure SQL Managed Instance is a PaaS database engine. Similar in many ways to Azure SQL Database, it [features differences](https://learn.microsoft.com/en-us/azure/azure-sql/database/features-comparison?view=azuresql)such as support for Cyrillic characters for collation. It sits in one's VNet.
+
+##### Data Analytics
+Azure has many options for data analytics, including:
+* **Azure Synapse Analytics:** This allows one to query data using serverless or provisioned resources. Ideal for business intelligence or machine learning.
+* **Azure HDInsight:** This is an open-source analytics service. It supports popular open-source frameworks, and can be used for things such as data extraction and transformation.
+* **Azure Databricks:** This supports multiple programming languages and data science frameworks in order to develop insights from data and create AI solutions.
+* **Azure Data Lake Analytics:** This is an analytics job service that can simplify big data via the use of queries. It is capable of handling queries of any scale by manually setting its power needs.
 
 
 
 Thisisatest123!
+
 
 [Intro to Azure CDN](https://learn.microsoft.com/en-us/training/modules/intro-to-azure-content-delivery-network/)  
 [Explore Azure App Service](https://learn.microsoft.com/en-us/training/modules/introduction-to-azure-app-service/)  
 [What is a REST API](https://www.redhat.com/en/topics/api/what-is-a-rest-api)  
 [Intro to Azure DNS](https://learn.microsoft.com/en-us/training/modules/intro-to-azure-dns/)  
 [Intro to Azure Files](https://learn.microsoft.com/en-us/training/modules/introduction-to-azure-files/)  
+[Database basics](https://www.lido.app/post/database-101)  
 [Azure Database fundamentals](https://learn.microsoft.com/en-us/training/modules/azure-database-fundamentals/)  
 [Benefits and Usage of Storage Account Resources - John Savill](https://www.youtube.com/watch?v=b8BrfsxLSx8)  
 [Benefits and Usage of Database Resources - John Savill](https://www.youtube.com/watch?v=4sQOF9fSOAU)  
