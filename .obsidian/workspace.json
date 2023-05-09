@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "beschrijvingen/06_notes/AZ-18_FunctionsContainers notes.md",
+                "file": "beschrijvingen/06_notes/AZ-19_eventGridServiceBus notes.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "beschrijvingen/06_notes/AZ-18_FunctionsContainers notes.md",
+                "file": "beschrijvingen/06_notes/AZ-19_eventGridServiceBus notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "beschrijvingen/06_notes/AZ-18_FunctionsContainers notes.md",
+                "file": "beschrijvingen/06_notes/AZ-19_eventGridServiceBus notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "beschrijvingen/06_notes/AZ-18_FunctionsContainers notes.md"
+                "file": "beschrijvingen/06_notes/AZ-19_eventGridServiceBus notes.md"
               }
             }
           }
@@ -157,12 +157,28 @@
   },
   "active": "1152e1753abfcde8",
   "lastOpenFiles": [
+    "beschrijvingen/06_notes/AZ-18_FunctionsContainersQueueStorage notes.md",
+    "00_includes/AZ-18_screenshot1.png",
+    "00_includes/AZ-18_screenshot2.png",
+    "00_includes/AZ-18_screenshot3.png",
+    "00_includes/AZ-18_screenshot4.png",
+    "beschrijvingen/06_notes/AZ-19_eventGridServiceBus notes.md",
+    "05_Azure_2/05_completed_assignments/AZ-13_appService.md",
+    "06_Azure_3/AZ-18_functions/HttpExample/__pycache__/__init__.cpython-39.pyc",
+    "06_Azure_3/AZ-18_functions/HttpExample/__pycache__",
+    "06_Azure_3/AZ-18_functions/HttpExample/function.json",
+    "06_Azure_3/AZ-18_functions/HttpExample/sample.dat",
+    "06_Azure_3/AZ-18_functions/HttpExample/__init__.py",
+    "06_Azure_3/AZ-18_functions/HttpExample",
+    "06_Azure_3/AZ-18_functions/requirements.txt",
+    "06_Azure_3/AZ-18_functions/local.settings.json",
+    "06_Azure_3/AZ-18_functions/host.json",
+    "06_Azure_3/AZ-18_functions",
+    "beschrijvingen/06_notes/AZ-16_activeDirectory notes.md",
+    "beschrijvingen/06_notes/AZ-17_monitorActivityLog notes.md",
+    "00_templates/standup.md",
     "beschrijvingen/06_notes/AZ-15_advisorSupportApp notes.md",
     "beschrijvingen/06_notes/06_notes.md",
-    "beschrijvingen/06_notes/AZ-18_FunctionsContainers notes.md",
-    "beschrijvingen/06_notes/AZ-17_monitorActivityLog notes.md",
-    "beschrijvingen/06_notes/AZ-19_eventGridQueueStorageServiceBus notes.md",
-    "beschrijvingen/06_notes/AZ-16_activeDirectory notes.md",
     "beschrijvingen/06_notes/AZ-14_cosmosDB notes.md",
     "beschrijvingen/05_notes/AZ-11 notes.md",
     "05_Azure_2/05_completed_assignments/AZ-13_databases.md",
@@ -170,10 +186,6 @@
     "beschrijvingen/05_notes/AZ-12 presentation.md",
     "00_includes/AZ-14_screenshot1.png",
     "05_Azure_2/05_completed_assignments/AZ-12_wellArchitectedFramework.md",
-    "06_Azure_3/06_completed_assignments",
-    "06_Azure_3",
-    "beschrijvingen/06_notes",
-    "05_Azure_2/05_completed_assignments/AZ-13_appService.md",
     "beschrijvingen/05_notes/05_notes.md",
     "05_Azure_2/05_completed_assignments/AZ-13_files.md",
     "beschrijvingen/05_notes/AZ-13 notes.md",
@@ -190,19 +202,6 @@
     "00_templates/retro.md",
     "beschrijvingen/04_notes/AZ-10 notes.md",
     "04_Azure_1/04_completed_assignments/Az-04_coreServices.md",
-    "04_Azure_1/04_completed_assignments/AZ-03_advantagesCloud.md",
-    "04_Azure_1/04_completed_assignments/AZ-02_costManagement.md",
-    "00_includes/AZ-13_screenshot1.png",
-    "00_includes/AZ-12_screenshot1.png",
-    "00_includes/AZ-11_screenshot7.png",
-    "00_includes/AZ-11_screenshot5.png",
-    "beschrijvingen/05_notes",
-    "05_Azure_2/05_completed_assignments",
-    "05_Azure_2",
-    "00_includes/04AZ07-vm2_key.pem",
-    "00_includes/04AZ07-vm1_key.pem",
-    "04_Azure_1/AZ-06/template.json",
-    "04_Azure_1/AZ-06/parameters.json",
     "Untitled.canvas",
     "Untitled 1.canvas"
   ]
