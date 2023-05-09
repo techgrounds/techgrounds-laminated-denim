@@ -46,5 +46,7 @@ With this step completed, I then prepared to connect the trigger to Azure Queue 
 ![SS2](../../00_includes/AZ-18_screenshot2.png)  
 Next, I deployed the app and executed the function again. Another message was added to the queue.  
 ![ss3](../../00_includes/AZ-18_screenshot3.png)  
-Finally, I checked the Azure Portal to see how the function looked there.
+Finally, I checked the Azure Portal to see how the function looked there.  
 ![ss4](../../00_includes/AZ-18_screenshot4.png)  
+
+The code for the project I used is available [here.](../AZ-18_functions/)
