@@ -1,6 +1,8 @@
 # Azure Functions, Containers and Queue Storage
 Azure Functions is a serverless, fully managed compute option that allows for the execution of code without any resource management overhead. Containers are software packages that contain all necessary components to run on any OS or device that meets their hardware requirements. Queue Storage is a storage account service described better [here.](../../04_Azure_1/04_completed_assignments/AZ-05_storageAccounts.md)
 
+#Azure/AZ-900 #Azure/Services 
+
 ## Key-terms
 #### Containers
 A container is a software package that contains all the tools necessary to run anywhere. They contain application code and its dependencies, such as programming language runtimes and libraries. They allow the software to run in a layer that is abstract from the actual environment.

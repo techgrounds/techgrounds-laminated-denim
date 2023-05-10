@@ -1,6 +1,8 @@
 # Azure Messaging Services
 There are three messaging services in Azure: Event Grid, Event Hubs and Service Bus. Each is useful in different scenarios.
 
+#Azure/AZ-900 #Azure/Services 
+
 ## Key-terms
 #### Events
 An event is a notification of a change in a condition or state. This might be the notification that a file has been created. The event consumer decides what to do with the information; the publisher of the event does not care.

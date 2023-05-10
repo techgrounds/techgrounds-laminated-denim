@@ -1,6 +1,7 @@
-# [Onderwerp]
-[Geef een korte beschrijving van het onderwerp]
+# Azure Active Directory and Security options
+Azure Active Directory is an identity and access management platform with many different features. It can interface with on-premises Active Directory via AD Connect, for example. Azure also features many other security features and concepts, listed under key-terms below.
 
+#Azure/AZ-900 #Azure/Services 
 ## Key-terms
 #### Azure Active Directory
 Azure Active Directory is a centralised identity and access management platform. It can interface with other Azure services, Office 365, 3rd party SaaS solutions and even custom apps. In this way, it acts as an identity provider and gives end-users a single-sign on (SSO): one account and password for multiple applications.
