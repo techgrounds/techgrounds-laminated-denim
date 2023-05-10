@@ -31,7 +31,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "06_Azure_3/06_completed_assignments/AZ-14_cosmosDB.md",
+                "file": "06_Azure_3/06_completed_assignments/AZ-17_monitorActivityLog.md",
                 "mode": "source",
                 "source": false
               }
@@ -111,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "06_Azure_3/06_completed_assignments/AZ-14_cosmosDB.md",
+                "file": "06_Azure_3/06_completed_assignments/AZ-17_monitorActivityLog.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -128,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "06_Azure_3/06_completed_assignments/AZ-14_cosmosDB.md",
+                "file": "06_Azure_3/06_completed_assignments/AZ-17_monitorActivityLog.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -151,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "06_Azure_3/06_completed_assignments/AZ-14_cosmosDB.md"
+                "file": "06_Azure_3/06_completed_assignments/AZ-17_monitorActivityLog.md"
               }
             }
           }
@@ -175,18 +175,21 @@
   },
   "active": "19331940fa7d7bb5",
   "lastOpenFiles": [
+    "00_includes/AZ-17_screenshot1.png",
+    "00_includes/AZ-17_screenshot2.png",
+    "06_Azure_3/06_completed_assignments/AZ-18_functionsContainersQueue.md",
+    "05_Azure_2/05_completed_assignments/AZ-12_wellArchitectedFramework.md",
+    "beschrijvingen/06_notes/AZ-18_FunctionsContainersQueueStorage notes.md",
+    "06_Azure_3/06_completed_assignments/AZ-14_cosmosDB.md",
     "06_Azure_3/06_completed_assignments/AZ-15_advisorSupportApp.md",
     "06_Azure_3/06_completed_assignments/AZ-16_activeDirectorySecurity.md",
     "06_Azure_3/06_completed_assignments/AZ-17_monitorActivityLog.md",
-    "06_Azure_3/06_completed_assignments/AZ-18_functionsContainersQueue.md",
     "06_Azure_3/06_completed_assignments/AZ-19_eventGridServiceBus.md",
     "beschrijvingen/06_notes/AZ-16_activeDirectory notes.md",
     "beschrijvingen/06_notes/AZ-19_eventGridServiceBus notes.md",
-    "beschrijvingen/06_notes/AZ-18_FunctionsContainersQueueStorage notes.md",
     "04_Azure_1/04_completed_assignments/AZ-05_storageAccounts.md",
     "beschrijvingen/06_notes/AZ-17_monitorActivityLog notes.md",
     "beschrijvingen/06_notes/AZ-15_advisorSupportApp notes.md",
-    "06_Azure_3/06_completed_assignments/AZ-14_cosmosDB.md",
     "beschrijvingen/06_notes/AZ-14_cosmosDB notes.md",
     "06_Azure_3/06_completed_assignments/opdracht 1 1 1 1 1 1.md",
     "00_includes/AZ-16_screenshot4.png",
@@ -194,7 +197,6 @@
     "00_includes/AZ-16_screenshot3.png",
     "00_includes/AZ-16_screenshot1.png",
     "05_Azure_2/05_completed_assignments/AZ-13_databases.md",
-    "05_Azure_2/05_completed_assignments/AZ-12_wellArchitectedFramework.md",
     "beschrijvingen/06_notes/06_notes.md",
     "04_Azure_1/04_completed_assignments/AZ-09_sharedResponsibility.md",
     "04_Azure_1/04_completed_assignments/Az-04_coreServices.md",
@@ -204,13 +206,11 @@
     "04_Azure_1/04_completed_assignments/AZ-02_costManagement.md",
     "04_Azure_1/04_completed_assignments/AZ-10_virtualNetworks.md",
     "04_Azure_1/04_completed_assignments/AZ-08_firewalls.md",
-    "04_Azure_1/04_completed_assignments/AZ-07_diskStorage.md",
     "00_includes/AZ-19_screenshot3.png",
     "00_includes/AZ-19_screenshot4.png",
     "00_includes/AZ-19_screenshot5.png",
     "00_includes/AZ-19_screenshot6.png",
     "00_includes/AZ-19_screenshot2.png",
-    "00_includes/AZ-19_screenshot1.png",
     "06_Azure_3/AZ-18_functions/HttpExample/__pycache__/__init__.cpython-39.pyc",
     "06_Azure_3/AZ-18_functions/HttpExample/__pycache__",
     "06_Azure_3/AZ-18_functions/HttpExample/function.json",
