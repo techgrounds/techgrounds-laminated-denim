@@ -22,8 +22,6 @@ Azure Container Instances allow one to run containers in Azure without having to
 #### Docker
 Docker is a containerisation platform that can be used to develop, ship and run containers. Docker can run on a local machine, in server environments and the cloud. 
 
-
-
 #### [Azure Functions](https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/6-functions)
 Azure Functions is a serverless compute option that is activated by events. Instead of maintaining a VM or container, an event wakes the function and executes the underlying code. Upon completion, the compute resources are deallocated. Azure Functions supports stateless or stateful functionality. By default, Functions is stateless; it behaves as if it is restarted each time it activates. With stateful functionality enabled, it uses a context to track prior activity.
 

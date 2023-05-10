@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "05_Azure_2/05_completed_assignments/AZ-13_databases.md",
+                "file": "beschrijvingen/06_notes/AZ-16_activeDirectory notes.md",
                 "mode": "source",
                 "source": false
               }
@@ -22,16 +22,16 @@
         ]
       },
       {
-        "id": "c3b15ae80f83ccf6",
+        "id": "5bf2437f58ccd353",
         "type": "tabs",
         "children": [
           {
-            "id": "41f8202792604c6f",
+            "id": "19331940fa7d7bb5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "beschrijvingen/06_notes/06_notes.md",
+                "file": "06_Azure_3/06_completed_assignments/AZ-16_activeDirectorySecurity.md",
                 "mode": "source",
                 "source": false
               }
@@ -111,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "beschrijvingen/06_notes/06_notes.md",
+                "file": "06_Azure_3/06_completed_assignments/AZ-16_activeDirectorySecurity.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -128,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "beschrijvingen/06_notes/06_notes.md",
+                "file": "06_Azure_3/06_completed_assignments/AZ-16_activeDirectorySecurity.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -151,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "beschrijvingen/06_notes/06_notes.md"
+                "file": "06_Azure_3/06_completed_assignments/AZ-16_activeDirectorySecurity.md"
               }
             }
           }
@@ -173,14 +173,31 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "41f8202792604c6f",
+  "active": "19331940fa7d7bb5",
   "lastOpenFiles": [
-    "05_Azure_2/05_completed_assignments/AZ-13_databases.md",
-    "beschrijvingen/06_notes/06_notes.md",
+    "beschrijvingen/06_notes/AZ-16_activeDirectory notes.md",
+    "06_Azure_3/06_completed_assignments/AZ-16_activeDirectorySecurity.md",
+    "beschrijvingen/06_notes/AZ-19_eventGridServiceBus notes.md",
+    "06_Azure_3/06_completed_assignments/AZ-17_monitorActivityLog.md",
+    "06_Azure_3/06_completed_assignments/AZ-18_functionsContainersQueue.md",
+    "06_Azure_3/06_completed_assignments/AZ-19_eventGridServiceBus.md",
+    "beschrijvingen/06_notes/AZ-18_FunctionsContainersQueueStorage notes.md",
+    "04_Azure_1/04_completed_assignments/AZ-05_storageAccounts.md",
+    "beschrijvingen/06_notes/AZ-17_monitorActivityLog notes.md",
+    "beschrijvingen/06_notes/AZ-15_advisorSupportApp notes.md",
+    "06_Azure_3/06_completed_assignments/AZ-15_advisorSupportApp.md",
+    "06_Azure_3/06_completed_assignments/AZ-14_cosmosDB.md",
     "beschrijvingen/06_notes/AZ-14_cosmosDB notes.md",
+    "06_Azure_3/06_completed_assignments/opdracht 1 1 1 1 1 1.md",
+    "00_includes/AZ-16_screenshot4.png",
+    "00_includes/AZ-16_screenshot2.png",
+    "00_includes/AZ-16_screenshot3.png",
+    "00_includes/AZ-16_screenshot1.png",
+    "05_Azure_2/05_completed_assignments/AZ-13_databases.md",
+    "05_Azure_2/05_completed_assignments/AZ-12_wellArchitectedFramework.md",
+    "beschrijvingen/06_notes/06_notes.md",
     "04_Azure_1/04_completed_assignments/AZ-09_sharedResponsibility.md",
     "04_Azure_1/04_completed_assignments/Az-04_coreServices.md",
-    "04_Azure_1/04_completed_assignments/AZ-05_storageAccounts.md",
     "04_Azure_1/04_completed_assignments/AZ-06_virtualMachines.md",
     "04_Azure_1/04_completed_assignments/AZ-03_advantagesCloud.md",
     "04_Azure_1/04_completed_assignments/AZ-01_globalInfrastructure.md",
@@ -188,29 +205,12 @@
     "04_Azure_1/04_completed_assignments/AZ-10_virtualNetworks.md",
     "04_Azure_1/04_completed_assignments/AZ-08_firewalls.md",
     "04_Azure_1/04_completed_assignments/AZ-07_diskStorage.md",
-    "05_Azure_2/05_completed_assignments/AZ-11_loadBalancer.md",
-    "beschrijvingen/06_notes/AZ-19_eventGridServiceBus notes.md",
-    "beschrijvingen/05_notes/AZ-13 notes.md",
-    "beschrijvingen/05_notes/AZ-12 presentation.md",
-    "beschrijvingen/05_notes/AZ-12 notes.md",
-    "beschrijvingen/06_notes/AZ-18_FunctionsContainersQueueStorage notes.md",
-    "beschrijvingen/06_notes/AZ-17_monitorActivityLog notes.md",
-    "beschrijvingen/06_notes/AZ-15_advisorSupportApp notes.md",
-    "beschrijvingen/06_notes/AZ-16_activeDirectory notes.md",
-    "05_Azure_2/05_completed_assignments/AZ-13_appService.md",
-    "beschrijvingen/Exam notes.md",
-    "beschrijvingen/04_notes/AZ-01 Notes.md",
-    "beschrijvingen/04_notes/AZ-05 Presentation.md",
     "00_includes/AZ-19_screenshot3.png",
     "00_includes/AZ-19_screenshot4.png",
     "00_includes/AZ-19_screenshot5.png",
     "00_includes/AZ-19_screenshot6.png",
     "00_includes/AZ-19_screenshot2.png",
     "00_includes/AZ-19_screenshot1.png",
-    "00_includes/AZ-18_screenshot1.png",
-    "00_includes/AZ-18_screenshot2.png",
-    "00_includes/AZ-18_screenshot3.png",
-    "00_includes/AZ-18_screenshot4.png",
     "06_Azure_3/AZ-18_functions/HttpExample/__pycache__/__init__.cpython-39.pyc",
     "06_Azure_3/AZ-18_functions/HttpExample/__pycache__",
     "06_Azure_3/AZ-18_functions/HttpExample/function.json",

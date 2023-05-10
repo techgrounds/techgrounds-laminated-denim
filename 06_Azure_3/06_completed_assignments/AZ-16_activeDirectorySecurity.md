@@ -1,6 +1,7 @@
-[Describe Azure Identity and Access Security](https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/)  
-[Quickstart: Create a new tenant in Azure AD](https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-access-create-new-tenant)  
+# [Onderwerp]
+[Geef een korte beschrijving van het onderwerp]
 
+## Key-terms
 #### Azure Active Directory
 Azure Active Directory is a centralised identity and access management platform. It can interface with other Azure services, Office 365, 3rd party SaaS solutions and even custom apps. In this way, it acts as an identity provider and gives end-users a single-sign on (SSO): one account and password for multiple applications.
 
@@ -55,7 +56,7 @@ Defence-in-depth refers to the layering of security.
 
 #### Azure Arc
 
-
+## Opdracht
 ##### Assignment:
 * Create a tenant in Azure Active Directory
 * Create a user
@@ -63,6 +64,14 @@ Defence-in-depth refers to the layering of security.
 * Delete the user
 * Delete the directory
 
+### Gebruikte bronnen
+[Describe Azure Identity and Access Security](https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/)  
+[Quickstart: Create a new tenant in Azure AD](https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-access-create-new-tenant)  
+
+### Ervaren problemen
+None.
+
+### Resultaat
 By following a tutorial in the documentation, I was able to create a tenant in Azure Active Directory. Cursory examination allowed me to create a user and assign a role to the user.  
 ![ss3](AZ-16_screenshot4.png)  
 Deleting the user was similarly easy to execute. Deletion of the directory was possible from the overview page where I could view all tenants, accessible through my profile.
