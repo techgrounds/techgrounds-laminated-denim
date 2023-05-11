@@ -55,7 +55,6 @@ Defence-in-depth refers to the layering of security.
 #### Microsoft Defender for Cloud
 
 
-#### Azure Arc
 
 ## Opdracht
 ##### Assignment:

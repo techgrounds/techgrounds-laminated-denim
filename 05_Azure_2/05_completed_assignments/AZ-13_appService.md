@@ -36,9 +36,9 @@ Azure CDN is a service that places content closer to clients attempting to acces
 POP refers to server locations that host content repositories.
 
 #### Azure DNS
-Azure DNS is an alternative to an on-premises DNS server or a DNS registrar. It supports multiple file formats, can be integrated and managed with common Azure tools, and supports public and private zoning, which allows specific DNS records to be limited to private networks. Because of its integration with Azure management tools, Azure DNS can be more efficient than using an external DNS registrar with its own tools.
+Azure DNS is an alternative to an on-premises DNS server or a DNS registrar. It supports multiple file formats, can be integrated and managed with common Azure tools, and supports public and private zoning, which allows specific DNS records to be limited to private networks. Because of its integration with Azure management tools, Azure DNS can be more efficient than using an external DNS registrar with its own tools. It also supports alias record sets: this allows it to point at an Azure resource such as Azure Traffic Manager, and if the IP of the resource changes, the alias record set updates itself during DNS resolution.
 
-Managing one's own DNS server is a better option if one requires Active Directory Domain Services or support for DNSSEC.
+Managing one's own DNS server is a better option if one requires Active Directory Domain Services or support for DNSSEC. Azure DNS does not allow for the purchase of domain names. This requires App Service domains or a third-party domain name registrar.
 
 ## Opdracht
 ### Gebruikte bronnen

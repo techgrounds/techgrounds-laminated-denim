@@ -6,14 +6,35 @@ Azure Virtual Networks allow resources to communicate with each other, over the 
 #### Virtual Networks
 VNets are a set of Azure resources that allow other resources to communicate over a network, with the internet or with on-prem devices. 
 
+* Point-to-site virtual private network connections: for example, a client computer that uses a VPN connection to connect to an Azure VNet.
+* Site-to-site virtual private networks: for example, linking an on-premises VPN device or gateway to the Azure VPN gateway in a VNet. This way, Azure devices appear as if on the local network.
+* Azure ExpressRoute: a dedicated private connection to Azure that doesn't travel over the internet.
+
+##### Virtual Network Peering
+VNet peering allows two networks to connect directly with one another. Network traffic between peered networks is private, travels on the MS backbone network and never enters the public internet. Peered VNets can be in separate regions.
+
+##### UDR
+User-defined routes allow for routing table control between subnets, within a VNet or between VNets.
+
+#### Azure VPN Gateway
+Azure VPN Gateways can be deployed in dedicated subnets and enable point-to-site, site-to-site and network-to-network connections. They can be policy or route-based, which specifies which traffic is to be encrypted.
+* Policy-based VPN gateways check the IP addresses of packets to determine which tunnel the packet is sent through.
+* Route-based gateways uses IP routing to determine which tunnel to use. Route-based gateways are the preferred option for on-prem devices. They offer co-existence with Azure ExpressRoute gateway.
+
+Azure VPN Gateways can also serve as failovers for ExpressRoute and be created in a zone-redundant manner.
+
+#### Azure ExpressRoute
+ExpressRoute is a dedicated private connection to Azure that doesn't travel over the internet. Each physical location has its own *ExpressRoute Circuit.* ExpressRoute Global Reach allows for the exchange of data across regions without using public internet. ExpressRoute uses BGP (Border Gateway Protocol), offering dynamic routing between on-prem networks and services in the cloud. ExpressRoute has redundancy. It supports four connectivity models:
+* CloudExchange colocation: for organisations located in a facility with a cloud exchange.
+* Point-to-point ethernet connections.
+* Any-to-any connections (IPVPN): via integration of a company WAN with the MS cloud.
+* Direct connection from ExpressRoute sites across the world.
+
 #### Network Security Groups
 NSGs are software firewalls that can control traffic between subnets or VMs. They allow for full control over every network request entering or exiting a VM.
 
 #### Load Balancer
-The Azure Load Balancer can distribute traffic between multiple VMs. 
-
-#### Virtual Machines Scale Sets
-Azure virtual machine scale sets allow for the creation of a group of load balanced VMs. These allow scaling on demand or on schedule and provide high availability to applications. Scale sets cost nothing; instead, one pays for the VMs created.
+The Azure Load Balancer can distribute traffic between multiple VMs and serve as a public endpoint.
 
 ## Opdracht
 ### Gebruikte bronnen

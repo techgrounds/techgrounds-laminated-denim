@@ -5,7 +5,7 @@ Azure Advisor monitors Azure resources and suggests improvements based on the We
 
 ## Key-terms
 #### Azure Advisor
-The Azure Advisor is a monitoring solution that evaluates Azure resources and suggests improvements based on the [Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/). It does this by analysing resource configuration and usage telemetry. Azure Advisor supports a limited selection of resources.
+The Azure Advisor is a monitoring solution that evaluates Azure resources and suggests improvements based on the [Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/). It does this by analysing resource configuration and usage telemetry. Azure Advisor supports a limited selection of resources. It integrates with MS Defender for Cloud to give security recommendations.
 
 #### Azure Support Plans
 There are four tiers of Azure Support Plans: Basic, Developer, Standard and Professional Direct.

@@ -21,14 +21,23 @@ These are concepts and strategies I plan to implement to achieve a passing grade
 * Read further about cloud models (public, private, hybrid) (add to AZ-09)
 * Read further about reliability, predictability, security, governance, manageability in cloud. (Add to AZ-03)
 
+
 #### Describe Azure architecture and services
-* Read further about hierarchy of resource groups, subscriptions and management groups. Grab a screenshot. Add to AZ-01.
-* Read about networking. VNets, virtual subnets, peering, Azure DNS, Azure VPN Gateway and Azure ExpressRoute. Add to AZ-10.
+* Read about Azure [Data Lake](https://azure.microsoft.com/en-us/pricing/details/storage/blobs/) and [Power BI](https://learn.microsoft.com/en-us/power-bi/transform-model/dataflows/dataflows-azure-data-lake-storage-integration)
+* [Read about Azure Tags](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources)
+* [Read about Microsoft Defender for Identity (formerly Azure ATP)](https://learn.microsoft.com/en-us/defender-for-identity/what-is)
+* Read about Azure VMWare Solution and Azure Dedicated Hosts.
+
 
 #### Describe Azure management and governance
-* Read further about Azure Cloud Shell, including Azure Powershell & Azure CLI. Maybe add to AZ-06?
-* 
+* Read about account tiers and free accounts.
+* Read about pricing plans for services.
+* Read about PIM (Privileged Identity Management)
+* Read about MS Defender for Cloud
+* Read about IaaS, PaaS and SaaS use scenarios.
+* [Read about subscription and service limits.](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/azure-subscription-service-limits)
+* [Read about accepted authentication methods.](https://learn.microsoft.com/en-us/azure/active-directory/authentication/concept-authentication-methods)
+* [Read more about how Azure Policies enforces compliance.](https://learn.microsoft.com/en-us/azure/governance/policy/overview)
 
 #### Strategies:
-* Complete [these learning paths](https://learn.microsoft.com/en-us/certifications/exams/az-900/?tab=tab-learning-paths#two-ways-to-prepare)
 * Cram with [John Saville.](https://www.youtube.com/playlist?list=PLlVtbbG169nED0_vMEniWBQjSoxTsBYS3)

@@ -10,7 +10,7 @@ Azure offers different manners to store data, such as Azure SQL Database, Azure 
 A storage account is a container that groups multiple Storage services together. Only *Azure Storage* services can be added to an account. A storage account allows one to configure these services as a group. A storage account is an Azure resource and can be part of a resource group. Storage Accounts offer Premium and Standard performance tiers. Premium offers higher performance but less redundancy.  
 ![ss of typical setup](../../00_includes/AZ-05_screenshot1.png)  
 ##### Blob storage
-Data stored in loose containers without true directory capabilities.
+Data stored in loose containers without true directory capabilities. It is massively scalable, supports text, binary data and big data analytics through Data Lake Storage Gen2.
 * Blocks: suited for unstructured data.
 * Page: great for random read/write access.
 * Append: ideal for appending data, for example for logs.
@@ -25,7 +25,40 @@ Small pieces of data that supports FIFO (first in, first out.) Essentially a lis
 Tables support key-value pairs. Essentially a property, type and name stored together. Useful for user data, metadata and similar things.
 
 ##### Access tiers:
-Hot, cool and archive are the three different options. Hot is for frequently accessed data, cool for infrequently accessed data and archive for backup and storage. Lifecycle management allows one to automatically move data into different access tiers based on metrics such as last accessed.
+Hot, cool and archive are the three different options. Hot is for frequently accessed data, cool for infrequently accessed data and archive for backup and storage. Lifecycle management allows one to automatically move data into different access tiers based on metrics such as last accessed. The archive access tier is set at the blob level.
+
+#### Azure Migrate
+Azure Migrate is a service for migration from on-prem to the cloud. It provides:
+
+* **Unified migration platform:** A single portal for all migration needs.
+* **Range of tools:** Tools for assessment and migration, including Azure Migrate: Discovery and assessment, and Azure Migrate: Server Migration.
+
+#### Azure Data Box
+Azure Data Box is a physical data migration service. This involves shipping an organisation a Data Box storage device with a maximum capacity of 80 terabytes. This is transported to and from the datacenter via regional carrier. It can be ordered and tracked end-to-end via the Azure portal. Data Box is ideal for:
+
+* Onetime migration
+* Moving an offline media library to an online media library
+* Migrating a VM farm, SQL server and applications to Azure
+* Moving historical data to Azure for analysis and reporting with use of HDInsight
+* Initial bulk transfer
+* Periodic uploads
+* Disaster recovery, with data exported from Azure to an on-prem datacenter.
+* Security requirements.
+* Migration back to on-prem or to another cloud service provider.
+
+#### AzCopy
+AzCopy is a CLI utility that can be used to copy, download, or synchronise blobs or files to and from storage accounts. It can be configured to work with other cloud providers to move files between clouds. Synchronisation with AzCopy works in one direction: one designates a source and a destination.
+
+#### Azure Storage Explorer
+This is standalone software that provides a GUI for file and blob management. It is compatible with Windows, macOS and Linux. AzCopy serves as a backend to perform all management functions.
+
+#### Azure File Sync
+Azure File Sync is a manner of bi-directional syncing between a Windows file server and files in Azure. Its features include:
+* Any protocol available on Windows Server for local data access, including SMB, NFS, and FTPS.
+* As many caches as needed across the world.
+* The replacement of a failed local server by installing Azure File Sync on a new server in the same datacentre.
+* The configuration of cloud tiering so frequently accessed files are replicated locally, while infrequently accessed files are kept in the cloud.
+
 
 
 
