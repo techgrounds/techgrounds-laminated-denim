@@ -5,9 +5,11 @@ Azure global infrastructure refers to the physical architecture of the Azure Clo
 
 ## Key-terms
 #### Azure Regions
-Azure regions are an umbrella term for the datacentres located in a region. For example, South Africa has two regions: South Africa North and South Africa West. These consist of multiple datacentres.
+Azure regions are an umbrella term for the datacentres located in a region. For example, South Africa has two regions: South Africa North and South Africa West. These consist of multiple datacentres. 
 
 There are also special Azure regions designated for compliance purposes, such as US DoD Central and regions in China. These are either operated by screened personnel or, in China's case, another company. These are called *Sovereign Regions.*
+
+All datacentres within a region have no more than 2ms latency between another.
 
 #### Azure Availability Zones
 Availability zones ensure service and data redundancy  by hosting these across a minimum of three discrete datacentres within a single region. This is [not available in every region.](https://learn.microsoft.com/en-us/azure/reliability/availability-zones-service-support?azure-portal=true) Availability zones are primarily used for VMs, load balancers, managed disks and SQL databases. There is typically a cost associated with this kind of duplication. Azure services that support availability zones fall into three categories:

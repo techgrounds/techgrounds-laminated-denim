@@ -26,6 +26,7 @@ These are concepts and strategies I plan to implement to achieve a passing grade
 * [Read about Azure Tags](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources)
 * [Read about Microsoft Defender for Identity (formerly Azure ATP)](https://learn.microsoft.com/en-us/defender-for-identity/what-is)
 * Read about Azure VMWare Solution and Azure Dedicated Hosts.
+* Read about Azure Kubernetes Service (and/or Kubernetes in general.)
 
 
 #### Describe Azure management and governance
