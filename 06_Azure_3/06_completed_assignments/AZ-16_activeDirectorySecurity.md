@@ -52,9 +52,19 @@ Defence-in-depth refers to the layering of security.
 * The data layer, where the use of strong encryption and the proper storage of encryption keys is important.
 ![ss3](../../00_includes/AZ-16_screenshot3.png)
 
-#### Microsoft Defender for Cloud
+#### [Microsoft Defender for Cloud](https://learn.microsoft.com/en-us/training/modules/intro-to-defender-cloud/)
+MS Defender for Cloud is software that secures hybrid cloud environments. It uses a Secure Score to provide recommendations on how to improve security posture. It supports visibility over compliance with regulations.  Defender for Cloud has many different integrated plans, with examples including:
+* **Defender for Servers:** Threat detection and defence for Windows and Linux machines no matter their environment.
+* **Defender for Storage:** Detection for unusual or harmful attempts to access storage accounts.
+* **Defender for DNS:** Detection for suspicious activity such as data exfiltration, malware, DNS attacks and communication with suspicious domains.
+* **Defender for Key Vault:** Detection for strange attempts to access or exploit Key Vault data.
 
-
+##### MS Defender Key terms
+* **SOC:** Security Operations Center. The part of an organisation that deals with security issues.
+* **Secure Score:** A Secure Score is a percentage-based KPI (key performance indicator) which contains several measures and recommendations.
+* **Cloud Security Posture Management:** CSPM is a system with which organisations can identify and fix misconfigurations, threats, misuse and compliance violations.
+* **Cloud Workload Protection:** CWP is the process by which cloud workloads are kept secure.
+* **Security Posture:** This is the combination of one's visibility over the asset environment and attack surface, alongside one's ability to detect, contain, mitigate, protect and react to security threats.
 
 ## Opdracht
 ##### Assignment:

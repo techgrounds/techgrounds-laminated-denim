@@ -23,6 +23,9 @@ Elasticity refers to the ability of the cloud to automatically scale processing,
 #### Agility
 Agility refers to the speed with which scaling is possible. For example, if one requires more VMs these VMs can be launched within seconds of making the request. 
 
+#### Predictability
+Predictability in the cloud is given by features such as *Stock-Keeping Units* (SKUs), which define the variations of certain products. For example, by comparing Azure Compute Units (ACUs) across SKUs. Templates also offer predictability, by allowing for things to always be deployed in the same way. Automation helps with this.
+
 #### Geo-distribution
 Geo-distribution refers to the geographic distribution of datacentres. Advantages include availability, latency, redundancy, and compliance.
 
@@ -34,11 +37,21 @@ Disaster recovery refers to things such as data backups and the infrastructure t
 #### Consumption-based model
 The consumption-based model is as its name indicates: a pricing model that does not require upfront investment but is rather based on dynamic scaling based on an organisation's requirements. Benefits include paying for extra resources as needed, or the ability to halt those resources when they're no longer necessary.
 
+#### Public Cloud
+Azure is an example of a public cloud. By definition, it is computing offered by a third-party provider via the internet. Benefits include almost limitless scaling, many regions, and many services.
+
+#### Private Cloud
+A private cloud is a cloud based on a private datacentre. Being that this requires ownership of the physical infrastructure, this is a CapEx investment.
+
+#### Hybrid Cloud
+A hybrid cloud is a combination use of public and private clouds. This could be using an Azure-based load balancer for peak usage, or the public cloud for data backups.
+
 ## Opdracht
 ### Gebruikte bronnen
 [Describe benefits of cloud services](https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/)  
 [Elastic Computing](https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-elastic-computing)  
 [Benefits of cloud services, Exam Ref AZ-900](https://www.microsoftpressstore.com/articles/article.aspx?p=2979073)  
+[Differences between types of cloud computing](https://www.youtube.com/watch?v=7dlCrF2wmXU)
 
 ### Ervaren problemen
 The assignment was theoretical. I could not find any sources referencing geo-distribution, but the [AZ-01](AZ-01_globalInfrastructure) assignment filled in the blanks.

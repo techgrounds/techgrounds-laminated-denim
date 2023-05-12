@@ -30,6 +30,9 @@ A serverless, no or low-code solution based on graphical abstractions called con
 
 ![ss5](../../00_includes/AZ-18_screenshot5.png)
 
+#### Serverless compute
+Serverless computing refers to event-driven computing. For example, a Functions app that is activated when a particular event happens and then deallocates upon completion of its task.
+
 ## Opdracht
 #### Assignment:
 * Create a Functions App

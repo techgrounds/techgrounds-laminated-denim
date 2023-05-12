@@ -23,7 +23,6 @@ These are concepts and strategies I plan to implement to achieve a passing grade
 
 
 #### Describe Azure architecture and services
-* Read about Azure [Data Lake](https://azure.microsoft.com/en-us/pricing/details/storage/blobs/) and [Power BI](https://learn.microsoft.com/en-us/power-bi/transform-model/dataflows/dataflows-azure-data-lake-storage-integration)
 * [Read about Azure Tags](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources)
 * [Read about Microsoft Defender for Identity (formerly Azure ATP)](https://learn.microsoft.com/en-us/defender-for-identity/what-is)
 * Read about Azure VMWare Solution and Azure Dedicated Hosts.

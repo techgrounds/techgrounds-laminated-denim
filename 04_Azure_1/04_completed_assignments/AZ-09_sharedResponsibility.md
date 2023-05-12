@@ -1,6 +1,8 @@
 # Shared Responsibility Model
 The shared responsibility model describes the relationship between customer, provider and service. Depending on the form of cloud service chosen, the customer and provider will each have a different set of responsibilities. In SaaS, the client is responsible for practically nothing except their data. In IaaS, the customer is responsible for almost everything except the hardware.
 
+Functionally, the less responsibility the customer has, the less work. SaaS and PaaS are therefore superior options in most use scenarios unless importing legacy configurations into the cloud, in which case IaaS would be ideal.
+
 #Azure/AZ-900 #Azure/Concepts
 
 ## Key-terms

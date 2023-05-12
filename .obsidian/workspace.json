@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "04_Azure_1/04_completed_assignments/Az-04_coreServices.md",
+                "file": "00_templates/retro.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "\"Resource Manager\"",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "04_Azure_1/04_completed_assignments/Az-04_coreServices.md",
+                "file": "00_templates/retro.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "04_Azure_1/04_completed_assignments/Az-04_coreServices.md",
+                "file": "00_templates/retro.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "04_Azure_1/04_completed_assignments/Az-04_coreServices.md"
+                "file": "00_templates/retro.md"
               }
             }
           }
@@ -157,33 +157,33 @@
   },
   "active": "19331940fa7d7bb5",
   "lastOpenFiles": [
-    "04_Azure_1/04_completed_assignments/AZ-05_storageAccounts.md",
-    "06_Azure_3/06_completed_assignments/AZ-16_activeDirectorySecurity.md",
-    "04_Azure_1/04_completed_assignments/Az-04_coreServices.md",
-    "06_Azure_3/06_completed_assignments/AZ-15_advisorSupportApp.md",
     "06_Azure_3/06_completed_assignments/AZ-21_toolsManagementDeployment.md",
+    "06_Azure_3/06_completed_assignments/AZ-16_activeDirectorySecurity.md",
+    "00_templates/retro.md",
+    "04_Azure_1/04_completed_assignments/AZ-03_advantagesCloud.md",
+    "05_Azure_2/05_completed_assignments/AZ-12_wellArchitectedFramework.md",
+    "04_Azure_1/04_completed_assignments/AZ-01_globalInfrastructure.md",
+    "04_Azure_1/04_completed_assignments/AZ-02_costManagement.md",
+    "04_Azure_1/04_completed_assignments/AZ-09_sharedResponsibility.md",
+    "04_Azure_1/04_completed_assignments/Az-04_coreServices.md",
+    "04_Azure_1/04_completed_assignments/AZ-10_virtualNetworks.md",
+    "06_Azure_3/06_completed_assignments/AZ-18_functionsContainersQueue.md",
+    "beschrijvingen/04_notes/AZ-03 notes.md",
+    "05_Azure_2/05_completed_assignments/AZ-13_databases.md",
+    "04_Azure_1/04_completed_assignments/AZ-05_storageAccounts.md",
+    "06_Azure_3/06_completed_assignments/AZ-15_advisorSupportApp.md",
     "06_Azure_3/06_completed_assignments/AZ-20_toolsGovernanceCompliance.md",
     "05_Azure_2/05_completed_assignments/AZ-13_appService.md",
-    "05_Azure_2/05_completed_assignments/AZ-12_wellArchitectedFramework.md",
     "05_Azure_2/05_completed_assignments/AZ-11_loadBalancer.md",
     "04_Azure_1/04_completed_assignments/AZ-06_virtualMachines.md",
     "04_Azure_1/04_completed_assignments/AZ-07_diskStorage.md",
     "04_Azure_1/04_completed_assignments/AZ-08_firewalls.md",
     "06_Azure_3/06_completed_assignments/AZ-17_monitorActivityLog.md",
-    "06_Azure_3/06_completed_assignments/AZ-18_functionsContainersQueue.md",
     "06_Azure_3/06_completed_assignments/AZ-19_eventGridServiceBus.md",
-    "04_Azure_1/04_completed_assignments/AZ-02_costManagement.md",
-    "04_Azure_1/04_completed_assignments/AZ-03_advantagesCloud.md",
-    "04_Azure_1/04_completed_assignments/AZ-10_virtualNetworks.md",
     "06_Azure_3/06_completed_assignments/AZ-14_cosmosDB.md",
     "beschrijvingen/04_notes/AZ-01 Notes.md",
-    "04_Azure_1/04_completed_assignments/AZ-01_globalInfrastructure.md",
     "beschrijvingen/06_notes/06_notes.md",
-    "beschrijvingen/04_notes/AZ-08 notes.md",
     "00_includes/AZ-18_screenshot5.png",
-    "05_Azure_2/05_completed_assignments/AZ-13_files.md",
-    "beschrijvingen/06_notes/AZ-16_activeDirectory notes.md",
-    "04_Azure_1/04_completed_assignments/AZ-09_sharedResponsibility.md",
     "00_includes/AZ-17_screenshot1.png",
     "00_includes/AZ-17_screenshot2.png",
     "00_includes/AZ-16_screenshot4.png",

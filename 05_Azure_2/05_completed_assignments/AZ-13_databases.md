@@ -44,6 +44,9 @@ Azure has many options for data analytics, including:
 * **Azure Databricks:** This supports multiple programming languages and data science frameworks in order to develop insights from data and create AI solutions.
 * **Azure Data Lake Analytics:** This is an analytics job service that can simplify big data via the use of queries. It is capable of handling queries of any scale by manually setting its power needs.
 
+#### Power BI
+Power BI is a software suite that allows one to connect unrelated data sources to visualise and share the data. This data could be an excel spreadsheet, or sourced from databases or Data Lake Storage. 
+
 ## Opdracht
 ##### Assignment:
 * Create an Azure SQL Database
