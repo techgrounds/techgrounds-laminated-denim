@@ -30,7 +30,7 @@ REST stands for 'representational state transfer.' A RESTful API is an API that 
 * A layered system that organises servers and requested information into hierarchies.
 
 #### Azure Content Delivery Network
-Azure CDN is a service that places content closer to clients attempting to access it across the world. It does this by caching data that is accessed on servers closer to the client. These locations are also known as a POP. CDNs are ideal for static content that is accessed by users worldwide. They have little benefit for dynamic or streamed content, or applications that only service users from a strict geographic area. Azure CDN is also capable of compression.
+Azure CDN is a service that places content closer to clients attempting to access it across the world. It does this by caching data that is accessed on servers closer to the client. These locations are also known as a POP. CDNs are ideal for static content that is accessed by users worldwide. They have little benefit for dynamic or livestreamed content, or applications that only service users from a strict geographic area. Azure CDN is also capable of compression.
 
 ##### Point-of-presence
 POP refers to server locations that host content repositories.

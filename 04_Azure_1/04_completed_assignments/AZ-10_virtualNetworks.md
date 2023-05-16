@@ -11,7 +11,7 @@ VNets are a set of Azure resources that allow other resources to communicate ove
 * Azure ExpressRoute: a dedicated private connection to Azure that doesn't travel over the internet.
 
 ##### Virtual Network Peering
-VNet peering allows two networks to connect directly with one another. Network traffic between peered networks is private, travels on the MS backbone network and never enters the public internet. Peered VNets can be in separate regions.
+VNet peering allows two networks to connect directly with one another. Network traffic between peered networks is private, travels on the MS backbone network and never enters the public internet. Peered VNets can be in separate regions. VNets peered across regions incur costs for traffic.
 
 ##### UDR
 User-defined routes allow for routing table control between subnets, within a VNet or between VNets.

@@ -23,7 +23,7 @@ The Azure CLI is functionally identical to Azure PowerShell, with the primary di
 Azure Arc offers a way to use Azure Resource Manager (ARM) to monitor hybrid and multi-cloud configurations. It does this by:
 * Projecting non-Azure resources into ARM for easy management.
 * Allowing for the management of multi-cloud, hybrid VMs, Kubernetes clusters and databases as if they were running in Azure.
-* The continuation of traditional ITOps alongside DevOps.
+* The continuation of traditional [ITOps](https://www.ibm.com/topics/it-operations) alongside DevOps.
 * The configuration of custom locations as an abstraction layer over Azure Arc-enabled Kubernetes clusters and cluster extensions.
 
 Azure Arc allows for the management of the following resource types outside of Azure: Servers, Kubernetes clusters, Azure data services, SQL servers, and VMs.

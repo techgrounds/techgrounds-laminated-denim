@@ -4,5 +4,3 @@
 * Kan 30m extra tijd aanvragen als engels niet moedertaal is - kom ik in aanmerking?
 
 * Exam booken, tijd doorgeven aan Casper
-
-

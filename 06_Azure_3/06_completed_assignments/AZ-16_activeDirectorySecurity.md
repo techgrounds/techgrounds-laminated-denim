@@ -36,7 +36,7 @@ RBAC offers access control for actions that pass through the Azure Resource Mana
 
 #### Zero Trust Model
 The Zero Trust model is a security model that assumes a worst case scenario. It requires authentication from everyone accessing the network and grants access based on that authentication, rather than the legacy model of trusting everyone connected to the corporate network. These are the guiding principles:
-* **Verify explicitly:** Authenticate and authorise based on all available data points.
+* **Verify explicitly:** Authenticate and authorise based on all available data points, such as user identity, location, device and any anomalies.
 * **Use least privilege access:** Limit user access with Just-In-Time (JIT) and Just-Enough-Access (JEA), data protection and adaptive policies based on risk.
 * **Assume breach:** This involves the verification of end-to-end encryption, analytics to gain visibility on threats, and the segmentation of access.
 

@@ -45,6 +45,7 @@ Resource Manager templates allow one to create a copy of a VM with the same sett
 
 #### Azure CLI
 A command-line interface that allows for scripting. Available on multiple OSes and in a browser. It is compatible with other scripting languages like Ruby and Python. A tutorial can be found [here.](https://learn.microsoft.com/en-us/azure/virtual-machines/linux/quick-create-cli)
+
 #### Other utilities
 Azure Powershell and Azure CLI are useful for simple scripts and the use of CLI tools. Terraform allows for the creation of config files with HCL (HashiCorp Configuration Language.) The REST API and Azure Client SDK allow for interaction using other programming languages such as C# or Java. Links to further reading on the above subjects are found [here.](https://learn.microsoft.com/en-us/training/modules/intro-to-azure-virtual-machines/4-describe-other-create-vm-options)
 

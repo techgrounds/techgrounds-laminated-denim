@@ -24,6 +24,7 @@ These are concepts and strategies I plan to implement to achieve a passing grade
 #### Describe Azure architecture and services
 * [Read about Microsoft Defender for Identity (formerly Azure ATP)](https://learn.microsoft.com/en-us/defender-for-identity/what-is)
 * Read about Azure VMWare Solution and Azure Dedicated Hosts.
+* Read about Hypervisors.
 
 #### Describe Azure management and governance
 * Read about account tiers and free accounts.
@@ -32,6 +33,7 @@ These are concepts and strategies I plan to implement to achieve a passing grade
 * [Read about subscription and service limits.](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/azure-subscription-service-limits)
 * [Read about accepted authentication methods.](https://learn.microsoft.com/en-us/azure/active-directory/authentication/concept-authentication-methods)
 * [Read more about how Azure Policies enforces compliance.](https://learn.microsoft.com/en-us/azure/governance/policy/overview)
+* Azure AD RBAC vs Azure RBAC?
 
 #### Strategies:
 * Cram with [John Saville.](https://www.youtube.com/playlist?list=PLlVtbbG169nED0_vMEniWBQjSoxTsBYS3)
