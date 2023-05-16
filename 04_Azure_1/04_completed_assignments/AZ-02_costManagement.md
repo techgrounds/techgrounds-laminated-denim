@@ -34,9 +34,6 @@ Each person in the organisation must be active in cost management in order to op
 #### Cost Management suite in Azure
 The cost management suite allows one to analyse costs. It is possible to set up multiple budgets and alerts in order to track and notify departments if they are nearing their quota.
 
-#### Resource tags
-Resource tags offer another layer of management aside from subscriptions and resource groups to create structure and provide an overview of costs. They can be tweaked through PowerShell, the Azure CLI, templates, the REST API or the Azure portal.
-
 #### Free account
 A free subscription features a set of services that are permanently free, and a specific quantity of services that are free for 12 months. It also features a credit for 30 days.
 

@@ -21,20 +21,14 @@ These are concepts and strategies I plan to implement to achieve a passing grade
 * Read further about cloud models (public, private, hybrid) (add to AZ-09)
 * Read further about reliability, predictability, security, governance, manageability in cloud. (Add to AZ-03)
 
-
 #### Describe Azure architecture and services
-* [Read about Azure Tags](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources)
 * [Read about Microsoft Defender for Identity (formerly Azure ATP)](https://learn.microsoft.com/en-us/defender-for-identity/what-is)
 * Read about Azure VMWare Solution and Azure Dedicated Hosts.
-* Read about Azure Kubernetes Service (and/or Kubernetes in general.)
-
 
 #### Describe Azure management and governance
 * Read about account tiers and free accounts.
 * Read about pricing plans for services.
 * Read about PIM (Privileged Identity Management)
-* Read about MS Defender for Cloud
-* Read about IaaS, PaaS and SaaS use scenarios.
 * [Read about subscription and service limits.](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/azure-subscription-service-limits)
 * [Read about accepted authentication methods.](https://learn.microsoft.com/en-us/azure/active-directory/authentication/concept-authentication-methods)
 * [Read more about how Azure Policies enforces compliance.](https://learn.microsoft.com/en-us/azure/governance/policy/overview)

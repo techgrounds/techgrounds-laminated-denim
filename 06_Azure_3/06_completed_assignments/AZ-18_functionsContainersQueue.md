@@ -17,6 +17,12 @@ Containers are a more lightweight alternative to VMs. They virtualise at the OS 
 #### Azure Container Instances
 Azure Container Instances allow one to run containers in Azure without having to manage a VM or use another service. Benefits include fast startup times, potential internet access and an interactive shell. They offer application isolation, custom sizing, and are designed to run a single application. Container instances support linking with Azure Files and VNets. They are a PaaS offering.
 
+#### [Azure Kubernetes Service](https://learn.microsoft.com/en-us/azure/aks/intro-kubernetes)
+AKS is a service to deploy a managed Kubernetes cluster in Azure. One pays for the number and size of the nodes used by the cluster. Azure Kubernetes Service integrates with many Azure monitoring, access and compliance tools.
+
+#### [Kubernetes](https://kubernetes.io/docs/concepts/overview/)
+Kubernetes is open-source software for the automated deployment and scaling of containerised software. A Kubernetes [cluster](https://kubernetes.io/docs/concepts/overview/components/) consists of a set of machines, called nodes, that can run containerised software. 
+
 #### Docker
 Docker is a containerisation platform that can be used to develop, ship and run containers. Docker can run on a local machine, in server environments and the cloud. 
 

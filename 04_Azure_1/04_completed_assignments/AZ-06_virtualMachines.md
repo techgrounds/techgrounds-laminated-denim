@@ -15,7 +15,7 @@ Azure VMs make use of several *Azure resources* to do their job.
 
 ##### Virtual Machine Availability Sets
 These are distinct from Virtual Machine Scale Sets. Availability sets can stagger updates and vary their power and network connectivity, ensuring some VMs remain online in case of network or power failure. They do this by grouping VMs in two manners:
-* **Update  domain:** The update domain groups VMs that can be rebooted simultaneously. Only one update domain group will be offline at a time.
+* **Update domain:** The update domain groups VMs that can be rebooted simultaneously. Only one update domain group will be offline at a time. Availability sets can have up to 20 update domains.
 * **Fault domain:** The fault domain groups VMs by power source and network switch. By default, an availability set will group VMs across three fault domains.
 
 #### VM naming

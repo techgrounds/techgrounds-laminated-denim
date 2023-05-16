@@ -69,7 +69,7 @@ The WAF is an option in the Application Gateway that checks requests before they
 A back-end pool is a collection of servers with an associated load balancer.
 
 ##### TLS/SSL termination
-This allows one to terminate TLS and SSL connections at the application gateway instead of in the back-end, saving on CPU utilisation.
+This allows one to terminate TLS and SSL connections at the application gateway instead of in the back-end, saving on CPU utilisation. Also known as SSL offloading.
 
 #### Azure Front Door
 Front Door is an application delivery network that can provide global load balancing. It is capable of OSI Layer 7 functionality much like an application gateway, but can also distribute loads over a variety of Azure regions.
