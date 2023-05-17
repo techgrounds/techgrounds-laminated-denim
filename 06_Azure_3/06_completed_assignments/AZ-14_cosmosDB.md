@@ -34,6 +34,21 @@ Apache Gremlin is used for data in graph structure. Data entries form nodes that
 #### Read-Replicas
 Read-replicas are synchronised read-only replicas of one master database. This offers the benefit of low latency for the act of reading from the read-replica without complicating the process of writing data. All web servers write to the one master database.
 
+#### IoT
+The Internet of Things refers to devices embedded with sensors that are connected to a network.
+
+#### [Azure IoT Hub](https://learn.microsoft.com/en-us/azure/iot-hub/iot-concepts-and-iot-hub)
+IoT Hub is an Azure service for communication between the cloud and devices. It is ideal for sending and receiving data and updates to remote devices. It can integrate with other Azure services such as Event Grid and Logic Apps. It is a PaaS solution and effectively the backend for IoT communication in Azure.
+
+##### [Azure IoT Central](https://learn.microsoft.com/en-us/azure/iot-central/core/overview-iot-central)
+Azure IoT Central is an application platform as a service (aPaaS). It is a more streamlined solution than IoT Hub, featuring templates and dashboards.
+
+#### [Azure Sphere](https://learn.microsoft.com/en-us/azure-sphere/)
+Azure Sphere is a security-focused application platform for communication with internet-connected devices. It doesn't provide the functionality the other IoT services do, but as an end-to-end security solution it can communicate with them. It is built out of three things:
+* A microcontroller unit (MCU)
+* A custom high-level Linux-based OS
+* A cloud-based security service: AS3.
+
 ## Opdracht
 #### Assignment:
 * Establish theoretical knowledge of Azure Cosmos DB.

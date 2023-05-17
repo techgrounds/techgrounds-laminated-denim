@@ -1,7 +1,7 @@
 # Azure Active Directory and Security options
 Azure Active Directory is an identity and access management platform with many different features. It can interface with on-premises Active Directory via AD Connect, for example. Azure also features many other security features and concepts, listed under key-terms below.
 
-#Azure/AZ-900 #Azure/Services 
+#Azure/AZ-900 #Azure/Services #Cybersecurity #Azure/Management #Azure/SC-900
 ## Key-terms
 #### Azure Active Directory
 Azure Active Directory is a centralised identity and access management platform. It can interface with other Azure services, Office 365, 3rd party SaaS solutions and even custom apps. In this way, it acts as an identity provider and gives end-users a single-sign on (SSO): one account and password for multiple applications.
@@ -29,6 +29,15 @@ External identities are people, devices or services outside one's organisation. 
 ##### Azure Conditional Access
 Conditional access is an Azure AD tool for authorisation based on identity signals, such as who the user is, where they are and what device they are using. This allows for more granular control. MFA might be requested if the user is signing on from an unfamiliar location, or access rights may be limited if they are on a foreign device.
 
+##### Privileged Identity Management
+PIM is a feature of the Azure AD Premium P2 license. It allows for time-based and approval-based role activation. Key features include:
+* Just-in-time privileged access to Azure AD and Azure resources.
+* Assigning time-bound access to resources that include start and end dates.
+* Requiring approval to activate privileged roles.
+* Enforcing the use of MFA to activate any role.
+* Access reviews.
+* Audit histories.
+
 #### Role Based Access Control
 RBAC offers access control for actions that pass through the Azure Resource Manager: through the Azure portal, Cloud Shell, PowerShell and Azure CLI. It does not affect authorisation on the application or data level. It does this by using scope and role. A role given read access on the subscription scope will have read access for all child scopes, such as associated resource groups and resources.
 
@@ -53,7 +62,7 @@ Defence-in-depth refers to the layering of security.
 ![ss3](../../00_includes/AZ-16_screenshot3.png)
 
 #### [Microsoft Defender for Cloud](https://learn.microsoft.com/en-us/training/modules/intro-to-defender-cloud/)
-MS Defender for Cloud is software that secures hybrid cloud environments. It uses a Secure Score to provide recommendations on how to improve security posture. It supports visibility over compliance with regulations.  Defender for Cloud has many different integrated plans, with examples including:
+MS Defender for Cloud is software that secures hybrid cloud environments. It uses a Secure Score to provide recommendations on how to improve security posture. It supports visibility over compliance with regulations. Its central use is protecting workloads in Azure. Defender for Cloud has many different integrated plans, with examples including:
 * **Defender for Servers:** Threat detection and defence for Windows and Linux machines no matter their environment.
 * **Defender for Storage:** Detection for unusual or harmful attempts to access storage accounts.
 * **Defender for DNS:** Detection for suspicious activity such as data exfiltration, malware, DNS attacks and communication with suspicious domains.
@@ -65,6 +74,19 @@ MS Defender for Cloud is software that secures hybrid cloud environments. It use
 * **Cloud Security Posture Management:** CSPM is a system with which organisations can identify and fix misconfigurations, threats, misuse and compliance violations.
 * **Cloud Workload Protection:** CWP is the process by which cloud workloads are kept secure.
 * **Security Posture:** This is the combination of one's visibility over the asset environment and attack surface, alongside one's ability to detect, contain, mitigate, protect and react to security threats.
+
+#### [MS Defender for Identity](https://learn.microsoft.com/en-us/defender-for-identity/what-is) 
+([Intro to MS Defender for Identity](https://learn.microsoft.com/en-us/training/modules/defender-identity-introduction/introduction))  
+MS Defender for Identity, formerly known as Azure Advanced Threat Protection or ATP, is a cloud-based security service that uses signals from an on-prem Active Directory to detect threats. This makes it useful for hybrid environments. It can:
+* Monitor user and entity activity with AI analytics.
+* Protect user identities stored in Active Directory, for example by identifying lateral movement paths.
+* Detect and protect against attacks aimed at the on-prem components of Active Directory Federation Services (AD FS.)
+
+##### Lateral movement paths
+Lateral movement paths refers to the concept of an attacker gaining access to a less-secured device with less authorisation privileges, and using that device to later gain access to penetrate more deeply. For example, by gaining an administrator's credentials if that admin ever logs in using the compromised device.
+
+#### [MS Sentinel](https://learn.microsoft.com/en-us/azure/sentinel/overview)
+Microsoft Sentinel is a scalable cloud platform that provides security information and event management (SIEM) alongside security orchestration, automation, and response (SOAR.) In essence, the detection and automated response to security incidents. Sentinel can take data from security logs and signals, apply tools from Azure Monitor such as Log Analytics, and create actionable information from these sources.
 
 ## Opdracht
 ##### Assignment:

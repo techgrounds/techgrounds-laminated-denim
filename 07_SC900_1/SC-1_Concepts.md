@@ -48,3 +48,21 @@ Governments and industry groups issue and enforce regulations regarding the use 
 * **Data privacy:** This refers to transparency about the collection, processing, use and sharing of personal data. Personal data refers to any information that is related to an identified or identifiable natural person.
 
 ### Identity as primary security perimeter
+Identity as primary security perimeter refers to the concept of identity as the central pillar by which authentication and authorisation are granted. Instead of a legacy model where a perimeter (such as a corporate office) is created and everyone within is granted access, with this new model authentication and JIT/JEA are granted based on the unique identifiers that make up an identity. An identity could be a user, an application, a device or something else. The four pillars of identity infrastructure are:
+* **Administration:** The creation, management and governance of identities.
+* **Authentication:** The act of checking if a user is who they say they are.
+* **Authorisation:** Determining the correct access level for an authenticated identity.
+* **Auditing:** This is about tracking who does what, when, where, and how. Logs, reporting and alerts help with this.
+
+#### Identity provider
+An identity provider handles the creation, maintenance and management of identity information. It offers authentication, authorisation and auditing services. Examples include Azure AD as well as Twitter, Google and Amazon. One key feature of an identity provider and modern authentication methods is support for single sign-on, or SSO.
+
+#### Directory services and Active Directory
+Directories within networking refer to hierarchical structures that store information about objects on a network. A directory service stores this data and shares it with users, administrators, services, and apps.
+
+Active Directory is a group of directory services developed by MS for Windows 2000, designed for on-prem domain-based networks. This includes Active Directory Domain Services (AD DS), which stores information about domain members, verifies credentials, and then authorises them. A server running AD DS is known as a domain controller, or DC.
+
+#### Federation
+Federation is the process of establishing trust across identity providers. For example, if a user wishes to log in to a website they might use their Facebook account to do so. This is possible because the website's identity provider has a "trust relationship" with the Facebook identity provider; they are federated. Federation and trust relationships do not need to be bi-directional.
+![ss3](00SC_resources/SC-1_screenshot3.png)
+

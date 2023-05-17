@@ -36,6 +36,16 @@ NSGs are software firewalls that can control traffic between subnets or VMs. The
 #### Load Balancer
 The Azure Load Balancer can distribute traffic between multiple VMs and serve as a public endpoint.
 
+#### [Azure DDoS Infrastructure Protection](https://learn.microsoft.com/en-us/training/modules/introduction-azure-ddos-protection/1-introduction)
+Azure offers Azure DDoS Infrastructure Protection by default. This protects any Azure service with a public IP. It provides traffic monitoring, always-on detection, automatic attack mitigation and an SLA that is based on the Azure region. Its downside is that Infrastructure Protection's safeguards have a higher threshold than most applications; it might not trigger for an attack that will bring down an application.
+
+#### Azure DDoS Network Protection
+Network Protection offers enhanced features. It uses intelligent traffic profiling to
+It secures a network at layers 3 and 4, can provide analytic reports about an attack, supports integration with MS Defender for Cloud and MS Sentinel, and can also integrate with Azure Monitor.
+
+#### Azure DDoS IP Protection
+The highest tier of DDoS Protection available, IP Protection is a pay-per-protected IP model. In addition to Network Protection's features, it provides DDoS rapid response support, cost protection and discounts on Web Application Firewall.
+
 ## Opdracht
 ### Gebruikte bronnen
 [Intro to Azure VNets](https://learn.microsoft.com/en-us/training/modules/introduction-to-azure-virtual-networks/)  

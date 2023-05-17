@@ -62,9 +62,6 @@ Azure File Sync is a manner of bi-directional syncing between a Windows file ser
 * The replacement of a failed local server by installing Azure File Sync on a new server in the same datacentre.
 * The configuration of cloud tiering so frequently accessed files are replicated locally, while infrequently accessed files are kept in the cloud.
 
-
-
-
 ## Opdracht
 ### Gebruikte bronnen
 [Create an Azure Storage account](https://learn.microsoft.com/en-us/training/modules/create-azure-storage-account/)  

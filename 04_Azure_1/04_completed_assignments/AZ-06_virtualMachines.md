@@ -50,10 +50,16 @@ A command-line interface that allows for scripting. Available on multiple OSes a
 Azure Powershell and Azure CLI are useful for simple scripts and the use of CLI tools. Terraform allows for the creation of config files with HCL (HashiCorp Configuration Language.) The REST API and Azure Client SDK allow for interaction using other programming languages such as C# or Java. Links to further reading on the above subjects are found [here.](https://learn.microsoft.com/en-us/training/modules/intro-to-azure-virtual-machines/4-describe-other-create-vm-options)
 
 #### Azure Site Recovery
-Azure Site Recovery is a manner of duplicating infrastructure across multiple locations to deal with regional failover. This could be on-prem infrastructure backed up in the cloud, or cloud infrastructure that can failover to a secondary datacentre. It works with Azure resources, Hyper-V, VMware and on-prem servers.
+Azure Site Recovery is a manner of duplicating infrastructure across multiple locations to deal with regional failover. This could be on-prem infrastructure backed up in the cloud, or cloud infrastructure that can failover to a secondary datacentre. It works with Azure resources, [Hyper-V](https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/about/), VMware and on-prem servers.
 
 #### Azure Virtual Desktop
-Virtual Desktops separates data and software from the local hardware. This offers centralised management with Azure AD and RBAC.
+Virtual Desktops separates data and software from the local hardware. This offers centralised management with Azure AD and RBAC. Effectively a virtualised OS environment.
+
+#### [Azure Dedicated Hosts](https://learn.microsoft.com/en-us/azure/virtual-machines/dedicated-hosts)
+Azure Dedicated Hosts is a service that allows one to reserve an entire host machine. These are the entirety of a physical server in an Azure datacentre. This can provide cost optimisation, reliability, performance efficiency and security benefits.
+
+#### [Azure VMWare Solution](https://learn.microsoft.com/en-us/training/modules/intro-azure-vmware-solution/)
+Azure VMWare Solution is a service for moving VMWare-based solutions from an on-prem datacentre into Azure. Native integration with other Azure services, continued use of existing VMWare skills, and operational consistency are benefits. Billing options include pay as you go, 1 year reserved instances and 3 year reserved instances.
 
 ## Opdracht
 ### Gebruikte bronnen
