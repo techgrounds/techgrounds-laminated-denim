@@ -61,6 +61,9 @@ Azure Dedicated Hosts is a service that allows one to reserve an entire host mac
 #### [Azure VMWare Solution](https://learn.microsoft.com/en-us/training/modules/intro-azure-vmware-solution/)
 Azure VMWare Solution is a service for moving VMWare-based solutions from an on-prem datacentre into Azure. Native integration with other Azure services, continued use of existing VMWare skills, and operational consistency are benefits. Billing options include pay as you go, 1 year reserved instances and 3 year reserved instances.
 
+#### [Azure Bastion](https://learn.microsoft.com/en-us/azure/bastion/bastion-overview)
+Bastion allows one to connect to VMs without requiring the VMs to have a public IP. It is a PaaS service that runs inside a VNet and provides RDP/SSH connectivity to VMs over TLS from either the Azure Portal or a local client.
+
 ## Opdracht
 ### Gebruikte bronnen
 [Intro to VMs](https://learn.microsoft.com/en-us/training/modules/intro-to-azure-virtual-machines/)  

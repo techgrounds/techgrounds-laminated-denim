@@ -4,7 +4,7 @@ Azure Storage accounts are a resource that group together multiple storage servi
 #Azure/Services #Azure/Architecture #Azure/AZ-900
 ## Key-terms
 #### Azure Storage
-Azure offers different manners to store data, such as Azure SQL Database, Azure Cosmos DB and Azure Table Storage. Messaging is handled by Azure Queues and Event Hubs. Loose files can be stored by services such as Azure Files and Azure Blobs. Azure groups Azure Blobs, Azure Files, Azure Queues, and Azure Tables together under the header *Azure Storage.*
+Azure offers different manners to store data, such as Azure SQL Database, Azure Cosmos DB and Azure Table Storage. Messaging is handled by Azure Queues and Event Hubs. Loose files can be stored by services such as Azure Files and Azure Blobs. Azure groups Azure Blobs, Azure Files, Azure Queues, Azure Tables, and disks together under the header *Azure Storage.*
 
 #### Storage account
 A storage account is a container that groups multiple Storage services together. Only *Azure Storage* services can be added to an account. A storage account allows one to configure these services as a group. A storage account is an Azure resource and can be part of a resource group. Storage Accounts offer Premium and Standard performance tiers. Premium offers higher performance but less redundancy.  
@@ -28,7 +28,7 @@ Small pieces of data that supports FIFO (first in, first out.) Essentially a lis
 Tables support key-value pairs. Essentially a property, type and name stored together. Useful for user data, metadata and similar things.
 
 ##### Access tiers:
-Hot, cool and archive are the three different options. Hot is for frequently accessed data, cool for infrequently accessed data and archive for backup and storage. Lifecycle management allows one to automatically move data into different access tiers based on metrics such as last accessed. The archive access tier is set at the blob level.
+Hot, cool and archive are the three different options. Hot is for frequently accessed data, cool for infrequently accessed data and archive for backup and storage. Lifecycle management allows one to automatically move data into different access tiers based on metrics such as last accessed. The archive access tier is set at the blob or object level.
 
 #### Azure Migrate
 Azure Migrate is a service for migration from on-prem to the cloud. It provides:

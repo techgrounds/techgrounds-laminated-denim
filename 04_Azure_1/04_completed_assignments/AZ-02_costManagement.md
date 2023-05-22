@@ -35,7 +35,7 @@ Each person in the organisation must be active in cost management in order to op
 The cost management suite allows one to analyse costs. It is possible to set up multiple budgets and alerts in order to track and notify departments if they are nearing their quota.
 
 #### Free account
-A free subscription features a set of services that are permanently free, and a specific quantity of services that are free for 12 months. It also features a credit for 30 days.
+A free subscription features a set of services that are permanently free, and a specific quantity (55+) of services that are free for 12 months. It also features $200 credit for 30 days. Free accounts migrate to pay-as-you-go pricing at the end of the trial. 
 
 #### Free student account
 The free student account gives students $100 credit and free dev tools. It can be used without a credit card.

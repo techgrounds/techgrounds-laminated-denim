@@ -3,6 +3,10 @@ Azure Active Directory is an identity and access management platform with many d
 
 #Azure/AZ-900 #Azure/Services #Cybersecurity #Azure/Management #Azure/SC-900
 ## Key-terms
+
+#### Microsoft Entra
+Microsoft Entra is a suite containing multiple identity services, such as Azure Active Directory. Features include Azure AD, Verified ID and permissions management.
+
 #### Azure Active Directory
 Azure Active Directory is a centralised identity and access management platform. It can interface with other Azure services, Office 365, 3rd party SaaS solutions and even custom apps. In this way, it acts as an identity provider and gives end-users a single-sign on (SSO): one account and password for multiple applications.
 
@@ -12,6 +16,13 @@ Azure AD supports self-service password resets, MFA, a banned password list and 
 Azure AD DS offers managed domain services such as domain join, group policies, LDAP, and Kerberos or NLTM authentication. This allows one to use applications that do not support modern authentication protocols in the cloud. Azure AD DS integrates with Azure AD, allowing users to access resources tied to AD DS with their SSO.
 
 ![ss1](../../00_includes/AZ-16_screenshot1.png)
+
+##### [Azure AD licenses](https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-whatis)
+Azure Active Directory features four different payment options:
+* **Free:** which is available to anyone with a subscription to any MS Online business service. Ancilliary functions are available to those with a subscription to a number of Office 365 offerings.
+* **Premium P1:** This allows users to access on-prem and cloud resources. It also supports dynamic groups, self-service group management, Microsoft Identity Manager, and self-service password reset.
+* **Premium P2:** In addition to the above, P2 offers Azure Active Directory Identity Protection. This provides Conditional Access and Privileged Identity Management.
+* **Pay as you go:** This allows one to purchase licenses for specific features, such as Azure AD B2C.
 
 #### Passwordless Authentication options
 Azure and Azure Government features three passwordless authentication options that integrate with Azure AD:

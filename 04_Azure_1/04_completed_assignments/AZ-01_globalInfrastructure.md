@@ -32,7 +32,7 @@ A logical container containing resources such as databases and web apps. A resou
 Group resources of similar function or location together. The deletion of a resource group immediately deletes the resources within. Role-based access control ([RBAC](https://auth0.com/docs/manage-users/access-control/rbac)) permissions can also be applied to resource groups.
 
 #### Resource tags
-Resource tags offer another layer of management aside from subscriptions and resource groups to create structure and provide an overview of costs. They are not inherited. They can be tweaked through PowerShell, the Azure CLI, templates, the REST API or the Azure portal.
+Resource tags offer another layer of management aside from subscriptions and resource groups to create structure and provide an overview of costs. They are not inherited. They can be tweaked through PowerShell, the Azure CLI, templates, the REST API or the Azure portal. Azure Policy can enforce the use of tags.
 
 ##### [Azure Resource Manager](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview)
 Azure Resource Manager offers management and deployment features that allow one to create, update and delete resources. Access control and tagging are also possible. Resource Manager authenticates and authorises requests other Azure tools and serves as an API. A JSON template (rather than a script) can be used to define what one wishes to deploy in the Resource Manager.
@@ -48,6 +48,9 @@ Individual subscriptions include hard limitations. For example, [Azure ExpressRo
 
 ##### Management groups
 Management groups manage access, compliance and policies for multiple subscriptions. Subscriptions in a management group inherit the settings applied to the group. It is possible to create a hierarchy of management groups. The policies of a management group cannot be altered by those it governs. [RBACs](https://auth0.com/docs/manage-users/access-control/rbac) can be applied to management groups. Management groups support 6 levels of depth in their hierarchy, not including the root group or the subscription.
+
+#### [Azure Lighthouse](https://learn.microsoft.com/en-us/azure/lighthouse/overview)
+Azure Lighthouse is a service that allows one to monitor and manage deployments across multiple tenants. This is useful for service providers, application providers on the marketplace, and multi-tenant deployments. It offers centralised management.
 
 ## Opdracht
 ### Gebruikte bronnen
