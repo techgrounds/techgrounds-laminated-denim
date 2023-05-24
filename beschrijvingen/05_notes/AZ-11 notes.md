@@ -37,7 +37,7 @@ Autoscaling is a manner of scaling a scale set up and down. It's ideal for varia
 Each scale condition that is met by the VM workload is acted upon.
 
 #### Azure Spot
-Azure Spot instances allow one to utilise excess compute resources on the global Azure infrastructure. This results in cost-savings of up to 80%, but VMs used this way are temporary. If Azure requires the extra compute resources, Azure Spot VMs are shut down.
+Azure Spot instances allow one to utilise excess compute resources on the global Azure infrastructure. This results in cost-savings of up to 80%, but VMs used this way are temporary. If Azure requires the extra compute resources, Azure Spot VMs are shut down. This is useful for batch instructions that can resume after stopping.
 
 #### Azure Advisor
 The Azure Advisor is a monitoring solution that evaluates Azure resources and suggests improvements based on the [Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/).

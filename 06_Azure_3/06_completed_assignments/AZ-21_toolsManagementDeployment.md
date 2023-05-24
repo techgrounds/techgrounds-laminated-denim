@@ -1,6 +1,8 @@
 # Features and tools for managing and deploying Azure resources
 Azure tools for managing and deploying Azure resources allow for the automisation of management and deployment. This saves on labour costs.
 
+#Azure/AZ-900 #Azure/Management 
+
 ## Key-terms
 #### Azure Portal
 The Azure Portal is a web-based console and GUI. It is an alternative to CLI tools.

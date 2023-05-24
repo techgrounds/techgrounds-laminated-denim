@@ -1,6 +1,8 @@
 # Azure features and tools for governance and compliance
 These features and tools allow for high and low level management of Azure resources.
 
+#Azure/AZ-900 #Azure/Governance
+
 ## Key-terms
 #### Azure Blueprints
 Azure Blueprints allows for the standardisation of subscription or environment deployments. This allows one to define settings and policies that are applied as new subscriptions are created. Each component in a blueprint definition is called an artifact. Artifacts can contain parameters for configuration, but do not require them. Artifacts include:

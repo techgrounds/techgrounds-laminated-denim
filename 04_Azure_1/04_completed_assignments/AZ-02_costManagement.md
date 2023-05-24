@@ -43,6 +43,12 @@ The free student account gives students $100 credit and free dev tools. It can b
 #### Pay-as-you-go
 Pas-as-you-go is a payment model where you pay for the resources used during a billing cycle. This saves costs on unused resources but also allows one to cope with unexpected increases in demand by renting additional resources. For example, VM costs are priced on a per-hour basis but billed per minute of usage. Storage is priced separately.
 
+#### Hybrid Use Benefit
+The Hybrid Use Benefit allows one to transfer and use their purchased licenses in Azure.
+
+#### Azure Reservations
+Azure Reservations, also known as reserved instances, allow one to make a 1 or 3 year commitment to a resource for a significant discount.
+
 ## Opdracht
 
 ### Gebruikte bronnen

@@ -12,7 +12,7 @@ There are also special Azure regions designated for compliance purposes, such as
 All datacentres within a region have no more than 2ms latency between another.
 
 #### Azure Availability Zones
-Availability zones ensure service and data redundancy  by hosting these across a minimum of three discrete datacentres within a single region. This is [not available in every region.](https://learn.microsoft.com/en-us/azure/reliability/availability-zones-service-support?azure-portal=true) Availability zones are primarily used for VMs, load balancers, managed disks and SQL databases. There is typically a cost associated with this kind of duplication. Azure services that support availability zones fall into three categories:
+Availability zones ensure service and data redundancy by hosting these across a minimum of three discrete datacentres within a single region. This is [not available in every region.](https://learn.microsoft.com/en-us/azure/reliability/availability-zones-service-support?azure-portal=true) Availability zones are primarily used for VMs, load balancers, managed disks and SQL databases. There is typically a cost associated with this kind of duplication. Different subscriptions will map availability zones to different datacentres; AZ1 in one subscription might not map to the same datacentre as AZ1 in a second subscription. Azure services that support availability zones fall into three categories:
 * **Zonal services:** Resources that are pinned to a specific zone (e.g. VMs, managed disks, IPs)
 * **Zone-redundant services:** The platform replicates automatically across zones (e.g. zone-redundant storage, SQL database)
 * **Non-regional services:** Services that are always available from Azure geographies; these are resilient to zone and region-wide outages.
@@ -72,5 +72,5 @@ Azure Lighthouse is a service that allows one to monitor and manage deployments 
 ### Resultaat
 Choosing a region to host one's cloud services is a choice that comes down to a few factors. Location can determine:
 1. The latency to reach the data centre.
-2. The compliance of the data centre. with any relevant laws.
+2. The compliance of the data centre with any relevant laws.
 3. The availability of certain services, such as region pairing.

@@ -16,7 +16,7 @@ It is suited for the following scenarios:
 ##### Azure Cosmos DB for NoSQL
 This model manages data in JSON document format and then uses SQL syntax to work with the data.
 
-##### Azure cosmos DB for MongoDB
+##### Azure Cosmos DB for MongoDB
 MongoDB is an open source database that uses the Binary JSON (BSON) format. Azure CosmosDB for MongoDB allows the use of MongoDB client libraries and code.
 
 ##### Azure Cosmos DB for PostgreSQL

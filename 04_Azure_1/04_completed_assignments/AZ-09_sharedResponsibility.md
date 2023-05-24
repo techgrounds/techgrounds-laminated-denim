@@ -18,12 +18,28 @@ IaaS features use-cases such as:
 * Lift-and-shift migration. The migration of resources from on-premises to IaaS.
 * Testing and development. With established configuration settings, it is possible to quickly spin up and shut down testing environments in the cloud.
 
+Benefits include:
+* Reduced capital expenditure and cost optimisation.
+* Increased scaling and performance of IT workloads.
+* Increased stability, reliability, and supportability.
+* Improved business continuity and disaster recovery.
+* Enhanced security.
+* More innovation and faster iteration.
+
 #### PaaS
 Platform as a service sits between IaaS and SaaS. In PaaS, the provider maintains the datacentre, but also the operating systems, middleware, development tools and business intelligence services that are features of cloud computing. Maintenance of this software is also for the cloud provider. Network settings, directory infrastructure and application security are subjects where responsibility can vary depending on the configuration.
 
 PaaS features use-cases such as:
 * Development framework. PaaS gives developers a framework for creating cloud-based applications with its built-in software.
 * Analytics and business intelligence. The software included with PaaS gives companies the capability to analyse their data.
+
+Benefits include:
+* Less time spent coding.
+* More development capability without increasing staff.
+* Multi-platform development.
+* Affordable use of sophisticated tools.
+* Support of geographically distributed development teams.
+* Efficient management of application lifecycle.
 
 #### SaaS
 Software as a service is effectively the renting of software in the cloud. Examples include email and Office 365. SaaS is inflexible but simple to employ. With SaaS, the customer's only responsibilities are data, account and access management, and potentially directory infrastructure.
@@ -32,6 +48,13 @@ Use-cases for SaaS include:
 * Messaging
 * Business productivity software
 * Expense tracking
+
+Benefits include:
+* Access to sophisticated applications.
+* Paying only for what one uses.
+* The use of free client software.
+* Workforce mobilisation.
+* App data that is accessible from anywhere.
 
 ## Opdracht
 ### Gebruikte bronnen

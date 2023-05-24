@@ -19,7 +19,7 @@ Data stored in loose containers without true directory capabilities. It is massi
 Data Lake Storage Gen2 refers to functions used for big data analytics, built on Azure Blob Storage. A data lake is a centralised repository for all one's data, structured and unstructured. Data Lake supports hierarchical directory structures, is priced at Azure Blob levels, supports petabytes of data, and supports all Blob features.
 
 ##### Files
-Files offers file sharing and true directory capabilities. This can be combined with Azure File Sync in order to synchronise with on-premises file servers. Tiering allows one to replicate local files if a certain data capacity is reached.
+Files offers file sharing and true directory capabilities. This can be combined with Azure File Sync in order to synchronise with on-premises file servers. Cloud Tiering allows one to replicate local files if a certain data capacity is reached.
 
 ##### Queues
 Small pieces of data that supports FIFO (first in, first out.) Essentially a list of messages in a queue.

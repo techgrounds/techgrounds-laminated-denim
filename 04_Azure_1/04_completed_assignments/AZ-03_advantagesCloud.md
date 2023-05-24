@@ -34,6 +34,9 @@ Geo-distribution refers to the geographic distribution of datacentres. Advantage
 
 Disaster recovery refers to things such as data backups and the infrastructure the cloud provides to recreate resources in another unaffected region. This ensures continued availability of data and applications even in the event of disaster. 
 
+#### Service Level Agreements
+SLAs refer to the agreements Microsoft has with its customers regarding uptime of Azure services. Many factors can influence the SLA rating: for example, two VM instances spread across two availability zones have an SLA of 99.99%. If these VMs are reliant on other services to run, such as a storage account, their combined SLA is referred to as a *composite SLA.* Logically, this composite SLA is a lower uptime than the SLA of the storage account or VMs. If the VMs have access to alternative resources they can use instead of the storage account, the composite SLA will be significantly improved.
+
 #### Consumption-based model
 The consumption-based model is as its name indicates: a pricing model that does not require upfront investment but is rather based on dynamic scaling based on an organisation's requirements. Benefits include paying for extra resources as needed, or the ability to halt those resources when they're no longer necessary.
 
@@ -44,7 +47,7 @@ Azure is an example of a public cloud. By definition, it is computing offered by
 A private cloud is a cloud based on a private datacentre. Being that this requires ownership of the physical infrastructure, this is a CapEx investment.
 
 #### Hybrid Cloud
-A hybrid cloud is a combination use of public and private clouds. This could be using an Azure-based load balancer for peak usage, or the public cloud for data backups.
+A hybrid cloud is a combination use of public and private clouds. This could be using an Azure-based load balancer for peak usage, or the public cloud for data backups. Advantages include control, flexibility, cost-effectiveness and ease.
 
 ## Opdracht
 ### Gebruikte bronnen

@@ -39,6 +39,12 @@ A serverless, no or low-code solution based on graphical abstractions called con
 #### Serverless compute
 Serverless computing refers to event-driven computing. For example, a Functions app that is activated when a particular event happens and then deallocates upon completion of its task.
 
+Benefits include:
+* No infrastructure management.
+* Dynamic scalability.
+* A faster time to market.
+* A more efficient use of resources.
+
 ## Opdracht
 #### Assignment:
 * Create a Functions App

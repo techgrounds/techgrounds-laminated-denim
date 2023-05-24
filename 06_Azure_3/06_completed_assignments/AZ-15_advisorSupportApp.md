@@ -11,7 +11,7 @@ The Azure Advisor is a monitoring solution that evaluates Azure resources and su
 There are four tiers of Azure Support Plans: Basic, Developer, Standard and Professional Direct.
 
 ##### Basic
-Basic is included for all Azure customers for free. It does not feature third-party software support or 24/7 access to technical support by email and phone.
+Basic is included for all Azure customers for free. It does **not** feature third-party software support or 24/7 access to technical support by email and phone.
 
 ##### Developer
 The developer tier features access to support after business hours by email. Minimal case severity and response time is within 8 business hours. It features general guidance for architecture support. It is intended for trial and non-production environments.

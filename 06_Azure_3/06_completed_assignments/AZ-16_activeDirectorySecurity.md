@@ -10,7 +10,7 @@ Microsoft Entra is a suite containing multiple identity services, such as Azure 
 #### Azure Active Directory
 Azure Active Directory is a centralised identity and access management platform. It can interface with other Azure services, Office 365, 3rd party SaaS solutions and even custom apps. In this way, it acts as an identity provider and gives end-users a single-sign on (SSO): one account and password for multiple applications.
 
-Azure AD supports self-service password resets, MFA, a banned password list and smart lockout services. It also support device registration through tools like MS InTune, offering device-based conditional access policies. It can be connected to an on-premises Active Directory through Azure AD Connect.
+Azure AD supports self-service password resets, MFA, a banned password list and smart lockout services. It also support device registration through tools like MS InTune, offering device-based conditional access policies. It can be connected to an on-premises Active Directory through Azure AD Connect. Identity Secure Score is an Azure AD feature that represents an organisation's security posture.
 
 ##### Azure Active Directory Domain Services
 Azure AD DS offers managed domain services such as domain join, group policies, LDAP, and Kerberos or NLTM authentication. This allows one to use applications that do not support modern authentication protocols in the cloud. Azure AD DS integrates with Azure AD, allowing users to access resources tied to AD DS with their SSO.
@@ -19,7 +19,7 @@ Azure AD DS offers managed domain services such as domain join, group policies, 
 
 ##### [Azure AD licenses](https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-whatis)
 Azure Active Directory features four different payment options:
-* **Free:** which is available to anyone with a subscription to any MS Online business service. Ancilliary functions are available to those with a subscription to a number of Office 365 offerings.
+* **Free:** which is available to anyone with a subscription to any MS Online business service. Ancilliary functions are available to those with a subscription to a number of Office 365 offerings. The free subscription supports 50 000 objects or users.
 * **Premium P1:** This allows users to access on-prem and cloud resources. It also supports dynamic groups, self-service group management, Microsoft Identity Manager, and self-service password reset.
 * **Premium P2:** In addition to the above, P2 offers Azure Active Directory Identity Protection. This provides Conditional Access and Privileged Identity Management.
 * **Pay as you go:** This allows one to purchase licenses for specific features, such as Azure AD B2C.
@@ -28,7 +28,7 @@ Azure Active Directory features four different payment options:
 Azure and Azure Government features three passwordless authentication options that integrate with Azure AD:
 
 * **Windows Hello for Business:** This ties biometric and PIN credentials directly to a user's PC.
-* **MS Authenticator:** This uses an employee's phone as a "something you have" authentication tool, combined with PIn or biometric data.
+* **MS Authenticator:** This uses an employee's phone as a "something you have" authentication tool, combined with PIN or biometric data.
 * **FIDO2 security keys:** Fast IDentity Online is an open standard for passwordless authentication. Typically, sign-in involves something such as a USB device, Bluetooth or NFC communication.
 
 ##### External Identities
