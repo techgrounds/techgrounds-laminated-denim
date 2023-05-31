@@ -44,7 +44,7 @@ The consumption-based model is as its name indicates: a pricing model that does 
 Azure is an example of a public cloud. By definition, it is computing offered by a third-party provider via the internet. Benefits include almost limitless scaling, many regions, and many services.
 
 #### Private Cloud
-A private cloud is a cloud based on a private datacentre. Being that this requires ownership of the physical infrastructure, this is a CapEx investment.
+A private cloud is a cloud based on a private datacentre. Being that this requires ownership of the physical infrastructure, this is a CapEx investment. Benefits include self-service, scalability, elasticity, control, and customisation.
 
 #### Hybrid Cloud
 A hybrid cloud is a combination use of public and private clouds. This could be using an Azure-based load balancer for peak usage, or the public cloud for data backups. Advantages include control, flexibility, cost-effectiveness and ease.

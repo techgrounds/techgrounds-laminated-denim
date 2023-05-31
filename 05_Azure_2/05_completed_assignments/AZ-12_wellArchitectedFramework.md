@@ -57,7 +57,6 @@ DevOps is the process of cooperation between software development (dev) and oper
 * Continuous improvement and minimisation of waste through automation of repetitive tasks and monitoring performance metrics.
 * Hyperfocus on user needs with short feedback loops by taking advantage of the time granted by the above points.
 
-
 ## Opdracht
 ### Gebruikte bronnen
 [Well Architected Framework documentation](https://learn.microsoft.com/en-us/azure/well-architected/)  

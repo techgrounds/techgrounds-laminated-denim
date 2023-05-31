@@ -25,7 +25,7 @@ Files offers file sharing and true directory capabilities. This can be combined 
 Small pieces of data that supports FIFO (first in, first out.) Essentially a list of messages in a queue.
 
 ##### Tables:
-Tables support key-value pairs. Essentially a property, type and name stored together. Useful for user data, metadata and similar things.
+Tables support key-value pairs. Essentially a property, type and name stored together. Useful for user data, metadata and similar things. It can store terabytes of data.
 
 ##### Access tiers:
 Hot, cool and archive are the three different options. Hot is for frequently accessed data, cool for infrequently accessed data and archive for backup and storage. Lifecycle management allows one to automatically move data into different access tiers based on metrics such as last accessed. The archive access tier is set at the blob or object level.
