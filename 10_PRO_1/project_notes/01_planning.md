@@ -10,17 +10,36 @@
 	* List of requirements
 	* List of assumptions
 	* Github best practice version control.
+		* [advanced tutorial version control](https://www.youtube.com/watch?v=Uszj_k0DGsg)
+		* [basic tutorial github](https://www.youtube.com/watch?v=RGOj5yH7evk)
 * Day3: Research cloud services.
 	* App Service vs VMs
+		* VMSS with Linux running Apache2.
+			* + Pricing, familiarity with systems, IT department competence, future scaling.
+			* - patching / maintenance overhead, potential stability or configuration issues. More points of failure.
 	* Management server solutions
+		* 
 	* Network, firewall & load balancing solutions.
+		* Two virtual networks, each running separate IP ranges.
+		* Load balancer for the VMSS with public IP.
+		* NIC & public IP for management server.
+		* NSG rules matching requirements.
+		* 
 	* Best SQL Database solution
+		* Azure Database for MySQL
+			* + Support for LAMP (Linux, Apache, MySQL, php.) Flexible scaling. PaaS. Cost controls.
+			* - less flexible than CosmosDB.
 	* Script storage solutions
+		* Storage Account with zone-redundancy.
+		* 
 	* Disc storage solutions
 		* Backup solutions.
 		* Encryption solutions.
 	* Security tools & services required
+		* Built-in / free services.
 * Day4: Sketch infrastructure, learn Bicep.
+	* 9:30-12:30 Bicep
+	* 14-15:45 infrastructure on drawio
 * Day5: Play catch-up if needed.
 	* Create sub-goals for wk2.
 
@@ -73,13 +92,17 @@
 * 
 
 ## Questions for PO:
+* Zijn er software requirements voor de admin server of is dit iets voor het IT team?
 * 
 
 ### Notes from PO meetings:
-
+* Principle of least privilege
+* *
 
 # List of cloud services required:
 * Azure Virtual Networks
+* Security team will build an IDS
+* 
 
 
 # Deliverables:

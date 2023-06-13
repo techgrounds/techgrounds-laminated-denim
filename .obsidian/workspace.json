@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10_PRO_1/project_notes/01_planning.md",
+                "file": "10_PRO_1/project_notes/02_Bicep.md",
                 "mode": "source",
                 "source": false
               }
@@ -73,7 +73,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "activity log",
+                "query": "tag:#Subnets",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -118,7 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "10_PRO_1/project_notes/01_planning.md",
+                "file": "10_PRO_1/project_notes/02_Bicep.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,7 +135,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "10_PRO_1/project_notes/01_planning.md",
+                "file": "10_PRO_1/project_notes/02_Bicep.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -158,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "10_PRO_1/project_notes/01_planning.md"
+                "file": "10_PRO_1/project_notes/02_Bicep.md"
               }
             }
           }
@@ -179,44 +179,44 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "be16bfdadd07ab67",
+  "active": "581e030abe8bd9e5",
   "lastOpenFiles": [
-    "10_PRO_1/project_notes/old plans.md",
+    "10_PRO_1/project/learning/main.parameters.dev.json",
+    "10_PRO_1/project/learning/main.bicep",
+    "10_PRO_1/project/learning/mainOld1.bicep",
+    "10_PRO_1/project/learning/modules/appService.bicep",
+    "10_PRO_1/project/learning/modules",
     "10_PRO_1/project_notes/01_planning.md",
+    "10_PRO_1/project_notes/02_Bicep.md",
+    "10_PRO_1/project/learning/storage.bicep",
+    "10_PRO_1/project/learning",
+    "10_PRO_1/project_notes/old plans.md",
+    "10_PRO_1/project/readme.md",
+    "10_PRO_1/documentation/Design Documentation.md",
+    "10_PRO_1/documentation/Decision Documentation.md",
+    "10_PRO_1/documentation/time_logs/timelog_copyme.md",
+    "06_Azure_3/06_completed_assignments/AZ-20_toolsGovernanceCompliance.md",
+    "06_Azure_3/06_completed_assignments/AZ-21_toolsManagementDeployment.md",
+    "06_Azure_3/06_completed_assignments/AZ-19_eventGridServiceBus.md",
+    "10_PRO_1/documentation/time_logs/2023-06-07.md",
+    "10_PRO_1/documentation/time_logs/2023-06-06.md",
+    "10_PRO_1/documentation/time_logs/2023-06-05.md",
+    "05_Azure_2/05_completed_assignments/AZ-13_databases.md",
+    "04_Azure_1/04_completed_assignments/AZ-08_firewalls.md",
+    "05_Azure_2/05_completed_assignments/AZ-11_loadBalancer.md",
     "07_SC900_1/SC-1_Concepts.md",
     "07_SC900_1/SC-2_AzureAD.md",
     "07_SC900_1/SC-3_msSecurityCapabilities.md",
     "07_SC900_1/SC-4_msComplianceCapabilities.md",
     "06_Azure_3/06_completed_assignments/AZ-16_activeDirectorySecurity.md",
     "05_Azure_2/05_completed_assignments/AZ-13_files.md",
-    "05_Azure_2/05_completed_assignments/AZ-13_databases.md",
     "05_Azure_2/05_completed_assignments/AZ-13_appService.md",
-    "06_Azure_3/06_completed_assignments/AZ-20_toolsGovernanceCompliance.md",
     "10_PRO_1/project/storage.bicep",
     "10_PRO_1/project/project_stafford.code-workspace",
     "10_PRO_1/project/test",
     "10_PRO_1/project",
-    "10_PRO_1/New folder",
-    "10_PRO_1/project_notes",
     "10_PRO_1/project_notes.md",
     "01_Linux_1/01_completed_assignments/GIT-01 report.md",
-    "01_Linux_1/01_completed_assignments/GIT-02 report.md",
-    "10_PRO_1/project/readme.md",
-    "10_PRO_1/documentation/Design Documentation.md",
-    "10_PRO_1/documentation/Decision Documentation.md",
-    "10_PRO_1/documentation",
-    "10_PRO_1/documentation/time_logs/2023-06-05.md",
-    "10_PRO_1/documentation/time_logs/timelog_copyme.md",
-    "10_PRO_1/documentation/time_logs",
-    "10_PRO_1",
-    "01_Linux_1/01_completed_assignments/LNX-02 report.md",
-    "01_Linux_1/01_completed_assignments/LNX-01 report.md",
-    "beschrijvingen/09_notes/Python.md",
-    "09_Python_1/PY08_keyValuePairs/user_info.csv",
-    "04_Azure_1/04_completed_assignments/AZ-03_advantagesCloud.md",
-    "beschrijvingen/06_notes/AZ-17_monitorActivityLog notes.md",
-    "06_Azure_3/06_completed_assignments/AZ-21_toolsManagementDeployment.md",
-    "06_Azure_3/06_completed_assignments/AZ-19_eventGridServiceBus.md",
     "07_SC900_1/00SC_resources/SC-1_screenshot3.png",
     "07_SC900_1/00SC_resources/SC-1_screenshot2.png",
     "07_SC900_1/00SC_resources/SC-1_screenshot1.png",
