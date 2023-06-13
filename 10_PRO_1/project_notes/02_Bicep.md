@@ -180,6 +180,25 @@ module applicationModule 'application.bicep' = {
 }
 ```
 
+## Conditions & Loops
+Good idea to use variables to define the expressions used for a condition. e.g.
+```
+@allowed([
+  'Development'
+  'Production'
+])
+param environmentName string
+
+var auditingEnabled = environmentName == 'Production'
+
+resource auditingSettings 'Microsoft.Sql/servers/auditingSettings@2021-11-01-preview' = if (auditingEnabled) {
+  parent: server
+  name: 'default'
+  properties: {
+  }
+}
+```
+
 
 ## Troubleshooting:
 [Target scope "subscription" does not match the deployment scope "resourceGroup"](https://github.com/Azure/bicep/issues/6323)
