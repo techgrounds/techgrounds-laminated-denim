@@ -73,7 +73,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#Subnets",
+                "query": "tag:#encapsulation",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -179,19 +179,19 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "be16bfdadd07ab67",
+  "active": "581e030abe8bd9e5",
   "lastOpenFiles": [
+    "10_PRO_1/project/learning/04_modules",
     "10_PRO_1/project/learning/03_conditionsAndLoops/main.bicep",
+    "10_PRO_1/project/learning/03_conditionsAndLoops/modules/main.bicep",
+    "10_PRO_1/project/learning/03_conditionsAndLoops/modules/database.bicep",
+    "10_PRO_1/project/learning/03_conditionsAndLoops/modules",
     "10_PRO_1/project/learning/03_conditionsAndLoops",
     "10_PRO_1/project/learning/02_parameters/main.parameters.dev.json",
     "10_PRO_1/project/learning/02_parameters/main.bicep",
     "10_PRO_1/project/learning/02_parameters",
     "10_PRO_1/project/learning/01_firstbiceptemplate/modules/appService.bicep",
     "10_PRO_1/project/learning/01_firstbiceptemplate/mainOld1.bicep",
-    "10_PRO_1/project/learning/01_firstbiceptemplate/modules",
-    "10_PRO_1/project/learning/01_firstbiceptemplate",
-    "10_PRO_1/project/learning/parameters/main.parameters.dev.json",
-    "10_PRO_1/project/learning/parameters/main.bicep",
     "10_PRO_1/project_notes/01_planning.md",
     "10_PRO_1/project_notes/02_Bicep.md",
     "10_PRO_1/project_notes/old plans.md",

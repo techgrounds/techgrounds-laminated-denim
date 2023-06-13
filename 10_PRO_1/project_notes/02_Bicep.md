@@ -202,3 +202,4 @@ resource auditingSettings 'Microsoft.Sql/servers/auditingSettings@2021-11-01-pre
 
 ## Troubleshooting:
 [Target scope "subscription" does not match the deployment scope "resourceGroup"](https://github.com/Azure/bicep/issues/6323)
+Using modules to define resource group scope? Idea from Akram.
