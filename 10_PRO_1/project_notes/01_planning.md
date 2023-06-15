@@ -79,6 +79,7 @@
 	* Reliability at as low a price as possible for the DB.
 	* SQL database does not need to be configured, just deployed.
 		* Ensure the webdev team can configure the database on deployment.
+	* Database does not need to be backed up.
 * App-wide SLA of 99%
 * Support for variable workload.
 * Separate scripts for separate functions, but automate the execution with a single script/button.

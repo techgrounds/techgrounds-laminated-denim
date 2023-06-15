@@ -1,4 +1,9 @@
 
+# Deployment
+```
+New-AzResourceGroup -Name <rgName> -Location <region>
+New-AzResourceGroupDeployment -ResourceGroupName rgName -TemplateFile main.bicep
+```
 
 # Bicep notes
 * Learn resource naming restrictions before attempting to use them in Bicep.
@@ -7,7 +12,8 @@
 * Be careful with default values; use inexpensive SKUs as defaults.
 
 ## Resources:
-[Advanced Bicep Guide](https://github.com/nnellans/bicep-guide)
+[Advanced Bicep Guide](https://github.com/nnellans/bicep-guide)  
+[Creat Network resources with Bicep](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/scenarios-virtual-networks)  
 
 ## [Parameters and Variables](https://learn.microsoft.com/en-us/training/modules/build-first-bicep-template/5-add-flexibility-parameters-variables)
 Parameters allow one to bring in values from outside a template file. A user deploying a template via CLI or PowerShell will be prompted to provide values for each parameter. A parameter file could also be used, which lists all parameters and corresponding values. Add parameters to the top of a template. Example: `param environmentName string`  

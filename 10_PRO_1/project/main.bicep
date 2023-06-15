@@ -29,6 +29,14 @@ module networking 'modules/networking.bicep' = {
   }
 }
 
+module keyvault 'modules/keyvault.bicep' = {
+  name: 'keyvault-${location}'
+  params: {
+    envName: envName
+    location: location
+  }
+}
+
 module storage 'modules/storageaccount.bicep' = {
   name: 'storage-${location}'
   params: {
