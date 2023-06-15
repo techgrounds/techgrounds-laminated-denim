@@ -48,6 +48,11 @@
 * Day2: Code network infrastructure.
 * Day3: Design and code management server & storage.
 * Day4: Design and code webserver & database.
+	* Check classmates' work.
+	* Look at templates.
+	* Design / code network infra, keep it basic.
+	* Research / jot down powershell commands for deployment.
+	* Deploy network infra, resource group & storage account.
 * Day5: Play catch-up, test.
 
 ## Week 3:
@@ -88,6 +93,7 @@
 * Two VNets, peered.
 	* One for web server.
 	* One for the management server.
+	* 
 * Security measures such as MS Defender for Cloud.
 * 
 

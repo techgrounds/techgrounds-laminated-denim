@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10_PRO_1/project_notes/02_Bicep.md",
+                "file": "10_PRO_1/project_notes/01_planning.md",
                 "mode": "source",
                 "source": false
               }
@@ -73,7 +73,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#encapsulation",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -118,7 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "10_PRO_1/project_notes/02_Bicep.md",
+                "file": "10_PRO_1/project_notes/01_planning.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,7 +135,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "10_PRO_1/project_notes/02_Bicep.md",
+                "file": "10_PRO_1/project_notes/01_planning.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -158,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "10_PRO_1/project_notes/02_Bicep.md"
+                "file": "10_PRO_1/project_notes/01_planning.md"
               }
             }
           }
@@ -179,25 +179,32 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "581e030abe8bd9e5",
+  "active": "be16bfdadd07ab67",
   "lastOpenFiles": [
-    "10_PRO_1/project/learning/04_modules",
-    "10_PRO_1/project/learning/03_conditionsAndLoops/main.bicep",
-    "10_PRO_1/project/learning/03_conditionsAndLoops/modules/main.bicep",
-    "10_PRO_1/project/learning/03_conditionsAndLoops/modules/database.bicep",
-    "10_PRO_1/project/learning/03_conditionsAndLoops/modules",
-    "10_PRO_1/project/learning/03_conditionsAndLoops",
-    "10_PRO_1/project/learning/02_parameters/main.parameters.dev.json",
-    "10_PRO_1/project/learning/02_parameters/main.bicep",
-    "10_PRO_1/project/learning/02_parameters",
-    "10_PRO_1/project/learning/01_firstbiceptemplate/modules/appService.bicep",
-    "10_PRO_1/project/learning/01_firstbiceptemplate/mainOld1.bicep",
+    "02_Networking_1/02_completed_assignments/NTW-05_report_ipaddresses.md",
+    "02_Networking_1/02_completed_assignments/NTW-06_report_subnets.md",
+    "02_Networking_1/02_completed_assignments/NTW-03_report_protocols.md",
+    "02_Networking_1/02_completed_assignments/NTW-04_report_binaryhex.md",
+    "02_Networking_1/02_completed_assignments/NTW-02_report_devices.md",
     "10_PRO_1/project_notes/01_planning.md",
+    "10_PRO_1/project/modules/networking.bicep",
+    "10_PRO_1/project/modules/storageaccount.bicep",
+    "10_PRO_1/project/modules/resourceGroup.bicep",
     "10_PRO_1/project_notes/02_Bicep.md",
+    "10_PRO_1/project/learning/04_modules/modules/cdn.bicep",
+    "10_PRO_1/project/learning/04_modules/modules/app.bicep",
+    "10_PRO_1/project/learning/04_modules/main.bicep",
+    "10_PRO_1/project/learning/04_modules/Untitled.md",
+    "10_PRO_1/project/learning/04_modules/modules",
+    "10_PRO_1/project/learning/03_conditionsAndLoops/modules/webserver.bicep",
+    "10_PRO_1/project/modules/managementServer.bicep",
+    "10_PRO_1/project/modules",
     "10_PRO_1/project_notes/old plans.md",
-    "10_PRO_1/project/readme.md",
+    "beschrijvingen/00_teamnotes/WK-02.md",
     "10_PRO_1/documentation/Design Documentation.md",
     "10_PRO_1/documentation/Decision Documentation.md",
+    "10_PRO_1/project/readme.md",
+    "10_PRO_1/project_notes/Sprint Review.md",
     "10_PRO_1/documentation/time_logs/timelog_copyme.md",
     "06_Azure_3/06_completed_assignments/AZ-20_toolsGovernanceCompliance.md",
     "06_Azure_3/06_completed_assignments/AZ-21_toolsManagementDeployment.md",
@@ -210,13 +217,6 @@
     "05_Azure_2/05_completed_assignments/AZ-11_loadBalancer.md",
     "07_SC900_1/SC-1_Concepts.md",
     "07_SC900_1/SC-2_AzureAD.md",
-    "07_SC900_1/SC-3_msSecurityCapabilities.md",
-    "07_SC900_1/SC-4_msComplianceCapabilities.md",
-    "06_Azure_3/06_completed_assignments/AZ-16_activeDirectorySecurity.md",
-    "05_Azure_2/05_completed_assignments/AZ-13_files.md",
-    "05_Azure_2/05_completed_assignments/AZ-13_appService.md",
-    "10_PRO_1/project_notes.md",
-    "01_Linux_1/01_completed_assignments/GIT-01 report.md",
     "07_SC900_1/00SC_resources/SC-1_screenshot3.png",
     "07_SC900_1/00SC_resources/SC-1_screenshot2.png",
     "07_SC900_1/00SC_resources/SC-1_screenshot1.png",

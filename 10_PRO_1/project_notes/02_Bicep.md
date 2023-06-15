@@ -1,9 +1,13 @@
 
+
 # Bicep notes
 * Learn resource naming restrictions before attempting to use them in Bicep.
 * Bicep is strict regarding line breaks.
 * Use consistent naming for parameters and variables.
 * Be careful with default values; use inexpensive SKUs as defaults.
+
+## Resources:
+[Advanced Bicep Guide](https://github.com/nnellans/bicep-guide)
 
 ## [Parameters and Variables](https://learn.microsoft.com/en-us/training/modules/build-first-bicep-template/5-add-flexibility-parameters-variables)
 Parameters allow one to bring in values from outside a template file. A user deploying a template via CLI or PowerShell will be prompted to provide values for each parameter. A parameter file could also be used, which lists all parameters and corresponding values. Add parameters to the top of a template. Example: `param environmentName string`  
