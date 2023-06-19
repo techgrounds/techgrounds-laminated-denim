@@ -45,6 +45,24 @@
           }
         ],
         "currentTab": 2
+      },
+      {
+        "id": "4e5786db76745e63",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4371f1e7e6028229",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "10_PRO_1/project_notes/Sprint Review.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -118,7 +136,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "10_PRO_1/project_notes/01_planning.md",
+                "file": "10_PRO_1/project_notes/Sprint Review.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,7 +153,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "10_PRO_1/project_notes/01_planning.md",
+                "file": "10_PRO_1/project_notes/Sprint Review.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -158,7 +176,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "10_PRO_1/project_notes/01_planning.md"
+                "file": "10_PRO_1/project_notes/Sprint Review.md"
               }
             }
           }
@@ -179,12 +197,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "be16bfdadd07ab67",
+  "active": "4371f1e7e6028229",
   "lastOpenFiles": [
+    "10_PRO_1/project_notes/01_planning.md",
+    "10_PRO_1/project_notes/Sprint Review.md",
     "10_PRO_1/project_notes/02_Bicep.md",
+    "10_PRO_1/project_notes/old plans.md",
+    "10_PRO_1/documentation/time_logs/2023-15-06.md",
+    "10_PRO_1/documentation/time_logs/timelog_copyme.md",
     "10_PRO_1/project/modules/keyVault.bicep",
     "10_PRO_1/project/modules/webserver.bicep",
-    "10_PRO_1/project_notes/01_planning.md",
     "02_Networking_1/02_completed_assignments/NTW-05_report_ipaddresses.md",
     "02_Networking_1/02_completed_assignments/NTW-06_report_subnets.md",
     "02_Networking_1/02_completed_assignments/NTW-03_report_protocols.md",
@@ -199,13 +221,10 @@
     "10_PRO_1/project/learning/04_modules/Untitled.md",
     "10_PRO_1/project/learning/04_modules/modules",
     "10_PRO_1/project/learning/03_conditionsAndLoops/modules/webserver.bicep",
-    "10_PRO_1/project_notes/old plans.md",
     "beschrijvingen/00_teamnotes/WK-02.md",
     "10_PRO_1/documentation/Design Documentation.md",
     "10_PRO_1/documentation/Decision Documentation.md",
     "10_PRO_1/project/readme.md",
-    "10_PRO_1/project_notes/Sprint Review.md",
-    "10_PRO_1/documentation/time_logs/timelog_copyme.md",
     "06_Azure_3/06_completed_assignments/AZ-20_toolsGovernanceCompliance.md",
     "06_Azure_3/06_completed_assignments/AZ-21_toolsManagementDeployment.md",
     "06_Azure_3/06_completed_assignments/AZ-19_eventGridServiceBus.md",

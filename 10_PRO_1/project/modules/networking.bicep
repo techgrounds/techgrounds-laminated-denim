@@ -35,6 +35,9 @@ resource vnet1 'Microsoft.Network/virtualNetworks@2022-11-01' = {
         name: '${vnet1Name}-subnet1'
         properties: {
           addressPrefix: vnet1AddressPrefix
+          networkSecurityGroup: {
+            id: nsg1.id
+          }
         }
       }
     ]
@@ -59,6 +62,9 @@ resource vnet2 'Microsoft.Network/virtualNetworks@2022-11-01' = {
         name: '${vnet2Name}-subnet1'
         properties: {
           addressPrefix: vnet2AddressPrefix
+          networkSecurityGroup: {
+            id: nsg2.id
+          }
         }
       }
     ]
