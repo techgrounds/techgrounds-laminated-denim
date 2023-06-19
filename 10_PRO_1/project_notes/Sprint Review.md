@@ -23,6 +23,6 @@ In de eerste week was ik een paar dagen ziek, en ik ben sinsdien achtergevallen 
 
 
 ```
-New-AzResourceGroup -Name testRG -Location westeurope
-New-AzResourceGroupDeployment -ResourceGroupName testRG -TemplateFile main.bicep
+New-AzResourceGroup -Name testRG2 -Location westeurope
+New-AzResourceGroupDeployment -ResourceGroupName testRG2 -TemplateFile main.bicep
 ```

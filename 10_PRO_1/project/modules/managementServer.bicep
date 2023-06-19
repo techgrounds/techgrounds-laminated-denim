@@ -8,31 +8,118 @@ param envName string
 @description('The Azure Region into which the resources are deployed.')
 param location string
 
-// Variable for the management server VM name.
-var mgmtServerName = take('${take(envName, 3)}${take(location, 6)}mgmtserv${uniqueString(resourceGroup().id)}', 24)
-var mgmtServerSku = envName == 'dev' ? 'Standard_B1s' : 'Standard_B2s'
+@secure()
+@description('The administrator username.')
+param adminUsername string
 
-// a VM management server running Ubuntu
-resource mgmtServer 'Microsoft.Compute/virtualMachines@2023-03-01' = {
-  name: mgmtServerName
+@secure()
+@description('The administrator password.')
+param adminPassword string
+
+// Parameters with outputs from other modules.
+//param keyVaultIdentity string
+param VNet2Identity string
+param vnet2Subnet1Identity string
+//param nsg2Identity string
+//param StorageAcc string
+param StorageAccBlobEndpoint string
+
+//Variables for the networking components of the VM.
+var MgmtDNSLabel = toLower('${mgmtServerName}')
+var publicIpSku = 'Basic'
+var nicName = 'MgmtServerNic'
+
+// Variable for the management server VM.
+var mgmtServerName = '${take(envName, 3)}${take(location, 6)}mgmtsv'
+var mgmtServerSize = envName == 'dev' ? 'Standard_B1s' : 'Standard_B2s'
+// variable for the Windows Server OS version
+var MgmtServerOSVersion = '2022-Datacenter'
+
+// A public IP for the management server.
+resource mgmtServerPIP 'Microsoft.Network/publicIPAddresses@2022-11-01' = {
+  name: '${mgmtServerName}-pip'
   location: location
+  sku: {
+    name: publicIpSku
+  }
+  properties: {
+    publicIPAllocationMethod: 'Dynamic'
+    dnsSettings: {
+      domainNameLabel: MgmtDNSLabel
+    }
+  }
 }
 
-// a NIC attached to the VM management server
-resource mgmtServerNic 'Microsoft.Network/networkInterfaces@2022-11-01' = {
-  name: '${mgmtServerName}nic'
+resource MgmtServerNIC 'Microsoft.Network/networkInterfaces@2022-11-01' = {
+  name: nicName
   location: location
   properties: {
     ipConfigurations: [
       {
-        name: 'ipconfig1'
+        name: 'MgmtServerIPConfig'
         properties: {
-          subnet: {
-            id: subnet.id
-          }
           privateIPAllocationMethod: 'Dynamic'
+          publicIPAddress: {
+            id: mgmtServerPIP.id
+          }
+          subnet: {
+            id: resourceId('Microsoft.Network/virtualNetworks/subnets', VNet2Identity, vnet2Subnet1Identity)
+          }
         }
       }
     ]
   }
+  dependsOn: [
+  ]
 }
+
+// a VM management server running Windows Server.
+resource mgmtServer 'Microsoft.Compute/virtualMachines@2023-03-01' = {
+  name: mgmtServerName
+  location: location
+  properties: {
+    hardwareProfile: {
+      vmSize: mgmtServerSize
+    }
+    osProfile: {
+      computerName: mgmtServerName
+      adminUsername: adminUsername
+      adminPassword: adminPassword
+    }
+    storageProfile: {
+      imageReference: {
+        publisher: 'MicrosoftWindowsServer'
+        offer: 'WindowsServer'
+        sku: MgmtServerOSVersion
+        version: 'latest'
+      }
+    osDisk: {
+      createOption: 'FromImage'
+      managedDisk: {
+        storageAccountType: 'StandardSSD_LRS'
+      }
+    }
+    dataDisks: [
+      {
+        diskSizeGB: 256
+        lun: 0
+        createOption: 'Empty'
+      }
+    ]
+    }
+    networkProfile: {
+      networkInterfaces: [
+        {
+          id: MgmtServerNIC.id
+        }
+      ]
+    }
+    diagnosticsProfile: {
+      bootDiagnostics: {
+        enabled: true
+        storageUri: StorageAccBlobEndpoint
+      }
+    }
+  }
+}
+
