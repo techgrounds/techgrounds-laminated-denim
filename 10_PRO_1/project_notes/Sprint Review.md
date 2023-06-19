@@ -19,9 +19,9 @@ Om het makkelijk te houden heb ik gekozen voor de creatie van een resourcegroup 
 
 Terwijl we wachten voor de Azure Portal, zal ik kort vertellen over de mismatch tussen mijn planning en de werkelijke output.
 
-In de eerste week was ik een paar dagen ziek, en ik ben sinsdien achtergevallen op mijn planning. Daarboven op duurde het leren van Bicep langer dan verwacht.vvvvvv
+In de eerste week was ik een paar dagen ziek, en ik ben sinsdien achtergevallen op mijn planning. Daarboven duurde het leren van Bicep langer dan verwacht. In plaats van het bouwen van alle componenten ben ik dus vooral bezig geweest met het leren van Bicep. Wel is het me gelukt om networking componenten en een storage account te bouwen en heb ik een begin gemaakt aan een keyvault en onderzoek voor de servers.
 
-Make sure you prep a demo beforehand.
+
 ```
 New-AzResourceGroup -Name testRG -Location westeurope
 New-AzResourceGroupDeployment -ResourceGroupName testRG -TemplateFile main.bicep

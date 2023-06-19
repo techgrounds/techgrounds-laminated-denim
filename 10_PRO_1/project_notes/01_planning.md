@@ -18,7 +18,7 @@
 			* + Pricing, familiarity with systems, IT department competence, future scaling.
 			* - patching / maintenance overhead, potential stability or configuration issues. More points of failure.
 	* Management server solutions
-		* 
+		* VM running Windows Server.
 	* Network, firewall & load balancing solutions.
 		* Two virtual networks, each running separate IP ranges.
 		* Load balancer for the VMSS with public IP.
@@ -37,6 +37,7 @@
 		* Encryption solutions.
 	* Security tools & services required
 		* Built-in / free services.
+		* Key Vault
 * Day4: Sketch infrastructure, learn Bicep.
 	* 9:30-12:30 Bicep
 	* 14-15:45 infrastructure on drawio
@@ -56,10 +57,15 @@
 * Day5: Play catch-up, test.
 
 ## Week 3:
-* Day1: Design and code identity management.
-* Day2: Design and code security.
-* Day3: Test and polish.
-* Day4: Present.
+* Day 1: Code Key Vault.
+	* Code mgmt server.
+	* Write outputs to connect mgmt server to network.
+* Day 2: Code vmss and load balancer for webserver.
+	* Connect it to network.
+* Day 3: Code database.
+	* Connect it to network.
+	* Connect it to webserver.
+* Day 4: 
 
 # Requirements:
 * Encrypt all VM discs.
@@ -69,6 +75,7 @@
 * Automated webserver installation.
 * Admin server must be accessible via a public IP.
 	* Admin server must only be accessible from trusted locations.
+	* Must run Windows Server.
 * Use the following IP ranges: 10.10.10.0/24 & 10.20.20.0/24
 * All subnets require firewalls.
 * SSH/RDP to the web server must only be possible from the admin server.

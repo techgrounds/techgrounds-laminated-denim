@@ -20,57 +20,23 @@ resource keyVault 'Microsoft.KeyVault/vaults@2023-02-01' = {
     Location: location
   }
   properties: {
-    accessPolicies: [
-      {
-        applicationId: 'string'
-        objectId: 'string'
-        permissions: {
-          certificates: [
-            'string'
-          ]
-          keys: [
-            'string'
-          ]
-          secrets: [
-            'string'
-          ]
-          storage: [
-            'string'
-          ]
-        }
-        tenantId: 'string'
-      }
-    ]
     createMode: 'default'
     enabledForDeployment: true
     enabledForDiskEncryption: true
     enabledForTemplateDeployment: true
-    enablePurgeProtection: false
-    enableRbacAuthorization: true
+    enablePurgeProtection: true
+    enableRbacAuthorization: false
     enableSoftDelete: true
     networkAcls: {
       bypass: 'AzureServices'
       defaultAction: 'deny'
-      ipRules: [
-        {
-          value: 'string'
-        }
-      ]
-      virtualNetworkRules: [
-        {
-          id: 'string'
-          ignoreMissingVnetServiceEndpoint: false
-        }
-      ]
     }
-    provisioningState: 'string'
-    publicNetworkAccess: 'disabled'
+    publicNetworkAccess: 'enabled'
     sku: {
       family: 'A'
       name: 'standard'
     }
     softDeleteRetentionInDays: 90
-    tenantId: 'string'
-    vaultUri: 'string'
+    tenantId: 'de60b253-74bd-4365-b598-b9e55a2b208d'
   }
 }

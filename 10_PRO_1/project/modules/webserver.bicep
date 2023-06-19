@@ -15,3 +15,4 @@ param webServerName string = 'webserver'
 
 // A virtual machine scale set with all its required dependencies.
 
+//A network interface coupled to vnet1 and subnet1 from networking.bicep
