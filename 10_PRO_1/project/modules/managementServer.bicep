@@ -26,12 +26,12 @@ param StorageAccBlobEndpoint string
 
 //Variables for the networking components of the VM.
 var MgmtDNSLabel = toLower('${mgmtServerName}')
-var publicIpSku = 'Basic'
+var publicIpSku = 'Standard'
 var nicName = 'MgmtServerNic'
 
 // Variable for the management server VM.
 var mgmtServerName = '${take(envName, 3)}${take(location, 6)}mgmtsv'
-var mgmtServerSize = envName == 'dev' ? 'Standard_B1s' : 'Standard_B2s'
+var mgmtServerSize = envName == 'dev' ? 'Standard_B1ms' : 'Standard_B2s'
 // variable for the Windows Server OS version
 var MgmtServerOSVersion = '2022-Datacenter'
 
@@ -43,7 +43,7 @@ resource mgmtServerPIP 'Microsoft.Network/publicIPAddresses@2022-11-01' = {
     name: publicIpSku
   }
   properties: {
-    publicIPAllocationMethod: 'Dynamic'
+    publicIPAllocationMethod: 'Static'
     dnsSettings: {
       domainNameLabel: MgmtDNSLabel
     }
@@ -122,4 +122,3 @@ resource mgmtServer 'Microsoft.Compute/virtualMachines@2023-03-01' = {
     }
   }
 }
-

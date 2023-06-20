@@ -68,3 +68,16 @@ module mgmtServer 'modules/managementServer.bicep' = {
     //nsg2Identity: networking.outputs.nsg2ID
   }
 }
+
+module webServer 'modules/webserver.bicep' = {
+  name: 'webServer-${location}'
+  params: {
+    envName: envName
+    location: location
+    adminUsername: adminUsername
+    adminPassword: adminPassword
+    Vnet1Identity: networking.outputs.vnet1ID
+    vnet1Subnet1Identity: networking.outputs.vnet1Subnet1ID
+    StorageAccBlobEndpoint: storage.outputs.storageAccountBlobEndpoint
+  }
+}

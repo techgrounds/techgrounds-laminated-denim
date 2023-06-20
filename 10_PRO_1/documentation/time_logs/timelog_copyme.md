@@ -2,7 +2,7 @@
 
 ## Dagverslag (1 zin)
 
-  ## Obstakels
+## Obstakels
 
 
 ## Oplossingen
