@@ -8,6 +8,10 @@ param envName string
 @description('The Azure Region into which the resources are deployed.')
 param location string
 
+//A parameter array with the IP ranges that are allowed to access the management server via SSH and RDP.
+@description('The IP ranges that are allowed to access the management server via SSH and RDP.')
+param allowedIpRange array
+
 //Variables for VNet1 and its subnets.
 var vnet1Name = '${envName}-${take(location, 6)}-vnet1'
 var vnet1AddressPrefix = '10.10.10.0/24'
@@ -86,7 +90,7 @@ resource vnet1vnet2 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings@20
   }
 }
 
-// A network security group that allows HTTPS traffic from the internet and SSH access from the management server on vnet2.
+// A network security group for vnet1 that allows HTTPS and HTTP traffic from the internet and SSH access from the management server on vnet2.
 resource nsg1 'Microsoft.Network/networkSecurityGroups@2022-11-01' = {
   name: '${vnet1Name}-nsg'
   location: location
@@ -98,14 +102,27 @@ resource nsg1 'Microsoft.Network/networkSecurityGroups@2022-11-01' = {
     securityRules: [
       {
         name: 'https'
-        properties: { //fix when webserver is up!!!!!!!!!!!!!!
+        properties: {
           protocol: 'TCP'
           sourceAddressPrefix: '*'
           destinationAddressPrefix: '*'
           sourcePortRange: '*'
           destinationPortRange: '443'
           access: 'Allow'
-          priority: 100
+          priority: 1000
+          direction: 'Inbound'
+        }
+      }
+      {
+        name: 'http'
+        properties: {
+          protocol: 'TCP'
+          sourceAddressPrefix: '*'
+          destinationAddressPrefix: '*'
+          sourcePortRange: '*'
+          destinationPortRange: '80'
+          access: 'Allow'
+          priority: 1050
           direction: 'Inbound'
         }
       }
@@ -118,7 +135,7 @@ resource nsg1 'Microsoft.Network/networkSecurityGroups@2022-11-01' = {
           destinationAddressPrefix: '*' //fill this in when the management server is up!!!!!!!!!!!!!!!!!!!!!
           destinationPortRange: '22' //fill this in when the management server is up!!!!!!!!!!!!!!!!!!!!!
           access: 'Allow'
-          priority: 101
+          priority: 1100
           direction: 'Inbound'
         }
       }
@@ -140,15 +157,28 @@ properties: {
       name: 'ssh'
       properties: {
         protocol: 'TCP'
-        sourceAddressPrefix: '*' //fill this in when the management server is up!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        sourceAddressPrefix: string(allowedIpRange)
         destinationAddressPrefix: '*'
         sourcePortRange: '*'
         destinationPortRange: '22'
         access: 'Allow'
-        priority: 200
+        priority: 1000
         direction: 'Inbound'
           }
         }
+          {
+          name: 'RDP'
+          properties: {
+            protocol: 'TCP'
+            sourceAddressPrefix: string(allowedIpRange)
+            destinationAddressPrefix: '*'
+            sourcePortRange: '*'
+            destinationPortRange: '3389'
+            access: 'Allow'
+            priority: 1000
+            direction: 'Inbound'
+              }
+            }
       ]
     }
   }

@@ -5,6 +5,8 @@ New-AzResourceGroup -Name <rgName> -Location <region>
 New-AzResourceGroupDeployment -ResourceGroupName rgName -TemplateFile main.bicep
 ```
 
+Loading bash scripts from a private github repository is best practice.
+
 # Bicep notes
 * Learn resource naming restrictions before attempting to use them in Bicep.
 * Bicep is strict regarding line breaks.

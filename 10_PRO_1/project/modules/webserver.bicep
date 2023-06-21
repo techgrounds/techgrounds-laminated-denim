@@ -19,21 +19,51 @@ param adminPassword string
 
 param Vnet1Identity string
 param vnet1Subnet1Identity string
-param StorageAccBlobEndpoint string
+//param StorageAccBlobEndpoint string
 ///////
 
 //Parameters for the VMSS
 @description('The name of the webserver VM scaleset.')
 param webServerName string = '${take(envName, 3)}${take(location, 6)}websv${take(uniqueString(resourceGroup().id), 4)}'
+
 @description('The SKU size for the VMSS.')
 param webServerSku string = envName == 'dev' ? 'Standard_B1s' : 'Standard_B2s'
+
+// @description('The base URI where artifacts required by this template are located. For example, if stored on a public GitHub repo, you\'d use the following URI: https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/201-vmss-windows-webapp-dsc-autoscale/.')
+// param _artifactsLocation string = deployment().properties.templateLink.uri
+
+@description('When true this limits the scale set to a single placement group, of max size 100 virtual machines. NOTE: If singlePlacementGroup is true, it may be modified to false. However, if singlePlacementGroup is false, it may not be modified to true.')
+param singlePlacementGroup bool = true
 //////
 
 //variables for VMSS
+var vmScaleSetName = toLower(substring('vmss${uniqueString(resourceGroup().id)}', 0, 9))
+var longvmScaleSet = toLower(webServerName)
 var instanceCount = 1
 var vmssId = webServer.id
+var platformFaultDomainCount = 1
+var imageReference = {
+    publisher: 'Canonical'
+    offer: '0001-com-ubuntu-server-jammy'
+    sku: '22_04-lts-gen2'
+    version: 'latest'
+}
 
-//variables for autoscaling
+//variables for other resources
+var publicIPAddressName = '${vmScaleSetName}pip'
+var publicIPAddressID = webServerPublicIP.id
+var loadBalancerName = '${vmScaleSetName}lb'
+var lbProbeID = resourceId('Microsoft.Network/loadBalancers/probes', loadBalancerName, 'tcpProbe')
+var natPoolName = '${vmScaleSetName}natpool'
+var bePoolName = '${vmScaleSetName}bepool'
+var lbPoolID = resourceId('Microsoft.Network/loadBalancers/backendAddressPools', loadBalancerName, bePoolName)
+var natStartPort = 50000
+var natEndPort = 50119
+var natBackendPort = 3389
+var nicName = '${vmScaleSetName}nic'
+var ipConfigName = '${vmScaleSetName}ipconfig'
+var frontEndIPConfigID = resourceId('Microsoft.Network/loadBalancers/frontendIPConfigurations', loadBalancerName, 'loadBalancerFrontEnd')
+var publicIpSku = 'Standard'
 var autoScaleResourceName = '${webServerName}AutoScale'
 var autoScaleDefault = '1'
 var autoScaleMin = '1'
@@ -45,6 +75,188 @@ var scaleInCPUPercentageThreshold = 25
 var scaleOutInterval = '1'
 var scaleInInterval = '1'
 ///////
+
+//A load balancer connected to the vmss with a public IP.
+resource loadBalancer 'Microsoft.Network/loadBalancers@2022-11-01' = {
+  name: loadBalancerName
+  location: location
+  sku: {
+    name: 'Standard'
+  }
+  tags: {
+    Environment: envName
+    Location: location
+  }
+  properties: {
+    frontendIPConfigurations: [
+      {
+        name: 'LoadBalancerFrontEnd'
+        properties: {
+          publicIPAddress: {
+            id: publicIPAddressID
+          }
+        }
+      }
+    ]
+    backendAddressPools: [
+      {
+        name: bePoolName
+      }
+    ]
+    inboundNatPools: [
+      {
+        name: natPoolName
+        properties: {
+          frontendIPConfiguration: {
+            id: frontEndIPConfigID
+          }
+          protocol: 'Tcp'
+          frontendPortRangeStart: natStartPort
+          frontendPortRangeEnd: natEndPort
+          backendPort: natBackendPort
+        }
+      }
+    ]
+    loadBalancingRules: [
+      {
+        name: 'LBRule'
+        properties: {
+          frontendIPConfiguration: {
+            id: frontEndIPConfigID
+          }
+          backendAddressPool: {
+            id: lbPoolID
+          }
+          protocol: 'Tcp'
+          frontendPort: 80
+          backendPort: 80
+          enableFloatingIP: false
+          idleTimeoutInMinutes: 5
+          probe: {
+            id: lbProbeID
+          }
+        }
+      }
+    ]
+    probes: [
+      {
+        name: 'tcpProbe'
+        properties: {
+          protocol: 'Tcp'
+          port: 80
+          intervalInSeconds: 5
+          numberOfProbes: 2
+        }
+      }
+    ]
+  }
+}
+
+// A virtual machine scale set
+resource webServer 'Microsoft.Compute/virtualMachineScaleSets@2023-03-01' = {
+  name: webServerName
+  location: location
+  tags: {
+    Environment: envName
+    Location: location
+  }
+  sku: {
+    capacity: int(instanceCount)
+    name: webServerSku
+    tier: 'Standard'
+  }
+  properties: {
+    overprovision: true
+    upgradePolicy: {
+      mode: 'Automatic'
+    }
+    singlePlacementGroup: singlePlacementGroup
+    platformFaultDomainCount: platformFaultDomainCount
+    virtualMachineProfile: {
+      storageProfile: {
+        osDisk: {
+          caching: 'ReadWrite'
+          createOption: 'FromImage'
+        }
+        imageReference: imageReference
+      }
+      osProfile: {
+        computerNamePrefix: vmScaleSetName
+        adminUsername: adminUsername
+        adminPassword: adminPassword
+      }
+      networkProfile: {
+        networkInterfaceConfigurations: [
+          {
+            name: nicName
+            properties: {
+              primary: true
+              ipConfigurations: [
+                {
+                  name: ipConfigName
+                  properties: {
+                    subnet: {
+                      id: resourceId('Microsoft.Network/virtualNetworks/subnets', Vnet1Identity, vnet1Subnet1Identity)
+                    }
+                    loadBalancerBackendAddressPools: [
+                      {
+                        id: lbPoolID
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+      // extensionProfile: {
+      //   extensions: [
+      //     {
+      //       name: 'Microsoft.Powershell.DSC'
+      //       properties: {
+      //         publisher: 'Microsoft.Powershell'
+      //         type: 'DSC'
+      //         typeHandlerVersion: '2.9'
+      //         autoUpgradeMinorVersion: true
+      //         forceUpdateTag: powershelldscUpdateTagVersion
+      //         settings: {
+      //           configuration: {
+      //             url: powershelldscZipFullPath
+      //             script: 'InstallIIS.ps1'
+      //             function: 'InstallIIS'
+      //           }
+      //           configurationArguments: {
+      //             nodeName: 'localhost'
+      //             WebDeployPackagePath: webDeployPackageFullPath
+      //           }
+      //         }
+      //       }
+      //     }
+      //   ]
+      // }
+    }
+  }
+}
+
+//A public IP for the load balancer.
+resource webServerPublicIP 'Microsoft.Network/publicIPAddresses@2022-11-01' = {
+  name: publicIPAddressName
+  location: location
+  sku: {
+    name: publicIpSku
+  }
+  tags: {
+    Environment: envName
+    Location: location
+  }
+  properties: {
+    publicIPAllocationMethod: 'Static'
+    dnsSettings: {
+      domainNameLabel: longvmScaleSet
+    }
+  }
+}
 
 // Autoscaling resource for the vmss
 resource autoScaleResource 'Microsoft.Insights/autoscalesettings@2022-10-01' = {
@@ -111,401 +323,4 @@ resource autoScaleResource 'Microsoft.Insights/autoscalesettings@2022-10-01' = {
   }
 }
 
-// A virtual machine scale set
-resource webServer 'Microsoft.Compute/virtualMachineScaleSets@2023-03-01' = {
-  name: webServerName
-  location: location
-  tags: {
-    Environment: envName
-    Location: location
-  }
-  sku: {
-    capacity: int(instanceCount)
-    name: webServerSku
-    tier: 'Standard'
-  }
-  extendedLocation: {
-    name: 'string'
-    type: 'EdgeZone'
-  }
-  identity: {
-    type: 'SystemAssigned'
-    userAssignedIdentities: {}
-  }
-  plan: {
-    name: 'string'
-    product: 'string'
-    promotionCode: 'string'
-    publisher: 'string'
-  }
-properties: {
-    additionalCapabilities: {
-      hibernationEnabled: bool
-      ultraSSDEnabled: bool
-    }
-    automaticRepairsPolicy: {
-      enabled: bool
-      gracePeriod: 'string'
-      repairAction: 'string'
-    }
-    constrainedMaximumCapacity: bool
-    doNotRunExtensionsOnOverprovisionedVMs: bool
-    hostGroup: {
-      id: 'string'
-    }
-    orchestrationMode: 'string'
-    overprovision: bool
-    platformFaultDomainCount: int
-    priorityMixPolicy: {
-      baseRegularPriorityCount: int
-      regularPriorityPercentageAboveBase: int
-    }
-    proximityPlacementGroup: {
-      id: 'string'
-    }
-    scaleInPolicy: {
-      forceDeletion: bool
-      rules: [
-        'string'
-      ]
-    }
-    singlePlacementGroup: bool
-    spotRestorePolicy: {
-      enabled: bool
-      restoreTimeout: 'string'
-    }
-    upgradePolicy: {
-      automaticOSUpgradePolicy: {
-        disableAutomaticRollback: bool
-        enableAutomaticOSUpgrade: bool
-        useRollingUpgradePolicy: bool
-      }
-      mode: 'string'
-      rollingUpgradePolicy: {
-        enableCrossZoneUpgrade: bool
-        maxBatchInstancePercent: int
-        maxSurge: bool
-        maxUnhealthyInstancePercent: int
-        maxUnhealthyUpgradedInstancePercent: int
-        pauseTimeBetweenBatches: 'string'
-        prioritizeUnhealthyInstances: bool
-        rollbackFailedInstancesOnPolicyBreach: bool
-      }
-    }
-    virtualMachineProfile: {
-      applicationProfile: {
-        galleryApplications: [
-          {
-            configurationReference: 'string'
-            enableAutomaticUpgrade: bool
-            order: int
-            packageReferenceId: 'string'
-            tags: 'string'
-            treatFailureAsDeploymentFailure: bool
-          }
-        ]
-      }
-      billingProfile: {
-        maxPrice: json('decimal-as-string')
-      }
-      capacityReservation: {
-        capacityReservationGroup: {
-          id: 'string'
-        }
-      }
-      diagnosticsProfile: {
-        bootDiagnostics: {
-          enabled: bool
-          storageUri: 'string'
-        }
-      }
-      evictionPolicy: 'string'
-      extensionProfile: {
-        extensions: [
-          {
-            name: 'string'
-            properties: {
-              autoUpgradeMinorVersion: bool
-              enableAutomaticUpgrade: bool
-              forceUpdateTag: 'string'
-              protectedSettings: any()
-              protectedSettingsFromKeyVault: {
-                secretUrl: 'string'
-                sourceVault: {
-                  id: 'string'
-                }
-              }
-              provisionAfterExtensions: [
-                'string'
-              ]
-              publisher: 'string'
-              settings: any()
-              suppressFailures: bool
-              type: 'string'
-              typeHandlerVersion: 'string'
-            }
-          }
-        ]
-        extensionsTimeBudget: 'string'
-      }
-      hardwareProfile: {
-        vmSizeProperties: {
-          vCPUsAvailable: int
-          vCPUsPerCore: int
-        }
-      }
-      licenseType: 'string'
-      networkProfile: {
-        healthProbe: {
-          id: 'string'
-        }
-        networkApiVersion: '2020-11-01'
-        networkInterfaceConfigurations: [
-          {
-            id: 'string'
-            name: 'string'
-            properties: {
-              deleteOption: 'string'
-              disableTcpStateTracking: bool
-              dnsSettings: {
-                dnsServers: [
-                  'string'
-                ]
-              }
-              enableAcceleratedNetworking: bool
-              enableFpga: bool
-              enableIPForwarding: bool
-              ipConfigurations: [
-                {
-                  id: 'string'
-                  name: 'string'
-                  properties: {
-                    applicationGatewayBackendAddressPools: [
-                      {
-                        id: 'string'
-                      }
-                    ]
-                    applicationSecurityGroups: [
-                      {
-                        id: 'string'
-                      }
-                    ]
-                    loadBalancerBackendAddressPools: [
-                      {
-                        id: 'string'
-                      }
-                    ]
-                    loadBalancerInboundNatPools: [
-                      {
-                        id: 'string'
-                      }
-                    ]
-                    primary: bool
-                    privateIPAddressVersion: 'string'
-                    publicIPAddressConfiguration: {
-                      name: 'string'
-                      properties: {
-                        deleteOption: 'string'
-                        dnsSettings: {
-                          domainNameLabel: 'string'
-                        }
-                        idleTimeoutInMinutes: int
-                        ipTags: [
-                          {
-                            ipTagType: 'string'
-                            tag: 'string'
-                          }
-                        ]
-                        publicIPAddressVersion: 'string'
-                        publicIPPrefix: {
-                          id: 'string'
-                        }
-                      }
-                      sku: {
-                        name: 'string'
-                        tier: 'string'
-                      }
-                    }
-                    subnet: {
-                      id: 'string'
-                    }
-                  }
-                }
-              ]
-              networkSecurityGroup: {
-                id: 'string'
-              }
-              primary: bool
-            }
-          }
-        ]
-      }
-      osProfile: {
-        adminPassword: 'string'
-        adminUsername: 'string'
-        allowExtensionOperations: bool
-        computerNamePrefix: 'string'
-        customData: 'string'
-        linuxConfiguration: {
-          disablePasswordAuthentication: bool
-          enableVMAgentPlatformUpdates: bool
-          patchSettings: {
-            assessmentMode: 'string'
-            automaticByPlatformSettings: {
-              rebootSetting: 'string'
-            }
-            patchMode: 'string'
-          }
-          provisionVMAgent: bool
-          ssh: {
-            publicKeys: [
-              {
-                keyData: 'string'
-                path: 'string'
-              }
-            ]
-          }
-        }
-        requireGuestProvisionSignal: bool
-        secrets: [
-          {
-            sourceVault: {
-              id: 'string'
-            }
-            vaultCertificates: [
-              {
-                certificateStore: 'string'
-                certificateUrl: 'string'
-              }
-            ]
-          }
-        ]
-        windowsConfiguration: {
-          additionalUnattendContent: [
-            {
-              componentName: 'Microsoft-Windows-Shell-Setup'
-              content: 'string'
-              passName: 'OobeSystem'
-              settingName: 'string'
-            }
-          ]
-          enableAutomaticUpdates: bool
-          enableVMAgentPlatformUpdates: bool
-          patchSettings: {
-            assessmentMode: 'string'
-            automaticByPlatformSettings: {
-              rebootSetting: 'string'
-            }
-            enableHotpatching: bool
-            patchMode: 'string'
-          }
-          provisionVMAgent: bool
-          timeZone: 'string'
-          winRM: {
-            listeners: [
-              {
-                certificateUrl: 'string'
-                protocol: 'string'
-              }
-            ]
-          }
-        }
-      }
-      priority: 'string'
-      scheduledEventsProfile: {
-        osImageNotificationProfile: {
-          enable: bool
-          notBeforeTimeout: 'string'
-        }
-        terminateNotificationProfile: {
-          enable: bool
-          notBeforeTimeout: 'string'
-        }
-      }
-      securityProfile: {
-        encryptionAtHost: bool
-        securityType: 'string'
-        uefiSettings: {
-          secureBootEnabled: bool
-          vTpmEnabled: bool
-        }
-      }
-      serviceArtifactReference: {
-        id: 'string'
-      }
-      storageProfile: {
-        dataDisks: [
-          {
-            caching: 'string'
-            createOption: 'string'
-            deleteOption: 'string'
-            diskIOPSReadWrite: int
-            diskMBpsReadWrite: int
-            diskSizeGB: int
-            lun: int
-            managedDisk: {
-              diskEncryptionSet: {
-                id: 'string'
-              }
-              securityProfile: {
-                diskEncryptionSet: {
-                  id: 'string'
-                }
-                securityEncryptionType: 'string'
-              }
-              storageAccountType: 'string'
-            }
-            name: 'string'
-            writeAcceleratorEnabled: bool
-          }
-        ]
-        diskControllerType: 'string'
-        imageReference: {
-          communityGalleryImageId: 'string'
-          id: 'string'
-          offer: 'string'
-          publisher: 'string'
-          sharedGalleryImageId: 'string'
-          sku: 'string'
-          version: 'string'
-        }
-        osDisk: {
-          caching: 'string'
-          createOption: 'string'
-          deleteOption: 'string'
-          diffDiskSettings: {
-            option: 'Local'
-            placement: 'string'
-          }
-          diskSizeGB: int
-          image: {
-            uri: 'string'
-          }
-          managedDisk: {
-            diskEncryptionSet: {
-              id: 'string'
-            }
-            securityProfile: {
-              diskEncryptionSet: {
-                id: 'string'
-              }
-              securityEncryptionType: 'string'
-            }
-            storageAccountType: 'string'
-          }
-          name: 'string'
-          osType: 'string'
-          vhdContainers: [
-            'string'
-          ]
-          writeAcceleratorEnabled: bool
-        }
-      }
-      userData: 'string'
-    }
-    zoneBalance: bool
-  }
-  zones: [
-    'string'
-  ]
-}
+
