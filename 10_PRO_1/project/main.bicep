@@ -17,7 +17,7 @@ param adminUsername string
 param adminPassword string
 
 @description('The IP ranges that are allowed to access the management server via SSH and RDP.')
-param allowedIpRange array = ['']
+param allowedIpRange array = ['31.151.222.110', '31.151.222.111']
 
 //param rgName string = ''
 //= take('${take(envName, 3)}-${take(location, 6)}-rg${uniqueString(resourceGroup().id)}', 24)
@@ -86,14 +86,14 @@ module webServer 'modules/webserver.bicep' = {
   }
 }
 
-// module database 'modules/database.bicep' = {
-//   name: 'database-${location}'
-//   params: {
-//     envName: envName
-//     location: location
-//     adminUsername: adminUsername
-//     adminPassword: adminPassword
-//     Vnet2Identity: networking.outputs.vnet2ID
-//     Vnet2Subnet1Identity: networking.outputs.vnet2Subnet1ID
-//   }
-// }
+module database 'modules/database.bicep' = {
+  name: 'database-${location}'
+  params: {
+    envName: envName
+    location: location
+    adminUsername: adminUsername
+    adminPassword: adminPassword
+    Vnet1Identity: networking.outputs.vnet1ID
+    vnet1Subnet1Identity: networking.outputs.vnet1Subnet1ID
+  }
+}

@@ -78,11 +78,11 @@ resource vnet2 'Microsoft.Network/virtualNetworks@2022-11-01' = {
 //Virtual Network peering between VNet1 and VNet2.
 resource vnet1vnet2 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2022-11-01' = {
   parent: vnet1
-  name: '${vnet1Name}-${vnet2Name}'
+  name: '${vnet1Name}-to-${vnet2Name}'
   properties: {
     allowVirtualNetworkAccess: true
     allowForwardedTraffic: false
-    allowGatewayTransit: false
+    allowGatewayTransit: true
     useRemoteGateways: false
     remoteVirtualNetwork: {
       id: vnet2.id
@@ -90,9 +90,23 @@ resource vnet1vnet2 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings@20
   }
 }
 
+resource vnet2vnet1 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2022-07-01' = {
+  name: '${vnet2Name}-to-${vnet1Name}'
+  parent: vnet2
+  properties: {    
+    allowVirtualNetworkAccess: true
+    allowForwardedTraffic: false
+    allowGatewayTransit: true   
+    doNotVerifyRemoteGateways: false
+    remoteVirtualNetwork: {
+      id: vnet1.id
+    }
+  }
+}
+
 // A network security group for vnet1 that allows HTTPS and HTTP traffic from the internet and SSH access from the management server on vnet2.
 resource nsg1 'Microsoft.Network/networkSecurityGroups@2022-11-01' = {
-  name: '${vnet1Name}-nsg'
+  name: '${vnet1Name}-nsg1'
   location: location
   tags: {
     Environment: envName
@@ -130,10 +144,10 @@ resource nsg1 'Microsoft.Network/networkSecurityGroups@2022-11-01' = {
         name: 'ssh'
         properties: {
           protocol: 'TCP'
-          sourceAddressPrefix: '*' //fill this in when the management server is up!!!!!!!!!!!!!!!!!!!!!
-          sourcePortRange: '*' //fill this in when the management server is up!!!!!!!!!!!!!!!!!!!!!
-          destinationAddressPrefix: '*' //fill this in when the management server is up!!!!!!!!!!!!!!!!!!!!!
-          destinationPortRange: '22' //fill this in when the management server is up!!!!!!!!!!!!!!!!!!!!!
+          sourceAddressPrefix: '10.10.20.10/32' 
+          sourcePortRange: '*' 
+          destinationAddressPrefix: '*' 
+          destinationPortRange: '22'
           access: 'Allow'
           priority: 1100
           direction: 'Inbound'
@@ -157,7 +171,7 @@ properties: {
       name: 'ssh'
       properties: {
         protocol: 'TCP'
-        sourceAddressPrefix: string(allowedIpRange)
+        sourceAddressPrefix: '${allowedIpRange[0]}/32'
         destinationAddressPrefix: '*'
         sourcePortRange: '*'
         destinationPortRange: '22'
@@ -170,12 +184,12 @@ properties: {
           name: 'RDP'
           properties: {
             protocol: 'TCP'
-            sourceAddressPrefix: string(allowedIpRange)
+            sourceAddressPrefix: '${allowedIpRange[0]}/32'
             destinationAddressPrefix: '*'
             sourcePortRange: '*'
             destinationPortRange: '3389'
             access: 'Allow'
-            priority: 1000
+            priority: 1100
             direction: 'Inbound'
               }
             }

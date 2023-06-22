@@ -1,14 +1,28 @@
-@description('Server Name for Azure database for MySQL')
-param serverName string
+//Imported parameters
+@description('The environment name. "dev" and "prod" are valid inputs.')
+@allowed([
+  'dev'
+  'prod'
+])
+param envName string = 'dev'
 
-@description('Database administrator login name')
-@minLength(1)
-param administratorLogin string
+@description('The Azure Region into which the resources are deployed.')
+param location string
 
-@description('Database administrator password')
-@minLength(8)
 @secure()
-param administratorLoginPassword string
+@description('The administrator username.')
+param adminUsername string
+
+@secure()
+@description('The administrator password.')
+param adminPassword string
+
+param Vnet1Identity string
+param vnet1Subnet1Identity string
+//
+
+@description('Server Name for Azure database for MySQL')
+param sqlServerName string = '${take(envName, 3)}${take(location, 6)}mysqlserv${take(uniqueString(resourceGroup().id), 4)}'
 
 @description('Azure database for MySQL compute capacity in vCores (2,4,8,16,32)')
 param skuCapacity int = 2
@@ -18,6 +32,9 @@ param skuName string = 'GP_Gen5_2'
 
 @description('Azure database for MySQL Sku Size ')
 param SkuSizeMB int = 5120
+
+@description('Virtual Network RuleName')
+param virtualNetworkRuleName string = 'AllowSubnet'
 
 @description('Azure database for MySQL pricing tier')
 @allowed([
@@ -38,65 +55,27 @@ param skuFamily string = 'Gen5'
 ])
 param mysqlVersion string = '8.0'
 
-@description('Location for all resources.')
-param location string
-
 @description('MySQL Server backup retention days')
 param backupRetentionDays int = 7
 
 @description('Geo-Redundant Backup setting')
 param geoRedundantBackup string = 'Disabled'
 
-@description('Virtual Network Name')
-param virtualNetworkName string = 'azure_mysql_vnet'
-
-@description('Subnet Name')
-param subnetName string = 'azure_mysql_subnet'
-
-@description('Virtual Network RuleName')
-param virtualNetworkRuleName string = 'AllowSubnet'
-
-@description('Virtual Network Address Prefix')
-param vnetAddressPrefix string = '10.0.0.0/16'
-
-@description('Subnet Address Prefix')
-param subnetPrefix string = '10.0.0.0/16'
-
 var firewallrules = [
   {
     Name: 'rule1'
-    StartIpAddress: '0.0.0.0'
-    EndIpAddress: '255.255.255.255'
+    StartIpAddress: '10.10.10.0'
+    EndIpAddress: '10.10.10.255'
   }
   {
     Name: 'rule2'
-    StartIpAddress: '0.0.0.0'
-    EndIpAddress: '255.255.255.255'
+    StartIpAddress: '10.10.20.0'
+    EndIpAddress: '10.10.20.255'
   }
 ]
 
-// resource vnet 'Microsoft.Network/virtualNetworks@2021-05-01' = {
-//   name: virtualNetworkName
-//   location: location
-//   properties: {
-//     addressSpace: {
-//       addressPrefixes: [
-//         vnetAddressPrefix
-//       ]
-//     }
-//   }
-// }
-
-// resource subnet 'Microsoft.Network/virtualNetworks/subnets@2021-05-01' = {
-//   parent: vnet
-//   name: subnetName
-//   properties: {
-//     addressPrefix: subnetPrefix
-//   }
-// }
-
-resource mysqlDbServer 'Microsoft.DBforMySQL/servers@2017-12-01' = {
-  name: serverName
+resource mySqlServer 'Microsoft.DBforMySQL/servers@2017-12-01' = {
+  name: sqlServerName
   location: location
   sku: {
     name: skuName
@@ -108,8 +87,8 @@ resource mysqlDbServer 'Microsoft.DBforMySQL/servers@2017-12-01' = {
   properties: {
     createMode: 'Default'
     version: mysqlVersion
-    administratorLogin: administratorLogin
-    administratorLoginPassword: administratorLoginPassword
+    administratorLogin: adminUsername
+    administratorLoginPassword: adminPassword
     storageProfile: {
       storageMB: SkuSizeMB
       backupRetentionDays: backupRetentionDays
@@ -120,7 +99,7 @@ resource mysqlDbServer 'Microsoft.DBforMySQL/servers@2017-12-01' = {
   resource virtualNetworkRule 'virtualNetworkRules@2017-12-01' = {
     name: virtualNetworkRuleName
     properties: {
-      virtualNetworkSubnetId: subnet.id
+      virtualNetworkSubnetId: resourceId('Microsoft.Network/virtualNetworks/subnets', Vnet1Identity,  vnet1Subnet1Identity)
       ignoreMissingVnetServiceEndpoint: true
     }
   }
@@ -128,7 +107,8 @@ resource mysqlDbServer 'Microsoft.DBforMySQL/servers@2017-12-01' = {
 
 @batchSize(1)
 resource firewallRules 'Microsoft.DBforMySQL/servers/firewallRules@2017-12-01' = [for rule in firewallrules: {
-  name: '${mysqlDbServer.name}/${rule.Name}'
+  parent: mySqlServer
+  name: '${rule.Name}'
   properties: {
     startIpAddress: rule.StartIpAddress
     endIpAddress: rule.EndIpAddress

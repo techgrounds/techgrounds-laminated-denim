@@ -62,10 +62,10 @@
 	* Write outputs to connect mgmt server to network.
 * Day 2: Code vmss and load balancer for webserver.
 	* Connect it to network.
-* Day 3: Code database.
+* Day 3: Code vmss
+* Day 4: Code database.
 	* Connect it to network.
 	* Connect it to webserver.
-* Day 4: 
 
 # Requirements:
 * Encrypt all VM discs.

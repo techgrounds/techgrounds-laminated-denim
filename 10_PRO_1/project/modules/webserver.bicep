@@ -237,6 +237,9 @@ resource webServer 'Microsoft.Compute/virtualMachineScaleSets@2023-03-01' = {
       // }
     }
   }
+  dependsOn: [
+    loadBalancer
+  ]
 }
 
 //A public IP for the load balancer.

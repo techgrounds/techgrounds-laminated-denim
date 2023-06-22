@@ -15,7 +15,8 @@ Loading bash scripts from a private github repository is best practice.
 
 ## Resources:
 [Advanced Bicep Guide](https://github.com/nnellans/bicep-guide)  
-[Creat Network resources with Bicep](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/scenarios-virtual-networks)  
+[Create Network resources with Bicep](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/scenarios-virtual-networks)  
+[Getting items from the keyvault](https://learn.microsoft.com/en-us/training/modules/build-reusable-bicep-templates-parameters/6-exercise-create-use-parameter-files?pivots=cli)
 
 ## [Parameters and Variables](https://learn.microsoft.com/en-us/training/modules/build-first-bicep-template/5-add-flexibility-parameters-variables)
 Parameters allow one to bring in values from outside a template file. A user deploying a template via CLI or PowerShell will be prompted to provide values for each parameter. A parameter file could also be used, which lists all parameters and corresponding values. Add parameters to the top of a template. Example: `param environmentName string`  

@@ -25,7 +25,7 @@ param vnet2Subnet1Identity string
 param StorageAccBlobEndpoint string
 
 //Variables for the networking components of the VM.
-var MgmtDNSLabel = toLower('${mgmtServerName}')
+var MgmtDNSLabel = toLower('${mgmtServerName}${take(uniqueString(resourceGroup().id), 4)}')
 var publicIpSku = 'Standard'
 var nicName = 'MgmtServerNic'
 
@@ -58,7 +58,9 @@ resource MgmtServerNIC 'Microsoft.Network/networkInterfaces@2022-11-01' = {
       {
         name: 'MgmtServerIPConfig'
         properties: {
-          privateIPAllocationMethod: 'Dynamic'
+          privateIPAddress: '10.10.20.10'
+          privateIPAddressVersion: 'IPv4'
+          privateIPAllocationMethod: 'Static'
           publicIPAddress: {
             id: mgmtServerPIP.id
           }
