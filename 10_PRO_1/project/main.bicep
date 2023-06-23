@@ -97,3 +97,13 @@ module database 'modules/database.bicep' = {
     vnet1Subnet1Identity: networking.outputs.vnet1Subnet1ID
   }
 }
+
+// module recoveryVault 'modules/recoveryServices.bicep' = {
+//   name: 'recoveryVault-${location}'
+//   params: {
+//     envName: envName
+//     location: location
+//     webServerName: webServer.outputs.webServerName
+//   }
+// }
+

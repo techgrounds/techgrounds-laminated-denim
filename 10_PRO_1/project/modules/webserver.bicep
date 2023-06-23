@@ -326,4 +326,6 @@ resource autoScaleResource 'Microsoft.Insights/autoscalesettings@2022-10-01' = {
   }
 }
 
-
+//Output webserver name
+output webServerName string = webServer.name
+output webServerID string = webServer.id

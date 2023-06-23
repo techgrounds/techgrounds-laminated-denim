@@ -91,6 +91,8 @@
 * Support for variable workload.
 * Separate scripts for separate functions, but automate the execution with a single script/button.
 * Segmentation is important; different functions should be separated.
+* RPO: 1 week is the MVP, ideal is 1 day.
+* RTO: 1 hour.
 
 ## Assumptions:
 * Azure AD with PIM.
