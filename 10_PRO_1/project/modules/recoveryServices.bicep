@@ -17,7 +17,6 @@ param recoveryVaultName string
 var VaultPolicyName = '${recoveryVaultName}-policy'
 var VaultVmssContainerName = '${recoveryVaultName}-websv-container'
 
-
 resource recoveryVault 'Microsoft.RecoveryServices/vaults@2023-01-01' = {
   name: recoveryVaultName
   location: location

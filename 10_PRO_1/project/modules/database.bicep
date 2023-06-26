@@ -74,6 +74,14 @@ var firewallrules = [
   }
 ]
 
+var databasePrivateEndpointName = '${sqlServerName}-EndPoint'
+var privateDnsZoneName = 'privatelink${environment().suffixes.sqlServerHostname}'
+var pvtEndpointDnsGroupName = '${databasePrivateEndpointName}/mydnsgroupname'
+
+resource vnet1 'Microsoft.Network/virtualNetworks@2022-11-01'existing = {
+  name: Vnet1Identity
+}
+
 resource mySqlServer 'Microsoft.DBforMySQL/servers@2017-12-01' = {
   name: sqlServerName
   location: location
@@ -89,6 +97,7 @@ resource mySqlServer 'Microsoft.DBforMySQL/servers@2017-12-01' = {
     version: mysqlVersion
     administratorLogin: adminUsername
     administratorLoginPassword: adminPassword
+    publicNetworkAccess: 'Disabled'
     storageProfile: {
       storageMB: SkuSizeMB
       backupRetentionDays: backupRetentionDays
@@ -114,3 +123,65 @@ resource firewallRules 'Microsoft.DBforMySQL/servers/firewallRules@2017-12-01' =
     endIpAddress: rule.EndIpAddress
   }
 }]
+
+resource databasePrivateEndpoint 'Microsoft.Network/privateEndpoints@2022-11-01' = {
+  name: databasePrivateEndpointName
+  location: location
+  properties: {
+    subnet: {
+      id: vnet1.properties.subnets[0].id
+    }
+    privateLinkServiceConnections: [
+      {
+        name: databasePrivateEndpointName
+        properties: {
+          privateLinkServiceId: mySqlServer.id
+          groupIds: [
+            'mySqlServer'
+          ]
+        }
+      }
+    ]
+  }
+  dependsOn: [
+    vnet1
+  ]
+}
+
+resource privateDnsZone 'Microsoft.Network/privateDnsZones@2020-06-01' = {
+  name: privateDnsZoneName
+  location: 'global'
+  properties: {}
+  dependsOn: [
+    vnet1
+  ]
+}
+
+resource privateDnsZoneLink 'Microsoft.Network/privateDnsZones/virtualNetworkLinks@2020-06-01' = {
+  parent: privateDnsZone
+  name: '${privateDnsZoneName}-link'
+  location: 'global'
+  properties: {
+    registrationEnabled: false
+    virtualNetwork: {
+      id: vnet1.id
+    }
+  }
+}
+
+resource pvtEndpointDnsGroup 'Microsoft.Network/privateEndpoints/privateDnsZoneGroups@2022-11-01' = {
+  name: pvtEndpointDnsGroupName
+  properties: {
+    privateDnsZoneConfigs: [
+      {
+        name: 'config1'
+        properties: {
+          privateDnsZoneId: privateDnsZone.id
+        }
+      }
+    ]
+  }
+  dependsOn: [
+    databasePrivateEndpoint
+  ]
+}
