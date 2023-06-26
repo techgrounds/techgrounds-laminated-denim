@@ -326,6 +326,26 @@ resource autoScaleResource 'Microsoft.Insights/autoscalesettings@2022-10-01' = {
   }
 }
 
+resource extension 'Microsoft.Compute/virtualMachineScaleSets/extensions@2023-03-01' = {
+  parent: webServer
+  name: 'install_apache'
+  properties: {
+    publisher: 'Microsoft.Azure.Extensions'
+    type: 'CustomScript'
+    typeHandlerVersion: '2.1'
+    autoUpgradeMinorVersion: true
+    settings: {
+      skipDos2Unix: false
+      fileUris: [
+
+      ]
+    }
+    protectedSettings: {
+      commandToExecute: 'sh install_apache.sh'
+    }
+  }
+}
+
 //Output webserver name
 output webServerName string = webServer.name
 output webServerID string = webServer.id

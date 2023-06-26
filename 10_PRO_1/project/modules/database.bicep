@@ -18,7 +18,6 @@ param adminUsername string
 param adminPassword string
 
 param Vnet1Identity string
-param vnet1Subnet1Identity string
 //
 
 @description('Server Name for Azure database for MySQL')
@@ -108,7 +107,7 @@ resource mySqlServer 'Microsoft.DBforMySQL/servers@2017-12-01' = {
   resource virtualNetworkRule 'virtualNetworkRules@2017-12-01' = {
     name: virtualNetworkRuleName
     properties: {
-      virtualNetworkSubnetId: resourceId('Microsoft.Network/virtualNetworks/subnets', Vnet1Identity,  vnet1Subnet1Identity)
+      virtualNetworkSubnetId: vnet1.properties.subnets[0].id
       ignoreMissingVnetServiceEndpoint: true
     }
   }

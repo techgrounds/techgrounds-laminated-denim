@@ -181,6 +181,9 @@
   },
   "active": "be16bfdadd07ab67",
   "lastOpenFiles": [
+    "10_PRO_1/project/scripts/apache.sh",
+    "10_PRO_1/project/scripts",
+    "10_PRO_1/project/apache.sh",
     "10_PRO_1/project_notes/02_Bicep.md",
     "10_PRO_1/project_notes/01_planning.md",
     "10_PRO_1/project/modules/recoveryServices.bicep",
@@ -211,8 +214,6 @@
     "02_Networking_1/02_completed_assignments/NTW-03_report_protocols.md",
     "02_Networking_1/02_completed_assignments/NTW-04_report_binaryhex.md",
     "02_Networking_1/02_completed_assignments/NTW-02_report_devices.md",
-    "10_PRO_1/project/modules/networking.bicep",
-    "10_PRO_1/project/modules/storageaccount.bicep",
     "10_PRO_1/project/learning/04_modules/Untitled.md",
     "beschrijvingen/00_teamnotes/WK-02.md",
     "10_PRO_1/project/readme.md",

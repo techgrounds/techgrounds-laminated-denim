@@ -48,7 +48,7 @@ resource keyVault 'Microsoft.KeyVault/vaults@2023-02-01' = {
     enabledForDeployment: true
     enabledForDiskEncryption: true
     enabledForTemplateDeployment: true
-    enablePurgeProtection: true
+    enablePurgeProtection: false
     enableRbacAuthorization: true
     enableSoftDelete: true
     networkAcls: {
@@ -60,7 +60,7 @@ resource keyVault 'Microsoft.KeyVault/vaults@2023-02-01' = {
       family: 'A'
       name: 'standard'
     }
-    softDeleteRetentionInDays: 90
+    softDeleteRetentionInDays: 30
     tenantId: tenantID
   }
 }
