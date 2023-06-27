@@ -13,6 +13,14 @@ Loading bash scripts from a private github repository is best practice.
 * Use consistent naming for parameters and variables.
 * Be careful with default values; use inexpensive SKUs as defaults.
 
+## Key Vault & Disk Encryption
+[linux disk encryption](https://learn.microsoft.com/en-us/azure/virtual-machines/linux/disk-encryption-overview)
+ * VM must connect to Azure AD endpoint.
+ * VM must connect to keyvault endpoint.
+ * VM must connect to storage endpoint that hosts Azure extension repository and an Azure storage account that hosts the VHD files.
+ * If your security policy limits access from Azure VMs to the Internet, you can resolve the preceding URI and configure a specific rule to allow outbound connectivity to the IPs. For more information, see [Azure Key Vault behind a firewall](https://learn.microsoft.com/en-us/azure/key-vault/general/access-behind-firewall).
+
+
 ## Resources:
 [Advanced Bicep Guide](https://github.com/nnellans/bicep-guide)  
 [Create Network resources with Bicep](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/scenarios-virtual-networks)  

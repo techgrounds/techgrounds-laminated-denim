@@ -17,7 +17,8 @@ param adminUsername string
 param adminPassword string
 
 // Parameters with outputs from other modules.
-//param keyVaultIdentity string
+// param keyVaultName string
+param diskEncryptionSetName string
 param VNet2Identity string
 param vnet2Subnet1Identity string
 //param nsg2Identity string
@@ -34,6 +35,14 @@ var mgmtServerName = '${take(envName, 3)}${take(location, 6)}mgmtsv'
 var mgmtServerSize = envName == 'dev' ? 'Standard_B1ms' : 'Standard_B2s'
 // variable for the Windows Server OS version
 var MgmtServerOSVersion = '2022-Datacenter'
+
+// resource keyVault 'Microsoft.KeyVault/vaults@2023-02-01' existing = {
+//   name: keyVaultName
+// }
+
+resource diskEncryptionSet 'Microsoft.Compute/diskEncryptionSets@2022-07-02' existing = {
+  name: diskEncryptionSetName
+}
 
 // A public IP for the management server.
 resource mgmtServerPIP 'Microsoft.Network/publicIPAddresses@2022-11-01' = {
@@ -79,6 +88,9 @@ resource MgmtServerNIC 'Microsoft.Network/networkInterfaces@2022-11-01' = {
 resource mgmtServer 'Microsoft.Compute/virtualMachines@2023-03-01' = {
   name: mgmtServerName
   location: location
+  identity: {
+    type: 'SystemAssigned'
+  }
   properties: {
     hardwareProfile: {
       vmSize: mgmtServerSize
@@ -99,15 +111,11 @@ resource mgmtServer 'Microsoft.Compute/virtualMachines@2023-03-01' = {
       createOption: 'FromImage'
       managedDisk: {
         storageAccountType: 'StandardSSD_LRS'
+        diskEncryptionSet: {
+          id: diskEncryptionSet.id
+        }
       }
     }
-    dataDisks: [
-      {
-        diskSizeGB: 256
-        lun: 0
-        createOption: 'Empty'
-      }
-    ]
     }
     networkProfile: {
       networkInterfaces: [

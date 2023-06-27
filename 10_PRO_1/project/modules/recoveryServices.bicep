@@ -29,15 +29,15 @@ resource recoveryVault 'Microsoft.RecoveryServices/vaults@2023-01-01' = {
     tier: 'Standard'
   }
   properties: {
-    // encryption: {
-    //   infrastructureEncryption: 'Enabled'
-    //   kekIdentity: {
-    //     useSystemAssignedIdentity: true
-    //   }
-    //   keyVaultProperties: {
-    //     keyUri: 'string'
-    //   }
-    // }
+    encryption: {
+      infrastructureEncryption: 'Enabled'
+      kekIdentity: {
+        useSystemAssignedIdentity: true
+      }
+      keyVaultProperties: {
+        keyUri: 'string'
+      }
+    }
     monitoringSettings: {
       azureMonitorAlertSettings: {
         alertsForAllJobFailures: 'Enabled'

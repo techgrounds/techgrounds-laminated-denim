@@ -113,6 +113,11 @@ resource mySqlServer 'Microsoft.DBforMySQL/servers@2017-12-01' = {
   }
 }
 
+resource db 'Microsoft.DBforMySQL/servers/databases@2017-12-01' = {
+  parent: mySqlServer
+  name: 'mydb'
+}
+
 @batchSize(1)
 resource firewallRules 'Microsoft.DBforMySQL/servers/firewallRules@2017-12-01' = [for rule in firewallrules: {
   parent: mySqlServer

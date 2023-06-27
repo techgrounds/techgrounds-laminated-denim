@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10_PRO_1/project_notes/01_planning.md",
+                "file": "06_Azure_3/06_completed_assignments/AZ-15_advisorSupportApp.md",
                 "mode": "source",
                 "source": false
               }
@@ -73,7 +73,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "NAT",
+                "query": "keyvault",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -98,7 +98,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -118,7 +119,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "10_PRO_1/project_notes/01_planning.md",
+                "file": "06_Azure_3/06_completed_assignments/AZ-15_advisorSupportApp.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,7 +136,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "10_PRO_1/project_notes/01_planning.md",
+                "file": "06_Azure_3/06_completed_assignments/AZ-15_advisorSupportApp.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -158,7 +159,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "10_PRO_1/project_notes/01_planning.md"
+                "file": "06_Azure_3/06_completed_assignments/AZ-15_advisorSupportApp.md"
               }
             }
           }
@@ -179,8 +180,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "be16bfdadd07ab67",
+  "active": "a8673bffff049c90",
   "lastOpenFiles": [
+    "06_Azure_3/06_completed_assignments/AZ-16_activeDirectorySecurity.md",
     "10_PRO_1/project_notes/02_Bicep.md",
     "10_PRO_1/project_notes/01_planning.md",
     "10_PRO_1/project_notes/old plans.md",
@@ -216,7 +218,6 @@
     "04_Azure_1/04_completed_assignments/AZ-06_virtualMachines.md",
     "05_Azure_2/05_completed_assignments/AZ-11_loadBalancer.md",
     "10_PRO_1/project/modules/test.bicep",
-    "10_PRO_1/documentation/time_logs/2023-15-06.md",
     "07_SC900_1/00SC_resources/SC-1_screenshot3.png",
     "07_SC900_1/00SC_resources/SC-1_screenshot2.png",
     "07_SC900_1/00SC_resources/SC-1_screenshot1.png",
