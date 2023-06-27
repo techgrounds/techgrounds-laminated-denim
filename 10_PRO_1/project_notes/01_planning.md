@@ -24,7 +24,6 @@
 		* Load balancer for the VMSS with public IP.
 		* NIC & public IP for management server.
 		* NSG rules matching requirements.
-		* 
 	* Best SQL Database solution
 		* Azure Database for MySQL
 			* + Support for LAMP (Linux, Apache, MySQL, php.) Flexible scaling. PaaS. Cost controls.

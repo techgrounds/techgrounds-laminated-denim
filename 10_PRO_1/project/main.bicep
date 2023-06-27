@@ -82,6 +82,7 @@ module webServer 'modules/webserver.bicep' = {
     adminPassword: adminPassword
     Vnet1Identity: networking.outputs.vnet1ID
     vnet1Subnet1Identity: networking.outputs.vnet1Subnet1ID
+    // storageAccountName: storage.outputs.storageAccountName
     //StorageAccBlobEndpoint: storage.outputs.storageAccountBlobEndpoint
   }
 }

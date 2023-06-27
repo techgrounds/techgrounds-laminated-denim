@@ -17,6 +17,7 @@ Loading bash scripts from a private github repository is best practice.
 [Advanced Bicep Guide](https://github.com/nnellans/bicep-guide)  
 [Create Network resources with Bicep](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/scenarios-virtual-networks)  
 [Getting items from the keyvault](https://learn.microsoft.com/en-us/training/modules/build-reusable-bicep-templates-parameters/6-exercise-create-use-parameter-files?pivots=cli)
+[Stackoverflow topic on running a script](https://stackoverflow.com/questions/74478948/post-deployment-bash-script-in-bicep-file-does-not-execute)  
 
 ### MS Recovery Service
 [Backup Policy in Bicep](https://learn.microsoft.com/en-us/azure/templates/microsoft.recoveryservices/vaults/backuppolicies?pivots=deployment-language-bicep)  

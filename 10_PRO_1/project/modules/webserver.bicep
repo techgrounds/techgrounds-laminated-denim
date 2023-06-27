@@ -19,7 +19,7 @@ param adminPassword string
 
 param Vnet1Identity string
 param vnet1Subnet1Identity string
-//param StorageAccBlobEndpoint string
+// param storageAccountName string
 ///////
 
 //Parameters for the VMSS
@@ -35,6 +35,10 @@ param webServerSku string = envName == 'dev' ? 'Standard_B1s' : 'Standard_B2s'
 @description('When true this limits the scale set to a single placement group, of max size 100 virtual machines. NOTE: If singlePlacementGroup is true, it may be modified to false. However, if singlePlacementGroup is false, it may not be modified to true.')
 param singlePlacementGroup bool = true
 //////
+
+// resource storageAccount 'Microsoft.Storage/storageAccounts@2022-09-01' existing = {
+//   name: storageAccountName
+// }
 
 //variables for VMSS
 var vmScaleSetName = toLower(substring('vmss${uniqueString(resourceGroup().id)}', 0, 9))
@@ -74,6 +78,8 @@ var scaleOutCPUPercentageThreshold = 75
 var scaleInCPUPercentageThreshold = 25
 var scaleOutInterval = '1'
 var scaleInInterval = '1'
+//var webServerScriptName = '${vmScaleSetName}Script'
+var launchScript = 'IyEvYmluL2Jhc2gKc3VkbyBzdQphcHQgdXBkYXRlCmFwdCBpbnN0YWxsIGFwYWNoZTIgLXkKdWZ3IGFsbG93ICdBcGFjaGUnCnN5c3RlbWN0bCBlbmFibGUgYXBhY2hlMgpzeXN0ZW1jdGwgcmVzdGFydCBhcGFjaGUy'
 ///////
 
 //A load balancer connected to the vmss with a public IP.
@@ -184,6 +190,7 @@ resource webServer 'Microsoft.Compute/virtualMachineScaleSets@2023-03-01' = {
         computerNamePrefix: vmScaleSetName
         adminUsername: adminUsername
         adminPassword: adminPassword
+        customData: launchScript
       }
       networkProfile: {
         networkInterfaceConfigurations: [
@@ -210,31 +217,6 @@ resource webServer 'Microsoft.Compute/virtualMachineScaleSets@2023-03-01' = {
           }
         ]
       }
-      // extensionProfile: {
-      //   extensions: [
-      //     {
-      //       name: 'Microsoft.Powershell.DSC'
-      //       properties: {
-      //         publisher: 'Microsoft.Powershell'
-      //         type: 'DSC'
-      //         typeHandlerVersion: '2.9'
-      //         autoUpgradeMinorVersion: true
-      //         forceUpdateTag: powershelldscUpdateTagVersion
-      //         settings: {
-      //           configuration: {
-      //             url: powershelldscZipFullPath
-      //             script: 'InstallIIS.ps1'
-      //             function: 'InstallIIS'
-      //           }
-      //           configurationArguments: {
-      //             nodeName: 'localhost'
-      //             WebDeployPackagePath: webDeployPackageFullPath
-      //           }
-      //         }
-      //       }
-      //     }
-      //   ]
-      // }
     }
   }
   dependsOn: [
@@ -326,25 +308,49 @@ resource autoScaleResource 'Microsoft.Insights/autoscalesettings@2022-10-01' = {
   }
 }
 
-resource extension 'Microsoft.Compute/virtualMachineScaleSets/extensions@2023-03-01' = {
-  parent: webServer
-  name: 'install_apache'
-  properties: {
-    publisher: 'Microsoft.Azure.Extensions'
-    type: 'CustomScript'
-    typeHandlerVersion: '2.1'
-    autoUpgradeMinorVersion: true
-    settings: {
-      skipDos2Unix: false
-      fileUris: [
+// resource webServerScript 'Microsoft.Resources/deploymentScripts@2020-10-01' = {
+//   name: webServerScriptName
+//   location: location
+//   kind: 'AzureCLI'
+//   identity: {
+//     type: 'SystemAssigned'
+//   }
+//   properties: {
+//     azCliVersion: '2.0.80'
+//     retentionInterval: 'P1D'
+//     cleanupPreference: 'Always'
+//     primaryScriptUri: 'https://github.com/techgrounds/techgrounds-laminated-denim/blob/main/10_PRO_1/project/scripts/apache.sh'
+//     storageAccountSettings: {
+//       storageAccountName: storageAccount.name
+//       storageAccountKey: storageAccount.listKeys('2022-09-01').keys[0].value
+//     }
+//   }
+//   dependsOn: [
+//     storageAccount
+//     webServer
+//   ]
+// }
 
-      ]
-    }
-    protectedSettings: {
-      commandToExecute: 'sh install_apache.sh'
-    }
-  }
-}
+// resource extension 'Microsoft.Compute/virtualMachineScaleSets/extensions@2023-03-01' = {
+//   parent: webServer
+//   name: 'install_apache'
+//   properties: {
+//     publisher: 'Microsoft.Azure.Extensions'
+//     type: 'CustomScript'
+//     typeHandlerVersion: '2.1'
+//     autoUpgradeMinorVersion: true
+//     settings: {
+//       skipDos2Unix: false
+//       fileUris: [
+
+//       'https://github.com/techgrounds/techgrounds-laminated-denim/blob/main/10_PRO_1/project/scripts/apache.sh'
+//       ]
+//     }
+//     protectedSettings: {
+//       commandToExecute: 'sh apache.sh'
+//     }
+//   }
+// }
 
 //Output webserver name
 output webServerName string = webServer.name
