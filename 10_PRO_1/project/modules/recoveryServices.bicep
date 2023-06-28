@@ -8,14 +8,25 @@ param envName string
 @description('The Azure Region into which the resources are deployed.')
 param location string
 
-@description('The name of the Web Server.')
-param webServerName string
+@description('The name of the Key Vault.')
+param keyVaultName string
+
+@description('The name of the SQL Server.')
+param sqlServerDbName string
 
 @description('The name of the Recovery Services Vault')
-param recoveryVaultName string
+param recoveryVaultName string = '${take(envName, 3)}-${take(location, 6)}-recoveryvault${take(uniqueString(resourceGroup().id), 6)}'
 
 var VaultPolicyName = '${recoveryVaultName}-policy'
-var VaultVmssContainerName = '${recoveryVaultName}-websv-container'
+var VaultSqlContainerName = '${recoveryVaultName}-websv-container'
+
+resource keyVault 'Microsoft.KeyVault/vaults@2023-02-01' existing = {
+  name: keyVaultName
+}
+
+resource mySqlServerDb 'Microsoft.DBforMySQL/servers/databases@2017-12-01' existing = {
+  name: sqlServerDbName
+}
 
 resource recoveryVault 'Microsoft.RecoveryServices/vaults@2023-01-01' = {
   name: recoveryVaultName
@@ -35,7 +46,7 @@ resource recoveryVault 'Microsoft.RecoveryServices/vaults@2023-01-01' = {
         useSystemAssignedIdentity: true
       }
       keyVaultProperties: {
-        keyUri: 'string'
+        keyUri: keyVault.properties.vaultUri
       }
     }
     monitoringSettings: {
@@ -56,50 +67,23 @@ resource recoveryVaultPolicy 'Microsoft.RecoveryServices/vaults/backupPolicies@2
   }
   parent: recoveryVault
   properties: {
-    backupManagementType: 'AzureIaasVM'
-instantRPDetails: {
-  azureBackupRGNamePrefix: 'string'
-  azureBackupRGNameSuffix: 'string'
-}
-instantRpRetentionRangeInDays: int
-policyType: 'string'
-retentionPolicyType: 'SimpleRetentionPolicy'
-retentionDuration: {
-  count: int
-  durationType: 'string'
-}
-schedulePolicy: {
-  schedulePolicyType: 'SimpleSchedulePolicyV2'
-  dailySchedule: {
-    scheduleRunTimes: [
-      'string'
-    ]
-  }
-  hourlySchedule: {
-    interval: int
-    scheduleWindowDuration: int
-    scheduleWindowStartTime: 'string'
-  }
-  scheduleRunFrequency: 'string'
-  weeklySchedule: {
-    scheduleRunDays: [
-      'string'
-    ]
-    scheduleRunTimes: [
-      'string'
-    ]
-  }
-}
-tieringPolicy: {}
-timeZone: 'string'
+    protectedItemsCount: 1
+    backupManagementType: 'AzureSql'
+    retentionPolicy: {
+      retentionPolicyType: 'SimpleRetentionPolicy'
+      retentionDuration: {
+        count: 1
+        durationType: 'Weeks'
+      }
+    }
   }
 }
 
-resource recoveryVaultVmssContainer 'Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems@2023-02-01' = {
-  name: VaultVmssContainerName
+resource recoveryVaultSqlContainer 'Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems@2023-02-01' = {
+  name: VaultSqlContainerName
   properties: {
-    protectedItemType: 'Microsoft.Compute/virtualMachineScaleSets'
+    protectedItemType: 'Microsoft.Sql/servers/databases'
     policyId: '${recoveryVault.id}/backupPolicies/${recoveryVaultPolicy.id}'
-    sourceResourceId: webServerName
+    sourceResourceId: mySqlServerDb.id
   }
 } 

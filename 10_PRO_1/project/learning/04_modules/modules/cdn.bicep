@@ -44,4 +44,6 @@ resource endpoint 'Microsoft.Cdn/profiles/endpoints@2023-05-01' = {
   }
 }
 
+
+
 output endpointHostName string = endpoint.properties.hostName

@@ -16,6 +16,9 @@ param adminUsername string
 @description('The administrator password.')
 param adminPassword string
 
+@description('The object ID of the service principal that will be granted access to the Key Vault.')
+param principalId string
+
 @description('The IP ranges that are allowed to access the management server via SSH and RDP.')
 param allowedIpRange array = ['31.151.222.110', '31.151.222.111']
 
@@ -46,6 +49,9 @@ module keyvault 'modules/keyvault.bicep' = {
  params: {
    envName: envName
    location: location
+   adminPassword: adminPassword
+   adminUserName: adminUsername
+   principalId: principalId
  }
 }
 
@@ -66,7 +72,8 @@ module mgmtServer 'modules/managementServer.bicep' = {
     adminPassword: adminPassword
     //StorageAcc: storage.outputs.storageAccountId
     StorageAccBlobEndpoint: storage.outputs.storageAccountBlobEndpoint
-    //keyVaultIdentity: keyvault.outputs.keyVaultID
+    //keyVaultName: keyvault.outputs.keyVaultID
+    diskEncryptionSetName: keyvault.outputs.diskEncryptionSetName
     VNet2Identity: networking.outputs.vnet2ID
     vnet2Subnet1Identity: networking.outputs.vnet2Subnet1ID
     //nsg2Identity: networking.outputs.nsg2ID
@@ -82,6 +89,7 @@ module webServer 'modules/webserver.bicep' = {
     adminPassword: adminPassword
     Vnet1Identity: networking.outputs.vnet1ID
     vnet1Subnet1Identity: networking.outputs.vnet1Subnet1ID
+    diskEncryptionSetName: keyvault.outputs.diskEncryptionSetName
     // storageAccountName: storage.outputs.storageAccountName
     //StorageAccBlobEndpoint: storage.outputs.storageAccountBlobEndpoint
   }
@@ -98,12 +106,13 @@ module database 'modules/database.bicep' = {
   }
 }
 
-// module recoveryVault 'modules/recoveryServices.bicep' = {
-//   name: 'recoveryVault-${location}'
-//   params: {
-//     envName: envName
-//     location: location
-//     webServerName: webServer.outputs.webServerName
-//   }
-// }
+module recoveryVault 'modules/recoveryServices.bicep' = {
+  name: 'recoveryVault-${location}'
+  params: {
+    envName: envName
+    location: location
+    keyVaultName: keyvault.outputs.keyVaultID
+    sqlServerDbName: database.outputs.sqlServerDbName
+  }
+}
 

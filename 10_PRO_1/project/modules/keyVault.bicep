@@ -16,12 +16,15 @@ param adminUserName string
 @description('The admin password.')
 param adminPassword string
 
+@description('The object ID of the service principal that will be granted access to the Key Vault.')
+param principalId string
+
 //Variable for keyvault name.
 var keyVaultName = '${take(envName, 3)}-${take(location, 6)}-vault${take(uniqueString(resourceGroup().id), 6)}'
 var adminUserSecretName = '${keyVaultName}-adminUserName'
 var adminPasswordSecretName = '${keyVaultName}-adminPassword'
 var diskEncryptionSetName = '${keyVaultName}-diskEncryptionSet'
-var diskEncryptionKeyName = '${keyVaultName}-diskEncryptionKey'
+var diskEncryptionKeyName = 'diskEncryptionSetKey'
 
 // Deploys a Key Vault.
 resource keyVault 'Microsoft.KeyVault/vaults@2023-02-01' = {
@@ -32,51 +35,60 @@ resource keyVault 'Microsoft.KeyVault/vaults@2023-02-01' = {
     Location: location
   }
   properties: {
+    accessPolicies: [
+      {
+        objectId: principalId
+        permissions: {
+          certificates: [
+            'all'
+          ]
+          keys: [
+            'all'
+          ]
+          secrets: [
+            'all'
+          ]
+          storage: [
+            'all'
+          ]
+        }
+        tenantId: tenant().tenantId
+      }
+      // an access policy allowing the disk encryption set to access the key vault 
+      {
+        objectId: diskEncryptionSet.identity.principalId
+        permissions: {
+          keys: [
+            'get'
+            'wrapKey'
+            'unwrapKey'
+          ]
+        }
+        tenantId: tenant().tenantId
+      }
+    ]
     createMode: 'default'
     enabledForDeployment: true
     enabledForDiskEncryption: true
     enabledForTemplateDeployment: true
-    enableRbacAuthorization: true
+    enableRbacAuthorization: false
     enableSoftDelete: false
     networkAcls: {
       bypass: 'AzureServices'
-      defaultAction: 'deny'
+      ipRules: [
+        {
+          value: '31.151.222.110'
+        }
+      ]
+      defaultAction: 'Deny'
     }
-    publicNetworkAccess: 'disabled'
+    publicNetworkAccess: 'enabled'
     sku: {
       family: 'A'
       name: 'standard'
     }
     softDeleteRetentionInDays: 7
     tenantId: tenant().tenantId
-  }
-}
-
-resource keyVaultAccessPolicy 'Microsoft.KeyVault/vaults/accessPolicies@2023-02-01' = {
-  name: 
-  parent: 
-  properties: {
-    accessPolicies: [
-      {
-        applicationId:
-        objectId:
-        permissions: {
-          certificates: [
-            'string'
-          ]
-          keys: [
-            'string'
-          ]
-          secrets: [
-            'string'
-          ]
-          storage: [
-            'string'
-          ]
-        }
-        tenantId: 'string'
-      }
-    ]
   }
 }
 
@@ -92,8 +104,6 @@ resource diskEncryptionKey 'Microsoft.KeyVault/vaults/keys@2023-02-01'= {
     keyOps: [
       'encrypt'
       'decrypt'
-      'import'
-      'release'
       'unwrapKey'
       'wrapKey'
     ]
@@ -113,12 +123,10 @@ resource diskEncryptionSet 'Microsoft.Compute/diskEncryptionSets@2022-07-02' = {
   properties: {
     activeKey: {
       keyUrl: diskEncryptionKey.properties.keyUriWithVersion
-      sourceVault: {
-        id: keyVault.id
-      }
     }
     rotationToLatestKeyVersionEnabled: true
   }
+  dependsOn: keyVault
 }
 
 resource adminUserSecret 'Microsoft.KeyVault/vaults/secrets@2023-02-01' = {
@@ -137,19 +145,31 @@ resource adminPasswordSecret 'Microsoft.KeyVault/vaults/secrets@2023-02-01' = {
   }
 }
 
-// resource kvRoleAssignment 'Microsoft.Authorization/roleAssignments@2020-04-01-preview' = {
-//   name: guid(roleIdMapping[roleName],objectId,kv.id)
-//   scope: kv
+// resource diskEncryptionAccessPolicy 'Microsoft.KeyVault/vaults/accessPolicies@2023-02-01' = {
+//   name: 'add'
+//   parent: keyVault
 //   properties: {
-//     roleDefinitionId: subscriptionResourceId('Microsoft.Authorization/roleDefinitions', roleIdMapping[roleName])
-//     principalId: objectId
-//     principalType: 'ServicePrincipal'
+//     accessPolicies: [
+//       {
+//         objectId: diskEncryptionSet.identity.principalId
+//         permissions: {
+//           keys: [
+//             'get'
+//             'wrapKey'
+//             'unwrapKey'
+//           ]
+//         }
+//         tenantId: subscription().tenantId
+//       }
+//     ]
 //   }
 // }
+
+//resource recoverySecret 'Microsoft.KeyVault/vaults/keys@2023-02-01'
 
 output adminUserNameSecret string = adminUserSecret.properties.secretUriWithVersion
 #disable-next-line outputs-should-not-contain-secrets // This outputs the secret URI, not the secret.
 output adminPasswordSecret string = adminPasswordSecret.properties.secretUriWithVersion
 
 output keyVaultID string = keyVault.name
-output diskEncryptionSetName string = diskEncryptionSet.name
+// output diskEncryptionSetName string = diskEncryptionSet.name

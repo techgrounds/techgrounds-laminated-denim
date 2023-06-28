@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "06_Azure_3/06_completed_assignments/AZ-15_advisorSupportApp.md",
+                "file": "10_PRO_1/project_notes/02_Bicep.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,8 +98,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -119,7 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "06_Azure_3/06_completed_assignments/AZ-15_advisorSupportApp.md",
+                "file": "10_PRO_1/project_notes/02_Bicep.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -136,7 +135,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "06_Azure_3/06_completed_assignments/AZ-15_advisorSupportApp.md",
+                "file": "10_PRO_1/project_notes/02_Bicep.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -159,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "06_Azure_3/06_completed_assignments/AZ-15_advisorSupportApp.md"
+                "file": "10_PRO_1/project_notes/02_Bicep.md"
               }
             }
           }
@@ -180,8 +179,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a8673bffff049c90",
+  "active": "be16bfdadd07ab67",
   "lastOpenFiles": [
+    "04_Azure_1/04_completed_assignments/AZ-01_globalInfrastructure.md",
     "06_Azure_3/06_completed_assignments/AZ-16_activeDirectorySecurity.md",
     "10_PRO_1/project_notes/02_Bicep.md",
     "10_PRO_1/project_notes/01_planning.md",
@@ -216,7 +216,6 @@
     "10_PRO_1/project/vmssjsontemplate.json",
     "04_Azure_1/04_completed_assignments/AZ-05_storageAccounts.md",
     "04_Azure_1/04_completed_assignments/AZ-06_virtualMachines.md",
-    "05_Azure_2/05_completed_assignments/AZ-11_loadBalancer.md",
     "10_PRO_1/project/modules/test.bicep",
     "07_SC900_1/00SC_resources/SC-1_screenshot3.png",
     "07_SC900_1/00SC_resources/SC-1_screenshot2.png",

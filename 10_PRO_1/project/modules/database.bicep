@@ -60,18 +60,18 @@ param backupRetentionDays int = 7
 @description('Geo-Redundant Backup setting')
 param geoRedundantBackup string = 'Disabled'
 
-var firewallrules = [
-  {
-    Name: 'rule1'
-    StartIpAddress: '10.10.10.0'
-    EndIpAddress: '10.10.10.255'
-  }
-  {
-    Name: 'rule2'
-    StartIpAddress: '10.10.20.0'
-    EndIpAddress: '10.10.20.255'
-  }
-]
+// var firewallrules = [
+//   {
+//     Name: 'rule1'
+//     StartIpAddress: '10.10.10.0'
+//     EndIpAddress: '10.10.10.255'
+//   }
+//   {
+//     Name: 'rule2'
+//     StartIpAddress: '10.10.20.0'
+//     EndIpAddress: '10.10.20.255'
+//   }
+// ]
 
 var databasePrivateEndpointName = '${sqlServerName}-EndPoint'
 var privateDnsZoneName = 'privatelink${environment().suffixes.sqlServerHostname}'
@@ -108,25 +108,25 @@ resource mySqlServer 'Microsoft.DBforMySQL/servers@2017-12-01' = {
     name: virtualNetworkRuleName
     properties: {
       virtualNetworkSubnetId: vnet1.properties.subnets[0].id
-      ignoreMissingVnetServiceEndpoint: true
+      ignoreMissingVnetServiceEndpoint: false
     }
   }
 }
 
-resource db 'Microsoft.DBforMySQL/servers/databases@2017-12-01' = {
-  parent: mySqlServer
-  name: 'mydb'
-}
+// @batchSize(1)
+// resource firewallRules 'Microsoft.DBforMySQL/servers/firewallRules@2017-12-01' = [for rule in firewallrules: {
+//   parent: mySqlServer
+//   name: '${rule.Name}'
+//   properties: {
+//     startIpAddress: rule.StartIpAddress
+//     endIpAddress: rule.EndIpAddress
+//   }
+// }]
 
-@batchSize(1)
-resource firewallRules 'Microsoft.DBforMySQL/servers/firewallRules@2017-12-01' = [for rule in firewallrules: {
+resource mySqlServerDB 'Microsoft.DBforMySQL/servers/databases@2017-12-01' = {
   parent: mySqlServer
-  name: '${rule.Name}'
-  properties: {
-    startIpAddress: rule.StartIpAddress
-    endIpAddress: rule.EndIpAddress
-  }
-}]
+  name: '${sqlServerName}-myDB'
+}
 
 resource databasePrivateEndpoint 'Microsoft.Network/privateEndpoints@2022-11-01' = {
   name: databasePrivateEndpointName
@@ -141,7 +141,7 @@ resource databasePrivateEndpoint 'Microsoft.Network/privateEndpoints@2022-11-01'
         properties: {
           privateLinkServiceId: mySqlServer.id
           groupIds: [
-            'mySqlServer'
+            
           ]
         }
       }
@@ -189,3 +189,6 @@ resource pvtEndpointDnsGroup 'Microsoft.Network/privateEndpoints/privateDnsZoneG
     databasePrivateEndpoint
   ]
 }
+
+output sqlServerName string = mySqlServer.name
+output sqlServerDbName string = mySqlServerDB.name
