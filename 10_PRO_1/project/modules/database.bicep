@@ -21,7 +21,7 @@ param Vnet1Identity string
 //
 
 @description('Server Name for Azure database for MySQL')
-param sqlServerName string = '${take(envName, 3)}${take(location, 6)}mysqlserv${take(uniqueString(resourceGroup().id), 4)}'
+param mySqlServerName string = '${take(envName, 3)}${take(location, 6)}mysqlserv${take(uniqueString(resourceGroup().id), 4)}'
 
 @description('Azure database for MySQL compute capacity in vCores (2,4,8,16,32)')
 param skuCapacity int = 2
@@ -73,7 +73,7 @@ param geoRedundantBackup string = 'Disabled'
 //   }
 // ]
 
-var databasePrivateEndpointName = '${sqlServerName}-EndPoint'
+var databasePrivateEndpointName = '${mySqlServerName}-EndPoint'
 var privateDnsZoneName = 'privatelink${environment().suffixes.sqlServerHostname}'
 var pvtEndpointDnsGroupName = '${databasePrivateEndpointName}/mydnsgroupname'
 
@@ -82,7 +82,7 @@ resource vnet1 'Microsoft.Network/virtualNetworks@2022-11-01'existing = {
 }
 
 resource mySqlServer 'Microsoft.DBforMySQL/servers@2017-12-01' = {
-  name: sqlServerName
+  name: mySqlServerName
   location: location
   sku: {
     name: skuName
@@ -92,11 +92,13 @@ resource mySqlServer 'Microsoft.DBforMySQL/servers@2017-12-01' = {
     family: skuFamily
   }
   properties: {
+    sslEnforcement: 'Enabled'
     createMode: 'Default'
     version: mysqlVersion
     administratorLogin: adminUsername
     administratorLoginPassword: adminPassword
-    publicNetworkAccess: 'Disabled'
+    publicNetworkAccess: 'Enabled'
+    infrastructureEncryption: 'Enabled'
     storageProfile: {
       storageMB: SkuSizeMB
       backupRetentionDays: backupRetentionDays
@@ -108,7 +110,7 @@ resource mySqlServer 'Microsoft.DBforMySQL/servers@2017-12-01' = {
     name: virtualNetworkRuleName
     properties: {
       virtualNetworkSubnetId: vnet1.properties.subnets[0].id
-      ignoreMissingVnetServiceEndpoint: false
+      ignoreMissingVnetServiceEndpoint: true
     }
   }
 }
@@ -125,7 +127,7 @@ resource mySqlServer 'Microsoft.DBforMySQL/servers@2017-12-01' = {
 
 resource mySqlServerDB 'Microsoft.DBforMySQL/servers/databases@2017-12-01' = {
   parent: mySqlServer
-  name: '${sqlServerName}-myDB'
+  name: '${mySqlServerName}-myDB'
 }
 
 resource databasePrivateEndpoint 'Microsoft.Network/privateEndpoints@2022-11-01' = {
@@ -141,7 +143,7 @@ resource databasePrivateEndpoint 'Microsoft.Network/privateEndpoints@2022-11-01'
         properties: {
           privateLinkServiceId: mySqlServer.id
           groupIds: [
-            
+            'mysqlServer'
           ]
         }
       }
@@ -190,5 +192,5 @@ resource pvtEndpointDnsGroup 'Microsoft.Network/privateEndpoints/privateDnsZoneG
   ]
 }
 
-output sqlServerName string = mySqlServer.name
-output sqlServerDbName string = mySqlServerDB.name
+output mySqlServerName string = mySqlServer.name
+output mySqlServerDbName string = mySqlServerDB.name

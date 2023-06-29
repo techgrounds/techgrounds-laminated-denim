@@ -179,8 +179,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "be16bfdadd07ab67",
+  "active": "581e030abe8bd9e5",
   "lastOpenFiles": [
+    "10_PRO_1/project/modules/recoveryServices.parameters.json",
+    "10_PRO_1/project/modules/recoveryServices.old.json",
+    "10_PRO_1/project/modules/database.parameters.json",
     "04_Azure_1/04_completed_assignments/AZ-01_globalInfrastructure.md",
     "06_Azure_3/06_completed_assignments/AZ-16_activeDirectorySecurity.md",
     "10_PRO_1/project_notes/02_Bicep.md",
@@ -213,10 +216,7 @@
     "10_PRO_1/documentation/time_logs/2023-19-06.md",
     "04_Azure_1/04_completed_assignments/AZ-07_diskStorage.md",
     "10_PRO_1/project/vmssjsontemplate.bicep",
-    "10_PRO_1/project/vmssjsontemplate.json",
     "04_Azure_1/04_completed_assignments/AZ-05_storageAccounts.md",
-    "04_Azure_1/04_completed_assignments/AZ-06_virtualMachines.md",
-    "10_PRO_1/project/modules/test.bicep",
     "07_SC900_1/00SC_resources/SC-1_screenshot3.png",
     "07_SC900_1/00SC_resources/SC-1_screenshot2.png",
     "07_SC900_1/00SC_resources/SC-1_screenshot1.png",

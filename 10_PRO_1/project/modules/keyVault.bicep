@@ -25,6 +25,7 @@ var adminUserSecretName = '${keyVaultName}-adminUserName'
 var adminPasswordSecretName = '${keyVaultName}-adminPassword'
 var diskEncryptionSetName = '${keyVaultName}-diskEncryptionSet'
 var diskEncryptionKeyName = 'diskEncryptionSetKey'
+var recoveryKeyName = 'recoveryVaultKey'
 
 // Deploys a Key Vault.
 resource keyVault 'Microsoft.KeyVault/vaults@2023-02-01' = {
@@ -55,24 +56,25 @@ resource keyVault 'Microsoft.KeyVault/vaults@2023-02-01' = {
         tenantId: tenant().tenantId
       }
       // an access policy allowing the disk encryption set to access the key vault 
-      {
-        objectId: diskEncryptionSet.identity.principalId
-        permissions: {
-          keys: [
-            'get'
-            'wrapKey'
-            'unwrapKey'
-          ]
-        }
-        tenantId: tenant().tenantId
-      }
+      // {
+      //   objectId: diskEncryptionSet.identity.principalId
+      //   permissions: {
+      //     keys: [
+      //       'get'
+      //       'wrapKey'
+      //       'unwrapKey'
+      //     ]
+      //   }
+      //   tenantId: tenant().tenantId
+      // }
     ]
     createMode: 'default'
     enabledForDeployment: true
     enabledForDiskEncryption: true
     enabledForTemplateDeployment: true
     enableRbacAuthorization: false
-    enableSoftDelete: false
+    enableSoftDelete: true
+    enablePurgeProtection: true
     networkAcls: {
       bypass: 'AzureServices'
       ipRules: [
@@ -89,6 +91,47 @@ resource keyVault 'Microsoft.KeyVault/vaults@2023-02-01' = {
     }
     softDeleteRetentionInDays: 7
     tenantId: tenant().tenantId
+  }
+}
+
+resource diskEncryptionSet 'Microsoft.Compute/diskEncryptionSets@2022-07-02' = {
+  name: diskEncryptionSetName
+  location: location
+  tags: {
+    location: location
+    environment: envName
+  }
+  identity: {
+    type: 'systemAssigned'
+  }
+  properties: {
+    activeKey: {
+      keyUrl: diskEncryptionKey.properties.keyUriWithVersion
+    }
+    rotationToLatestKeyVersionEnabled: true
+  }
+  dependsOn: [
+    keyVault
+  ]
+}
+
+resource diskEncryptionAccessPolicy 'Microsoft.KeyVault/vaults/accessPolicies@2023-02-01' = {
+  name: 'add'
+  parent: keyVault
+  properties: {
+    accessPolicies: [
+      {
+        objectId: diskEncryptionSet.identity.principalId
+        permissions: {
+          keys: [
+            'get'
+            'wrapKey'
+            'unwrapKey'
+          ]
+        }
+        tenantId: subscription().tenantId
+      }
+    ]
   }
 }
 
@@ -110,25 +153,6 @@ resource diskEncryptionKey 'Microsoft.KeyVault/vaults/keys@2023-02-01'= {
   }
 }
 
-resource diskEncryptionSet 'Microsoft.Compute/diskEncryptionSets@2022-07-02' = {
-  name: diskEncryptionSetName
-  location: location
-  tags: {
-    location: location
-    environment: envName
-  }
-  identity: {
-    type: 'systemAssigned'
-  }
-  properties: {
-    activeKey: {
-      keyUrl: diskEncryptionKey.properties.keyUriWithVersion
-    }
-    rotationToLatestKeyVersionEnabled: true
-  }
-  dependsOn: keyVault
-}
-
 resource adminUserSecret 'Microsoft.KeyVault/vaults/secrets@2023-02-01' = {
   parent: keyVault
   name: adminUserSecretName
@@ -145,31 +169,27 @@ resource adminPasswordSecret 'Microsoft.KeyVault/vaults/secrets@2023-02-01' = {
   }
 }
 
-// resource diskEncryptionAccessPolicy 'Microsoft.KeyVault/vaults/accessPolicies@2023-02-01' = {
-//   name: 'add'
-//   parent: keyVault
-//   properties: {
-//     accessPolicies: [
-//       {
-//         objectId: diskEncryptionSet.identity.principalId
-//         permissions: {
-//           keys: [
-//             'get'
-//             'wrapKey'
-//             'unwrapKey'
-//           ]
-//         }
-//         tenantId: subscription().tenantId
-//       }
-//     ]
-//   }
-// }
-
-//resource recoverySecret 'Microsoft.KeyVault/vaults/keys@2023-02-01'
+resource recoveryKey 'Microsoft.KeyVault/vaults/keys@2023-02-01' = {
+  parent: keyVault
+  name: recoveryKeyName
+  properties: {
+    attributes: {
+      enabled: true
+    }
+    keySize: 4096
+    kty: 'RSA'
+    keyOps: [
+      'encrypt'
+      'decrypt'
+      'unwrapKey'
+      'wrapKey'
+    ]
+  }
+}
 
 output adminUserNameSecret string = adminUserSecret.properties.secretUriWithVersion
 #disable-next-line outputs-should-not-contain-secrets // This outputs the secret URI, not the secret.
 output adminPasswordSecret string = adminPasswordSecret.properties.secretUriWithVersion
 
 output keyVaultID string = keyVault.name
-// output diskEncryptionSetName string = diskEncryptionSet.name
+output diskEncryptionSetName string = diskEncryptionSet.name

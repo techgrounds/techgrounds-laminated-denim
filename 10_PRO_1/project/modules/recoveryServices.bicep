@@ -19,6 +19,10 @@ param recoveryVaultName string = '${take(envName, 3)}-${take(location, 6)}-recov
 
 var VaultPolicyName = '${recoveryVaultName}-policy'
 var VaultSqlContainerName = '${recoveryVaultName}-websv-container'
+var recoveryVaultDbItemName = '${recoveryVaultName}/${backupFabric}/${protectionContainer}/${protectedItem}'
+var backupFabric = 'Azure'
+var protectionContainer = 'AzureSqlContainer;${resourceGroup().name};${sqlServerDbName}'
+var protectedItem = 'AzureSQL; AzureSqlContainer;${resourceGroup().name};${sqlServerDbName}'
 
 resource keyVault 'Microsoft.KeyVault/vaults@2023-02-01' existing = {
   name: keyVaultName
@@ -79,8 +83,20 @@ resource recoveryVaultPolicy 'Microsoft.RecoveryServices/vaults/backupPolicies@2
   }
 }
 
-resource recoveryVaultSqlContainer 'Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems@2023-02-01' = {
-  name: VaultSqlContainerName
+// resource recoveryVaultContainer 'Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers@2023-02-01' = {
+//   parent: recoveryVault.properties.b
+//   name: VaultSqlContainerName
+//   properties: {
+//     containerType: 'AzureSqlContainer'
+//     backupManagementType: 'AzureSql'
+//   }
+//   dependsOn: [
+//     recoveryVault
+//   ]
+// }
+
+resource recoveryVaultDbItem 'Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems@2023-02-01' = {
+  name: recoveryVaultDbItemName
   properties: {
     protectedItemType: 'Microsoft.Sql/servers/databases'
     policyId: '${recoveryVault.id}/backupPolicies/${recoveryVaultPolicy.id}'
