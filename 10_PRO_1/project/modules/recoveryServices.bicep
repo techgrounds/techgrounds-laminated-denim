@@ -11,25 +11,58 @@ param location string
 @description('The name of the Key Vault.')
 param keyVaultName string
 
-@description('The name of the SQL Server.')
-param sqlServerDbName string
+// param recoveryKeySecretUri string
 
 @description('The name of the Recovery Services Vault')
 param recoveryVaultName string = '${take(envName, 3)}-${take(location, 6)}-recoveryvault${take(uniqueString(resourceGroup().id), 6)}'
 
 var VaultPolicyName = '${recoveryVaultName}-policy'
-var VaultSqlContainerName = '${recoveryVaultName}-websv-container'
-var recoveryVaultDbItemName = '${recoveryVaultName}/${backupFabric}/${protectionContainer}/${protectedItem}'
-var backupFabric = 'Azure'
-var protectionContainer = 'AzureSqlContainer;${resourceGroup().name};${sqlServerDbName}'
-var protectedItem = 'AzureSQL; AzureSqlContainer;${resourceGroup().name};${sqlServerDbName}'
+// var VaultSqlContainerName = '${recoveryVaultName}-websv-container'
+// var recoveryVaultDbItemName = '${recoveryVaultName}/${envName}fabric/${location}DbContainer/webSvDb'
+var recoveryKeyName = 'recoveryVaultKey'
 
 resource keyVault 'Microsoft.KeyVault/vaults@2023-02-01' existing = {
   name: keyVaultName
 }
 
-resource mySqlServerDb 'Microsoft.DBforMySQL/servers/databases@2017-12-01' existing = {
-  name: sqlServerDbName
+resource recoveryKey 'Microsoft.KeyVault/vaults/keys@2023-02-01' = {
+  parent: keyVault
+  name: recoveryKeyName
+  properties: {
+    attributes: {
+      enabled: true
+    }
+    keySize: 4096
+    kty: 'RSA'
+    keyOps: [
+      'encrypt'
+      'decrypt'
+      'unwrapKey'
+      'wrapKey'
+    ]
+  }
+}
+
+resource recoveryEncryptionAccessPolicy 'Microsoft.KeyVault/vaults/accessPolicies@2023-02-01' = {
+  name: 'add'
+  parent: keyVault
+  properties: {
+    accessPolicies: [
+      {
+        objectId: recoveryVault.identity.principalId
+        permissions: {
+          keys: [
+            'get'
+            'wrapKey'
+            'unwrapKey'
+            'encrypt'
+            'decrypt'
+          ]
+        }
+        tenantId: subscription().tenantId
+      }
+    ]
+  }
 }
 
 resource recoveryVault 'Microsoft.RecoveryServices/vaults@2023-01-01' = {
@@ -50,12 +83,15 @@ resource recoveryVault 'Microsoft.RecoveryServices/vaults@2023-01-01' = {
         useSystemAssignedIdentity: true
       }
       keyVaultProperties: {
-        keyUri: keyVault.properties.vaultUri
+        keyUri: recoveryKey.properties.keyUriWithVersion
       }
     }
     monitoringSettings: {
       azureMonitorAlertSettings: {
-        alertsForAllJobFailures: 'Enabled'
+        alertsForAllJobFailures: 'Enabled'   
+      }
+      classicAlertSettings: {
+        alertsForCriticalOperations: 'Enabled'
       }
     }
     publicNetworkAccess: 'Disabled'
@@ -83,23 +119,11 @@ resource recoveryVaultPolicy 'Microsoft.RecoveryServices/vaults/backupPolicies@2
   }
 }
 
-// resource recoveryVaultContainer 'Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers@2023-02-01' = {
-//   parent: recoveryVault.properties.b
-//   name: VaultSqlContainerName
+// resource recoveryVaultDbItem 'Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems@2023-02-01' = {
+//   name: recoveryVaultDbItemName
 //   properties: {
-//     containerType: 'AzureSqlContainer'
-//     backupManagementType: 'AzureSql'
+//     protectedItemType: 'Microsoft.Sql/servers/databases'
+//     policyId: '${recoveryVault.id}/backupPolicies/${recoveryVaultPolicy.id}'
+//     sourceResourceId: mySqlServerDb.id
 //   }
-//   dependsOn: [
-//     recoveryVault
-//   ]
-// }
-
-resource recoveryVaultDbItem 'Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems@2023-02-01' = {
-  name: recoveryVaultDbItemName
-  properties: {
-    protectedItemType: 'Microsoft.Sql/servers/databases'
-    policyId: '${recoveryVault.id}/backupPolicies/${recoveryVaultPolicy.id}'
-    sourceResourceId: mySqlServerDb.id
-  }
-} 
+// } 

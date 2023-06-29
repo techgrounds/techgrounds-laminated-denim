@@ -25,7 +25,6 @@ var adminUserSecretName = '${keyVaultName}-adminUserName'
 var adminPasswordSecretName = '${keyVaultName}-adminPassword'
 var diskEncryptionSetName = '${keyVaultName}-diskEncryptionSet'
 var diskEncryptionKeyName = 'diskEncryptionSetKey'
-var recoveryKeyName = 'recoveryVaultKey'
 
 // Deploys a Key Vault.
 resource keyVault 'Microsoft.KeyVault/vaults@2023-02-01' = {
@@ -131,9 +130,50 @@ resource diskEncryptionAccessPolicy 'Microsoft.KeyVault/vaults/accessPolicies@20
         }
         tenantId: subscription().tenantId
       }
+      {
+        objectId: recoveryVault.identity.principalId
+        permissions: {
+          keys: [
+            'get'
+            'wrapKey'
+            'unwrapKey'
+            'encrypt'
+            'decrypt'
+          ]
+        }
+        tenantId: subscription().tenantId
+      }
     ]
   }
 }
+
+resource recoveryKey 'Microsoft.KeyVault/vaults/keys@2023-02-01' = {
+  parent: keyVault
+  name: recoveryKeyName
+  properties: {
+    attributes: {
+      enabled: true
+    }
+    keySize: 4096
+    kty: 'RSA'
+    keyOps: [
+      'encrypt'
+      'decrypt'
+      'unwrapKey'
+      'wrapKey'
+    ]
+  }
+}
+
+// resource recoveryEncryptionAccessPolicy 'Microsoft.KeyVault/vaults/accessPolicies@2023-02-01' = {
+//   name: 'add'
+//   parent: keyVault
+//   properties: {
+//     accessPolicies: [
+      
+//     ]
+//   }
+// }
 
 resource diskEncryptionKey 'Microsoft.KeyVault/vaults/keys@2023-02-01'= {
   parent: keyVault
@@ -169,27 +209,10 @@ resource adminPasswordSecret 'Microsoft.KeyVault/vaults/secrets@2023-02-01' = {
   }
 }
 
-resource recoveryKey 'Microsoft.KeyVault/vaults/keys@2023-02-01' = {
-  parent: keyVault
-  name: recoveryKeyName
-  properties: {
-    attributes: {
-      enabled: true
-    }
-    keySize: 4096
-    kty: 'RSA'
-    keyOps: [
-      'encrypt'
-      'decrypt'
-      'unwrapKey'
-      'wrapKey'
-    ]
-  }
-}
-
 output adminUserNameSecret string = adminUserSecret.properties.secretUriWithVersion
 #disable-next-line outputs-should-not-contain-secrets // This outputs the secret URI, not the secret.
 output adminPasswordSecret string = adminPasswordSecret.properties.secretUriWithVersion
 
 output keyVaultID string = keyVault.name
 output diskEncryptionSetName string = diskEncryptionSet.name
+

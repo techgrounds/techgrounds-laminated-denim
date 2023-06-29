@@ -112,7 +112,6 @@ module recoveryVault 'modules/recoveryServices.bicep' = {
     envName: envName
     location: location
     keyVaultName: keyvault.outputs.keyVaultID
-    sqlServerDbName: database.outputs.mySqlServerDbName
   }
 }
 

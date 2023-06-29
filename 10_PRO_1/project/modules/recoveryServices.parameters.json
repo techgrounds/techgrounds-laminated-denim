@@ -11,8 +11,5 @@
     "keyVaultName": {
       "value": "dev-westeu-vaultluqab3"
     },
-    "sqlServerDbName": {
-      "value": "devwesteumysqlservluqa"
-    }
   }
 }
