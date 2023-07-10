@@ -15,12 +15,15 @@ param allowedIpRange array
 //Variables for VNet1 and its subnets.
 var vnet1Name = '${envName}-${take(location, 6)}-vnet1'
 var vnet1AddressPrefix = '10.10.10.0/24'
+var vnet1Subnet1AddressPrefix = '10.10.10.0/25'
+var vnet1Subnet2AddressPrefix = '10.10.10.128/25'
 
 //Variables for VNet2 and its subnets.
 var vnet2Name = '${envName}-${take(location, 6)}-vnet2'
 var vnet2AddressPrefix = '10.10.20.0/24'
 
-// Two Virtual Networks. The first with a subnet range of 10.10.10.0/24 and the second with a subnet range of 10.20.20.0/24.
+// Two Virtual Networks. Vnet1 contains two subnets, hosting the webserver VMSS and App Gateway.
+// Vnet 2 hosts the management server, database and any eventual desktop instances.
 resource vnet1 'Microsoft.Network/virtualNetworks@2022-11-01' = {
   name: vnet1Name
   location: location
@@ -36,9 +39,22 @@ resource vnet1 'Microsoft.Network/virtualNetworks@2022-11-01' = {
     }
     subnets: [
       {
-        name: '${vnet1Name}-subnet1'
+        name: '${vnet1Name}-subnet1' //subnet for webserver VMSS.
         properties: {
-          addressPrefix: vnet1AddressPrefix
+          addressPrefix: vnet1Subnet1AddressPrefix
+          privateEndpointNetworkPolicies: 'Enabled'
+          privateLinkServiceNetworkPolicies: 'Enabled'
+          networkSecurityGroup: {
+            id: nsg1.id
+          }
+        }
+      }
+      {
+        name: '${vnet1Name}-subnet2' //subnet for App Gateway.
+        properties: {
+          addressPrefix: vnet1Subnet2AddressPrefix
+          privateEndpointNetworkPolicies: 'Enabled'
+          privateLinkServiceNetworkPolicies: 'Enabled'
           networkSecurityGroup: {
             id: nsg1.id
           }

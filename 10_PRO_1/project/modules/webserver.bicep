@@ -57,17 +57,11 @@ var imageReference = {
 //variables for other resources
 var publicIPAddressName = '${vmScaleSetName}pip'
 var publicIPAddressID = webServerPublicIP.id
-var loadBalancerName = '${vmScaleSetName}lb'
-var lbProbeID = resourceId('Microsoft.Network/loadBalancers/probes', loadBalancerName, 'tcpProbe')
-var natPoolName = '${vmScaleSetName}natpool'
+var appGatewayName = '${vmScaleSetName}gateway'
 var bePoolName = '${vmScaleSetName}bepool'
-var lbPoolID = resourceId('Microsoft.Network/loadBalancers/backendAddressPools', loadBalancerName, bePoolName)
-var natStartPort = 50000
-var natEndPort = 50119
-var natBackendPort = 3389
+var bePoolID = resourceId('Microsoft.Network/applicationGateways/backendAddressPools', appGatewayName, bePoolName)
 var nicName = '${vmScaleSetName}nic'
 var ipConfigName = '${vmScaleSetName}ipconfig'
-var frontEndIPConfigID = resourceId('Microsoft.Network/loadBalancers/frontendIPConfigurations', loadBalancerName, 'loadBalancerFrontEnd')
 var publicIpSku = 'Standard'
 var autoScaleResourceName = '${webServerName}AutoScale'
 var autoScaleDefault = '1'
@@ -87,24 +81,81 @@ resource diskEncryptionSet 'Microsoft.Compute/diskEncryptionSets@2022-07-02' exi
   name: diskEncryptionSetName
 }
 
-//A load balancer connected to the vmss with a public IP.
-resource loadBalancer 'Microsoft.Network/loadBalancers@2022-11-01' = {
-  name: loadBalancerName
+resource vnet1 'Microsoft.Network/virtualNetworks@2022-11-01' existing = {
+  name: Vnet1Identity
+}
+
+//An application gateway with a public IP that is connected to the vmss.
+resource appGateway 'Microsoft.Network/applicationGateways@2022-11-01' = {
+  name: appGatewayName
   location: location
-  sku: {
-    name: 'Standard'
-  }
-  tags: {
-    Environment: envName
-    Location: location
+  identity: {
+    type: 'SystemAssigned, UserAssigned'
+    userAssignedIdentities: 
   }
   properties: {
+    gatewayIPConfigurations: [
+      {
+        name: 'appGatewayIpConfig'
+        properties: {
+          subnet: {
+            id: vnet1.properties.subnets[1].id
+          }
+        }
+      }
+    ]
     frontendIPConfigurations: [
       {
-        name: 'LoadBalancerFrontEnd'
+        name: 'appGatewayFrontendIP'
         properties: {
+          privateIPAllocationMethod: 'Dynamic'
           publicIPAddress: {
             id: publicIPAddressID
+          }
+        }
+      }
+    ]
+    frontendPorts: [
+      {
+        name: 'appGatewayHTTPFrontendPort'
+        properties: {
+          port: 80
+        }
+      }
+      {
+        name: 'appGatewayHTTPSFrontendPort'
+        properties: {
+          port: 443
+        }
+      }
+    ]
+    httpListeners: [
+      {
+        name: 'appGatewayHTTPListener'
+        properties: {
+          frontendIPConfiguration: {
+            id: resourceId('Microsoft.Network/applicationGateways/frontendIPConfigurations', appGatewayName, 'appGatewayFrontendIP')
+          }
+          frontendPort: {
+            id: resourceId('Microsoft.Network/applicationGateways/frontendPorts', appGatewayName, 'appGatewayHTTPFrontendPort')
+          }
+          protocol: 'Http'
+          requireServerNameIndication: false
+        }
+      }
+      {
+        name: 'appGatewayHTTPSListener'
+        properties: {
+          frontendIPConfiguration: {
+            id: resourceId('Microsoft.Network/applicationGateways/frontendIPConfigurations', appGatewayName, 'appGatewayFrontendIP')
+          }
+          frontendPort: {
+            id: resourceId('Microsoft.Network/applicationGateways/frontendPorts', appGatewayName, 'appGatewayHTTPSFrontendPort')
+          }
+          protocol: 'Https'
+          requireServerNameIndication: false
+          sslCertificate: {
+            id: resourceId('Microsoft.Network/applicationGateways/sslCertificates', appGatewayName, appGatewaySSLCert)
           }
         }
       }
@@ -112,55 +163,60 @@ resource loadBalancer 'Microsoft.Network/loadBalancers@2022-11-01' = {
     backendAddressPools: [
       {
         name: bePoolName
-      }
+        }
     ]
-    inboundNatPools: [
+    backendHttpSettingsCollection: [
       {
-        name: natPoolName
+        name: 'appGatewayBackendHttpSettings'
         properties: {
-          frontendIPConfiguration: {
-            id: frontEndIPConfigID
-          }
-          protocol: 'Tcp'
-          frontendPortRangeStart: natStartPort
-          frontendPortRangeEnd: natEndPort
-          backendPort: natBackendPort
+          port: 80
+          protocol: 'Http'
+          cookieBasedAffinity: 'Disabled'
+          requestTimeout: 30
         }
       }
     ]
-    loadBalancingRules: [
+    requestRoutingRules: [
       {
-        name: 'LBRule'
+        name: 'routingRuleHTTP'
         properties: {
-          frontendIPConfiguration: {
-            id: frontEndIPConfigID
+          ruleType: 'Basic'
+          httpListener: {
+            id: resourceId('Microsoft.Network/applicationGateways/httpListeners', appGatewayName, 'appGatewayHttpListener')
+          }
+          redirectConfiguration: {
+            redirectType: 'Permanent'
+            targetListener: {
+              id: resourceId('Microsoft.Network/applicationGateways/httpListeners', appGatewayName, 'appGatewayHttpsListener')
+            }
+          }
+        }
+      }
+      {
+        name: 'routingRuleHTTPS'
+        properties: {
+          ruleType: 'Basic'
+          httpListener: {
+            id: resourceId('Microsoft.Network/applicationGateways/httpListeners', appGatewayName, 'appGatewayHttpsListener')
           }
           backendAddressPool: {
-            id: lbPoolID
+            id: bePoolID
           }
-          protocol: 'Tcp'
-          frontendPort: 80
-          backendPort: 80
-          enableFloatingIP: false
-          idleTimeoutInMinutes: 5
-          probe: {
-            id: lbProbeID
+          backendHttpSettings: {
+            id: resourceId('Microsoft.Network/applicationGateways/backendHttpSettingsCollection', appGatewayName, 'appGatewayBackendHttpSettings')
           }
         }
       }
     ]
-    probes: [
-      {
-        name: 'tcpProbe'
-        properties: {
-          protocol: 'Tcp'
-          port: 80
-          intervalInSeconds: 5
-          numberOfProbes: 2
-        }
-      }
-    ]
+    enableHttp2: false
+    autoscaleConfiguration: {
+      minCapacity: 1
+      maxCapacity: 2
+    }
   }
+  dependsOn: [
+    vnet1
+  ]
 }
 
 // A virtual machine scale set
@@ -218,7 +274,7 @@ resource webServer 'Microsoft.Compute/virtualMachineScaleSets@2023-03-01' = {
                     }
                     loadBalancerBackendAddressPools: [
                       {
-                        id: lbPoolID
+                        id: bePoolID
                       }
                     ]
                   }
@@ -229,10 +285,16 @@ resource webServer 'Microsoft.Compute/virtualMachineScaleSets@2023-03-01' = {
         ]
       }
     }
+    automaticRepairsPolicy: {
+      enabled: true
+      repairAction: 'Reimage'
+      gracePeriod: 'PT20M'
+    }
   }
   dependsOn: [
-    loadBalancer
+    appGateway
   ]
+
 }
 
 //A public IP for the load balancer.
@@ -318,50 +380,6 @@ resource autoScaleResource 'Microsoft.Insights/autoscalesettings@2022-10-01' = {
     }
   }
 }
-
-// resource webServerScript 'Microsoft.Resources/deploymentScripts@2020-10-01' = {
-//   name: webServerScriptName
-//   location: location
-//   kind: 'AzureCLI'
-//   identity: {
-//     type: 'SystemAssigned'
-//   }
-//   properties: {
-//     azCliVersion: '2.0.80'
-//     retentionInterval: 'P1D'
-//     cleanupPreference: 'Always'
-//     primaryScriptUri: 'https://github.com/techgrounds/techgrounds-laminated-denim/blob/main/10_PRO_1/project/scripts/apache.sh'
-//     storageAccountSettings: {
-//       storageAccountName: storageAccount.name
-//       storageAccountKey: storageAccount.listKeys('2022-09-01').keys[0].value
-//     }
-//   }
-//   dependsOn: [
-//     storageAccount
-//     webServer
-//   ]
-// }
-
-// resource extension 'Microsoft.Compute/virtualMachineScaleSets/extensions@2023-03-01' = {
-//   parent: webServer
-//   name: 'install_apache'
-//   properties: {
-//     publisher: 'Microsoft.Azure.Extensions'
-//     type: 'CustomScript'
-//     typeHandlerVersion: '2.1'
-//     autoUpgradeMinorVersion: true
-//     settings: {
-//       skipDos2Unix: false
-//       fileUris: [
-
-//       'https://github.com/techgrounds/techgrounds-laminated-denim/blob/main/10_PRO_1/project/scripts/apache.sh'
-//       ]
-//     }
-//     protectedSettings: {
-//       commandToExecute: 'sh apache.sh'
-//     }
-//   }
-// }
 
 //Output webserver name
 output webServerName string = webServer.name

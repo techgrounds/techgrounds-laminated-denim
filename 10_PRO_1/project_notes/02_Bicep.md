@@ -20,6 +20,10 @@ Loading bash scripts from a private github repository is best practice.
  * VM must connect to storage endpoint that hosts Azure extension repository and an Azure storage account that hosts the VHD files.
  * If your security policy limits access from Azure VMs to the Internet, you can resolve the preceding URI and configure a specific rule to allow outbound connectivity to the IPs. For more information, see [Azure Key Vault behind a firewall](https://learn.microsoft.com/en-us/azure/key-vault/general/access-behind-firewall).
 
+## App Gateway
+[Documentation](https://learn.microsoft.com/en-us/azure/application-gateway/)  
+
+
 
 ## Resources:
 [Advanced Bicep Guide](https://github.com/nnellans/bicep-guide)  
