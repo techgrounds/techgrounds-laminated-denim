@@ -130,40 +130,40 @@ resource diskEncryptionAccessPolicy 'Microsoft.KeyVault/vaults/accessPolicies@20
         }
         tenantId: subscription().tenantId
       }
-      {
-        objectId: recoveryVault.identity.principalId
-        permissions: {
-          keys: [
-            'get'
-            'wrapKey'
-            'unwrapKey'
-            'encrypt'
-            'decrypt'
-          ]
-        }
-        tenantId: subscription().tenantId
-      }
+      // {
+      //   objectId: recoveryVault.identity.principalId
+      //   permissions: {
+      //     keys: [
+      //       'get'
+      //       'wrapKey'
+      //       'unwrapKey'
+      //       'encrypt'
+      //       'decrypt'
+      //     ]
+      //   }
+      //   tenantId: subscription().tenantId
+      // }
     ]
   }
 }
 
-resource recoveryKey 'Microsoft.KeyVault/vaults/keys@2023-02-01' = {
-  parent: keyVault
-  name: recoveryKeyName
-  properties: {
-    attributes: {
-      enabled: true
-    }
-    keySize: 4096
-    kty: 'RSA'
-    keyOps: [
-      'encrypt'
-      'decrypt'
-      'unwrapKey'
-      'wrapKey'
-    ]
-  }
-}
+// resource recoveryKey 'Microsoft.KeyVault/vaults/keys@2023-02-01' = {
+//   parent: keyVault
+//   name: recoveryKeyName
+//   properties: {
+//     attributes: {
+//       enabled: true
+//     }
+//     keySize: 4096
+//     kty: 'RSA'
+//     keyOps: [
+//       'encrypt'
+//       'decrypt'
+//       'unwrapKey'
+//       'wrapKey'
+//     ]
+//   }
+// }
 
 // resource recoveryEncryptionAccessPolicy 'Microsoft.KeyVault/vaults/accessPolicies@2023-02-01' = {
 //   name: 'add'
