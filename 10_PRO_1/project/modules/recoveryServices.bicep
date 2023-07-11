@@ -25,46 +25,6 @@ resource keyVault 'Microsoft.KeyVault/vaults@2023-02-01' existing = {
   name: keyVaultName
 }
 
-resource recoveryKey 'Microsoft.KeyVault/vaults/keys@2023-02-01' = {
-  parent: keyVault
-  name: recoveryKeyName
-  properties: {
-    attributes: {
-      enabled: true
-    }
-    keySize: 4096
-    kty: 'RSA'
-    keyOps: [
-      'encrypt'
-      'decrypt'
-      'unwrapKey'
-      'wrapKey'
-    ]
-  }
-}
-
-resource recoveryEncryptionAccessPolicy 'Microsoft.KeyVault/vaults/accessPolicies@2023-02-01' = {
-  name: 'add'
-  parent: keyVault
-  properties: {
-    accessPolicies: [
-      {
-        objectId: recoveryVault.identity.principalId
-        permissions: {
-          keys: [
-            'get'
-            'wrapKey'
-            'unwrapKey'
-            'encrypt'
-            'decrypt'
-          ]
-        }
-        tenantId: subscription().tenantId
-      }
-    ]
-  }
-}
-
 resource recoveryVault 'Microsoft.RecoveryServices/vaults@2023-01-01' = {
   name: recoveryVaultName
   location: location

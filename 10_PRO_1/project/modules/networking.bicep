@@ -45,7 +45,7 @@ resource vnet1 'Microsoft.Network/virtualNetworks@2022-11-01' = {
           privateEndpointNetworkPolicies: 'Enabled'
           privateLinkServiceNetworkPolicies: 'Enabled'
           networkSecurityGroup: {
-            id: nsg1.id
+            id: Vnet1Nsg1.id
           }
         }
       }
@@ -56,7 +56,7 @@ resource vnet1 'Microsoft.Network/virtualNetworks@2022-11-01' = {
           privateEndpointNetworkPolicies: 'Enabled'
           privateLinkServiceNetworkPolicies: 'Enabled'
           networkSecurityGroup: {
-            id: nsg1.id
+            id: Vnet1Nsg2.id
           }
         }
       }
@@ -83,7 +83,7 @@ resource vnet2 'Microsoft.Network/virtualNetworks@2022-11-01' = {
         properties: {
           addressPrefix: vnet2AddressPrefix
           networkSecurityGroup: {
-            id: nsg2.id
+            id: Vnet2Nsg1.id
           }
         }
       }
@@ -121,8 +121,60 @@ resource vnet2vnet1 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings@20
 }
 
 // A network security group for vnet1 that allows HTTPS and HTTP traffic from the internet and SSH access from the management server on vnet2.
-resource nsg1 'Microsoft.Network/networkSecurityGroups@2022-11-01' = {
+resource Vnet1Nsg1 'Microsoft.Network/networkSecurityGroups@2022-11-01' = {
   name: '${vnet1Name}-nsg1'
+  location: location
+  tags: {
+    Environment: envName
+    Location: location
+  }
+  properties: {
+    securityRules: [
+      {
+        name: 'https'
+        properties: {
+          protocol: 'TCP'
+          sourceAddressPrefix: vnet1AddressPrefix
+          destinationAddressPrefix: '*'
+          sourcePortRange: '*'
+          destinationPortRange: '443'
+          access: 'Allow'
+          priority: 1000
+          direction: 'Inbound'
+        }
+      }
+      {
+        name: 'http'
+        properties: {
+          protocol: 'TCP'
+          sourceAddressPrefix: vnet1AddressPrefix
+          destinationAddressPrefix: '*'
+          sourcePortRange: '*'
+          destinationPortRange: '80'
+          access: 'Allow'
+          priority: 1050
+          direction: 'Inbound'
+        }
+      }
+        {
+        name: 'ssh'
+        properties: {
+          protocol: 'TCP'
+          sourceAddressPrefix: '10.10.20.10/32' 
+          sourcePortRange: '*' 
+          destinationAddressPrefix: '*' 
+          destinationPortRange: '22'
+          access: 'Allow'
+          priority: 1100
+          direction: 'Inbound'
+        }
+      }
+    ]
+  }
+}
+
+resource Vnet1Nsg2 'Microsoft.Network/networkSecurityGroups@2022-11-01' = {
+  name: '${vnet1Name}-nsg2'
   location: location
   tags: {
     Environment: envName
@@ -157,13 +209,13 @@ resource nsg1 'Microsoft.Network/networkSecurityGroups@2022-11-01' = {
         }
       }
         {
-        name: 'ssh'
+        name: 'GatewayManager'
         properties: {
           protocol: 'TCP'
-          sourceAddressPrefix: '10.10.20.10/32' 
+          sourceAddressPrefix: 'GatewayManager'
           sourcePortRange: '*' 
           destinationAddressPrefix: '*' 
-          destinationPortRange: '22'
+          destinationPortRange: '65200-65535'
           access: 'Allow'
           priority: 1100
           direction: 'Inbound'
@@ -174,7 +226,7 @@ resource nsg1 'Microsoft.Network/networkSecurityGroups@2022-11-01' = {
 }
 
 // NSG for vnet2. Allows access to the management server via public IP from trusted locations.
-resource nsg2 'Microsoft.Network/networkSecurityGroups@2022-11-01' = {
+resource Vnet2Nsg1 'Microsoft.Network/networkSecurityGroups@2022-11-01' = {
 name: '${vnet2Name}-nsg'
 location: location
 tags: {
@@ -218,5 +270,5 @@ properties: {
   output vnet2ID string = vnet2.name
   output vnet1Subnet1ID string = vnet1.properties.subnets[0].name
   output vnet2Subnet1ID string = vnet2.properties.subnets[0].name
-  output nsg1ID string = nsg1.name
-  output nsg2ID string = nsg2.name
+  output Vnet1Nsg1Name string = Vnet1Nsg1.name
+  output Vnet2Nsg1Name string = Vnet2Nsg1.name

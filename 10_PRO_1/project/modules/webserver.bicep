@@ -96,6 +96,10 @@ resource appGateway 'Microsoft.Network/applicationGateways@2022-11-01' = {
   name: appGatewayName
   location: location
   properties: {
+    sku: {
+      name: 'Standard_v2'
+      tier: 'Standard_v2'
+    }
     sslCertificates: [
       {
         name: 'appGatewaySslCert'
@@ -187,6 +191,17 @@ resource appGateway 'Microsoft.Network/applicationGateways@2022-11-01' = {
         }
       }
     ]
+    redirectConfigurations: [
+      {
+        name: 'appGatewayRedirectConfig'
+        properties: {
+          redirectType: 'Permanent'
+          targetListener: {
+            id: resourceId('Microsoft.Network/applicationGateways/httpListeners', appGatewayName, 'appGatewayHttpsListener')
+          }
+        }
+      }
+    ]
     requestRoutingRules: [
       {
         name: 'routingRuleHTTP'
@@ -197,7 +212,7 @@ resource appGateway 'Microsoft.Network/applicationGateways@2022-11-01' = {
             id: resourceId('Microsoft.Network/applicationGateways/httpListeners', appGatewayName, 'appGatewayHttpListener')
           }
           redirectConfiguration: {
-              id: resourceId('Microsoft.Network/applicationGateways/httpListeners', appGatewayName, 'appGatewayHttpsListener')
+              id: resourceId('Microsoft.Network/applicationGateways/redirectConfigurations', appGatewayName, 'appGatewayRedirectConfig')
             }
           }
         }
@@ -282,7 +297,7 @@ resource webServer 'Microsoft.Compute/virtualMachineScaleSets@2023-03-01' = {
                     subnet: {
                       id: resourceId('Microsoft.Network/virtualNetworks/subnets', Vnet1Identity, vnet1Subnet1Identity)
                     }
-                    loadBalancerBackendAddressPools: [
+                    applicationGatewayBackendAddressPools: [
                       {
                         id: bePoolID
                       }
@@ -295,17 +310,18 @@ resource webServer 'Microsoft.Compute/virtualMachineScaleSets@2023-03-01' = {
         ]
       }
     }
-    automaticRepairsPolicy: {
-      enabled: true
-      repairAction: 'Reimage'
-      gracePeriod: 'PT20M'
-    }
+    // automaticRepairsPolicy: {
+    //   enabled: true
+    //   //repairAction: 'Replace'
+    //   gracePeriod: 'PT10M'
+    // }
   }
   dependsOn: [
     appGateway
   ]
-
 }
+
+
 
 //A public IP for the load balancer.
 resource webServerPublicIP 'Microsoft.Network/publicIPAddresses@2022-11-01' = {
