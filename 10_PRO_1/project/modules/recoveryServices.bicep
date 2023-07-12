@@ -8,9 +8,6 @@ param envName string
 @description('The Azure Region into which the resources are deployed.')
 param location string
 
-@description('The name for the Recovery Services Vault Key.')
-param recoveryKey string
-
 @description('The name for the Managed Identity.')
 param managedIdName string
 
@@ -57,15 +54,6 @@ resource recoveryVault 'Microsoft.RecoveryServices/vaults@2023-01-01' = {
     tier: 'Standard'
   }
   properties: {
-    encryption: {
-      infrastructureEncryption: 'Enabled'
-      kekIdentity: {
-        useSystemAssignedIdentity: true
-      }
-      keyVaultProperties: {
-        keyUri: recoveryKey
-      }
-    }
     monitoringSettings: {
       azureMonitorAlertSettings: {
         alertsForAllJobFailures: 'Enabled'   

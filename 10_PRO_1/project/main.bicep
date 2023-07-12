@@ -122,7 +122,6 @@ module recoveryVault 'modules/recoveryServices.bicep' = {
     envName: envName
     location: location
     // keyVaultName: keyvault.outputs.keyVaultID
-    recoveryKey: keyvault.outputs.recoveryKeyURI
     managedIdName: managedIdName
   }
 }

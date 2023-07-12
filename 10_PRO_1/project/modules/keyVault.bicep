@@ -159,24 +159,6 @@ resource AccessPolicy 'Microsoft.KeyVault/vaults/accessPolicies@2023-02-01' = {
   }
 }
 
-resource recoveryKey 'Microsoft.KeyVault/vaults/keys@2023-02-01' = {
-  parent: keyVault
-  name: 'recoveryServicesKey'
-  properties: {
-    attributes: {
-      enabled: true
-    }
-    keySize: 4096
-    kty: 'RSA'
-    keyOps: [
-      'encrypt'
-      'decrypt'
-      'unwrapKey'
-      'wrapKey'
-    ]
-  }
-}
-
 resource diskEncryptionKey 'Microsoft.KeyVault/vaults/keys@2023-02-01'= {
   parent: keyVault
   name: diskEncryptionKeyName
@@ -217,5 +199,3 @@ output adminPasswordSecret string = adminPasswordSecret.properties.secretUriWith
 
 output keyVaultID string = keyVault.name
 output diskEncryptionSetName string = diskEncryptionSet.name
-
-output recoveryKeyURI string = recoveryKey.properties.keyUriWithVersion
