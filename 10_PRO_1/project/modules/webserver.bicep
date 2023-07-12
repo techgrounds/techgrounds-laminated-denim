@@ -60,7 +60,6 @@ var imageReference = {
 
 //variables for other resources
 var publicIPAddressName = '${vmScaleSetName}pip'
-var publicIPAddressID = webServerPublicIP.id
 var appGatewayName = '${vmScaleSetName}gateway'
 var bePoolName = '${vmScaleSetName}bepool'
 var bePoolID = resourceId('Microsoft.Network/applicationGateways/backendAddressPools', appGatewayName, bePoolName)
@@ -125,7 +124,7 @@ resource appGateway 'Microsoft.Network/applicationGateways@2022-11-01' = {
         properties: {
           privateIPAllocationMethod: 'Dynamic'
           publicIPAddress: {
-            id: publicIPAddressID
+            id: webServerPublicIP.id
           }
         }
       }

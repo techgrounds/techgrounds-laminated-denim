@@ -26,6 +26,9 @@ param principalId string
 @description('The IP ranges that are allowed to access the management server via SSH and RDP.')
 param allowedIpRange array = ['31.151.222.110', '31.151.222.111']
 
+@description('The name for the Managed Identity.')
+param managedIdName string = 'keyVaultManagedIdentity'
+
 
 //param rgName string = ''
 //= take('${take(envName, 3)}-${take(location, 6)}-rg${uniqueString(resourceGroup().id)}', 24)
@@ -57,6 +60,7 @@ module keyvault 'modules/keyvault.bicep' = {
    adminPassword: adminPassword
    adminUserName: adminUsername
    principalId: principalId
+   managedIdName: managedIdName
  }
 }
 
@@ -112,12 +116,14 @@ module webServer 'modules/webserver.bicep' = {
 //   }
 // }
 
-// module recoveryVault 'modules/recoveryServices.bicep' = {
-//   name: 'recoveryVault-${location}'
-//   params: {
-//     envName: envName
-//     location: location
-//     keyVaultName: keyvault.outputs.keyVaultID
-//   }
-// }
+module recoveryVault 'modules/recoveryServices.bicep' = {
+  name: 'recoveryVault-${location}'
+  params: {
+    envName: envName
+    location: location
+    // keyVaultName: keyvault.outputs.keyVaultID
+    recoveryKey: keyvault.outputs.recoveryKeyURI
+    managedIdName: managedIdName
+  }
+}
 

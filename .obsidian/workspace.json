@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10_PRO_1/project_notes/1.1 planning.md",
+                "file": "10_PRO_1/project_notes/02_Bicep.md",
                 "mode": "source",
                 "source": false
               }
@@ -106,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "10_PRO_1/project_notes/1.1 planning.md",
+                "file": "10_PRO_1/project_notes/02_Bicep.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "10_PRO_1/project_notes/1.1 planning.md",
+                "file": "10_PRO_1/project_notes/02_Bicep.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "10_PRO_1/project_notes/1.1 planning.md"
+                "file": "10_PRO_1/project_notes/02_Bicep.md"
               }
             }
           }
@@ -169,12 +169,12 @@
   },
   "active": "c044fab285fa7ade",
   "lastOpenFiles": [
+    "10_PRO_1/project_notes/1.1 planning.md",
     "10_PRO_1/project_notes/02_Bicep.md",
     "01_Linux_1/01_completed_assignments/GIT-02 report.md",
     "10_PRO_1/project/appgwcert.pfx",
     "10_PRO_1/project/gatewaySslCert.cer",
     "10_PRO_1/documentation/time_logs/2023-07-10.md",
-    "10_PRO_1/project_notes/1.1 planning.md",
     "10_PRO_1/documentation/time_logs/2023-07-07.md",
     "10_PRO_1/documentation/time_logs/2023-07-06.md",
     "10_PRO_1/documentation/time_logs/timelog_copyme.md",
