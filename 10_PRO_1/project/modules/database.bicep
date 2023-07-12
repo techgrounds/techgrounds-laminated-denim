@@ -18,8 +18,8 @@ param adminUsername string
 param adminPassword string
 
 param Vnet1Identity string
-//
 
+//SQL server parameters
 @description('Server Name for Azure database for MySQL')
 param mySqlServerName string = '${take(envName, 3)}${take(location, 6)}mysqlserv${take(uniqueString(resourceGroup().id), 4)}'
 
@@ -60,21 +60,8 @@ param backupRetentionDays int = 7
 @description('Geo-Redundant Backup setting')
 param geoRedundantBackup string = 'Disabled'
 
-// var firewallrules = [
-//   {
-//     Name: 'rule1'
-//     StartIpAddress: '10.10.10.0'
-//     EndIpAddress: '10.10.10.255'
-//   }
-//   {
-//     Name: 'rule2'
-//     StartIpAddress: '10.10.20.0'
-//     EndIpAddress: '10.10.20.255'
-//   }
-// ]
-
 var databasePrivateEndpointName = '${mySqlServerName}-EndPoint'
-var privateDnsZoneName = 'privatelink${environment().suffixes.sqlServerHostname}'
+var privateDnsZoneName = 'privatelink.mysql.database.azure.com'
 var pvtEndpointDnsGroupName = '${databasePrivateEndpointName}/mydnsgroupname'
 
 resource vnet1 'Microsoft.Network/virtualNetworks@2022-11-01'existing = {
@@ -92,7 +79,7 @@ resource mySqlServer 'Microsoft.DBforMySQL/servers@2017-12-01' = {
     family: skuFamily
   }
   properties: {
-    sslEnforcement: 'Enabled'
+    sslEnforcement: 'Disabled'
     createMode: 'Default'
     version: mysqlVersion
     administratorLogin: adminUsername
@@ -115,16 +102,6 @@ resource mySqlServer 'Microsoft.DBforMySQL/servers@2017-12-01' = {
   }
 }
 
-// @batchSize(1)
-// resource firewallRules 'Microsoft.DBforMySQL/servers/firewallRules@2017-12-01' = [for rule in firewallrules: {
-//   parent: mySqlServer
-//   name: '${rule.Name}'
-//   properties: {
-//     startIpAddress: rule.StartIpAddress
-//     endIpAddress: rule.EndIpAddress
-//   }
-// }]
-
 resource mySqlServerDB 'Microsoft.DBforMySQL/servers/databases@2017-12-01' = {
   parent: mySqlServer
   name: '${mySqlServerName}-myDB'
@@ -137,13 +114,18 @@ resource databasePrivateEndpoint 'Microsoft.Network/privateEndpoints@2022-11-01'
     subnet: {
       id: vnet1.properties.subnets[0].id
     }
+    customDnsConfigs: [
+      {
+        fqdn: 'string'
+      }
+    ]
     privateLinkServiceConnections: [
       {
         name: databasePrivateEndpointName
         properties: {
           privateLinkServiceId: mySqlServer.id
           groupIds: [
-            'mysqlServer'
+            'mySqlServer'
           ]
         }
       }
@@ -191,6 +173,3 @@ resource pvtEndpointDnsGroup 'Microsoft.Network/privateEndpoints/privateDnsZoneG
     databasePrivateEndpoint
   ]
 }
-
-output mySqlServerName string = mySqlServer.name
-output mySqlServerDbName string = mySqlServerDB.name
