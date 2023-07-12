@@ -1,4 +1,4 @@
-# Log 00-06-2023
+# Log 00-07-2023
 
 ## Dagverslag (1 zin)
 Deployed virtual machine scale set and successfully connected to mgmtserver with RDP.

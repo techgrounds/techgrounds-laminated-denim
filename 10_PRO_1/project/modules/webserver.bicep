@@ -17,6 +17,10 @@ param adminUsername string
 @description('The administrator password.')
 param adminPassword string
 
+@secure()
+@description('The password for the SSL certificate.')
+param sslPassword string
+
 param Vnet1Identity string
 param vnet1Subnet1Identity string
 param diskEncryptionSetName string
@@ -56,18 +60,11 @@ var imageReference = {
 
 //variables for other resources
 var publicIPAddressName = '${vmScaleSetName}pip'
-var publicIPAddressID = webServerPublicIP.id
-var loadBalancerName = '${vmScaleSetName}lb'
-var lbProbeID = resourceId('Microsoft.Network/loadBalancers/probes', loadBalancerName, 'tcpProbe')
-var natPoolName = '${vmScaleSetName}natpool'
+var appGatewayName = '${vmScaleSetName}gateway'
 var bePoolName = '${vmScaleSetName}bepool'
-var lbPoolID = resourceId('Microsoft.Network/loadBalancers/backendAddressPools', loadBalancerName, bePoolName)
-var natStartPort = 50000
-var natEndPort = 50119
-var natBackendPort = 3389
+var bePoolID = resourceId('Microsoft.Network/applicationGateways/backendAddressPools', appGatewayName, bePoolName)
 var nicName = '${vmScaleSetName}nic'
 var ipConfigName = '${vmScaleSetName}ipconfig'
-var frontEndIPConfigID = resourceId('Microsoft.Network/loadBalancers/frontendIPConfigurations', loadBalancerName, 'loadBalancerFrontEnd')
 var publicIpSku = 'Standard'
 var autoScaleResourceName = '${webServerName}AutoScale'
 var autoScaleDefault = '1'
@@ -79,6 +76,8 @@ var scaleOutCPUPercentageThreshold = 75
 var scaleInCPUPercentageThreshold = 25
 var scaleOutInterval = '1'
 var scaleInInterval = '1'
+
+var base64EncodedCert = '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'
 //var webServerScriptName = '${vmScaleSetName}Script'
 var launchScript = 'IyEvYmluL2Jhc2gKc3VkbyBzdQphcHQgdXBkYXRlCmFwdCBpbnN0YWxsIGFwYWNoZTIgLXkKdWZ3IGFsbG93ICdBcGFjaGUnCnN5c3RlbWN0bCBlbmFibGUgYXBhY2hlMgpzeXN0ZW1jdGwgcmVzdGFydCBhcGFjaGUy'
 ///////
@@ -87,24 +86,90 @@ resource diskEncryptionSet 'Microsoft.Compute/diskEncryptionSets@2022-07-02' exi
   name: diskEncryptionSetName
 }
 
-//A load balancer connected to the vmss with a public IP.
-resource loadBalancer 'Microsoft.Network/loadBalancers@2022-11-01' = {
-  name: loadBalancerName
+resource vnet1 'Microsoft.Network/virtualNetworks@2022-11-01' existing = {
+  name: Vnet1Identity
+}
+
+//An application gateway with a public IP that is connected to the vmss.
+resource appGateway 'Microsoft.Network/applicationGateways@2022-11-01' = {
+  name: appGatewayName
   location: location
-  sku: {
-    name: 'Standard'
-  }
-  tags: {
-    Environment: envName
-    Location: location
-  }
   properties: {
+    sku: {
+      name: 'Standard_v2'
+      tier: 'Standard_v2'
+    }
+    sslCertificates: [
+      {
+        name: 'appGatewaySslCert'
+        properties: {
+          data: base64EncodedCert
+          password: sslPassword
+        }
+      }
+    ]
+    gatewayIPConfigurations: [
+      {
+        name: 'appGatewayIpConfig'
+        properties: {
+          subnet: {
+            id: vnet1.properties.subnets[1].id
+          }
+        }
+      }
+    ]
     frontendIPConfigurations: [
       {
-        name: 'LoadBalancerFrontEnd'
+        name: 'appGatewayFrontendIP'
         properties: {
+          privateIPAllocationMethod: 'Dynamic'
           publicIPAddress: {
-            id: publicIPAddressID
+            id: webServerPublicIP.id
+          }
+        }
+      }
+    ]
+    frontendPorts: [
+      {
+        name: 'appGatewayHTTPFrontendPort'
+        properties: {
+          port: 80
+        }
+      }
+      {
+        name: 'appGatewayHTTPSFrontendPort'
+        properties: {
+          port: 443
+        }
+      }
+    ]
+    httpListeners: [
+      {
+        name: 'appGatewayHTTPListener'
+        properties: {
+          frontendIPConfiguration: {
+            id: resourceId('Microsoft.Network/applicationGateways/frontendIPConfigurations', appGatewayName, 'appGatewayFrontendIP')
+          }
+          frontendPort: {
+            id: resourceId('Microsoft.Network/applicationGateways/frontendPorts', appGatewayName, 'appGatewayHTTPFrontendPort')
+          }
+          protocol: 'Http'
+          requireServerNameIndication: false
+        }
+      }
+      {
+        name: 'appGatewayHTTPSListener'
+        properties: {
+          frontendIPConfiguration: {
+            id: resourceId('Microsoft.Network/applicationGateways/frontendIPConfigurations', appGatewayName, 'appGatewayFrontendIP')
+          }
+          frontendPort: {
+            id: resourceId('Microsoft.Network/applicationGateways/frontendPorts', appGatewayName, 'appGatewayHTTPSFrontendPort')
+          }
+          protocol: 'Https'
+          requireServerNameIndication: false
+          sslCertificate: {
+            id: resourceId('Microsoft.Network/applicationGateways/sslCertificates', appGatewayName, 'appGatewaySSLCert')
           }
         }
       }
@@ -112,55 +177,70 @@ resource loadBalancer 'Microsoft.Network/loadBalancers@2022-11-01' = {
     backendAddressPools: [
       {
         name: bePoolName
-      }
+        }
     ]
-    inboundNatPools: [
+    backendHttpSettingsCollection: [
       {
-        name: natPoolName
+        name: 'appGatewayBackendHttpSettings'
         properties: {
-          frontendIPConfiguration: {
-            id: frontEndIPConfigID
-          }
-          protocol: 'Tcp'
-          frontendPortRangeStart: natStartPort
-          frontendPortRangeEnd: natEndPort
-          backendPort: natBackendPort
+          port: 80
+          protocol: 'Http'
+          cookieBasedAffinity: 'Disabled'
+          requestTimeout: 30
         }
       }
     ]
-    loadBalancingRules: [
+    redirectConfigurations: [
       {
-        name: 'LBRule'
+        name: 'appGatewayRedirectConfig'
         properties: {
-          frontendIPConfiguration: {
-            id: frontEndIPConfigID
+          redirectType: 'Permanent'
+          targetListener: {
+            id: resourceId('Microsoft.Network/applicationGateways/httpListeners', appGatewayName, 'appGatewayHttpsListener')
+          }
+        }
+      }
+    ]
+    requestRoutingRules: [
+      {
+        name: 'routingRuleHTTP'
+        properties: {
+          ruleType: 'Basic'
+          priority: 1
+          httpListener: {
+            id: resourceId('Microsoft.Network/applicationGateways/httpListeners', appGatewayName, 'appGatewayHttpListener')
+          }
+          redirectConfiguration: {
+              id: resourceId('Microsoft.Network/applicationGateways/redirectConfigurations', appGatewayName, 'appGatewayRedirectConfig')
+            }
+          }
+        }
+      {
+        name: 'routingRuleHTTPS'
+        properties: {
+          ruleType: 'Basic'
+          priority: 10
+          httpListener: {
+            id: resourceId('Microsoft.Network/applicationGateways/httpListeners', appGatewayName, 'appGatewayHttpsListener')
           }
           backendAddressPool: {
-            id: lbPoolID
+            id: bePoolID
           }
-          protocol: 'Tcp'
-          frontendPort: 80
-          backendPort: 80
-          enableFloatingIP: false
-          idleTimeoutInMinutes: 5
-          probe: {
-            id: lbProbeID
+          backendHttpSettings: {
+            id: resourceId('Microsoft.Network/applicationGateways/backendHttpSettingsCollection', appGatewayName, 'appGatewayBackendHttpSettings')
           }
         }
       }
     ]
-    probes: [
-      {
-        name: 'tcpProbe'
-        properties: {
-          protocol: 'Tcp'
-          port: 80
-          intervalInSeconds: 5
-          numberOfProbes: 2
-        }
-      }
-    ]
+    enableHttp2: false
+    autoscaleConfiguration: {
+      minCapacity: 1
+      maxCapacity: 2
+    }
   }
+  dependsOn: [
+    vnet1
+  ]
 }
 
 // A virtual machine scale set
@@ -216,9 +296,9 @@ resource webServer 'Microsoft.Compute/virtualMachineScaleSets@2023-03-01' = {
                     subnet: {
                       id: resourceId('Microsoft.Network/virtualNetworks/subnets', Vnet1Identity, vnet1Subnet1Identity)
                     }
-                    loadBalancerBackendAddressPools: [
+                    applicationGatewayBackendAddressPools: [
                       {
-                        id: lbPoolID
+                        id: bePoolID
                       }
                     ]
                   }
@@ -229,11 +309,18 @@ resource webServer 'Microsoft.Compute/virtualMachineScaleSets@2023-03-01' = {
         ]
       }
     }
+    // automaticRepairsPolicy: {
+    //   enabled: true
+    //   //repairAction: 'Replace'
+    //   gracePeriod: 'PT10M'
+    // }
   }
   dependsOn: [
-    loadBalancer
+    appGateway
   ]
 }
+
+
 
 //A public IP for the load balancer.
 resource webServerPublicIP 'Microsoft.Network/publicIPAddresses@2022-11-01' = {
@@ -318,50 +405,6 @@ resource autoScaleResource 'Microsoft.Insights/autoscalesettings@2022-10-01' = {
     }
   }
 }
-
-// resource webServerScript 'Microsoft.Resources/deploymentScripts@2020-10-01' = {
-//   name: webServerScriptName
-//   location: location
-//   kind: 'AzureCLI'
-//   identity: {
-//     type: 'SystemAssigned'
-//   }
-//   properties: {
-//     azCliVersion: '2.0.80'
-//     retentionInterval: 'P1D'
-//     cleanupPreference: 'Always'
-//     primaryScriptUri: 'https://github.com/techgrounds/techgrounds-laminated-denim/blob/main/10_PRO_1/project/scripts/apache.sh'
-//     storageAccountSettings: {
-//       storageAccountName: storageAccount.name
-//       storageAccountKey: storageAccount.listKeys('2022-09-01').keys[0].value
-//     }
-//   }
-//   dependsOn: [
-//     storageAccount
-//     webServer
-//   ]
-// }
-
-// resource extension 'Microsoft.Compute/virtualMachineScaleSets/extensions@2023-03-01' = {
-//   parent: webServer
-//   name: 'install_apache'
-//   properties: {
-//     publisher: 'Microsoft.Azure.Extensions'
-//     type: 'CustomScript'
-//     typeHandlerVersion: '2.1'
-//     autoUpgradeMinorVersion: true
-//     settings: {
-//       skipDos2Unix: false
-//       fileUris: [
-
-//       'https://github.com/techgrounds/techgrounds-laminated-denim/blob/main/10_PRO_1/project/scripts/apache.sh'
-//       ]
-//     }
-//     protectedSettings: {
-//       commandToExecute: 'sh apache.sh'
-//     }
-//   }
-// }
 
 //Output webserver name
 output webServerName string = webServer.name

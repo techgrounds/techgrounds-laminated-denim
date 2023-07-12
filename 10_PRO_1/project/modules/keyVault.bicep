@@ -19,13 +19,24 @@ param adminPassword string
 @description('The object ID of the service principal that will be granted access to the Key Vault.')
 param principalId string
 
+@description('The name for the Managed Identity.')
+param managedIdName string = 'keyVaultManagedIdentity'
+
 //Variable for keyvault name.
 var keyVaultName = '${take(envName, 3)}-${take(location, 6)}-vault${take(uniqueString(resourceGroup().id), 6)}'
 var adminUserSecretName = '${keyVaultName}-adminUserName'
 var adminPasswordSecretName = '${keyVaultName}-adminPassword'
 var diskEncryptionSetName = '${keyVaultName}-diskEncryptionSet'
 var diskEncryptionKeyName = 'diskEncryptionSetKey'
-var recoveryKeyName = 'recoveryVaultKey'
+
+resource managedId 'Microsoft.ManagedIdentity/userAssignedIdentities@2023-01-31' = {
+  name: managedIdName
+  location: location
+  tags: {
+    location: location
+    environment: envName
+  }
+}
 
 // Deploys a Key Vault.
 resource keyVault 'Microsoft.KeyVault/vaults@2023-02-01' = {
@@ -115,7 +126,7 @@ resource diskEncryptionSet 'Microsoft.Compute/diskEncryptionSets@2022-07-02' = {
   ]
 }
 
-resource diskEncryptionAccessPolicy 'Microsoft.KeyVault/vaults/accessPolicies@2023-02-01' = {
+resource AccessPolicy 'Microsoft.KeyVault/vaults/accessPolicies@2023-02-01' = {
   name: 'add'
   parent: keyVault
   properties: {
@@ -127,6 +138,19 @@ resource diskEncryptionAccessPolicy 'Microsoft.KeyVault/vaults/accessPolicies@20
             'get'
             'wrapKey'
             'unwrapKey'
+          ]
+        }
+        tenantId: subscription().tenantId
+      }
+      {
+        objectId: managedId.properties.principalId
+        permissions: {
+          keys: [
+            'get'
+            'wrapKey'
+            'unwrapKey'
+            'encrypt'
+            'decrypt'
           ]
         }
         tenantId: subscription().tenantId
@@ -166,24 +190,6 @@ resource adminPasswordSecret 'Microsoft.KeyVault/vaults/secrets@2023-02-01' = {
   name: adminPasswordSecretName
   properties: {
     value: adminPassword
-  }
-}
-
-resource recoveryKey 'Microsoft.KeyVault/vaults/keys@2023-02-01' = {
-  parent: keyVault
-  name: recoveryKeyName
-  properties: {
-    attributes: {
-      enabled: true
-    }
-    keySize: 4096
-    kty: 'RSA'
-    keyOps: [
-      'encrypt'
-      'decrypt'
-      'unwrapKey'
-      'wrapKey'
-    ]
   }
 }
 

@@ -96,6 +96,7 @@
 * Segmentation is important; different functions should be separated.
 * RPO: 1 week is the MVP, ideal is 1 day.
 * RTO: 1 hour.
+* Backup: management server data.
 
 ## Assumptions:
 * Azure AD with PIM.
