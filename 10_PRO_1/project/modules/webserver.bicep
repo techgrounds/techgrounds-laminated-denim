@@ -309,11 +309,11 @@ resource webServer 'Microsoft.Compute/virtualMachineScaleSets@2023-03-01' = {
         ]
       }
     }
-    automaticRepairsPolicy: {
-      enabled: true
-      repairAction: 'Replace'
-      gracePeriod: 'PT10M'
-    }
+    // automaticRepairsPolicy: {
+    //   enabled: true
+    //   repairAction: 'Replace'
+    //   gracePeriod: 'PT10M'
+    // }
   }
   dependsOn: [
     appGateway
