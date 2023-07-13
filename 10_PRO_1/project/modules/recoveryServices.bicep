@@ -11,29 +11,18 @@ param location string
 @description('The name for the Managed Identity.')
 param managedIdName string
 
-// @description('The name of the Key Vault.')
-// param keyVaultName string
-
-// param recoveryKeySecretUri string
+@description('The name of the Management Server.')
+param mgmtServerName string
 
 @description('The name of the Recovery Services Vault')
 param recoveryVaultName string = '${take(envName, 3)}-${take(location, 6)}-recoveryvault${take(uniqueString(resourceGroup().id), 6)}'
 
-// var VaultPolicyName = '${recoveryVaultName}-policy'
-// var VaultSqlContainerName = '${recoveryVaultName}-websv-container'
-// var recoveryVaultDbItemName = '${recoveryVaultName}/${envName}fabric/${location}DbContainer/webSvDb'
-
-
-// resource keyVault 'Microsoft.KeyVault/vaults@2023-02-01' existing = {
-//   name: keyVaultName
-// }
-
-// resource recoveryKey 'Microsoft.KeyVault/vaults/keys@2023-02-01' existing = {
-//   name: recoveryKeyName
-// }
-
 resource managedId 'Microsoft.ManagedIdentity/userAssignedIdentities@2023-01-31' existing = {
   name: managedIdName
+}
+
+resource mgmtServer 'Microsoft.Compute/virtualMachines@2023-03-01' existing = {
+  name: mgmtServerName
 }
 
 resource recoveryVault 'Microsoft.RecoveryServices/vaults@2023-01-01' = {
@@ -65,6 +54,36 @@ resource recoveryVault 'Microsoft.RecoveryServices/vaults@2023-01-01' = {
     publicNetworkAccess: 'Disabled'
   }
 }
+
+
+var backupFabric = 'Azure'
+var protectionContainer = 'iaasvmcontainer;iaasvmcontainerv2;${resourceGroup().name};${mgmtServerName}'
+var protectedItem = 'vm;iaasvmcontainerv2;${resourceGroup().name};${mgmtServerName}'
+
+//recovery container for the management server
+resource mgmtRecoveryContainer 'Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers@2023-02-01' = {
+  name: '${backupFabric}/${protectionContainer}/${protectedItem}'
+  properties: {
+    containerType:'Microsoft.Compute/virtualMachines'
+    virtualMachineId: mgmtServer.id
+  }
+}
+
+//recovery policy for the management server
+// resource mgmtRecoveryPolicy 'Microsoft.RecoveryServices/vaults/backupPolicies@2023-01-01' = {
+//   name: '${mgmtServerName}-BackupPolicy'
+//   properties: {
+//     protectedItemsCount: 1
+//     backupManagementType: 'AzureIaasVM'
+//     retentionPolicy: {
+//       retentionPolicyType: 'SimpleRetentionPolicy'
+//       retentionDuration: {
+//         count: 1
+//         durationType: 'Weeks'
+//       }
+//     }
+//   }
+// }
 
 // resource recoveryVaultPolicy 'Microsoft.RecoveryServices/vaults/backupPolicies@2023-01-01' = {
 //   name: VaultPolicyName

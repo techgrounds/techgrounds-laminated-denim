@@ -309,18 +309,16 @@ resource webServer 'Microsoft.Compute/virtualMachineScaleSets@2023-03-01' = {
         ]
       }
     }
-    // automaticRepairsPolicy: {
-    //   enabled: true
-    //   //repairAction: 'Replace'
-    //   gracePeriod: 'PT10M'
-    // }
+    automaticRepairsPolicy: {
+      enabled: true
+      repairAction: 'Replace'
+      gracePeriod: 'PT10M'
+    }
   }
   dependsOn: [
     appGateway
   ]
 }
-
-
 
 //A public IP for the load balancer.
 resource webServerPublicIP 'Microsoft.Network/publicIPAddresses@2022-11-01' = {

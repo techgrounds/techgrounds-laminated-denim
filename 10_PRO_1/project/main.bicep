@@ -1,3 +1,4 @@
+//Resource group and tag parameters.
 @description('The environment name. "dev" and "prod" are valid inputs.')
 @allowed([
   'dev'
@@ -7,7 +8,9 @@ param envName string = 'dev'
 
 @description('The Azure Region into which the resources are deployed.')
 param location string = resourceGroup().location
+//
 
+//Administrative and security parameters.
 @secure()
 @description('The administrator username.')
 param adminUsername string
@@ -19,15 +22,29 @@ param adminPassword string
 @secure()
 @description('The password for the SSL certificate.')
 param sslPassword string
+//
 
+//Networking parameters.
+@description('The IP ranges that are allowed to access the management server via SSH and RDP.')
+param allowedIpRange array = ['31.151.222.110', '31.151.222.111']
+//
+
+//Key Vault parameters.
 @description('The object ID of the service principal that will be granted access to the Key Vault.')
 param principalId string
 
-@description('The IP ranges that are allowed to access the management server via SSH and RDP.')
-param allowedIpRange array = ['31.151.222.110', '31.151.222.111']
-
 @description('The name for the Managed Identity.')
 param managedIdName string = 'keyVaultManagedIdentity'
+//
+
+//Mgmt Server parameters.
+@description('The name of the management server.')
+param mgmtServerName string = '${take(envName, 3)}${take(location, 6)}mgmtsv'
+//
+
+
+
+
 
 
 //param rgName string = ''
@@ -81,11 +98,10 @@ module mgmtServer 'modules/managementServer.bicep' = {
     adminPassword: adminPassword
     //StorageAcc: storage.outputs.storageAccountId
     StorageAccBlobEndpoint: storage.outputs.storageAccountBlobEndpoint
-    //keyVaultName: keyvault.outputs.keyVaultID
     diskEncryptionSetName: keyvault.outputs.diskEncryptionSetName
     VNet2Identity: networking.outputs.vnet2ID
     vnet2Subnet1Identity: networking.outputs.vnet2Subnet1ID
-    //nsg2Identity: networking.outputs.nsg2ID
+    mgmtServerName: mgmtServerName
   }
 }
 
@@ -123,6 +139,7 @@ module recoveryVault 'modules/recoveryServices.bicep' = {
     location: location
     // keyVaultName: keyvault.outputs.keyVaultID
     managedIdName: managedIdName
+    mgmtServerName: mgmtServerName
   }
 }
 

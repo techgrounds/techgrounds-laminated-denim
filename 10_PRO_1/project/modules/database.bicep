@@ -75,7 +75,7 @@ resource mySqlServer 'Microsoft.DBforMySQL/servers@2017-12-01' = {
     name: skuName
     tier: SkuTier
     capacity: skuCapacity
-    size: '${SkuSizeMB}'  //a string is expected here but a int for the storageProfile...
+    size: '${SkuSizeMB}'
     family: skuFamily
   }
   properties: {
@@ -114,11 +114,6 @@ resource databasePrivateEndpoint 'Microsoft.Network/privateEndpoints@2022-11-01'
     subnet: {
       id: vnet1.properties.subnets[0].id
     }
-    customDnsConfigs: [
-      {
-        fqdn: 'string'
-      }
-    ]
     privateLinkServiceConnections: [
       {
         name: databasePrivateEndpointName

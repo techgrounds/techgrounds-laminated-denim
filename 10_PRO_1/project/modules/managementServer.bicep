@@ -17,13 +17,14 @@ param adminUsername string
 param adminPassword string
 
 // Parameters with outputs from other modules.
-// param keyVaultName string
 param diskEncryptionSetName string
 param VNet2Identity string
 param vnet2Subnet1Identity string
-//param nsg2Identity string
 //param StorageAcc string
 param StorageAccBlobEndpoint string
+
+@description('The name of the management server.')
+param mgmtServerName string
 
 //Variables for the networking components of the VM.
 var MgmtDNSLabel = toLower('${mgmtServerName}${take(uniqueString(resourceGroup().id), 4)}')
@@ -31,14 +32,9 @@ var publicIpSku = 'Standard'
 var nicName = 'MgmtServerNic'
 
 // Variable for the management server VM.
-var mgmtServerName = '${take(envName, 3)}${take(location, 6)}mgmtsv'
 var mgmtServerSize = envName == 'dev' ? 'Standard_B1ms' : 'Standard_B2s'
 // variable for the Windows Server OS version
 var MgmtServerOSVersion = '2022-Datacenter'
-
-// resource keyVault 'Microsoft.KeyVault/vaults@2023-02-01' existing = {
-//   name: keyVaultName
-// }
 
 resource diskEncryptionSet 'Microsoft.Compute/diskEncryptionSets@2022-07-02' existing = {
   name: diskEncryptionSetName
