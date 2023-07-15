@@ -42,24 +42,6 @@ param managedIdName string = 'keyVaultManagedIdentity'
 param mgmtServerName string = '${take(envName, 3)}${take(location, 6)}mgmtsv'
 //
 
-
-
-
-
-
-//param rgName string = ''
-//= take('${take(envName, 3)}-${take(location, 6)}-rg${uniqueString(resourceGroup().id)}', 24)
-//param rgLocation string = 'westeurope'
-
-//module resourceGroupModule 'modules/resourceGroup.bicep' = {
-  //name: 'resourceGroupModule'
-  //scope: subscription()
-  //params: {
-    //rgName: rgName
-    //location: location
-  //}
-//}
-
 module networking 'modules/networking.bicep' = {
   name: 'networking-${location}'
   params: {
