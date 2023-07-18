@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10_PRO_1/project_notes/Python database test.md",
+                "file": "10_PRO_1/project/readme.md",
                 "mode": "source",
                 "source": false
               }
@@ -33,6 +33,24 @@
           }
         ],
         "currentTab": 1
+      },
+      {
+        "id": "72645b3194f0c4e9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "96dae6f739968978",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "10_PRO_1/project/documentation/Design Documentation Project Stafford.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -106,7 +124,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "10_PRO_1/project_notes/Python database test.md",
+                "file": "10_PRO_1/project/readme.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +141,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "10_PRO_1/project_notes/Python database test.md",
+                "file": "10_PRO_1/project/readme.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +164,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "10_PRO_1/project_notes/Python database test.md"
+                "file": "10_PRO_1/project/readme.md"
               }
             }
           }
@@ -169,10 +187,11 @@
   },
   "active": "c044fab285fa7ade",
   "lastOpenFiles": [
+    "10_PRO_1/project/documentation/Design Documentation Project Stafford.md",
+    "10_PRO_1/project/readme.md",
+    "10_PRO_1/project_notes/Python database test.md",
     "10_PRO_1/project_notes/python demo.mkv",
     "10_PRO_1/project_notes/learning/Presentation planning.md",
-    "10_PRO_1/project_notes/Python database test.md",
-    "10_PRO_1/project/documentation/Design Documentation Project Stafford.md",
     "10_PRO_1/project/main.parameters.json",
     "10_PRO_1/project/main.bicepparam",
     "10_PRO_1/project/documentation/Infrastructure_Diagram.png",
@@ -204,7 +223,6 @@
     "10_PRO_1/project/documentation/time_logs/2023-07-06.md",
     "10_PRO_1/project/documentation/time_logs/2023-30-06.md",
     "10_PRO_1/project/documentation/time_logs/2023-07-03.md",
-    "10_PRO_1/project/documentation",
     "10_PRO_1/project/documentation/time_logs/2023-20-06.md",
     "07_SC900_1/00SC_resources/SC-1_screenshot3.png",
     "07_SC900_1/00SC_resources/SC-1_screenshot2.png",
