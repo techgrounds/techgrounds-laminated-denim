@@ -22,6 +22,7 @@ resource mgmtServer 'Microsoft.Compute/virtualMachines@2023-03-01' existing = {
   name: mgmtServerName
 }
 
+//Deploys a Recovery Services Vault.
 resource recoveryVault 'Microsoft.RecoveryServices/vaults@2023-01-01' = {
   name: recoveryVaultName
   location: location

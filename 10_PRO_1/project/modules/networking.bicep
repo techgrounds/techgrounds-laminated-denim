@@ -39,7 +39,7 @@ resource vnet1 'Microsoft.Network/virtualNetworks@2022-11-01' = {
     }
     subnets: [
       {
-        name: '${vnet1Name}-subnet1' //subnet for webserver VMSS.
+        name: '${vnet1Name}-subnet1' //subnet for webserver VMSS and the database private endpoint.
         properties: {
           addressPrefix: vnet1Subnet1AddressPrefix
           privateEndpointNetworkPolicies: 'Enabled'
@@ -173,6 +173,7 @@ resource Vnet1Nsg1 'Microsoft.Network/networkSecurityGroups@2022-11-01' = {
   }
 }
 
+//NSG for the App Gateway.
 resource Vnet1Nsg2 'Microsoft.Network/networkSecurityGroups@2022-11-01' = {
   name: '${vnet1Name}-nsg2'
   location: location

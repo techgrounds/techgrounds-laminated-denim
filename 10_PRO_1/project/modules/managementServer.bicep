@@ -55,6 +55,7 @@ resource mgmtServerPIP 'Microsoft.Network/publicIPAddresses@2022-11-01' = {
   }
 }
 
+//A NIC for the management server.
 resource MgmtServerNIC 'Microsoft.Network/networkInterfaces@2022-11-01' = {
   name: nicName
   location: location

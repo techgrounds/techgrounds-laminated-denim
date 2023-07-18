@@ -68,6 +68,7 @@ resource vnet1 'Microsoft.Network/virtualNetworks@2022-11-01'existing = {
   name: Vnet1Identity
 }
 
+//Creates an Azure Database for MySQL Single Server resource.
 resource mySqlServer 'Microsoft.DBforMySQL/servers@2017-12-01' = {
   name: mySqlServerName
   location: location
@@ -102,11 +103,13 @@ resource mySqlServer 'Microsoft.DBforMySQL/servers@2017-12-01' = {
   }
 }
 
+// Creates a database on the MySQL server.
 resource mySqlServerDB 'Microsoft.DBforMySQL/servers/databases@2017-12-01' = {
   parent: mySqlServer
   name: '${mySqlServerName}-myDB'
 }
 
+//The below resources create a private endpoint for the database server.
 resource databasePrivateEndpoint 'Microsoft.Network/privateEndpoints@2022-11-01' = {
   name: databasePrivateEndpointName
   location: location

@@ -232,20 +232,6 @@ resource appGateway 'Microsoft.Network/applicationGateways@2022-11-01' = {
         }
       }
     ]
-    // probes: [
-    //   {
-    //     name: 'HealthProbe'
-    //     properties: {
-    //       pickHostNameFromBackendHttpSettings: true
-    //       protocol: 'Http'
-    //       port: 80
-    //       unhealthyThreshold: 3
-    //       path: '/'
-    //       timeout: 10
-    //       interval: 20
-    //     }
-    //   }
-    // ]
     enableHttp2: false
     autoscaleConfiguration: {
       minCapacity: 1
@@ -350,24 +336,6 @@ resource webServer 'Microsoft.Compute/virtualMachineScaleSets@2023-03-01' = {
     appGateway
   ]
 }
-
-// resource HealthExtension 'Microsoft.Compute/virtualMachineScaleSets/virtualMachines/extensions@2023-03-01' = {
-//   name: '${webServerName}/HealthExtension'
-//   location: location
-//   properties: {
-//     publisher: 'Microsoft.ManagedServices'
-//     type: 'ApplicationHealthLinux'
-//     autoUpgradeMinorVersion: true
-//     typeHandlerVersion: '1.0'
-//     settings: {
-//       protocol: 'HTTP'
-//       port: 80
-//       requestPath: '/'
-//       intervalInSeconds: 5
-//       numberofProbes: 1
-//     }
-//   }
-// }
 
 //A public IP for the Application Gateway.
 resource webServerPublicIP 'Microsoft.Network/publicIPAddresses@2022-11-01' = {

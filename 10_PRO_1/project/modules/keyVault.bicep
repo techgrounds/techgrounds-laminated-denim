@@ -38,7 +38,7 @@ resource managedId 'Microsoft.ManagedIdentity/userAssignedIdentities@2023-01-31'
   }
 }
 
-// Deploys a Key Vault.
+// Deploys a Key Vault with an access policy.
 resource keyVault 'Microsoft.KeyVault/vaults@2023-02-01' = {
   name: keyVaultName
   location: location
@@ -93,6 +93,7 @@ resource keyVault 'Microsoft.KeyVault/vaults@2023-02-01' = {
   }
 }
 
+//Creates a Disk Encryption Set used by the web and management servers to encrypt their disks.
 resource diskEncryptionSet 'Microsoft.Compute/diskEncryptionSets@2022-07-02' = {
   name: diskEncryptionSetName
   location: location
@@ -114,6 +115,7 @@ resource diskEncryptionSet 'Microsoft.Compute/diskEncryptionSets@2022-07-02' = {
   ]
 }
 
+//An Access Policy that grants permissions to the Disk Encryption Set.
 resource AccessPolicy 'Microsoft.KeyVault/vaults/accessPolicies@2023-02-01' = {
   name: 'add'
   parent: keyVault
@@ -147,6 +149,7 @@ resource AccessPolicy 'Microsoft.KeyVault/vaults/accessPolicies@2023-02-01' = {
   }
 }
 
+//Creates a Disk Encryption Key.
 resource diskEncryptionKey 'Microsoft.KeyVault/vaults/keys@2023-02-01'= {
   parent: keyVault
   name: diskEncryptionKeyName
@@ -165,6 +168,7 @@ resource diskEncryptionKey 'Microsoft.KeyVault/vaults/keys@2023-02-01'= {
   }
 }
 
+//Creates Secrets in the Vault.
 resource adminUserSecret 'Microsoft.KeyVault/vaults/secrets@2023-02-01' = {
   parent: keyVault
   name: adminUserSecretName
