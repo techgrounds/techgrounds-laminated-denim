@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10_PRO_1/project_notes/1.1 planning.md",
+                "file": "10_PRO_1/project/documentation/Design Documentation Project Stafford.md",
                 "mode": "source",
                 "source": false
               }
@@ -33,6 +33,24 @@
           }
         ],
         "currentTab": 1
+      },
+      {
+        "id": "4439994ad9716803",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e546f0b4e61ca2fc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "10_PRO_1/project_notes/01_planning.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -106,7 +124,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "10_PRO_1/project_notes/1.1 planning.md",
+                "file": "10_PRO_1/project/documentation/Design Documentation Project Stafford.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +141,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "10_PRO_1/project_notes/1.1 planning.md",
+                "file": "10_PRO_1/project/documentation/Design Documentation Project Stafford.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +164,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "10_PRO_1/project_notes/1.1 planning.md"
+                "file": "10_PRO_1/project/documentation/Design Documentation Project Stafford.md"
               }
             }
           }
@@ -167,44 +185,45 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c044fab285fa7ade",
+  "active": "581e030abe8bd9e5",
   "lastOpenFiles": [
-    "10_PRO_1/documentation/time_logs/2023-07-15.md",
-    "10_PRO_1/documentation/time_logs/2023-07-13.md",
-    "10_PRO_1/documentation/time_logs/timelog_copyme.md",
-    "10_PRO_1/project_notes/1.1 planning.md",
-    "10_PRO_1/project/modules/test.bicep",
-    "10_PRO_1/project/modules/test",
-    "10_PRO_1/documentation/time_logs/2023-07-12.md",
-    "10_PRO_1/documentation/time_logs/2023-07-11.md",
-    "10_PRO_1/documentation/time_logs/2023-07-10.md",
+    "10_PRO_1/project/main.parameters.json",
+    "10_PRO_1/project/main.bicepparam",
+    "10_PRO_1/project/documentation/Infrastructure_Diagram.png",
+    "10_PRO_1/project/documentation/Design Documentation Project Stafford.md",
+    "10_PRO_1/project/documentation/Infrastructure_Diagram.png.crswap",
+    "10_PRO_1/project/documentation/Infrastructure_Diagram.drawio.crswap",
+    "10_PRO_1/project/documentation/time_logs/2023-06-06.md",
+    "10_PRO_1/project/documentation/time_logs/2023-06-05.md",
+    "10_PRO_1/project/documentation/time_logs/2023-07-17.md",
+    "10_PRO_1/project/documentation/time_logs/timelog_copyme.md",
+    "10_PRO_1/project/documentation/Infrastructure_Diagram.drawio",
+    "10_PRO_1/documentation/Decision Documentation.md",
+    "10_PRO_1/documentation/Design Documentation.md",
     "10_PRO_1/project_notes/01_planning.md",
-    "10_PRO_1/project_notes/old plans.md",
+    "10_PRO_1/project_notes/1.1 planning.md",
     "10_PRO_1/project_notes/02_Bicep.md",
     "10_PRO_1/project_notes/Python database test.md",
+    "10_PRO_1/project_notes/Sprint Review.md",
+    "10_PRO_1/project/documentation/time_logs/2023-07-15.md",
+    "10_PRO_1/project/documentation/time_logs/2023-07-13.md",
+    "10_PRO_1/project/modules/test.bicep",
+    "10_PRO_1/project/modules/test",
+    "10_PRO_1/project/documentation/time_logs/2023-07-12.md",
+    "10_PRO_1/project/documentation/time_logs/2023-07-11.md",
+    "10_PRO_1/project/documentation/time_logs/2023-07-10.md",
+    "10_PRO_1/project_notes/old plans.md",
     "01_Linux_1/01_completed_assignments/GIT-02 report.md",
     "10_PRO_1/project/appgwcert.pfx",
     "10_PRO_1/project/gatewaySslCert.cer",
-    "10_PRO_1/documentation/time_logs/2023-07-07.md",
-    "10_PRO_1/documentation/time_logs/2023-07-06.md",
-    "10_PRO_1/documentation/Design Documentation.md",
-    "10_PRO_1/documentation/Decision Documentation.md",
-    "10_PRO_1/documentation/time_logs/2023-30-06.md",
-    "10_PRO_1/documentation/time_logs/2023-07-03.md",
-    "10_PRO_1/project/documentation/Design Documentation Project Stafford.md",
+    "10_PRO_1/project/documentation/time_logs/2023-07-07.md",
+    "10_PRO_1/project/documentation/time_logs/2023-07-06.md",
+    "10_PRO_1/project/documentation/time_logs/2023-30-06.md",
+    "10_PRO_1/project/documentation/time_logs/2023-07-03.md",
     "10_PRO_1/project/documentation",
-    "10_PRO_1/documentation/time_logs/2023-20-06.md",
-    "10_PRO_1/documentation/time_logs/2023-29-06.md",
-    "04_Azure_1/04_completed_assignments/AZ-01_globalInfrastructure.md",
-    "05_Azure_2/05_completed_assignments/AZ-13_files.md",
-    "10_PRO_1/project_notes/Sprint Review.md",
-    "05_Azure_2/05_completed_assignments/AZ-11_loadBalancer.md",
-    "00_templates/retro.md",
+    "10_PRO_1/project/documentation/time_logs/2023-20-06.md",
+    "10_PRO_1/project/documentation/time_logs/2023-29-06.md",
     "10_PRO_1/project/modules/recoveryServices.parameters.json",
-    "10_PRO_1/project/modules/recoveryServices.old.json",
-    "10_PRO_1/project/modules/database.parameters.json",
-    "10_PRO_1/project/scripts/apache.sh",
-    "10_PRO_1/project/scripts",
     "07_SC900_1/00SC_resources/SC-1_screenshot3.png",
     "07_SC900_1/00SC_resources/SC-1_screenshot2.png",
     "07_SC900_1/00SC_resources/SC-1_screenshot1.png",
@@ -214,7 +233,6 @@
     "00_includes/AZ-16_screenshot4.png",
     "00_includes/AZ-16_screenshot2.png",
     "00_includes/AZ-16_screenshot3.png",
-    "00_includes/AZ-16_screenshot1.png",
     "Untitled.canvas",
     "Untitled 1.canvas"
   ]

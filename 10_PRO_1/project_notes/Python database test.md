@@ -1,5 +1,7 @@
 https://learn.microsoft.com/en-us/azure/mysql/single-server/connect-python
 
+`sudo stress --cpu 90 --timeout 1000
+
 # Database python script
 1. Download and install [Python 3.7 or above](https://www.python.org/downloads/) for your OS. Make sure to add Python to your `PATH`, because the MySQL connector requires that.
     

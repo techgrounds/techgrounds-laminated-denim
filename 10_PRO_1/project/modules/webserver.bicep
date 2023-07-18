@@ -239,8 +239,10 @@ resource appGateway 'Microsoft.Network/applicationGateways@2022-11-01' = {
           pickHostNameFromBackendHttpSettings: true
           protocol: 'Http'
           port: 80
-          unhealthyThreshold: 5
+          unhealthyThreshold: 3
           path: '/'
+          timeout: 10
+          interval: 20
         }
       }
     ]
@@ -340,7 +342,6 @@ resource webServer 'Microsoft.Compute/virtualMachineScaleSets@2023-03-01' = {
     }
     automaticRepairsPolicy: {
       enabled: true
-      repairAction: 'Replace'
       gracePeriod: 'PT10M'
     }
   }

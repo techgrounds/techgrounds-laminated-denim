@@ -71,21 +71,20 @@ module storage 'modules/storageaccount.bicep' = {
   }
 }
 
-module mgmtServer 'modules/managementServer.bicep' = {
-  name: 'mgmtServer-${location}'
-  params: {
-    envName: envName
-    location: location
-    adminUsername: adminUsername
-    adminPassword: adminPassword
-    //StorageAcc: storage.outputs.storageAccountId
-    StorageAccBlobEndpoint: storage.outputs.storageAccountBlobEndpoint
-    diskEncryptionSetName: keyvault.outputs.diskEncryptionSetName
-    VNet2Identity: networking.outputs.vnet2ID
-    vnet2Subnet1Identity: networking.outputs.vnet2Subnet1ID
-    mgmtServerName: mgmtServerName
-  }
-}
+// module mgmtServer 'modules/managementServer.bicep' = {
+//   name: 'mgmtServer-${location}'
+//   params: {
+//     envName: envName
+//     location: location
+//     adminUsername: adminUsername
+//     adminPassword: adminPassword
+//     StorageAccBlobEndpoint: storage.outputs.storageAccountBlobEndpoint
+//     diskEncryptionSetName: keyvault.outputs.diskEncryptionSetName
+//     VNet2Identity: networking.outputs.vnet2ID
+//     vnet2Subnet1Identity: networking.outputs.vnet2Subnet1ID
+//     mgmtServerName: mgmtServerName
+//   }
+// }
 
 module webServer 'modules/webserver.bicep' = {
   name: 'webServer-${location}'
@@ -114,14 +113,14 @@ module webServer 'modules/webserver.bicep' = {
 //   }
 // }
 
-module recoveryVault 'modules/recoveryServices.bicep' = {
-  name: 'recoveryVault-${location}'
-  params: {
-    envName: envName
-    location: location
-    // keyVaultName: keyvault.outputs.keyVaultID
-    // managedIdName: managedIdName
-    mgmtServerName: mgmtServerName
-  }
-}
+// module recoveryVault 'modules/recoveryServices.bicep' = {
+//   name: 'recoveryVault-${location}'
+//   params: {
+//     envName: envName
+//     location: location
+//     // keyVaultName: keyvault.outputs.keyVaultID
+//     // managedIdName: managedIdName
+//     mgmtServerName: mgmtServerName
+//   }
+// }
 
