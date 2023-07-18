@@ -66,18 +66,6 @@ resource keyVault 'Microsoft.KeyVault/vaults@2023-02-01' = {
         }
         tenantId: tenant().tenantId
       }
-      // an access policy allowing the disk encryption set to access the key vault 
-      // {
-      //   objectId: diskEncryptionSet.identity.principalId
-      //   permissions: {
-      //     keys: [
-      //       'get'
-      //       'wrapKey'
-      //       'unwrapKey'
-      //     ]
-      //   }
-      //   tenantId: tenant().tenantId
-      // }
     ]
     createMode: 'default'
     enabledForDeployment: true

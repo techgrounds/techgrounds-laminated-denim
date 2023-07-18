@@ -48,11 +48,10 @@ from mysql.connector import errorcode
 
 config = {
   'host':'<mydemoserver>.mysql.database.azure.com',
-  'user':'<myadmin>@<mydemoserver>',
-  'password':'<mypassword>',
+  'user':'overlord@<mydemoserver>',
+  'password':'TestPassword123!',
   'database':'<mydatabase>',
   'client_flags': [mysql.connector.ClientFlag.SSL],
-  'ssl_ca': '<path-to-SSL-cert>/DigiCertGlobalRootG2.crt.pem'
 }
 
 # Construct connection string

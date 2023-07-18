@@ -232,20 +232,20 @@ resource appGateway 'Microsoft.Network/applicationGateways@2022-11-01' = {
         }
       }
     ]
-    probes: [
-      {
-        name: 'HealthProbe'
-        properties: {
-          pickHostNameFromBackendHttpSettings: true
-          protocol: 'Http'
-          port: 80
-          unhealthyThreshold: 3
-          path: '/'
-          timeout: 10
-          interval: 20
-        }
-      }
-    ]
+    // probes: [
+    //   {
+    //     name: 'HealthProbe'
+    //     properties: {
+    //       pickHostNameFromBackendHttpSettings: true
+    //       protocol: 'Http'
+    //       port: 80
+    //       unhealthyThreshold: 3
+    //       path: '/'
+    //       timeout: 10
+    //       interval: 20
+    //     }
+    //   }
+    // ]
     enableHttp2: false
     autoscaleConfiguration: {
       minCapacity: 1
@@ -297,24 +297,25 @@ resource webServer 'Microsoft.Compute/virtualMachineScaleSets@2023-03-01' = {
         adminPassword: adminPassword
         customData: launchScript
       }
-      // extensionProfile: {
-      //   extensions: [
-      //     {
-      //       name: 'healthext'
-      //       properties: {
-      //         autoUpgradeMinorVersion: true
-      //         publisher: 'Microsoft.ManagedServices'
-      //         type: 'ApplicationHealthLinux'
-      //         typeHandlerVersion: '1.0'
-      //         settings: 
-      //       }
-      //     }
-      //   ]
-      // }
+      extensionProfile: {
+        extensions: [
+          {
+            name: 'healthext'
+            properties: {
+              autoUpgradeMinorVersion: true
+              publisher: 'Microsoft.ManagedServices'
+              type: 'ApplicationHealthLinux'
+              typeHandlerVersion: '1.0'
+              settings: {
+                port: 80
+                protocol: 'http'
+                requestPath: ''
+              }
+            }
+          }
+        ]
+      }
       networkProfile: {
-        healthProbe: {
-          id: resourceId('Microsoft.Network/applicationGateways/probes', appGatewayName, 'HealthProbe')
-        }
         networkInterfaceConfigurations: [
           {
             name: nicName
