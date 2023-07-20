@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10_PRO_1/project/documentation/time_logs/2023-06-09.md",
+                "file": "10_PRO_1/project_notes/Presentation/Presentation planning.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "10_PRO_1/project/documentation/time_logs/2023-06-09.md",
+                "file": "10_PRO_1/project_notes/Presentation/Presentation planning.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "10_PRO_1/project/documentation/time_logs/2023-06-09.md",
+                "file": "10_PRO_1/project_notes/Presentation/Presentation planning.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "10_PRO_1/project/documentation/time_logs/2023-06-09.md"
+                "file": "10_PRO_1/project_notes/Presentation/Presentation planning.md"
               }
             }
           }
@@ -142,7 +142,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300.5
+    "width": 300.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -154,10 +155,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "19331940fa7d7bb5",
+  "active": "9b161da09ff9e2f6",
   "lastOpenFiles": [
-    "10_PRO_1/project/documentation/time_logs/2023-06-06.md",
+    "10_PRO_1/project_notes/1.1 planning.md",
     "10_PRO_1/project/documentation/time_logs/2023-06-09.md",
+    "10_PRO_1/project/documentation/time_logs/2023-06-06.md",
     "10_PRO_1/project/documentation/time_logs/2023-06-15.md",
     "10_PRO_1/project/documentation/time_logs/2023-06-07.md",
     "10_PRO_1/project_notes/Presentation/Presentation planning.md",
@@ -169,7 +171,6 @@
     "10_PRO_1/project_notes/Presentation/chrome_71fSrqMaPa.png",
     "10_PRO_1/project/readme.md",
     "10_PRO_1/project_notes/01_planning.md",
-    "10_PRO_1/project_notes/1.1 planning.md",
     "10_PRO_1/project_notes/Presentation",
     "10_PRO_1/project_notes/Python database test.md",
     "README.md",

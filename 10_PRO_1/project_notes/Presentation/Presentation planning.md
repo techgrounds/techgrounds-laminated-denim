@@ -16,7 +16,7 @@ Deploy beforehand. Open:
 3. Show deployment.
 	1. Laat de readme zien; die bevat alle relevante informatie. Vertel over de resource group maken via powershell vs aanmaken via module.
 4. Showcase Azure Portal.
-5.  Show screenshots of stress test, explain what you did. 
+5. Show screenshots of stress test, explain what you did. 
 6. Showcase working SSL encryption screenshot. Explain how SSL is implemented.
 7. RDP into management server.
 8. ssh into webserver.
@@ -33,7 +33,7 @@ Ik zal jullie nu vertellen over welke diensten ik heb gebruikt. **Scroll through
 * Mgmt server: basics, parameter met IP addressen voor access. Dit vs Azure AD PIM. Vertel over de backups.
 * Webserver: VM basics, scaling rules (forecast), app gateway rerouting rules (reden waarom ik voor AppGW koos over LB), self-signed SSL certificate.
 * Database: Translate documentation. Verder, omdat het een managed service is, bied deze keuze automatische backups en encryptie om aan de requirements te voldoen.
-* Storage: kort beschrijven wat de storage account doet voor de project eisen.
+* Storage: kort beschrijven wat de storage account doet voor de project eisen. (disk storage, mogelijkheid om post deployment scripts te uploaden)
 * Backups: Recovery Services Vault. Vertel dat de default policy (30dagen) een goede keuze is omdat Azure default policies een goed startpunt zijn voor beveiliging van data.
 * Key Vault: login credentials voor de admin user, en doet aan disk encryptie via customer managed keys voor de VMs. Dit is een extra laag encryptie boven wat Azure by default bied,  omdat encryptie een strenge eis is in de project requirements.
 

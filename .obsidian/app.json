@@ -2,5 +2,6 @@
   "alwaysUpdateLinks": true,
   "spellcheckLanguages": [
     "en-AU"
-  ]
+  ],
+  "spellcheck": false
 }

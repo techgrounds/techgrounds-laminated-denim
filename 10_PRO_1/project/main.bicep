@@ -26,7 +26,7 @@ param sslPassword string
 
 //Networking parameters.
 @description('The IP ranges that are allowed to access the management server via SSH and RDP.')
-param allowedIpRange array = ['31.151.222.110', '31.151.222.111']
+param allowedIpRange array = ['']
 //
 
 //Key Vault parameters.
