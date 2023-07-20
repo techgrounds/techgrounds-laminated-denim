@@ -13,38 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "04_Azure_1/04_completed_assignments/AZ-01_globalInfrastructure.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c044fab285fa7ade",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "10_PRO_1/project/readme.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          }
-        ],
-        "currentTab": 1
-      },
-      {
-        "id": "72645b3194f0c4e9",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "96dae6f739968978",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "10_PRO_1/project/documentation/Design Documentation Project Stafford.md",
+                "file": "10_PRO_1/project/documentation/time_logs/2023-06-09.md",
                 "mode": "source",
                 "source": false
               }
@@ -84,7 +53,7 @@
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
-                "sortOrder": "alphabetical"
+                "sortOrder": "byModifiedTime"
               }
             }
           },
@@ -124,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "10_PRO_1/project/readme.md",
+                "file": "10_PRO_1/project/documentation/time_logs/2023-06-09.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -141,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "10_PRO_1/project/readme.md",
+                "file": "10_PRO_1/project/documentation/time_logs/2023-06-09.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -164,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "10_PRO_1/project/readme.md"
+                "file": "10_PRO_1/project/documentation/time_logs/2023-06-09.md"
               }
             }
           }
@@ -185,55 +154,55 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c044fab285fa7ade",
+  "active": "19331940fa7d7bb5",
   "lastOpenFiles": [
-    "10_PRO_1/project_notes/chrome_CErdPd8X3o.png",
-    "10_PRO_1/project_notes/chrome_KVsPfvXwO7.png",
-    "10_PRO_1/project/documentation/Design Documentation Project Stafford.md",
-    "10_PRO_1/project/readme.md",
-    "10_PRO_1/project_notes/Python database test.md",
-    "10_PRO_1/project_notes/python demo.mkv",
-    "10_PRO_1/project_notes/learning/Presentation planning.md",
-    "10_PRO_1/project/main.parameters.json",
-    "10_PRO_1/project/main.bicepparam",
-    "10_PRO_1/project/documentation/Infrastructure_Diagram.png",
-    "10_PRO_1/project/documentation/Infrastructure_Diagram.png.crswap",
-    "10_PRO_1/project/documentation/Infrastructure_Diagram.drawio.crswap",
     "10_PRO_1/project/documentation/time_logs/2023-06-06.md",
-    "10_PRO_1/project/documentation/time_logs/2023-06-05.md",
-    "10_PRO_1/project/documentation/time_logs/2023-07-17.md",
-    "10_PRO_1/project/documentation/time_logs/timelog_copyme.md",
-    "10_PRO_1/project/documentation/Infrastructure_Diagram.drawio",
-    "10_PRO_1/documentation/Decision Documentation.md",
-    "10_PRO_1/documentation/Design Documentation.md",
+    "10_PRO_1/project/documentation/time_logs/2023-06-09.md",
+    "10_PRO_1/project/documentation/time_logs/2023-06-15.md",
+    "10_PRO_1/project/documentation/time_logs/2023-06-07.md",
+    "10_PRO_1/project_notes/Presentation/Presentation planning.md",
+    "10_PRO_1/project_notes/Sprint Review.md",
+    "10_PRO_1/project/documentation/Design Documentation Project Stafford.md",
+    "10_PRO_1/project_notes/Presentation/Autoscale_3instances.png",
+    "10_PRO_1/project_notes/Presentation/Autoscale_2instances.png",
+    "10_PRO_1/project_notes/Presentation/SSL_test.png",
+    "10_PRO_1/project_notes/Presentation/chrome_71fSrqMaPa.png",
+    "10_PRO_1/project/readme.md",
     "10_PRO_1/project_notes/01_planning.md",
     "10_PRO_1/project_notes/1.1 planning.md",
+    "10_PRO_1/project_notes/Presentation",
+    "10_PRO_1/project_notes/Python database test.md",
+    "README.md",
+    "Untitled.canvas",
+    "10_PRO_1/project_notes/old plans.md",
+    "10_PRO_1/project_notes/Presentation/python demo.mkv",
+    "10_PRO_1/project_notes/Presentation/chrome_CErdPd8X3o.png",
     "10_PRO_1/project_notes/02_Bicep.md",
-    "10_PRO_1/project_notes/Sprint Review.md",
-    "10_PRO_1/project/documentation/time_logs/2023-07-15.md",
-    "10_PRO_1/project/documentation/time_logs/2023-07-13.md",
+    "10_PRO_1/project_notes/Presentation/chrome_KVsPfvXwO7.png",
+    "beschrijvingen/Wer.md",
+    "beschrijvingen/storage-types.md",
+    "beschrijvingen/scrumNotes.md",
+    "beschrijvingen/Presentation Notes.md",
+    "beschrijvingen/Exam notes.md",
+    "10_PRO_1/project/documentation/Infrastructure_Diagram.png",
+    "10_PRO_1/project/documentation/time_logs/2023-06-20.md",
+    "10_PRO_1/project/documentation/time_logs/2023-06-21.md",
+    "10_PRO_1/project/documentation/time_logs/2023-06-19.md",
+    "10_PRO_1/project/documentation/time_logs/2023-06-05.md",
+    "10_PRO_1/project/documentation/time_logs/2023-06-29.md",
+    "10_PRO_1/project/documentation/time_logs/2023-07-03.md",
+    "10_PRO_1/project/documentation/time_logs/2023-07-18.md",
+    "10_PRO_1/project/main.parameters.json",
+    "10_PRO_1/project/main.bicepparam",
+    "10_PRO_1/project/documentation/Infrastructure_Diagram.png.crswap",
+    "10_PRO_1/project/documentation/Infrastructure_Diagram.drawio.crswap",
+    "10_PRO_1/project/documentation/Infrastructure_Diagram.drawio",
     "10_PRO_1/project/modules/test.bicep",
     "10_PRO_1/project/modules/test",
-    "10_PRO_1/project/documentation/time_logs/2023-07-12.md",
-    "10_PRO_1/project/documentation/time_logs/2023-07-11.md",
-    "10_PRO_1/project/documentation/time_logs/2023-07-10.md",
-    "10_PRO_1/project_notes/old plans.md",
-    "01_Linux_1/01_completed_assignments/GIT-02 report.md",
     "10_PRO_1/project/appgwcert.pfx",
-    "10_PRO_1/project/gatewaySslCert.cer",
-    "10_PRO_1/project/documentation/time_logs/2023-07-07.md",
-    "10_PRO_1/project/documentation/time_logs/2023-07-06.md",
-    "10_PRO_1/project/documentation/time_logs/2023-30-06.md",
-    "10_PRO_1/project/documentation/time_logs/2023-07-03.md",
     "07_SC900_1/00SC_resources/SC-1_screenshot3.png",
     "07_SC900_1/00SC_resources/SC-1_screenshot2.png",
     "07_SC900_1/00SC_resources/SC-1_screenshot1.png",
-    "00_includes/AZ-18_screenshot5.png",
-    "00_includes/AZ-17_screenshot1.png",
-    "00_includes/AZ-17_screenshot2.png",
-    "00_includes/AZ-16_screenshot4.png",
-    "00_includes/AZ-16_screenshot2.png",
-    "Untitled.canvas",
     "Untitled 1.canvas"
   ]
 }

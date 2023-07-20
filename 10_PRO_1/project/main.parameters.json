@@ -16,6 +16,9 @@
     },
     "principalId": {
       "value": ""
+    },
+    "allowedIpRange": {
+      "value": ""
     }
   }
 }
